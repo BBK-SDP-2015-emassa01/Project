@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}Aims and Objectives}{4}
+\contentsline {section}{\numberline {3}User modelling research and methodolody}{4}
+\contentsline {subsection}{\numberline {3.1}User requirements}{5}
+\contentsline {subsection}{\numberline {3.2}User behaviours}{5}
+\contentsline {subsection}{\numberline {3.3}Design of user model}{5}
+\contentsline {section}{\numberline {4}Development and Implementation of Jellibean}{5}
+\contentsline {subsection}{\numberline {4.1}API's and Development Tools}{5}
+\contentsline {subsection}{\numberline {4.2}Performance}{5}
+\contentsline {section}{\numberline {5}Integrating Jellibean with Motion Controller Hardware}{5}
+\contentsline {section}{\numberline {6}Critical Review of the Leap Motion Controller}{5}
+\contentsline {section}{\numberline {7}Jellibean Showcase}{6}
+\contentsline {section}{\numberline {8}Conclusion}{6}

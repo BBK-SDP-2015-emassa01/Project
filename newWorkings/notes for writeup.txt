@@ -1,0 +1,246 @@
+- Maybe just have to limit this to web search in the first instance.
+
+- Google have ended direct API support for their main service: http://stackoverflow.com/questions/4082966/what-are-the-alternatives-now-that-the-google-web-search-api-has-been-deprecated
+
+- Name of Search Engine = Jellibean
+Jellybeans are a rainbow of colours, different sizes and shades, but more importantly very different flavours (pina colada is a personal fave of mine). Jellybeans are renowned for their brittle outside shell, but with that soft melting chewy bit in the centre. They're unpredictable, you never know quite what you have till the flavour has taken over your taste buds, by which time, it's too late, if you find you don't like it and want to spit it out. 
+
+Marshmallows, however, all appear similar, pink and white fluffy neat shapes that don't really taste of very much except a comforting sweetness. Marshmallows are enjoyable and they're squishy, popping back into shape easily. Dip your hand in a bag of marshmallows and you're pretty sure of what you're going to get. You can eat them for ever. 
+
+Likening people to jellybeans and marshmallows is easy and fun. It takes a very personal issue and makes it impersonal, therefore eliminating any blame, and any of those confusing labels that these experts pin on us and our children. I felt my Type One children were like little jumping jellybeans, colourful, tasty, and different. They each had their shimmering shells, and there were surprisingly jelly-like and uncertain little hearts and minds inside that bright thin shell.
+
+Aim 1 synthesise the results. CLASS: jSoupHtmlParser
+-using Jsoup html parser to essentially query the results page to get the href of the links that come up.
+Screen scrapings
+Advantages of screen scraping over 2 of the aPIs:
+-- this is not limited to only web!
+-- using multiple APIs became costly in terms of time? (does this actually happen)
+--more lines of code because each API was different
+--html parsing was simpler and quicker but may need more regular updating than APIs
+--APIs die -- i.e., methods no longer available -- deprecated, and so this is reliance anyway
+
+still had to use the google console and custom search API as screen scraping is against terms of service for Google.
+Jsoup has its advantages over html parsing -Jsoup. This has my preference above the other HTML parsers available in Java since it supports jQuery like CSS selectors. Also, its class representing a list of nodes, Elements, implements Iterable so that you can iterate over it in an enhanced for loop (so there's no need to hassle with verbose Node and NodeList like classes in the average Java DOM parser).
+
+Google+ API
+Followed steps here: https://developers.google.com/+/web/people/
+and to get a server running I followed this: https://developers.google.com/+/web/samples/javascript
+
+
+
+
+INITIALLY for Google+API:
+I cloned:
+git clone https://github.com/googleplus/gplus-quickstart-javascript.git
+Then extracted
+then replace index.html with YOUR_CLIENT_ID with value of client ID when set up Google+API (enabled it) line 30
+
+TO RUN:
+cd to the gplus-quickstart-master
+run the sample from the location registered in the Google plus developers console.
+
+run the server: python -m SimpleHTTPServer 8081
+browse to localhost:8081
+
+sign in
+agree to access data
+AboutMe is revealed.
+
+
+
+Still needed to get all links from Google.
+BUT TOS state:
+5.3 You agree not to access (or attempt to access) any of the Services by any means other than through the interface that is provided by Google, unless you have been specifically allowed to do so in a separate agreement with Google. You specifically agree not to access (or attempt to access) any of the Services through any automated means (including use of scripts or web crawlers) and shall ensure that you comply with the instructions set out in any robots.txt file present on the Services.
+
+So maybe I need to use the Custom Search API? Look at this again.
+I tried several ways to parse the html, but rather than it being relatively simple (as for Yahoo and Bing, the Google page only picked up the links on the page itself such as Images, Web, Pictures, About, Google+, Privacy, Sign In, Settings … and so on.
+Tried simply spam notting (WebPageImpl class)
+
+Google:
+String key="AIzaSyCnAIDiZchNkR0OTBH3NMMNt4GmRiwpdnA";//server key
+String cx = "008818185974073145685:ga_fmgk9gf0";
+
+Google Custom Search API
+
+So Now we have the search engine to play with, search engine id and API key and we are ready to get hands dirty with some code. API Overview.
+
+ref: http://weblog4j.com/2014/06/03/having-fun-with-google-custom-search-api-and-java/
+It is a REST api with a single method called list.
+The API method is GET.
+The response data is returned as a JSON or ATOM type.
+The response consists of 1. Actual search result 2. Metadata for search like number of  results, alternative search queries 3.Custom search engine metadata.
+The data model depends on OpenSearch 1.1 specification.
+
+JAVASCRIPT
+was used to note things to console --> has the user identified as a person with autism spectrum disorder in their about me section on google plus, in order for the search to use the user persona? or is the user a typical user (no Jellibean user persona used in that case).
+
+
+NEXT -> searching links to find single order connections
+need to parse the all links text file (while x . hasNext(). . .)
+go to the page using apache lucene text search library
+find a method to find synonyms to original search query
+return the ones with the MOST similarity only.
+
+
+lucene tutorial here: http://www.lucenetutorial.com/lucene-in-5-minutes.html
+
+(temp - test in MScProject using lucene 4.10.3 3)
+
+BUT decided to try out SOLR, why?
+
+***************************************
+Lucene vs Solr
+
+Many people new to Lucene and Solr will ask the obvious question: Should I use Lucene or Solr?
+
+The answer is simple: if you're asking yourself this question, in 99% of situations, what you want to use is Solr.
+
+A simple way to conceptualize the relationship between Solr and Lucene is that of a car and its engine. You can't drive an engine, but you can drive a car. Similarly, Lucene is a programmatic library which you can't use as-is, whereas Solr is a complete application which you can use out-of-box.
+
+What is Solr?
+
+Apache Solr is a web application built around Lucene with all kinds of goodies.
+
+It adds functionality like
+
+XML/HTTP and JSON APIs
+Hit highlighting
+Faceted Search and Filtering
+Geospatial Search
+Fast Incremental Updates and Index Replication
+Caching
+Replication
+Web administration interface etc
+Unlike Lucene, Solr is a web application (WAR) which can be deployed in any servlet container, e.g. Jetty, Tomcat, Resin, etc.
+
+Solr can be installed and used by non-programmers. Lucene cannot.
+
+SoLR has better support than Lucene.
+***************************************
+
+RUN SOLR
+cd to solr directory
+
+run: bin/solr start -e cloud -noprompt
+
+navigate to: http://localhost:8983/solr/#/
+
+INDEX
+You then create a rich index using the bin/post features. bin/post features the ability to crawl a directory of files, optionally recursively even, sending the raw content of each file into Solr for extraction and indexing. A Solr install includes a docs/ subdirectory, so that makes a convenient set of (mostly) HTML files built-in to start with.
+
+use the command: bin/post -c gettingstarted docs/
+
+SEARCH
+curl "http://localhost:8983/solr/gettingstarted/select?wt=json&indent=true&q=foundation&fl=id"
+
+Searches for the term foundation and restricts the results to only the ID term
+
+For MULTIPLE SEARCH TERMS USE: curl "…q=\"CAS+latency\""
+
+
+
+STOP:
+the following command line will stop Solr and remove the directories for each of the two nodes that the start script created:
+
+bin/solr stop -all ; rm -Rf example/cloud/
+
+APACHE is NOT A WEB CRAWLER - so I NEED TO USE APACHE NUTCH INTEGRATED WITH APACHE
+http://wiki.apache.org/nutch/NutchTutorial
+http://wiki.apache.org/nutch/RunNutchInEclipse#Before_you_start
+
+BUILDING A SEARCH ENGINE IN 10 MIN WITH NUTCH AND SOLR
+A good resource: http://blog.building-blocks.com/technical-tips/building-a-search-engine-with-nutch-and-solr-in-10-minutes
+
+set xml file info in here ^^
+
+
+*********
+1. runs solr
+2. navigate to nutch/src
+3. run bin/nutch
+ready to start indexing data
+4. seed.txt txt file in a folder called 'urls' in the nutch folder.
+
+
+bin/crawl urls/ crawl/crawldb http://localhost:8983/solr 2
+
+.crawl urls firsttry http://localhost:8983/solr 1
+
+bin/crawl -i -D localhost:8983/solr/ urls/ TestCrawl/  1
+
+bin/crawl urls/ testCrawl/ localhost:8983/solr/ 1
+
+most promise: https://wiki.apache.org/nutch/IntranetDocumentSearch
+ ./bin/crawl urls crawlId http://localhost:8983/solr/nutch 2
+
+cp apache-tomcat-5.5.12.tar.gz /usr/local
+
+
+______
+SOLR and NUTCH was too long, so I'm trying now with just solr using the instruction in the manual
+navigate to the extracted tgz src folder and run
+
+ ---> bin/solr start -p 8984
+
+have to use another port as 8983 was being used
+
+to STOP
+ bin/solr stop -p 8983
+
+check status
+ bin/solr status
+
+--> check in web browser:
+http://localhost:8983/solr/#/
+
+--> create directory 
+bin/solr create -c jellibeans
+
+--> index to directory
+bin/post -c jellibeans example/exampledocs/*.xml
+
+--> search directory for video
+http://localhost:8983/solr/jellibeans/select?q=video
+
+--> search the web
+bin/post -c jellibeans http://lucene.apache.org/solr -recursive 1 -delay 1
+
+**********
+RUN from script fro Terminal
+cd to comm.txt file
+--> chmod +x comm.txt
+then
+-->./comm.txt
+
+
+*****GENERAL OVERVIEW:
+1. user identifies 'status' as ASD by entering ASD/autism in the about me section of the GooglePlus profile. This will create false hits, because someone may identify child as ASD - so need to think bout this more.
+
+2. the Google+ API goes into the about me section of a user profile and returns a boolean if the user is ASD/Not ASD.
+
+3. The boolean is flag which either proceeds with normal search, or if ASD - goes into the web somewhere (localhost) and completes the search query with the jSoupHtmlParser Class.
+returns a text file with URLs to search
+
+4.Each one of the URLs is made into a text script to be executed with 
+--> chmod +x comm.txt
+then
+-->./comm.txt
+to be indexed by solr
+
+5. the scripts are BATCH processed one after the other.
+
+6. do i have to go to the website to return results? can i index with a certain command via command line?
+
+
+7. SOME CRITERION are used and results are returned (criteria need to be figured out - I can say i recruited one person with Autism, and this was a user model based on one person so it has its downfalls, but we can conduct larger studies with groups) - this is a case study. RESULTs being some top K results.
+
+8. images are returned of the page, on 4 corners of the page
+
+9. UI component assists with chunking the information and returning it in non-overloaded ways.
+
+
+**********
+DJANGO
+followed guide here:https://docs.djangoproject.com/en/1.8/intro/tutorial01/
+and here
+https://docs.djangoproject.com/en/1.8/intro/tutorial02/
