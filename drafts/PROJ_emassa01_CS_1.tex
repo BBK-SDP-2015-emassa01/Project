@@ -157,14 +157,14 @@ To identify the features of the user model to build, I ran a study to collect ex
 
 The range of scores for the AQ is 0 to 50 with high scores indicating increased liklihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or aspergers. A score above 32 suggests a likelihood of Asperger syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}). However although the AQ is a useful tool, it is by no means a form of diagnosis of autism. For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
 
-Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 29 low AQ scorers and 7 high AQ scorers. 
+Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 26 low AQ scorers and 7 high AQ scorers. 
 
 
 \subsection{Differences in Search Queries Between Users With and Without Autistic-like traits.}
 I conducted a qualitative analysis on the search query strings from both low and high AQ scorer groups.
 
 In both groups, Google was the prefered search engine by far, with all participants reporting that they used Google as a first choice. No one in the current sample used Yahoo or Bing. 
-The low AQ scorer responses were analysed as a group. A `model' (or baseline) was generated using a frequency criterion of 40\% i.e., if 12 out of 29 respondents or more generated the same query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. When a response indicated that the participant would do an image search, I was unable use those data. The results from the frequency analysis are presented below.
+The low AQ scorer responses were analysed as a group. A `model' (or baseline) was generated using a frequency criterion of 40\% i.e., if 11 out of 26 respondents or more generated the same query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. When a response indicated that the participant would do an image search, I was unable use those data. The results from the frequency analysis are presented below.
 
 \begin{enumerate}
 \item{You hear a song on the radio with the lyrics, ”Look at your children”, and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{Look at your children song}. \\\textit{Look at your children lyrics}.}
@@ -180,9 +180,8 @@ The low AQ scorer responses were analysed as a group. A `model' (or baseline) wa
 The following observations were made for the users in the high AQ group:
 \begin{enumerate}
 \item{Although high AQ scorers' for the most part, formed query strings accurately, there was increased use of idiosyncratic words in the query strings that were forumulated. This is in line with previous research that suggests that people with autism organise information in more subjective and individual ways \cite{subjective organisation}. For example, referring to the picture of the dog as `yorkie pooh'(not listed in frequency index), `aeroplane' (frequency of 8254 words per million) instead of plane (frequency of 33900 words per million) or flight (29535 words per million) , `miniature' (less than 4973 words per million) instead of small (185463 words per million). The idiosyncratic nature of the words is captured by their lower frequency of use in the English language. Search engines use term frequency to determine if a document is relevant to the users search query. If the frequency of words used to form search queries differs between low and high AQ scorers, so will the returned search results.}
-\label{idiosyncracy}
 
-\item{There were an increased number of imcompletely-formed queries, in other words, in the high AQ group, participants were more likely to miss off words in the query string. This was observed even though the sample size was much smaller in the high AQ group (7 people) compared to the low AQ group (29 people)). For example, when analysing the resuls from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}), suggesting that Google is not performing well for the high AQ user group.\label{incomplete}
+\item{There were an increased number of imcompletely formed queries, in other words, in the high AQ group participants were more likely to miss off words in the query string. This was observed even though the sample size was much smaller in the high AQ group (7 people) compared to the low AQ group (26 people)). For example, when analysing the resuls from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}), suggesting that Google is not performing well for the high AQ user group.
 
 \begin{figure}[H]
 \begin{center}
@@ -200,7 +199,7 @@ The following observations were made for the users in the high AQ group:
 }
 
 \item{One individual of the 7 individuals in the high AQ group demonstrated ambiguous use of third-person pronouns, which is characteristic of some individuals with Autism \cite{pronoun}. This includes using first names instead of `I' or `you'. This is particularly detrimental to search engine query strings because the use of names distrupts the term frequency - inverse document frequency weighting \cite{tfidf} of the search query and subsequently the results returned to the user.
-}\label{pronoun}
+}
  
 \item{
 For questions that were `social' in nature (e.g., featuring a face of a famous woman), 2 out of 7 individuals in the high AQ group indicated that these were types of queries that they would not normally be interested in, and so ``wouldn't bother asking it". This is, of course, in line with the characteristics of Autism according to \cite{DSM}. For these queries, it was more common for individuals in the high AQ group to include information in their search query string that was extraneous to the search question itself, compared to the low AQ group. For example, in query 4 above (which asked respondents to indicate how they would identify a famous person), 2 high AQ scorers included information about the woman's earing. Inevitably this `dilutes' the search query and results in reduced precision for the search engine.
@@ -208,38 +207,15 @@ For questions that were `social' in nature (e.g., featuring a face of a famous w
 
 \item{ 
 Lastly there were more spelling errors and typographical errors in the high AQ group compared to the low AQ group.
-}\label{spelling}
+}
 
 \end{enumerate}
 \subsection{Building the Jellibeans Transformation Rule Engine}
-Given the set of observations in the data reported above, we aimed to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
+Given the set of observations above, the aims were to `transform' queries made by individuals in the high AQ group, using a set of rules (hence forth called the `rule engine', to queries that share greater overlap with those made by the low AQ group. 
 
-
-The aim for Jellibeans is to return search results that are more in line with low AQ scorers. In other words, search results from high AQ queries shared greater overlap with those made by the low AQ group, even though the queries were formed differently. The rule engine is thus a conrete and operationalised framework, for a theortetically-grounded user model of autism within search. \\
-
-\vspace{5mm} %5mm vertical space
-Jellibeans works to address more than one observation made during the data collection stage. As a general rule, changes will take the form of add on questions that aim to structure the individual to form a search query in a logical order so that key search terms are not dropped. The structure of query formation should also assist the user with less idiosyncratic search queries. At each stage the user can decide how to form their query process, but the scope of the question is reduced. I will now introduce the products operationalisation.\\
-
-\vspace{5mm} %5mm vertical space
-To address observation \ref{idiosyncracy} and to make high AQ scorer search queries less idiosyncratic, words not in english dictionary will be suggested for removal. For example, after each non-word, the user will be prompted with, ``This word is not in the dictionary, what would you like to do? Remove, Replace, or Keep". Non-words will be identified using a third party dictionary. 
- 
-A third party Thesaurus or Word Frequency Dictionary with an API will be used to suggest words that have the same meaning but higher frequency in the English language. This will also work to remove idiosyncracies in the user search queries.
-
-\vspace{5mm} %5mm vertical space
-To address observation \ref{incomplete}, Jellibeans will have an intermittent `search' term box that confirms what the user wants to return. So, if the user wants to know something like lyrics of a song, or the name of a famous person, the price of an item for sale, they would enter `lyrics', `name' or `price' and this would be added to their search query (if it has not already been added by the user). This would ensure user search queries are more complete.
-
-\vspace{5mm} %5mm vertical space
-For observation \ref{pronoun}, pronouns (`I' and `You') are ignored via a stoplist which is implemented by the search engine itself. Jellibeans will also identify names of people via the third person library and suggest that these are removed, replaced with another search query term, or kept if the keyword is relevant. The extra layer of checking refines the search query.
-
-\vspace{5mm} %5mm vertical space
-
-Because Jellibeans bypasses the search engine interface, a spell checker will be implemented to address increased spelling errors in high AQ scorers (observation \ref{spelling}). This will also be in the form of a `suggestion' at the search query formulation stage.
-
-
-
-\vspace{5mm} %5mm vertical space
-
-The Autism Quotient score of the user will be stored.
+From theoretical to concrete
+Results of the data collection
+Profile of users and user groups
 
 \subsection{Implementation}
 What was actually done
@@ -278,11 +254,7 @@ I will test and evaluate the system. Testing will involve assessing the reliabil
 Evaluation of the system will include comparisons to existing search engines; assessing how this idea can be implemented to tailor an existing systems; assessing how well the system does compared to existing systems on a set of criteria that are only relevant to the user group in question (a collective measure of user happiness). Evaluation will also include quantitative metrics such as Recall, Precision, and False Negative/Positive rates.
 
 
-Apache Solr\\
-
-Future directions for the current project would be to develop an API or library for word frequencies in the written English language. These frequency data could have been used to suggest words that were more frequent in the written language for people with Autism, who tend to use idiosyncratic language. This would suggest alternatives for the user.\\
-
-Alternatively, to use a thesaurus in the current project would be a useful addition.\\
+Apache Solr
 
 
 	
