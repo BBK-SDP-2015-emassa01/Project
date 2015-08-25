@@ -244,3 +244,58 @@ DJANGO
 followed guide here:https://docs.djangoproject.com/en/1.8/intro/tutorial01/
 and here
 https://docs.djangoproject.com/en/1.8/intro/tutorial02/
+
+
+
+
+NEW STUFF
+http://stackoverflow.com/questions/14360769/store-data-from-a-form-using-just-html
+for exporting data to excel
+
+colour blind ness - considerations using patterns?
+
+Colour themes - so that the 'theme ' of the research is remembered throughout. With some reinforcement / time, this will become a reminder of the original type of search query thus limiting the number of contextual links that need to be remembered in working memory.
+
+
+Maybe google which has access to current trending searches would be able to have the 'floating' modals to reflect the trends but the current version of Jellibeans is a working example of what could be achieved but with searches that are generally common, rather than trending.
+
+do-know-go
+http://searchenginewatch.com/sew/how-to/2235624/do-know-go-how-to-create-content-at-each-stage-of-the-buying-cycle
+
+web search users only look at the 10 top answers and seldom modify the search query
+http://dl.acm.org/citation.cfm?id=331405
+
+Good to use for ideas on my write up
+http://delivery.acm.org/10.1145/990000/988675/p13-rose.pdf?ip=193.61.45.125&id=988675&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2E5906F0ED3F2D94AB%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=705317129&CFTOKEN=88520103&__acm__=1440153124_ef7bc20f57944554e2d4a4d9e7338204
+TAKE IMAGE OF SEARCHE FROM THIS PAPER
+
+
+user acceptance testing!!
+
+testing for uri's --> http://www.seleniumhq.org/ selenium automated tests for URIs
+
+javascript help -> http://jsfiddle.net/nick_craver/hQ54P/ like an ice in a browser
+
+
+COULDNT USE JAVASCRIPT-
+You can include other website content in your html document using an iframe. However, due to the same original policy, you cannot have script from your domain affect content from another domain. In other words, you can't write some javascript to manipulate the content of some other web page you put in an iframe. The script would have to come from that domain as well.
+
+Diagrams
+Class diagrams
+Package diagram
+Sequence diagram
+Use Cases
+
+Look at Oded's presentation
+
+
+
+Challenges
+Robots
+Apache Lucene
+Sandboxes
+JavaScript html can't access third party pages
+Yahoo and Bing was easier and faster to do html scraping
+
+
+Changing the search query itself to fit more with a TD search query
