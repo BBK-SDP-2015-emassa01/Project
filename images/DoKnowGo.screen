@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="40" y="32" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="2" x="328" y="120" text="JELLIBEANS" measuredWidth="234" measuredHeight="59">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="3" x="408" y="178" text="SEARCH" measuredWidth="68" measuredHeight="26">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="5" x="168" y="232" width="153" height="137" measuredWidth="153" measuredHeight="137" background="#0b5394">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="6" x="584" y="232" width="145" height="137" measuredWidth="145" measuredHeight="137" background="#00ff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="7" x="384" y="232" width="137" height="137" measuredWidth="137" measuredHeight="137" background="#ffff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="10" x="40" y="208" width="817" measuredWidth="817" measuredHeight="6" foreground="#cccccc"/>
+  <widgets xsi:type="model:Label" id="12" x="168" y="376" text="DO SOMETHING" measuredWidth="145" measuredHeight="29">
+    <font size="18px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="592" y="376" text="GO SOMEWHERE" measuredWidth="148" measuredHeight="29">
+    <font size="18px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="14" x="368" y="376" text="KNOW SOMETHING" measuredWidth="172" measuredHeight="29">
+    <font size="18px"/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="15" x="256" y="175" text="                                                 DO" measuredWidth="400" measuredHeight="300"/>
+  <widgets xsi:type="model:Shape" id="16" x="384" y="232" width="153" height="137" measuredWidth="153" measuredHeight="137" background="#0b5394">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="19" x="304" y="376" width="313" height="46" text="Press the words 'DO SOMETHING' if you'd like to do something on the web like buy a cinema ticket" measuredWidth="313" measuredHeight="46">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="20" x="603" y="442" text="Close" measuredWidth="43" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
