@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{array}
 \usepackage[document]{ragged2e}
+\usepackage{comment} 
 
 \usepackage{datetime}
 
@@ -125,9 +126,17 @@ The resulting links are written to text file which stores the links in a text fi
 
 The system aims to deliver relevant results to the user, but what is ``relevant"? Not all users or groups of users search in the same way, so it is important to consider user intention. The first part of the current project aimed to investigate the differences between search queries of people with and without Autism, and to use those findings to build a stereotyped user model (a user model that will infer characteristics about the user from their diagnostic information) for a person with autism. Users will have to register will Google+ ???, and report their diagnostic information in the aboutMe section of their profile ??? / complete the Autism Quotient Questionnaire and obtain a score of autistic-like traits. Using the Google+ API, Jellibeans will connect to Google+ and ask the user to signin/ agree to the web application accessing their data. JavaScript will be used to parse the text in the aboutMe section to check if the user has identified as a persn with autism, aspergers, ASD or not. The result is returned via the console (inspect) command. ??? 
 
+\section{Project Trailer}
 
-\section {Method}
-\subsection{Building a User Model into Search}\label{building the user model} 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{JellibeanFlow}
+\end{center}
+\end{figure}
+
+
+\section {User Research}
+\subsection{Background}\label{background} 
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
 
 There are many stages to the search process. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. The stage at which the user model will have most possible impact is before results are returned to the user, that is, at the query formulation stage. It is this stage that the user model will be implemeted (stage 2 on Figure~\ref{search flow}).
@@ -153,18 +162,18 @@ Typical user's search flow process \cite{seo}
 \end{center}
 
 \subsection{Data Collection}
-To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 33 participants. The participants were asked to give examples of search queries they would use to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distrbuted widely via Surveymonkey.com \cite{surveymonkey} and can be seen in Appendix~\ref{AppendixA}. Participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
+To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distrbuted widely via Surveymonkey.com \cite{surveymonkey} and can be seen in Appendix~\ref{AppendixA}. Participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
 
-The range of scores for the AQ is 0 to 50 with high scores indicating increased liklihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or aspergers. A score above 32 suggests a likelihood of Asperger syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}). However although the AQ is a useful tool, it is by no means a form of diagnosis of autism. For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
+The range of scores for the AQ is 0 to 50 with high scores indicating increased liklihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or aspergers. A score above 30 suggests a likelihood of Asperger syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}).For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
 
-Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 29 low AQ scorers and 7 high AQ scorers. 
+Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 30 low AQ scorers and 7 high AQ scorers. 
 
 
 \subsection{Differences in Search Queries Between Users With and Without Autistic-like traits.}
 I conducted a qualitative analysis on the search query strings from both low and high AQ scorer groups.
 
 In both groups, Google was the prefered search engine by far, with all participants reporting that they used Google as a first choice. No one in the current sample used Yahoo or Bing. 
-The low AQ scorer responses were analysed as a group. A `model' (or baseline) was generated using a frequency criterion of 40\% i.e., if 12 out of 29 respondents or more generated the same query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. When a response indicated that the participant would do an image search, I was unable use those data. The results from the frequency analysis are presented below.
+The low AQ scorer responses were analysed as a group. A baseline answer was generated using a frequency criterion of 40\% i.e., if 12 out of 30 respondents or more generated the same query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. Data was discarded when a response indicated that the participant would do an image search, as this was not the aim of the survey. The results from the frequency analysis are presented below.
 
 \begin{enumerate}
 \item{You hear a song on the radio with the lyrics, ”Look at your children”, and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{Look at your children song}. \\\textit{Look at your children lyrics}.}
@@ -179,10 +188,11 @@ The low AQ scorer responses were analysed as a group. A `model' (or baseline) wa
 
 The following observations were made for the users in the high AQ group:
 \begin{enumerate}
-\item{Although high AQ scorers' for the most part, formed query strings accurately, there was increased use of idiosyncratic words in the query strings that were forumulated. This is in line with previous research that suggests that people with autism organise information in more subjective and individual ways \cite{subjective organisation}. For example, referring to the picture of the dog as `yorkie pooh'(not listed in frequency index), `aeroplane' (frequency of 8254 words per million) instead of plane (frequency of 33900 words per million) or flight (29535 words per million) , `miniature' (less than 4973 words per million) instead of small (185463 words per million). The idiosyncratic nature of the words is captured by their lower frequency of use in the English language. Search engines use term frequency to determine if a document is relevant to the users search query. If the frequency of words used to form search queries differs between low and high AQ scorers, so will the returned search results.}
-\label{idiosyncracy}
+\item{There were an increased number of imcompletely-formed queries. In the high AQ group, participants were more likely to miss off words in the query string. This was observed even though the sample size was much smaller in the high AQ group (7 people) compared to the low AQ group (29 people)). For example, when analysing the resuls from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}). More results are returned to the incomplete query (302,000,000 compared to 32,900,000). The high AQ user group are presented with results that have a lower precision, i.e., more irrelevant information that they must sift through to find the answer to their search query.\label{incomplete}
 
-\item{There were an increased number of imcompletely-formed queries, in other words, in the high AQ group, participants were more likely to miss off words in the query string. This was observed even though the sample size was much smaller in the high AQ group (7 people) compared to the low AQ group (29 people)). For example, when analysing the resuls from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}), suggesting that Google is not performing well for the high AQ user group.\label{incomplete}
+
+\item{Although many high AQ scorers' formed query strings well, there was increased use of idiosyncratic words in the query strings that were forumulated. This is in line with previous research that suggests that people with autism organise information in more subjective and individual ways \cite{subjective organisation}. For example, referring to the picture of the dog as `yorkie pooh'(not listed in frequency index), `aeroplane' (frequency of 8254 words per million) instead of plane (frequency of 33900 words per million) or flight (29535 words per million) , `miniature' (less than 4973 words per million) instead of small (185463 words per million). The idiosyncratic nature of the words is captured by their lower frequency of use in the English language. Search engines use term frequency to determine if a document is relevant to the users search query. If the frequency of words used to form search queries differs between low and high AQ scorers, so will the rankings of the returned search results.}
+\label{idiosyncracy}
 
 \begin{figure}[H]
 \begin{center}
@@ -206,12 +216,16 @@ The following observations were made for the users in the high AQ group:
 For questions that were `social' in nature (e.g., featuring a face of a famous woman), 2 out of 7 individuals in the high AQ group indicated that these were types of queries that they would not normally be interested in, and so ``wouldn't bother asking it". This is, of course, in line with the characteristics of Autism according to \cite{DSM}. For these queries, it was more common for individuals in the high AQ group to include information in their search query string that was extraneous to the search question itself, compared to the low AQ group. For example, in query 4 above (which asked respondents to indicate how they would identify a famous person), 2 high AQ scorers included information about the woman's earing. Inevitably this `dilutes' the search query and results in reduced precision for the search engine.
 }
 
+\begin{comment}
 \item{ 
 Lastly there were more spelling errors and typographical errors in the high AQ group compared to the low AQ group.
 }\label{spelling}
+\end{comment}
+
+
 
 \end{enumerate}
-\subsection{Building the Jellibeans Transformation Rule Engine}
+\subsection{Building Jellibeans: a Transformation Rule Engine}
 Given the set of observations in the data reported above, we aimed to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
 
 
@@ -246,6 +260,42 @@ What was actually done
 Classification of users
 Feature uses
 Storage of information
+
+\subsection{Design Patterns (for web applications)}
+
+Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to ‘make it easy’ for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
+
+As we have seen in the introduction, users with Autism behave in different ways to typical users when navigating search. Users with Autism do not use the same key phrases when looking for documents with several attributes, i.e., queries that would be best formulated using several iterations of search, or multiple search parameters. This leads to an ineffective search; one that requires users to sift through results which are in large-part irrelevant, and a bad user experience. Given the research findings observed in the current study, the parametric search pattern appears to be a better choice for the user group in question.  
+
+Parametric search queries allow users to define parameters in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination, or for a person. This requires high cognitive ‘load’ (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{expedia}\\
+\label{exped}
+\end{center}
+\end{figure}
+
+For typical users, parametric search is more structured, and in some circumstances seems more natural than a free – keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user’s search results in line with their search query, ultimately leading to a higher precision for the search enginei.
+
+One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
+
+\subsection{High Level UML Class Diagram of the System}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{jBeanClassDiagram}
+\label{exped}
+\end{center}
+\end{figure}
+
+\subsection{Use Case Diagram}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{JBeanUseCase}
+\label{exped}
+\end{center}
+\end{figure}
 
 
 \subsubsection{Integrating Jellibean with Motion Controller Hardware}
@@ -319,6 +369,7 @@ Disadvantages
 \bibitem{Baron Cohen et al} Baron-Cohen, Wheelrigjt, Skinner, Martin, Clubley (2001).   The Autism-Spectrum Quotient (AQ): evidence from Asperger Syndrome/high-functioning autism, males and females, scientists and mathematicians.  Journal of Autism and Developmental Disorders, 31, 5-17.
 \bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Asperger's syndrome. Journal of Autism and Developmental Disorders, 38(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
 \bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:1–20
+\bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). Clinical Linguistics and Phonetics, 27(2), 85-93. 
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.

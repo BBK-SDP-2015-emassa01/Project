@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Browser" id="1" x="40" y="32" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
+  <widgets xsi:type="model:Browser" id="1" x="32" y="32" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="2" x="328" y="120" text="JELLIBEANS" measuredWidth="234" measuredHeight="59">
+  <widgets xsi:type="model:Label" id="2" x="344" y="120" text="JELLIBEANS" measuredWidth="234" measuredHeight="59">
     <font size="43px"/>
   </widgets>
   <widgets xsi:type="model:Label" id="3" x="408" y="178" text="SEARCH" measuredWidth="68" measuredHeight="26">
