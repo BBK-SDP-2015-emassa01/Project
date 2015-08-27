@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage[document]{ragged2e}
 \usepackage{comment} 
+\usepackage{subcaption}
 
 \usepackage{datetime}
 
@@ -64,7 +65,7 @@ This project is substantially the result of my own work, expressed in my own wor
 \end{verbatim}
 
 \begin{center}
-word count (proposal text only) : 3294 words.
+word count (project text only) :
 \end{center}
 
 \clearpage
@@ -132,6 +133,8 @@ The system aims to deliver relevant results to the user, but what is ``relevant"
 \begin{center}
 \includegraphics[scale=0.7]{JellibeanFlow}
 \end{center}
+\caption{Jellibean User Flow}
+\label{JBeanUserFlow}
 \end{figure}
 
 
@@ -139,7 +142,7 @@ The system aims to deliver relevant results to the user, but what is ``relevant"
 \subsection{Background}\label{background} 
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
 
-There are many stages to the search process. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. The stage at which the user model will have most possible impact is before results are returned to the user, that is, at the query formulation stage. It is this stage that the user model will be implemeted (stage 2 on Figure~\ref{search flow}).
+There are many stages to the search process. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. The stage at which the user model will have most possible impact is before results are returned to the user, that is, at the query formulation stage. It is this stage that the user model will be implemeted (stage 2 on the user web-search process.)
 
 
 \begin{center}
@@ -153,16 +156,84 @@ solution, or piece of information.}
 \item{Scan for a solution, or a link to that solution.}
 \item{If unsatisfied, return to the search results and browse for another link or ...}
 \item{Perform a new search with refinements to the query}
+\label{search flows}
 \end {enumerate}
-\label{search flow}
 
-\hspace{1cm}
-Typical user's search flow process \cite{seo}
+\hspace{1.5cm}
+The User Web-Search Process \cite{seo}
 
 \end{center}
 
-\subsection{Data Collection}
-To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distrbuted widely via Surveymonkey.com \cite{surveymonkey} and can be seen in Appendix~\ref{AppendixA}. Participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
+\subsection{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}
+
+To implement the combination search engine I used three API’s provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
+
+To get started with the Google Custom Search API, I created a project called ‘Jellibeans’ in the Google Developers Console, and an OAuth 2.0 Client ID. I obtained a Consumer Key and Secret to use the API, and used these in the application code to access the Google Custom Search Engine (see Figure~\ref{JBeanAppletGoogleCustomSearch1}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{JBeanAppletGoogleCustomSearch}
+\end{center}
+
+\caption{Jellibean Applet Combination Search Engine}
+\label{JBeanAppletGoogleCustomSearch1}
+\end{figure}
+
+Following that I also registered my JavaScript origins within the console to access the Google+ API, and redirected URIs so that once users sign in using their Google+ login credentials they will be redirected to Jellibeans (or http://esha.mseth.co). This was done because I wanted users to be able to sign in and access their google profile from Jellibeans (see Figure~\ref{GoogleSignInPage}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{GoogleSignIn}
+\end{center}
+\caption{Google Sign In Page.}
+\label{GoogleSignInPage}
+
+\end{figure}
+
+Following a similar protocol for Yahoo and Bing Search API’s, I created projects in the Yahoo Developers Network, and Microsoft Azure Marketplace, and purchased an API Consumer Keys and Secrets (needed to use the APIs). 
+
+\subsubsection{Web Scraping}
+Web scraping was also an option, it quickly became a preferred because of integration of the three API’s and the flexibility/manipulation of  the resilts if they were returned using the same method. However this was against terms of service set out by Google (see section 5.3 of Figure~\ref{GoogleToS1}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{GoogleToS}
+\caption{Google Terms of Service}
+\label{GoogleToS1}
+
+\end{center}
+\end{figure}
+
+
+So, instead, I used the Jsoup API \cite{jsoup}, which is a java –written API for HTML. The library provides methods to conveniently extract data using DOM (Data Object Model) and CSS (Cascading Style Sheet) methods. The Jsoup HTML parser was used to scrape results only from Yahoo and Bing, and integrated these into a Java Applet that runs in Eclipse Luna IDE (see Figure~\ref{AppletFig}). The top 10 links, from each search engine were presented to users and ranked such that result 1 from Google was followed by result 1 from Yahoo, and that was followed by result 1 from Bing. Then results 2 from Google, Yahoo and Bing were presented and so on, until the 30 links were produced, in ranked order from the three search engines. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{htmlParsers}
+  \caption{JSoup HTML Parser.}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{Applet}
+  \caption{Complete query results.}
+\end{subfigure}
+\caption{JSoup HTML Parsers for Yahoo and Bing working with Google Custom Search API in Java Applet for testing.}
+\label{AppletFig}
+\end{figure}
+
+\subsection{User Research and Testing of Core Feature 1}
+To test the integrated combined search engine, the returned documents from 10 pre-determined search queries were presented to 10 participants who were identified as high AQ scorers. Participants were asked to comment on the search results that had been returned, and to choose three out of the links returned to follow up with, and to observe if anything was odd about the results returned. The responses from the 10 users were analysed to test core feature 1 and whether a combination search would be a good option for Jellibean Search, or whether it would introduce redundancy in the search results. 
+Somewhat non-surprisingly (given the statistics of preferred search engines) the results revealed Bing Search was favoured the least, and Google results the most, with Yahoo falling somewhere in between. Out of the 30 responses participants indicated to follow up with, 21 were Google results, 3 were Yahoo, and 1 was Bing and 5 results overlapped between Google and Yahoo.
+4 participants commented that the Bing results were distracting rather than helpful.
+
+Given these findings from the user group, it was decided to continue using the Google results, but to drop the results from Yahoo and Bing, in line with the aim of the project as a whole – to improve returned search results for users with Autism.
+
+
+
+\section{Core Feature 2: Building a User Model of Autism.}
+To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distrbuted widely via Surveymonkey.com \cite{surveymonkey} and can be seen in Appendix ~\ref{AppendixA}. Participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix ~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
 
 The range of scores for the AQ is 0 to 50 with high scores indicating increased liklihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or aspergers. A score above 30 suggests a likelihood of Asperger syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}).For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
 
@@ -195,21 +266,34 @@ The following observations were made for the users in the high AQ group:
 \label{idiosyncracy}
 
 \begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{lookAtUrChildren}\\
-\end{center}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{lookAtUrChildren}
+  \caption{Incomplete query results.}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{lookAtUrChildrenLyrics}
+  \caption{Complete query results.}
+\end{subfigure}
+\caption{High and low AQ scorers both formed search queries accurately, however there was an increased tendency to omit the word ``lyrics" in the high AQ group resulting in very different search results.}
+\label{someresults}
 \end{figure}
+
+\begin{comment}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{lookAtUrChildrenLyrics}\\
-\caption{High and low AQ scorers both formed search queries accurately, however there was an increased tendency to omit the word ``lyrics" in the high AQ group resulting in very different search results.}
-\label{someresults}
+\includegraphics[scale=0.5]{LookAtYourChild}\\
+\label{LookAtYourChild}
 \end{center}
 \end{figure}
+
+\end{comment}
 }
 
-\item{One individual of the 7 individuals in the high AQ group demonstrated ambiguous use of third-person pronouns, which is characteristic of some individuals with Autism \cite{pronoun}. This includes using first names instead of `I' or `you'. This is particularly detrimental to search engine query strings because the use of names distrupts the term frequency - inverse document frequency weighting \cite{tfidf} of the search query and subsequently the results returned to the user.
+\item{One individual of the 7 individuals in the high AQ group demonstrated ambiguous use of third-person pronouns, which is characteristic of some individuals with Autism \cite{pronoun}. This includes using first names. This is particularly detrimental to search engine query strings because the use of names distrupts the term frequency - inverse document frequency weighting \cite{tfidf} of the search query and subsequently the results returned to the user.
 }\label{pronoun}
  
 \item{
@@ -226,18 +310,16 @@ Lastly there were more spelling errors and typographical errors in the high AQ g
 
 \end{enumerate}
 \subsection{Building Jellibeans: a Transformation Rule Engine}
-Given the set of observations in the data reported above, we aimed to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
+Given the set of observations in the data reported above, the aims were to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns ('I' and `You') is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
 
 
 The aim for Jellibeans is to return search results that are more in line with low AQ scorers. In other words, search results from high AQ queries shared greater overlap with those made by the low AQ group, even though the queries were formed differently. The rule engine is thus a conrete and operationalised framework, for a theortetically-grounded user model of autism within search. \\
 
 \vspace{5mm} %5mm vertical space
-Jellibeans works to address more than one observation made during the data collection stage. As a general rule, changes will take the form of add on questions that aim to structure the individual to form a search query in a logical order so that key search terms are not dropped. The structure of query formation should also assist the user with less idiosyncratic search queries. At each stage the user can decide how to form their query process, but the scope of the question is reduced. I will now introduce the products operationalisation.\\
+Jellibeans works to address more than one observation made during the data collection stage. As a general rule, changes will take the form of add on questions that aim to structure the individual to form a search query in a logical order so that key search terms are not dropped. The structure of the query's formation should also assist the user with less idiosyncratic search queries. \\
 
 \vspace{5mm} %5mm vertical space
-To address observation \ref{idiosyncracy} and to make high AQ scorer search queries less idiosyncratic, words not in english dictionary will be suggested for removal. For example, after each non-word, the user will be prompted with, ``This word is not in the dictionary, what would you like to do? Remove, Replace, or Keep". Non-words will be identified using a third party dictionary. 
- 
-A third party Thesaurus or Word Frequency Dictionary with an API will be used to suggest words that have the same meaning but higher frequency in the English language. This will also work to remove idiosyncracies in the user search queries.
+To address observation \ref{idiosyncracy} and to make high AQ scorer search queries less idiosyncratic, Jellibeans will prompt the user to categorise their search query into one of 4 possible types of queries, a `DO', `Know', `Go' or `Social' query. Each type of query will be associated with a colour, and this colour will be prominent on the page, to serve as a visual reminder of the task. This works to reduce the working memory load for the user, and to serve as a goal-directed que -- Two things we know are difficult for people with Autism are maintenance of information in working memory, and goal-directed tasks involving a high demand on Executive Functioning (Executive functions (also known as cognitive control and supervisory attentional system) is an umbrella term for the management (regulation, control) of cognitive processes, including working memory, reasoning, task flexibility, and problem solving as well as planning and execution \cite{EF}.) 
 
 \vspace{5mm} %5mm vertical space
 To address observation \ref{incomplete}, Jellibeans will have an intermittent `search' term box that confirms what the user wants to return. So, if the user wants to know something like lyrics of a song, or the name of a famous person, the price of an item for sale, they would enter `lyrics', `name' or `price' and this would be added to their search query (if it has not already been added by the user). This would ensure user search queries are more complete.
@@ -245,11 +327,11 @@ To address observation \ref{incomplete}, Jellibeans will have an intermittent `s
 \vspace{5mm} %5mm vertical space
 For observation \ref{pronoun}, pronouns (`I' and `You') are ignored via a stoplist which is implemented by the search engine itself. Jellibeans will also identify names of people via the third person library and suggest that these are removed, replaced with another search query term, or kept if the keyword is relevant. The extra layer of checking refines the search query.
 
+\begin{comment}
 \vspace{5mm} %5mm vertical space
-
 Because Jellibeans bypasses the search engine interface, a spell checker will be implemented to address increased spelling errors in high AQ scorers (observation \ref{spelling}). This will also be in the form of a `suggestion' at the search query formulation stage.
 
-
+\end{comment}
 
 \vspace{5mm} %5mm vertical space
 
@@ -272,6 +354,8 @@ Parametric search queries allow users to define parameters in an increasingly lo
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.3]{expedia}\\
+
+\caption{Expedia Parametric Search Example}
 \label{exped}
 \end{center}
 \end{figure}
@@ -285,7 +369,9 @@ One of the aims of the study is to reduce the amount of textual information on t
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{jBeanClassDiagram}
-\label{exped}
+
+\caption{Jellibean High Level UML Class Diagram}
+\label{jBeanClassDiagram1}
 \end{center}
 \end{figure}
 
@@ -293,7 +379,9 @@ One of the aims of the study is to reduce the amount of textual information on t
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{JBeanUseCase}
-\label{exped}
+
+\caption{Jellibean High Level UML Use Case Diagram}
+\label{JBeanUseCase1}
 \end{center}
 \end{figure}
 
@@ -318,6 +406,13 @@ Current Project’s Hardware Selection Process and Important Design Issues:
 \section{Result}
 The transformations that were implemented
 
+\section{Challenges}
+Robots
+Apache Lucene
+Sandboxes
+JavaScript html can't access third party pages
+Yahoo and Bing was easier and faster to do html scraping
+
 
 \section{Conclusion}
 How does it compare to the original specification
@@ -334,8 +429,9 @@ Future directions for the current project would be to develop an API or library 
 
 Alternatively, to use a thesaurus in the current project would be a useful addition.\\
 
+Maybe google which has access to current trending searches would be able to have the `floating' modals to reflect the trends but the current version of Jellibeans is a working example of what could be achieved but with searches that are generally common, rather than trending.
 
-	
+colour blindness considerations - accessibility for people with Autism  
 
 \section {Critical Review of the Leap Motion Controller}
 Advantages
@@ -369,7 +465,9 @@ Disadvantages
 \bibitem{Baron Cohen et al} Baron-Cohen, Wheelrigjt, Skinner, Martin, Clubley (2001).   The Autism-Spectrum Quotient (AQ): evidence from Asperger Syndrome/high-functioning autism, males and females, scientists and mathematicians.  Journal of Autism and Developmental Disorders, 31, 5-17.
 \bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Asperger's syndrome. Journal of Autism and Developmental Disorders, 38(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
 \bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:1–20
+\bibitem{EF} Executive Function, https://en.wikipedia.org/wiki/Executive_functions, Retrieved 27 August 2015.
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
+\bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). Clinical Linguistics and Phonetics, 27(2), 85-93. 
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.

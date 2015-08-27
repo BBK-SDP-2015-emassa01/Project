@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Browser" id="1" x="40" y="32" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
+  <widgets xsi:type="model:Browser" id="24" x="32" y="35" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
     <font/>
   </widgets>
   <widgets xsi:type="model:Label" id="2" x="328" y="120" text="JELLIBEANS" measuredWidth="234" measuredHeight="59">
@@ -27,6 +27,16 @@
   </widgets>
   <widgets xsi:type="model:HLine" id="18" x="40" y="208" width="817" measuredWidth="817" measuredHeight="6" foreground="#cccccc"/>
   <widgets xsi:type="model:Table" id="19" x="160" y="264" width="561" height="305" text="No,Question,Enter '0' if you Disagree \nEnter '1' if you Agree&#xA;Q1,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q2,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q3,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q4,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q5,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q6,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q7,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q8,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q9,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q10,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q11,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;Q12,Lorem ipsum dolor sit amet consectetur adipisicing elit, []&#xA;&#xA;" measuredWidth="561" measuredHeight="305" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="21" x="290" y="576" text="Save Your Answers" measuredWidth="130" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="427" y="576" text="Calculate Your Score" measuredWidth="140" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="25" x="259" y="296" width="363" height="89" text="Jellibean says:" measuredWidth="363" measuredHeight="89"/>
+  <widgets xsi:type="model:TextField" id="26" x="269" y="336" text="Please complete all 50 items to complete the assessment" measuredWidth="344" measuredHeight="23">
     <font/>
   </widgets>
   <hRuler/>
