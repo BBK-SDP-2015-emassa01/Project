@@ -6,23 +6,24 @@
 \contentsline {section}{\numberline {3}Project Trailer}{5}
 \contentsline {section}{\numberline {4}Background Research}{5}
 \contentsline {section}{\numberline {5}Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}{6}
-\contentsline {subsubsection}{\numberline {5.0.1}Web Scraping}{8}
-\contentsline {subsection}{\numberline {5.1}User Research and Testing of Core Feature 1}{9}
+\contentsline {subsection}{\numberline {5.1}Web Scraping}{8}
+\contentsline {subsection}{\numberline {5.2}User Research and Testing of Core Feature 1}{9}
 \contentsline {section}{\numberline {6}Core Feature 2: Building a User Model of Autism.}{9}
 \contentsline {subsection}{\numberline {6.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{10}
-\contentsline {subsection}{\numberline {6.2}Building Jellibeans: a Transformation Rule Engine}{12}
-\contentsline {subsection}{\numberline {6.3}Implementation}{13}
-\contentsline {subsection}{\numberline {6.4}Design Patterns (for web applications)}{13}
-\contentsline {subsection}{\numberline {6.5}High Level UML Class Diagram of the System}{15}
-\contentsline {subsection}{\numberline {6.6}Use Case Diagram}{16}
-\contentsline {subsubsection}{\numberline {6.6.1}Integrating Jellibean with Motion Controller Hardware}{16}
-\contentsline {subsection}{\numberline {6.7}Development and Implementation of Jellibean}{17}
-\contentsline {subsection}{\numberline {6.8}API's and Development Tools}{17}
-\contentsline {section}{\numberline {7}Result}{17}
-\contentsline {section}{\numberline {8}Challenges}{17}
-\contentsline {section}{\numberline {9}Conclusion}{17}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{17}
-\contentsline {section}{\numberline {10}Critical Review of the Leap Motion Controller}{17}
-\contentsline {section}{\numberline {11}Appendices}{20}
-\contentsline {subsection}{\numberline {11.1}Search Query Survey}{21}
-\contentsline {subsection}{\numberline {11.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{25}
+\contentsline {section}{\numberline {7}Core Features 3 and 4: Jellibeans -- A Transformation Rule Engine}{12}
+\contentsline {section}{\numberline {8}Implementation}{13}
+\contentsline {subsection}{\numberline {8.1}Use Case Diagram}{13}
+\contentsline {subsection}{\numberline {8.2}Storage of information}{14}
+\contentsline {subsection}{\numberline {8.3}Classification of Users}{14}
+\contentsline {subsection}{\numberline {8.4}Design Patterns (for web applications)}{14}
+\contentsline {subsection}{\numberline {8.5}What was actually done?}{16}
+\contentsline {subsection}{\numberline {8.6}High Level UML Class Diagram of the System}{16}
+\contentsline {subsection}{\numberline {8.7}API's and Development Tools}{16}
+\contentsline {section}{\numberline {9}Core Feature 5: Integration with a Motion Controlled Interface.}{16}
+\contentsline {subsection}{\numberline {9.1}Evaluation and Review of the Leap Motion Controller.}{17}
+\contentsline {section}{\numberline {10}User Testing the System.}{17}
+\contentsline {section}{\numberline {11}Conclusions and Discussion.}{17}
+\contentsline {subsection}{\numberline {11.1}Signals of Quality Content}{18}
+\contentsline {section}{\numberline {12}Appendices}{20}
+\contentsline {subsection}{\numberline {12.1}Search Query Survey}{21}
+\contentsline {subsection}{\numberline {12.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{25}

@@ -191,7 +191,7 @@ Following that I also registered my JavaScript origins within the console to acc
 
 Following a similar protocol for Yahoo and Bing Search API’s, I created projects in the Yahoo Developers Network, and Microsoft Azure Marketplace, and purchased an API Consumer Keys and Secrets (needed to use the APIs). 
 
-\subsubsection{Web Scraping}
+\subsection{Web Scraping}
 Web scraping was also an option, it quickly became a preferred because of integration of the three API’s and the flexibility/manipulation of  the resilts if they were returned using the same method. However this was against terms of service set out by Google (see section 5.3 of Figure~\ref{GoogleToS1}).
 
 \begin{figure}[H]
@@ -308,9 +308,10 @@ Lastly there were more spelling errors and typographical errors in the high AQ g
 
 
 \end{enumerate}
-\subsection{Building Jellibeans: a Transformation Rule Engine}
-Given the set of observations in the data reported above, the aims were to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns ('I' and `You') is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
 
+
+\section{Core Features 3 and 4: Jellibeans -- A Transformation Rule Engine}
+Given the set of observations in the data reported above, the aims were to devise a set of rules that would `transform' queries made by individuals in the high AQ group to those similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns ('I' and `You') is already taken care of with the use of stop words, which is implemented by the search engine itself. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. 
 
 The aim for Jellibeans is to return search results that are more in line with low AQ scorers. In other words, search results from high AQ queries shared greater overlap with those made by the low AQ group, even though the queries were formed differently. The rule engine is thus a conrete and operationalised framework, for a theortetically-grounded user model of autism within search. \\
 
@@ -336,11 +337,27 @@ Because Jellibeans bypasses the search engine interface, a spell checker will be
 
 The Autism Quotient score of the user will be stored.
 
-\subsection{Implementation}
-What was actually done
-Classification of users
+\section{Implementation}
+
+\subsection{Use Case Diagram}
+
 Feature uses
-Storage of information
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{JBeanUseCase}
+\caption{Jellibean High Level UML Use Case Diagram}
+\label{JBeanUseCase1}
+\end{center}
+\end{figure}
+
+\subsection{Storage of information}
+Google+ and storing to file on computer.
+Returning AQ score to user.
+
+
+\subsection{Classification of Users}
+Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
 
 \subsection{Design Patterns (for web applications)}
 
@@ -363,29 +380,24 @@ For typical users, parametric search is more structured, and in some circumstanc
 
 One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
 
+
+\subsection{What was actually done?}
+
 \subsection{High Level UML Class Diagram of the System}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{jBeanClassDiagram}
-
 \caption{Jellibean High Level UML Class Diagram}
 \label{jBeanClassDiagram1}
 \end{center}
 \end{figure}
 
-\subsection{Use Case Diagram}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{JBeanUseCase}
-
-\caption{Jellibean High Level UML Use Case Diagram}
-\label{JBeanUseCase1}
-\end{center}
-\end{figure}
+\subsection{API's and Development Tools}
 
 
-\subsubsection{Integrating Jellibean with Motion Controller Hardware}
+\section{Core Feature 5: Integration with a Motion Controlled Interface.}
+Integrating Jellibean with Motion Controller Hardware
 LEAP motion controller and its use for the system.
 Current Project’s Hardware Selection Process and Important Design Issues:
 \begin{enumerate}
@@ -397,42 +409,7 @@ Current Project’s Hardware Selection Process and Important Design Issues:
 \item{Within the selection process, I did not just consider the physical design of the device, but also the way in which the devices manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? What about the physical sensation and its path towards a behavioural or emotional response? For example, can we program there to be an activity followed by a reward to reinforce the activity.}
 \end{enumerate}
 
-
-\subsection{Development and Implementation of Jellibean}
-\subsection{API's and Development Tools}
-
-
-\section{Result}
-The transformations that were implemented
-
-\section{Challenges}
-Robots
-Apache Lucene
-Sandboxes
-JavaScript html can't access third party pages
-Yahoo and Bing was easier and faster to do html scraping
-
-
-\section{Conclusion}
-How does it compare to the original specification
-This work has successfully completed aims XXX
-
-\subsection{Signals of Quality Content}
-I will test and evaluate the system. Testing will involve assessing the reliability and robustness of Jellibeans; the ease of its interaction; boundary conditions; ease of use; does it fullfil the aims of the project.
-Evaluation of the system will include comparisons to existing search engines; assessing how this idea can be implemented to tailor an existing systems; assessing how well the system does compared to existing systems on a set of criteria that are only relevant to the user group in question (a collective measure of user happiness). Evaluation will also include quantitative metrics such as Recall, Precision, and False Negative/Positive rates.
-
-
-Apache Solr\\
-
-Future directions for the current project would be to develop an API or library for word frequencies in the written English language. These frequency data could have been used to suggest words that were more frequent in the written language for people with Autism, who tend to use idiosyncratic language. This would suggest alternatives for the user.\\
-
-Alternatively, to use a thesaurus in the current project would be a useful addition.\\
-
-Maybe google which has access to current trending searches would be able to have the `floating' modals to reflect the trends but the current version of Jellibeans is a working example of what could be achieved but with searches that are generally common, rather than trending.
-
-colour blindness considerations - accessibility for people with Autism  
-
-\section {Critical Review of the Leap Motion Controller}
+\subsection {Evaluation and Review of the Leap Motion Controller.}
 Advantages
 \begin{enumerate}
 \item{Impressive}
@@ -455,6 +432,37 @@ Disadvantages
 \item{Built-in controls are not ideal}
 \item{Lighting works best when the hand is seen in silhouette fashion by the controller. }
 \end{enumerate}
+
+
+\section{User Testing the System.}
+The transformations that were implemented
+
+\section{Conclusions and Discussion.}
+Robots
+Apache Lucene
+Sandboxes
+JavaScript html can't access third party pages
+Yahoo and Bing was easier and faster to do html scraping
+
+
+How does it compare to the original specification
+This work has successfully completed aims XXX
+
+\subsection{Signals of Quality Content}
+I will test and evaluate the system. Testing will involve assessing the reliability and robustness of Jellibeans; the ease of its interaction; boundary conditions; ease of use; does it fullfil the aims of the project.
+Evaluation of the system will include comparisons to existing search engines; assessing how this idea can be implemented to tailor an existing systems; assessing how well the system does compared to existing systems on a set of criteria that are only relevant to the user group in question (a collective measure of user happiness). Evaluation will also include quantitative metrics such as Recall, Precision, and False Negative/Positive rates.
+
+
+Apache Solr\\
+
+Future directions for the current project would be to develop an API or library for word frequencies in the written English language. These frequency data could have been used to suggest words that were more frequent in the written language for people with Autism, who tend to use idiosyncratic language. This would suggest alternatives for the user.\\
+
+Alternatively, to use a thesaurus in the current project would be a useful addition.\\
+
+Maybe google which has access to current trending searches would be able to have the `floating' modals to reflect the trends but the current version of Jellibeans is a working example of what could be achieved but with searches that are generally common, rather than trending.
+
+colour blindness considerations - accessibility for people with Autism  
+
 
 
 \clearpage
