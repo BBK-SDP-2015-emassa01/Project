@@ -23,6 +23,6 @@
 \contentsline {section}{\numberline {9}Conclusion}{17}
 \contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{17}
 \contentsline {section}{\numberline {10}Critical Review of the Leap Motion Controller}{17}
-\contentsline {section}{\numberline {11}Appendices}{19}
-\contentsline {subsection}{\numberline {11.1}Search Query Survey}{20}
-\contentsline {subsection}{\numberline {11.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{24}
+\contentsline {section}{\numberline {11}Appendices}{20}
+\contentsline {subsection}{\numberline {11.1}Search Query Survey}{21}
+\contentsline {subsection}{\numberline {11.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{25}
