@@ -1,0 +1,754 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  29 AUG 2015 00:35
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**REP_emassa01_CS.tex
+(./REP_emassa01_CS.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen103
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count87
+\float@exts=\toks14
+\float@box=\box26
+\@float@everytoks=\toks15
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen104
+\extrarowheight=\dimen105
+\NC@list=\toks16
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks17
+\footnotemargin=\dimen106
+\c@pp@next@reset=\count88
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\CenteringLeftskip=\skip45
+\RaggedLeftLeftskip=\skip46
+\RaggedRightLeftskip=\skip47
+\CenteringRightskip=\skip48
+\RaggedLeftRightskip=\skip49
+\RaggedRightRightskip=\skip50
+\CenteringParfillskip=\skip51
+\RaggedLeftParfillskip=\skip52
+\RaggedRightParfillskip=\skip53
+\JustifyingParfillskip=\skip54
+\CenteringParindent=\skip55
+\RaggedLeftParindent=\skip56
+\RaggedRightParindent=\skip57
+\JustifyingParindent=\skip58
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\captionmargin=\dimen107
+\captionmargin@=\dimen108
+\captionwidth=\dimen109
+\caption@tempdima=\dimen110
+\caption@indent=\dimen111
+\caption@parindent=\dimen112
+\caption@hangindent=\dimen113
+)
+\c@ContinuedFloat=\count89
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count90
+\c@subtable=\count91
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/datetime/datetime.sty
+Package: datetime 2013/09/10 v2.59 Date Time Package
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count92
+)
+\etb@tempcnta=\count93
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2013/08/17 v2.03
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2012/09/28
+\fc@digit@counter=\count94
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen114
+)
+\c@padzeroesN=\count95
+\fc@tmpcatcode=\count96
+\@DT@modctr=\count97
+\@ordinalctr=\count98
+\@orgargctr=\count99
+\@strctr=\count100
+\@tmpstrctr=\count101
+\@DT@loopN=\count102
+\@DT@X=\count103
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fmtcount/fc-english.def
+File: fc-english.def 2013/08/17
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count104
+\@month=\count105
+\@year=\count106
+\c@HOUR=\count107
+\c@HOURXII=\count108
+\c@MINUTE=\count109
+\c@TOHOUR=\count110
+\c@TOMINUTE=\count111
+\c@SECOND=\count112
+\currenthour=\count113
+\currentminute=\count114
+\currentsecond=\count115
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count116
+\dayofyear=\count117
+\dayofweek=\count118
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks20
+\dt@b=\toks21
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count119
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+(./REP_emassa01_CS.aux)
+\openout1 = `REP_emassa01_CS.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 23.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 23.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen117
+\scratchbox=\box28
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen118
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./REP_emassa01_CS.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+
+Overfull \hbox (7.26064pt too wide) in paragraph at lines 8--8
+ [] []\OT1/cmr/bx/n/10.95 Core Fea-ture 1: Re-search and Data Col-lec-tion for 
+a Com-bi-na-tion Search En-gine 
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `REP_emassa01_CS.toc'.
+
+ [2
+
+]
+
+LaTeX Warning: Citation `CDC' on page 3 undefined on input line 99.
+
+
+Overfull \hbox (16.07642pt too wide) in paragraph at lines 98--101
+[]  
+ []
+
+[3
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 105.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 105.
+
+Overfull \hbox (0.4567pt too wide) in paragraph at lines 107--108
+[]\OT1/cmr/m/n/10.95 Individual char-ac-ter-is-tics of each user will be mea-su
+red us-ing a 50 item ques-tion-naire, the Autism 
+ []
+
+
+Overfull \hbox (4.38042pt too wide) in paragraph at lines 109--110
+[]\OT1/cmr/m/n/10.95 In pro-gram-matic terms, Jel-libeans is de-signed to im-pl
+e-ment a research-based user model in search. 
+ []
+
+[4
+
+] <images/JellibeanFlow.png, id=23, 722.7pt x 542.025pt>
+File: images/JellibeanFlow.png Graphic file (type png)
+
+<use images/JellibeanFlow.png>
+Package pdftex.def Info: images/JellibeanFlow.png used on input line 134.
+(pdftex.def)             Requested size: 505.88655pt x 379.4149pt.
+
+Overfull \hbox (36.13156pt too wide) in paragraph at lines 134--135
+ [] 
+ []
+
+[5 <./images/JellibeanFlow.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+<images/JBeanAppletGoogleCustomSearch.png, id=29, 550.055pt x 440.64626pt>
+File: images/JBeanAppletGoogleCustomSearch.png Graphic file (type png)
+
+<use images/JBeanAppletGoogleCustomSearch.png>
+Package pdftex.def Info: images/JBeanAppletGoogleCustomSearch.png used on input
+ line 174.
+(pdftex.def)             Requested size: 385.03587pt x 308.45027pt.
+ [6]
+<images/GoogleSignIn.png, id=33, 645.41125pt x 652.4375pt>
+File: images/GoogleSignIn.png Graphic file (type png)
+
+<use images/GoogleSignIn.png>
+Package pdftex.def Info: images/GoogleSignIn.png used on input line 185.
+(pdftex.def)             Requested size: 193.62486pt x 195.73276pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [7 <./images/JBeanAppletGoogleCustomSearch.png> <./images/GoogleSignIn.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+<images/GoogleToS.png, id=40, 770.88pt x 378.41376pt>
+File: images/GoogleToS.png Graphic file (type png)
+
+<use images/GoogleToS.png>
+Package pdftex.def Info: images/GoogleToS.png used on input line 199.
+(pdftex.def)             Requested size: 462.53157pt x 227.05pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+
+<images/htmlParsers.png, id=41, 515.9275pt x 760.8425pt>
+File: images/htmlParsers.png Graphic file (type png)
+
+<use images/htmlParsers.png>
+Package pdftex.def Info: images/htmlParsers.png used on input line 213.
+(pdftex.def)             Requested size: 164.41351pt x 242.45293pt.
+
+<images/Applet.png, id=42, 949.5475pt x 654.445pt>
+File: images/Applet.png Graphic file (type png)
+ <use images/Applet.png>
+Package pdftex.def Info: images/Applet.png used on input line 218.
+(pdftex.def)             Requested size: 164.41351pt x 113.3113pt.
+
+[8 <./images/GoogleToS.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+
+Overfull \hbox (0.94334pt too wide) in paragraph at lines 235--236
+\OT1/cmr/m/n/10.95 To iden-tify the fea-tures of the user model to build, I ran
+ a study to col-lect ex-am-ple search queries 
+ []
+
+[9 <./images/htmlParsers.png> <./images/Applet.png>]
+Overfull \hbox (4.10669pt too wide) in paragraph at lines 237--238
+[]\OT1/cmr/m/n/10.95 The range of scores for the AQ is 0 to 50 with high scores
+ in-di-cat-ing in-creased lik-li-hood of autism- 
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Overfull \hbox (40.45462pt too wide) in paragraph at lines 250--250
+[]\OT1/cmr/m/n/10.95 Youve lost touch with an old school friend (you went to St
+. Marys School). What key words/queries 
+ []
+
+Missing character: There is no ‚ in font cmti10!
+Missing character: There is no Ä in font cmti10!
+Missing character: There is no ô in font cmti10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Overfull \hbox (28.95712pt too wide) in paragraph at lines 253--253
+[]\OT1/cmr/m/n/10.95 How would you iden-tify what breed this an-i-mal is us-ing
+ a search en-gine? What key words/queries 
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+[10] <images/lookAtUrChildren.png, id=56, 413.545pt x 746.79pt>
+File: images/lookAtUrChildren.png Graphic file (type png)
+
+<use images/lookAtUrChildren.png>
+Package pdftex.def Info: images/lookAtUrChildren.png used on input line 271.
+(pdftex.def)             Requested size: 164.41351pt x 296.91028pt.
+
+<images/lookAtUrChildrenLyrics.png, id=57, 416.55624pt x 727.71875pt>
+File: images/lookAtUrChildrenLyrics.png Graphic file (type png)
+
+<use images/lookAtUrChildrenLyrics.png>
+Package pdftex.def Info: images/lookAtUrChildrenLyrics.png used on input line 2
+76.
+(pdftex.def)             Requested size: 164.41351pt x 287.22922pt.
+ [11] Excluding 'comment' comment.
+Excluding 'comment' comment. [12 <./images/lookAtUrChildren.png> <./images/look
+AtUrChildrenLyrics.png>]
+Overfull \hbox (3.65047pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10.95 struc-ture of the query's for-ma-tion should also as-sist th
+e user with less id-iosyn-cratic search queries.  
+ []
+
+Excluding 'comment' comment.
+<images/JBeanUseCase.png, id=66, 1044.90375pt x 763.85374pt>
+File: images/JBeanUseCase.png Graphic file (type png)
+
+<use images/JBeanUseCase.png>
+Package pdftex.def Info: images/JBeanUseCase.png used on input line 348.
+(pdftex.def)             Requested size: 470.20235pt x 343.731pt.
+ [13]
+Overfull \hbox (3.01167pt too wide) in paragraph at lines 360--361
+\OT1/cmr/m/n/10.95 Classification used the AQ into high and low scor-ers and fe
+ed-ing that in-for-ma-tion back in a down- 
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+[14 <./images/JBeanUseCase.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+<images/expedia.png, id=75, 1172.38pt x 440.64626pt>
+File: images/expedia.png Graphic file (type png)
+ <use images/expedia.png>
+Package pdftex.def Info: images/expedia.png used on input line 372.
+(pdftex.def)             Requested size: 351.7167pt x 132.19489pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Overfull \hbox (5.1104pt too wide) in paragraph at lines 379--380
+\OT1/cmr/m/n/10.95 where there is a high cog-ni-tive load. We can ap-ply this i
+dea to web search for peo-ple with Autism, 
+ []
+
+<images/jBeanClassDiagram.png, id=76, 1001.7425pt x 510.90875pt>
+File: images/jBeanClassDiagram.png Graphic file (type png)
+
+<use images/jBeanClassDiagram.png>
+Package pdftex.def Info: images/jBeanClassDiagram.png used on input line 390.
+(pdftex.def)             Requested size: 450.77995pt x 229.90681pt.
+ [15 <./images/expedia.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [16 <./images/jBeanClassDiagram.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ñ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ç in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no À in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ç in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ñ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+ [17] [18]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+ [19
+
+] [20]
+<images/survey1.png, id=98, 956.57375pt x 555.07375pt>
+File: images/survey1.png Graphic file (type png)
+
+<use images/survey1.png>
+Package pdftex.def Info: images/survey1.png used on input line 496.
+(pdftex.def)             Requested size: 478.2857pt x 277.53618pt.
+
+Overfull \hbox (8.53072pt too wide) in paragraph at lines 496--496
+ [] 
+ []
+
+<images/survey2.png, id=99, 966.61125pt x 495.8525pt>
+File: images/survey2.png Graphic file (type png)
+ <use images/survey2.png>
+Package pdftex.def Info: images/survey2.png used on input line 497.
+(pdftex.def)             Requested size: 483.30444pt x 247.92564pt.
+
+Overfull \hbox (13.54945pt too wide) in paragraph at lines 497--497
+ [][] 
+ []
+
+[21 <./images/survey1.png> <./images/survey2.png>]
+<images/survey3.png, id=105, 965.6075pt x 411.5375pt>
+File: images/survey3.png Graphic file (type png)
+ <use images/survey3.png>
+Package pdftex.def Info: images/survey3.png used on input line 503.
+(pdftex.def)             Requested size: 482.80257pt x 205.76825pt.
+
+Overfull \hbox (13.04758pt too wide) in paragraph at lines 503--503
+ [] 
+ []
+
+<images/survey4.png, id=106, 962.59625pt x 324.21124pt>
+File: images/survey4.png Graphic file (type png)
+
+<use images/survey4.png>
+Package pdftex.def Info: images/survey4.png used on input line 504.
+(pdftex.def)             Requested size: 481.29695pt x 162.10522pt.
+
+Overfull \hbox (11.54196pt too wide) in paragraph at lines 504--504
+ [][] 
+ []
+
+[22 <./images/survey3.png> <./images/survey4.png>]
+<images/survey5.png, id=112, 965.6075pt x 626.34pt>
+File: images/survey5.png Graphic file (type png)
+ <use images/survey5.png>
+Package pdftex.def Info: images/survey5.png used on input line 510.
+(pdftex.def)             Requested size: 482.80257pt x 313.16922pt.
+
+Overfull \hbox (13.04758pt too wide) in paragraph at lines 510--510
+ [] 
+ []
+
+<images/survey6.png, id=113, 966.61125pt x 623.32875pt>
+File: images/survey6.png Graphic file (type png)
+
+<use images/survey6.png>
+Package pdftex.def Info: images/survey6.png used on input line 511.
+(pdftex.def)             Requested size: 483.30444pt x 311.6636pt.
+
+Overfull \hbox (13.54945pt too wide) in paragraph at lines 511--511
+ [][] 
+ []
+
+[23 <./images/survey5.png> <./images/survey6.png>]
+<images/survey7.png, id=119, 963.6pt x 362.35374pt>
+File: images/survey7.png Graphic file (type png)
+ <use images/survey7.png>
+Package pdftex.def Info: images/survey7.png used on input line 518.
+(pdftex.def)             Requested size: 481.79883pt x 181.17642pt.
+
+Overfull \hbox (12.04384pt too wide) in paragraph at lines 518--518
+ [] 
+ []
+
+[24 <./images/survey7.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [25]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [26] (./REP_emassa01_CS.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4096 strings out of 493117
+ 63499 string characters out of 6135433
+ 127811 words of memory out of 5000000
+ 7456 multiletter control sequences out of 15000+600000
+ 10237 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,9n,40p,1089b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on REP_emassa01_CS.pdf (26 pages, 2174921 bytes).
+PDF statistics:
+ 161 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+
