@@ -102,6 +102,14 @@ Autism & Autism is amongst the most common neurodevelopmental condition and it i
 
 \section{Introduction}\label{intro}
 
+\begin{comment}
+Contains a brief outline of the topic as a whole
+Then state the aim and objectives of the project
+What was the purpose of the project and what did it set out to investigate?
+At the end of the introduction, provide a road map for the
+remainder of the report
+\end{comment}
+
 This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web, hereafter referred to as Jellibeans \footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans will run in a web browser and utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
 
 Individual characteristics of each user will be measured using a 50 item questionnaire, the Autism Quotient (AQ \cite{Baron Cohen et al}) which measures tendency towards autistic traits. A score of 32 or higher indicates a strong likelihood of Autism or Asperger syndrome (the questionnaire has a 79\% sensitivity score). Individuals who score highly on the AQ will be offered the current user model for their search. The questionnaire data will be stored in the user's Google+ profile????
@@ -109,6 +117,7 @@ Individual characteristics of each user will be measured using a 50 item questio
 In programmatic terms, Jellibeans is designed to implement a research-based user model in search. This itself is a considerable part of the current research project and involves the development of a rule engine to transform the idiosyncratic ??? nature of search queries formed by individuals with ASD to work with current available search engines. This development involved collecting and analysing search behaviour patterns from people with and without ASD and building a set of transformation rules given the features of search queries that are formed by individuals with ASD.
 
 Jellibeans will also improve the search experience for users with ASD by going one step further and enabling motion controlled search using the LEAP motion controller. The interface will be dynamic as opposed to static and this afford many advantages over traditional search engine interfaces.
+
 
 \subsection {User Models in Search}
 
@@ -127,7 +136,21 @@ The resulting links are written to text file which stores the links in a text fi
 
 The system aims to deliver relevant results to the user, but what is ``relevant"? Not all users or groups of users search in the same way, so it is important to consider user intention. The first part of the current project aimed to investigate the differences between search queries of people with and without Autism, and to use those findings to build a stereotyped user model (a user model that will infer characteristics about the user from their diagnostic information) for a person with autism. Users will have to register will Google+ ???, and report their diagnostic information in the aboutMe section of their profile ??? / complete the Autism Quotient Questionnaire and obtain a score of autistic-like traits. Using the Google+ API, Jellibeans will connect to Google+ and ask the user to signin/ agree to the web application accessing their data. JavaScript will be used to parse the text in the aboutMe section to check if the user has identified as a persn with autism, aspergers, ASD or not. The result is returned via the console (inspect) command. ??? 
 
+Are there any specific work packages that need to be done? If so, list those out here.
+
 \section {Background Research}\label{background} 
+
+\begin{comment}
+What is the problem we are trying to solve?
+define concepts and previous approaches.
+This chapter should focus on the context that you are operating in, e.g., by describing typical applications
+alternative tools and development approaches and how they have been used in practice
+alternative systems and what they achieve and do not achieve
+This should be a synopsis of the relevant part of your project proposal (do not just copy your proposal)
+Restrict yourself to what’s relevant to the specific context of your project (the proposal can have a more general look at the
+state-of-the-art)
+\end{comment}
+
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
 
 There are many stages to the search process. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. The stage at which the user model will have most possible impact is before results are returned to the user, that is, at the query formulation stage. It is this stage that the user model will be implemeted (stage 2 on the user web-search process.)
@@ -162,39 +185,10 @@ The User Web-Search Process \cite{seo}
 \label{JBeanUserFlow}
 \end{figure}
 
-\section{Software Architecture}
 
-\subsection{Use Case Diagram}
-
-Feature uses
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{JBeanUseCase}
-\caption{Jellibean High Level UML Use Case Diagram}
-\label{JBeanUseCase1}
-\end{center}
-\end{figure}
-
-\subsection{High Level UML Class Diagram of the System}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{jBeanClassDiagram}
-\caption{Jellibean High Level UML Class Diagram}
-\label{jBeanClassDiagram1}
-\end{center}
-\end{figure}
-
-\section{Implementation}
-
-\subsection{Storage of information}
-Google+ and storing to file on computer.
-Returning AQ score to user.
-
-
-\subsection{Classification of Users}
-Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
+\section{Product Specification}
+Functional and non-functional requirements and major dependencies.
+How I plan on tackling the problem to meet my requirements.
 
 \subsection{Design Patterns (for web applications)}
 
@@ -216,6 +210,49 @@ Parametric search queries allow users to define parameters in an increasingly lo
 For typical users, parametric search is more structured, and in some circumstances seems more natural than a free – keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user’s search results in line with their search query, ultimately leading to a higher precision for the search enginei.
 
 One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
+
+
+
+
+\section{Software Architecture}
+
+\subsection{Design Patterns}
+
+\subsection{Use Case Diagram}
+
+Feature uses and high level description of the system.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{JBeanUseCase}
+\caption{Jellibean High Level UML Use Case Diagram}
+\label{JBeanUseCase1}
+\end{center}
+\end{figure}
+
+\subsection{High Level UML Class Diagram of the System}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{jBeanClassDiagram}
+\caption{Jellibean High Level UML Class Diagram}
+\label{jBeanClassDiagram1}
+\end{center}
+\end{figure}
+
+
+
+
+\section{Implementation}
+
+\subsection{Storage of information}
+Google+ and storing to file on computer.
+Returning AQ score to user.
+
+
+\subsection{Classification of Users}
+Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
+
 
 
 \subsection{What was actually done?}
@@ -446,7 +483,24 @@ Describe the verification process you used in your project\\
 Unit Testing, Static Analysis etc.\\
 Manual testing, Selenium, Cucumber etc.
 
+Unit tests
+Regression tests
+Selenium
+Cucumber
+
 \section{Conclusions and Discussion.}
+
+\begin{comment}
+The final section summarizes the project as a whole
+A critical evaluation by the student, emphasizing
+strong points and weak points
+lessons learnt
+design decisions which, looking back, would be made differently
+ways in which the project could be improved or extended etc.
+recommendations for the project
+You can also describe possible future work in the area of your project
+\end{comment}
+
 Robots
 Apache Lucene
 Sandboxes

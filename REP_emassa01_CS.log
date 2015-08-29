@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  29 AUG 2015 01:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  29 AUG 2015 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,7 +305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 2.
 
-Overfull \hbox (7.26064pt too wide) in paragraph at lines 17--17
+Overfull \hbox (7.26064pt too wide) in paragraph at lines 19--19
  [] []\OT1/cmr/bx/n/10.95 Core Fea-ture 1: Re-search and Data Col-lec-tion for 
 a Com-bi-na-tion Search En-gine 
  []
@@ -327,79 +327,63 @@ Overfull \hbox (16.07642pt too wide) in paragraph at lines 98--101
 
 [3
 
-]
+] Excluding 'comment' comment.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 105.
+(Font)              <9> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 105.
+(Font)              <5> on input line 113.
 
-Overfull \hbox (0.4567pt too wide) in paragraph at lines 107--108
+Overfull \hbox (0.4567pt too wide) in paragraph at lines 115--116
 []\OT1/cmr/m/n/10.95 Individual char-ac-ter-is-tics of each user will be mea-su
 red us-ing a 50 item ques-tion-naire, the Autism 
  []
 
 
-Overfull \hbox (4.38042pt too wide) in paragraph at lines 109--110
+Overfull \hbox (4.38042pt too wide) in paragraph at lines 117--118
 []\OT1/cmr/m/n/10.95 In pro-gram-matic terms, Jel-libeans is de-signed to im-pl
 e-ment a research-based user model in search. 
  []
 
 [4
 
-]
+] Excluding 'comment' comment.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- <images/JellibeanFlow.png, id=23, 722.7pt x 542.025pt>
+
+<images/JellibeanFlow.png, id=23, 722.7pt x 542.025pt>
 File: images/JellibeanFlow.png Graphic file (type png)
 
 <use images/JellibeanFlow.png>
-Package pdftex.def Info: images/JellibeanFlow.png used on input line 159.
+Package pdftex.def Info: images/JellibeanFlow.png used on input line 182.
 (pdftex.def)             Requested size: 505.88655pt x 379.4149pt.
 
-Overfull \hbox (36.13156pt too wide) in paragraph at lines 159--160
+Overfull \hbox (36.13156pt too wide) in paragraph at lines 182--183
  [] 
  []
 
-[5] <images/JBeanUseCase.png, id=28, 1044.90375pt x 763.85374pt>
-File: images/JBeanUseCase.png Graphic file (type png)
-
-<use images/JBeanUseCase.png>
-Package pdftex.def Info: images/JBeanUseCase.png used on input line 173.
-(pdftex.def)             Requested size: 470.20235pt x 343.731pt.
+[5]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
  [6 <./images/JellibeanFlow.png>]
-<images/jBeanClassDiagram.png, id=33, 1001.7425pt x 510.90875pt>
-File: images/jBeanClassDiagram.png Graphic file (type png)
-
-<use images/jBeanClassDiagram.png>
-Package pdftex.def Info: images/jBeanClassDiagram.png used on input line 183.
-(pdftex.def)             Requested size: 450.77995pt x 229.90681pt.
- [7 <./images/JBeanUseCase.png>]
-Overfull \hbox (3.01167pt too wide) in paragraph at lines 197--198
-\OT1/cmr/m/n/10.95 Classification used the AQ into high and low scor-ers and fe
-ed-ing that in-for-ma-tion back in a down- 
- []
-
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ò in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-[8 <./images/jBeanClassDiagram.png>]
-<images/expedia.png, id=43, 1172.38pt x 440.64626pt>
+
+<images/expedia.png, id=32, 1172.38pt x 440.64626pt>
 File: images/expedia.png Graphic file (type png)
  <use images/expedia.png>
-Package pdftex.def Info: images/expedia.png used on input line 209.
+Package pdftex.def Info: images/expedia.png used on input line 203.
 (pdftex.def)             Requested size: 351.7167pt x 132.19489pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -408,9 +392,28 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Overfull \hbox (5.1104pt too wide) in paragraph at lines 216--217
+Overfull \hbox (5.1104pt too wide) in paragraph at lines 210--211
 \OT1/cmr/m/n/10.95 where there is a high cog-ni-tive load. We can ap-ply this i
 dea to web search for peo-ple with Autism, 
+ []
+
+<images/JBeanUseCase.png, id=33, 1044.90375pt x 763.85374pt>
+File: images/JBeanUseCase.png Graphic file (type png)
+
+<use images/JBeanUseCase.png>
+Package pdftex.def Info: images/JBeanUseCase.png used on input line 227.
+(pdftex.def)             Requested size: 470.20235pt x 343.731pt.
+ [7 <./images/expedia.png>]
+<images/jBeanClassDiagram.png, id=39, 1001.7425pt x 510.90875pt>
+File: images/jBeanClassDiagram.png Graphic file (type png)
+
+<use images/jBeanClassDiagram.png>
+Package pdftex.def Info: images/jBeanClassDiagram.png used on input line 237.
+(pdftex.def)             Requested size: 450.77995pt x 229.90681pt.
+ [8 <./images/JBeanUseCase.png>]
+Overfull \hbox (3.01167pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/10.95 Classification used the AQ into high and low scor-ers and fe
+ed-ing that in-for-ma-tion back in a down- 
  []
 
 Missing character: There is no ‚ in font cmr10!
@@ -427,58 +430,55 @@ File: images/JBeanAppletGoogleCustomSearch.png Graphic file (type png)
 
 <use images/JBeanAppletGoogleCustomSearch.png>
 Package pdftex.def Info: images/JBeanAppletGoogleCustomSearch.png used on input
- line 234.
+ line 275.
 (pdftex.def)             Requested size: 385.03587pt x 308.45027pt.
- [9 <./images/expedia.png>]
-<images/GoogleSignIn.png, id=49, 645.41125pt x 652.4375pt>
+ [9 <./images/jBeanClassDiagram.png>] <images/GoogleSignIn.png, id=49, 645.4112
+5pt x 652.4375pt>
 File: images/GoogleSignIn.png Graphic file (type png)
 
 <use images/GoogleSignIn.png>
-Package pdftex.def Info: images/GoogleSignIn.png used on input line 245.
+Package pdftex.def Info: images/GoogleSignIn.png used on input line 286.
 (pdftex.def)             Requested size: 193.62486pt x 195.73276pt.
+ [10 <./images/JBeanAppletGoogleCustomSearch.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [10 <./images/JBeanAppletGoogleCustomSearch.png> <./images/GoogleSignIn.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-
-<images/GoogleToS.png, id=55, 770.88pt x 378.41376pt>
+<images/GoogleToS.png, id=54, 770.88pt x 378.41376pt>
 File: images/GoogleToS.png Graphic file (type png)
 
 <use images/GoogleToS.png>
-Package pdftex.def Info: images/GoogleToS.png used on input line 259.
+Package pdftex.def Info: images/GoogleToS.png used on input line 300.
 (pdftex.def)             Requested size: 462.53157pt x 227.05pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
-
-<images/htmlParsers.png, id=56, 515.9275pt x 760.8425pt>
+ [11 <./images/GoogleSignIn.png> <./images/GoogleToS.png>] <images/htmlParsers.
+png, id=60, 515.9275pt x 760.8425pt>
 File: images/htmlParsers.png Graphic file (type png)
 
 <use images/htmlParsers.png>
-Package pdftex.def Info: images/htmlParsers.png used on input line 273.
+Package pdftex.def Info: images/htmlParsers.png used on input line 314.
 (pdftex.def)             Requested size: 164.41351pt x 242.45293pt.
 
-<images/Applet.png, id=57, 949.5475pt x 654.445pt>
+<images/Applet.png, id=61, 949.5475pt x 654.445pt>
 File: images/Applet.png Graphic file (type png)
  <use images/Applet.png>
-Package pdftex.def Info: images/Applet.png used on input line 278.
+Package pdftex.def Info: images/Applet.png used on input line 319.
 (pdftex.def)             Requested size: 164.41351pt x 113.3113pt.
-
-[11 <./images/GoogleToS.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
 
-Overfull \hbox (0.94334pt too wide) in paragraph at lines 295--296
+Overfull \hbox (0.94334pt too wide) in paragraph at lines 336--337
 \OT1/cmr/m/n/10.95 To iden-tify the fea-tures of the user model to build, I ran
  a study to col-lect ex-am-ple search queries 
  []
 
 [12 <./images/htmlParsers.png> <./images/Applet.png>]
-Overfull \hbox (4.10669pt too wide) in paragraph at lines 297--298
+Overfull \hbox (4.10669pt too wide) in paragraph at lines 338--339
 []\OT1/cmr/m/n/10.95 The range of scores for the AQ is 0 to 50 with high scores
  in-di-cat-ing in-creased lik-li-hood of autism- 
  []
@@ -496,7 +496,7 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Overfull \hbox (40.45462pt too wide) in paragraph at lines 310--310
+Overfull \hbox (40.45462pt too wide) in paragraph at lines 351--351
 []\OT1/cmr/m/n/10.95 Youve lost touch with an old school friend (you went to St
 . Marys School). What key words/queries 
  []
@@ -508,11 +508,12 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Overfull \hbox (28.95712pt too wide) in paragraph at lines 313--313
+Overfull \hbox (28.95712pt too wide) in paragraph at lines 354--354
 []\OT1/cmr/m/n/10.95 How would you iden-tify what breed this an-i-mal is us-ing
  a search en-gine? What key words/queries 
  []
 
+[13]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -522,11 +523,11 @@ Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-[13] <images/lookAtUrChildren.png, id=72, 413.545pt x 746.79pt>
+ <images/lookAtUrChildren.png, id=72, 413.545pt x 746.79pt>
 File: images/lookAtUrChildren.png Graphic file (type png)
 
 <use images/lookAtUrChildren.png>
-Package pdftex.def Info: images/lookAtUrChildren.png used on input line 331.
+Package pdftex.def Info: images/lookAtUrChildren.png used on input line 372.
 (pdftex.def)             Requested size: 164.41351pt x 296.91028pt.
 
 <images/lookAtUrChildrenLyrics.png, id=73, 416.55624pt x 727.71875pt>
@@ -534,12 +535,12 @@ File: images/lookAtUrChildrenLyrics.png Graphic file (type png)
 
 <use images/lookAtUrChildrenLyrics.png>
 Package pdftex.def Info: images/lookAtUrChildrenLyrics.png used on input line 3
-36.
+77.
 (pdftex.def)             Requested size: 164.41351pt x 287.22922pt.
  [14] Excluding 'comment' comment.
 Excluding 'comment' comment. [15 <./images/lookAtUrChildren.png> <./images/look
 AtUrChildrenLyrics.png>]
-Overfull \hbox (3.65047pt too wide) in paragraph at lines 379--379
+Overfull \hbox (3.65047pt too wide) in paragraph at lines 420--420
 \OT1/cmr/m/n/10.95 struc-ture of the query's for-ma-tion should also as-sist th
 e user with less id-iosyn-cratic search queries.  
  []
@@ -585,31 +586,31 @@ Missing character: There is no ¨ in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ñ in font cmr10!
 Missing character: There is no ¢ in font cmr10!
- [17] [18]
+ [17] Excluding 'comment' comment. [18]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
- [19
 
-] [20]
-<images/survey1.png, id=98, 956.57375pt x 555.07375pt>
+[19
+
+] [20] <images/survey1.png, id=98, 956.57375pt x 555.07375pt>
 File: images/survey1.png Graphic file (type png)
 
 <use images/survey1.png>
-Package pdftex.def Info: images/survey1.png used on input line 498.
+Package pdftex.def Info: images/survey1.png used on input line 569.
 (pdftex.def)             Requested size: 478.2857pt x 277.53618pt.
 
-Overfull \hbox (8.53072pt too wide) in paragraph at lines 498--498
+Overfull \hbox (8.53072pt too wide) in paragraph at lines 569--569
  [] 
  []
 
 <images/survey2.png, id=99, 966.61125pt x 495.8525pt>
 File: images/survey2.png Graphic file (type png)
  <use images/survey2.png>
-Package pdftex.def Info: images/survey2.png used on input line 499.
+Package pdftex.def Info: images/survey2.png used on input line 570.
 (pdftex.def)             Requested size: 483.30444pt x 247.92564pt.
 
-Overfull \hbox (13.54945pt too wide) in paragraph at lines 499--499
+Overfull \hbox (13.54945pt too wide) in paragraph at lines 570--570
  [][] 
  []
 
@@ -617,10 +618,10 @@ Overfull \hbox (13.54945pt too wide) in paragraph at lines 499--499
 <images/survey3.png, id=105, 965.6075pt x 411.5375pt>
 File: images/survey3.png Graphic file (type png)
  <use images/survey3.png>
-Package pdftex.def Info: images/survey3.png used on input line 505.
+Package pdftex.def Info: images/survey3.png used on input line 576.
 (pdftex.def)             Requested size: 482.80257pt x 205.76825pt.
 
-Overfull \hbox (13.04758pt too wide) in paragraph at lines 505--505
+Overfull \hbox (13.04758pt too wide) in paragraph at lines 576--576
  [] 
  []
 
@@ -628,10 +629,10 @@ Overfull \hbox (13.04758pt too wide) in paragraph at lines 505--505
 File: images/survey4.png Graphic file (type png)
 
 <use images/survey4.png>
-Package pdftex.def Info: images/survey4.png used on input line 506.
+Package pdftex.def Info: images/survey4.png used on input line 577.
 (pdftex.def)             Requested size: 481.29695pt x 162.10522pt.
 
-Overfull \hbox (11.54196pt too wide) in paragraph at lines 506--506
+Overfull \hbox (11.54196pt too wide) in paragraph at lines 577--577
  [][] 
  []
 
@@ -639,10 +640,10 @@ Overfull \hbox (11.54196pt too wide) in paragraph at lines 506--506
 <images/survey5.png, id=112, 965.6075pt x 626.34pt>
 File: images/survey5.png Graphic file (type png)
  <use images/survey5.png>
-Package pdftex.def Info: images/survey5.png used on input line 512.
+Package pdftex.def Info: images/survey5.png used on input line 583.
 (pdftex.def)             Requested size: 482.80257pt x 313.16922pt.
 
-Overfull \hbox (13.04758pt too wide) in paragraph at lines 512--512
+Overfull \hbox (13.04758pt too wide) in paragraph at lines 583--583
  [] 
  []
 
@@ -650,10 +651,10 @@ Overfull \hbox (13.04758pt too wide) in paragraph at lines 512--512
 File: images/survey6.png Graphic file (type png)
 
 <use images/survey6.png>
-Package pdftex.def Info: images/survey6.png used on input line 513.
+Package pdftex.def Info: images/survey6.png used on input line 584.
 (pdftex.def)             Requested size: 483.30444pt x 311.6636pt.
 
-Overfull \hbox (13.54945pt too wide) in paragraph at lines 513--513
+Overfull \hbox (13.54945pt too wide) in paragraph at lines 584--584
  [][] 
  []
 
@@ -661,10 +662,10 @@ Overfull \hbox (13.54945pt too wide) in paragraph at lines 513--513
 <images/survey7.png, id=119, 963.6pt x 362.35374pt>
 File: images/survey7.png Graphic file (type png)
  <use images/survey7.png>
-Package pdftex.def Info: images/survey7.png used on input line 520.
+Package pdftex.def Info: images/survey7.png used on input line 591.
 (pdftex.def)             Requested size: 481.79883pt x 181.17642pt.
 
-Overfull \hbox (12.04384pt too wide) in paragraph at lines 520--520
+Overfull \hbox (12.04384pt too wide) in paragraph at lines 591--591
  [] 
  []
 
@@ -743,7 +744,7 @@ local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on REP_emassa01_CS.pdf (26 pages, 2174739 bytes).
+Output written on REP_emassa01_CS.pdf (26 pages, 2176007 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
