@@ -39,7 +39,9 @@
   <widgets xsi:type="model:TextField" id="26" x="269" y="336" text="Please complete all 50 items to complete the assessment" measuredWidth="344" measuredHeight="23">
     <font/>
   </widgets>
-  <hRuler/>
+  <hRuler>
+    <guides position="657"/>
+  </hRuler>
   <vRuler/>
   <font size="12px"/>
 </model:Screen>

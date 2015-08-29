@@ -27,7 +27,7 @@
 
 \LARGE\author{Author: \textbf{Esha Massand}, Supervisor: \textbf{Keith Mannock}\\
 \\
-Birkbeck, University of London\\Department of Computer Science and Information Systems\\\\\\Project report submitted in partial fulfillment of the requirement for the \\MSc in Computer Science\date{\mydate\today}
+MSc Computer Science\\Department of Computer Science and Information Systems\\Birkbeck College, University of London\\\\\\Project report submitted in partial fulfillment of the requirement for the \\MSc in Computer Science\date{\mydate\today}
 \\\
 }
 
@@ -127,17 +127,6 @@ The resulting links are written to text file which stores the links in a text fi
 
 The system aims to deliver relevant results to the user, but what is ``relevant"? Not all users or groups of users search in the same way, so it is important to consider user intention. The first part of the current project aimed to investigate the differences between search queries of people with and without Autism, and to use those findings to build a stereotyped user model (a user model that will infer characteristics about the user from their diagnostic information) for a person with autism. Users will have to register will Google+ ???, and report their diagnostic information in the aboutMe section of their profile ??? / complete the Autism Quotient Questionnaire and obtain a score of autistic-like traits. Using the Google+ API, Jellibeans will connect to Google+ and ask the user to signin/ agree to the web application accessing their data. JavaScript will be used to parse the text in the aboutMe section to check if the user has identified as a persn with autism, aspergers, ASD or not. The result is returned via the console (inspect) command. ??? 
 
-\section{Project Trailer}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{JellibeanFlow.png}
-\end{center}
-\caption{Jellibean User Flow}
-\label{JBeanUserFlow}
-\end{figure}
-
-
 \section {Background Research}\label{background} 
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
 
@@ -162,6 +151,81 @@ solution, or piece of information.}
 The User Web-Search Process \cite{seo}
 
 \end{center}
+
+\section{Project Trailer}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{JellibeanFlow.png}
+\end{center}
+\caption{Jellibean User Flow}
+\label{JBeanUserFlow}
+\end{figure}
+
+\section{Software Architecture}
+
+\subsection{Use Case Diagram}
+
+Feature uses
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{JBeanUseCase}
+\caption{Jellibean High Level UML Use Case Diagram}
+\label{JBeanUseCase1}
+\end{center}
+\end{figure}
+
+\subsection{High Level UML Class Diagram of the System}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{jBeanClassDiagram}
+\caption{Jellibean High Level UML Class Diagram}
+\label{jBeanClassDiagram1}
+\end{center}
+\end{figure}
+
+\section{Implementation}
+
+\subsection{Storage of information}
+Google+ and storing to file on computer.
+Returning AQ score to user.
+
+
+\subsection{Classification of Users}
+Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
+
+\subsection{Design Patterns (for web applications)}
+
+Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to ‘make it easy’ for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
+
+As we have seen in the introduction, users with Autism behave in different ways to typical users when navigating search. Users with Autism do not use the same key phrases when looking for documents with several attributes, i.e., queries that would be best formulated using several iterations of search, or multiple search parameters. This leads to an ineffective search; one that requires users to sift through results which are in large-part irrelevant, and a bad user experience. Given the research findings observed in the current study, the parametric search pattern appears to be a better choice for the user group in question.  
+
+Parametric search queries allow users to define parameters in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination, or for a person. This requires high cognitive ‘load’ (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{expedia}\\
+
+\caption{Expedia Parametric Search Example}
+\label{exped}
+\end{center}
+\end{figure}
+
+For typical users, parametric search is more structured, and in some circumstances seems more natural than a free – keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user’s search results in line with their search query, ultimately leading to a higher precision for the search enginei.
+
+One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
+
+
+\subsection{What was actually done?}
+
+\subsection{API's and Development Tools}
+Describe the technologies used in the project, why they where
+chosen and what were the other options:\\
+Tools and programming languages\\
+Data-base, servers etc.
+
 
 \section{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}
 
@@ -337,64 +401,6 @@ Because Jellibeans bypasses the search engine interface, a spell checker will be
 
 The Autism Quotient score of the user will be stored.
 
-\section{Implementation}
-
-\subsection{Use Case Diagram}
-
-Feature uses
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{JBeanUseCase}
-\caption{Jellibean High Level UML Use Case Diagram}
-\label{JBeanUseCase1}
-\end{center}
-\end{figure}
-
-\subsection{Storage of information}
-Google+ and storing to file on computer.
-Returning AQ score to user.
-
-
-\subsection{Classification of Users}
-Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
-
-\subsection{Design Patterns (for web applications)}
-
-Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to ‘make it easy’ for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
-
-As we have seen in the introduction, users with Autism behave in different ways to typical users when navigating search. Users with Autism do not use the same key phrases when looking for documents with several attributes, i.e., queries that would be best formulated using several iterations of search, or multiple search parameters. This leads to an ineffective search; one that requires users to sift through results which are in large-part irrelevant, and a bad user experience. Given the research findings observed in the current study, the parametric search pattern appears to be a better choice for the user group in question.  
-
-Parametric search queries allow users to define parameters in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination, or for a person. This requires high cognitive ‘load’ (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.3]{expedia}\\
-
-\caption{Expedia Parametric Search Example}
-\label{exped}
-\end{center}
-\end{figure}
-
-For typical users, parametric search is more structured, and in some circumstances seems more natural than a free – keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user’s search results in line with their search query, ultimately leading to a higher precision for the search enginei.
-
-One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
-
-
-\subsection{What was actually done?}
-
-\subsection{High Level UML Class Diagram of the System}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{jBeanClassDiagram}
-\caption{Jellibean High Level UML Class Diagram}
-\label{jBeanClassDiagram1}
-\end{center}
-\end{figure}
-
-\subsection{API's and Development Tools}
-
 
 \section{Core Feature 5: Integration with a Motion Controlled Interface.}
 Integrating Jellibean with Motion Controller Hardware
@@ -435,7 +441,10 @@ Disadvantages
 
 
 \section{User Testing the System.}
-The transformations that were implemented
+The transformations that were implemented\\
+Describe the verification process you used in your project\\
+Unit Testing, Static Analysis etc.\\
+Manual testing, Selenium, Cucumber etc.
 
 \section{Conclusions and Discussion.}
 Robots
@@ -448,6 +457,15 @@ Yahoo and Bing was easier and faster to do html scraping
 How does it compare to the original specification
 This work has successfully completed aims XXX
 
+The final section summarizes the project as a whole\\
+A critical evaluation by the student, emphasizing\\
+strong points and weak points\\
+lessons learnt\\
+design decisions which, looking back, would be made differently\\
+ways in which the project could be improved or extended etc.\\
+recommendations for the project\\
+You can also describe possible future work in the area of your project
+
 \subsection{Signals of Quality Content}
 I will test and evaluate the system. Testing will involve assessing the reliability and robustness of Jellibeans; the ease of its interaction; boundary conditions; ease of use; does it fullfil the aims of the project.
 Evaluation of the system will include comparisons to existing search engines; assessing how this idea can be implemented to tailor an existing systems; assessing how well the system does compared to existing systems on a set of criteria that are only relevant to the user group in question (a collective measure of user happiness). Evaluation will also include quantitative metrics such as Recall, Precision, and False Negative/Positive rates.
@@ -455,6 +473,7 @@ Evaluation of the system will include comparisons to existing search engines; as
 
 Apache Solr\\
 
+\subsection{Future Directions}
 Future directions for the current project would be to develop an API or library for word frequencies in the written English language. These frequency data could have been used to suggest words that were more frequent in the written language for people with Autism, who tend to use idiosyncratic language. This would suggest alternatives for the user.\\
 
 Alternatively, to use a thesaurus in the current project would be a useful addition.\\
