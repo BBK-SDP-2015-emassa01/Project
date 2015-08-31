@@ -10,7 +10,6 @@
 \usepackage[document]{ragged2e}
 \usepackage{comment} 
 \usepackage{subcaption}
-\usepackage{amssymb,amsmath}
 
 \usepackage{datetime}
 
@@ -99,25 +98,6 @@ VR & Virtual Reality\\
 \begin{tabular}{l p{15cm}  }
 Autism & Autism is amongst the most common neurodevelopmental condition and it is currently estimated that 1/68 children meet criteria for Autism Spectrum \cite{CDC}. Autism is five times more common amongst boys than girls (1/42 boys, and 1/189 girls). According to the Diagnostic and Statistical Manual (2013), Autism is characterized by persistent and early deficits in reciprocal social interaction and repetitive behaviours. Individuals vary from high functioning to low functioning (along a spectrum), with behaviours emerging around 2 to 3 years of age.
 \end{tabular}
-
-\section*{Search Engine Measures}
-\newcommand{\cfplus}{\mathbin{\genfrac{}{}{0pt}{}{}{+}}}
-
-\subsection*{Precision}
-The field of information retrieval defines precision as the fraction of retrieved documents that are relevant to the query. 
-
-\begin{equation*}
-Precision
-=\frac{|(relevant\ documents) \land (retrieved\ documents)|}{|(retrieved\ documents)|}
-\end{equation*}
-
-\subsection*{Recall}
-The field of information retrieval defines recall as the fraction of relevant documents that are retrieved by the search query. 
-
-\begin{equation*}
-Recall
-=\frac{|(relevant\ documents) \land (retrieved\ documents)|}{|(relevant\ documents)|}
-\end{equation*}
 \clearpage
 
 \section{Introduction}\label{intro}
@@ -150,27 +130,17 @@ Individual characteristics of each user will be measured using a 50 item questio
 \end{comment}
 
 \section {Aims}
-The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\
-The core features for Jellibeans to implement and test for suitability within an environment for users with autism are:
+The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. To acheive this goal, Jellibeans will:
 \begin{enumerate}
-\item{A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine.}
-\item{Research, develop and test iterations of a \textit{stereotyped} user model of Autism within Search.}
-\item{To integrate Jellibeans with Google+, to enhancing the feel of a personalised search engine.}
-\item{Jellibeans will include a review and assessment of autistic-like traits or characteristcs, so that users can be aware of, and save a copy of their diagnostic information.}
-\item{Jellibeans will prioritise and display the three highest precision search results for users. The overall goal of Jellibeans is to increase precision of the search results.}
-\item{Jellibeans will }
-
-\end{enumerate}
-
-
-For search results returned by Google, the Custom Search API will be used in line with the Google terms of service (as `screen scraping', or copying the data directly from the website is prohibited). It is a RESTful api with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of  results, alternative search queries, and (3) custom search engine metadata. The data model depends on \cite{opensearch}.
+\item{Synthesise the search results from three search engines, Google, Bing and Yahoo. For search results returned by Google, the Custom Search API will be used in line with the Google terms of service (as `screen scraping', or copying the data directly from the website is prohibited). It is a RESTful api with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of  results, alternative search queries, and (3) custom search engine metadata. The data model depends on \cite{opensearch}.
 For Bing and Yahoo search results, JSoup (a Java HTML parser) will be used to identify the links from the resulting query. The JSoup HTML parser was considered more effient for retrieving search results, as it reduced the number of lines of code required to complete the task. 
 Jsoup has its advantages over html parsing. It contains a class representing a list of nodes, `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
 The resulting links are written to text file which stores the links in a text file in the projects source directory.
-
+}
 
 The system aims to deliver relevant results to the user, but what is ``relevant"? Not all users or groups of users search in the same way, so it is important to consider user intention. The first part of the current project aimed to investigate the differences between search queries of people with and without Autism, and to use those findings to build a stereotyped user model (a user model that will infer characteristics about the user from their diagnostic information) for a person with autism. Users will have to register will Google+ ???, and report their diagnostic information in the aboutMe section of their profile ??? / complete the Autism Quotient Questionnaire and obtain a score of autistic-like traits. Using the Google+ API, Jellibeans will connect to Google+ and ask the user to signin/ agree to the web application accessing their data. JavaScript will be used to parse the text in the aboutMe section to check if the user has identified as a persn with autism, aspergers, ASD or not. The result is returned via the console (inspect) command. ??? 
 
+\end{enumerate}
 Are there any specific work packages that need to be done? If so, list those out here.
 
 \section {Background Research}\label{background} 
@@ -211,16 +181,6 @@ The User Web-Search Process \cite{seo}
 \end{center}
 
 \section{Project Trailer}
-\begin{enumerate}
-\item{The development of a \textit{stereotyped} user model of Autism. The features of the model will be determined following analyses of survey responses gathered from individuals with Autism or autism-like symptomology. The survey will be administered online using a web-based survey engine www.surveymonkey.com \cite{surveymonkey}, and focus on identifying the differences in user search query generation for people with autism.}
-\item{Following the findings from above, Jellibeans will employ a parametric search feature, and suggestions to guide the user towards forming succinct and accurate search queries.}
-\item{Jellibeans will be integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine.}
-\item{Jellibeans will allow users to get feedback on the level of their autism-like symptomology. The Autism Quotient \cite{Baron Cohen et al}, a scientifically validated screening tool for autism spectrum disorders will feature on the Jellibean homepage, and users will be able to retrieve their score and save their responses for each question to a local file for their reference.}
-\item{Jellibeans will prioritise and display the three highest precision search results for users. The overall goal of Jellibeans is to increase precision of the search results.}
-\item{Jellibeans reduces the amound of text on the results page by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results.}
-\item{Due to the nature of the parametric search, and the reduction in number of search results displayed, the results from Jellibeans are more likely to be a direct semantic relation to the search query. This makes the selection of that result by the search engine more transparent to the user.}
-\item{Integration of the web application with a motion controlled user interface, the LEAP controller.}
-\end{enumerate}
 
 \begin{figure}[H]
 \begin{center}
