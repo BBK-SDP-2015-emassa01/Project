@@ -22,9 +22,12 @@
 \contentsline {section}{\numberline {11}Core Feature 5: Integration with a Motion Controlled Interface.}{17}
 \contentsline {subsection}{\numberline {11.1}Evaluation and Review of the Leap Motion Controller.}{18}
 \contentsline {section}{\numberline {12}User Testing the System.}{19}
-\contentsline {section}{\numberline {13}Conclusions and Discussion.}{19}
-\contentsline {subsection}{\numberline {13.1}Signals of Quality Content}{19}
-\contentsline {subsection}{\numberline {13.2}Future Directions}{19}
-\contentsline {section}{\numberline {14}Appendices}{21}
-\contentsline {subsection}{\numberline {14.1}Search Query Survey}{22}
-\contentsline {subsection}{\numberline {14.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{26}
+\contentsline {subsection}{\numberline {12.1}User Verification}{19}
+\contentsline {subsubsection}{\numberline {12.1.1}The positives}{19}
+\contentsline {subsubsection}{\numberline {12.1.2}The negatives}{20}
+\contentsline {section}{\numberline {13}Conclusions and Discussion.}{20}
+\contentsline {subsection}{\numberline {13.1}Signals of Quality Content}{20}
+\contentsline {subsection}{\numberline {13.2}Future Directions}{21}
+\contentsline {section}{\numberline {14}Appendices}{23}
+\contentsline {subsection}{\numberline {14.1}Search Query Survey}{24}
+\contentsline {subsection}{\numberline {14.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{28}

@@ -523,15 +523,51 @@ Disadvantages
 
 
 \section{User Testing the System.}
-The transformations that were implemented\\
-Describe the verification process you used in your project\\
-Unit Testing, Static Analysis etc.\\
-Manual testing, Selenium, Cucumber etc.
 
-Unit tests
+\subsection{User Verification}
+Five high AQ scorers were called back for interviews and a focus group. During the interview, individuals were given the same user search queries as in the data collection and research phase of the study. For each transformation that was implemented, users were asked to comment on whether it enhanced or took away from the ease of their search experience, and from their satisfaction with the search results. Users were asked to comment on:
+\begin{enumerate}
+\item{Whether they liked the parametric search style of Jellibeans}
+\item{The `narrowing' the scope for irrelevant detail, with more concrete questions above the search bar}
+\item{Why they may choose Jellibeans over other search engines, for example, Google}
+\item{The speed and efficiency of search with Jellibeans}
+\item{The search query results themselves}
+\item{The display and layout of the results}
+\end{enumerate}
+
+\subsubsection{The positives}
+Users verified that the `Dashboard' colour coding was helpful (see Figure~\ref{colourCoding}). The colour of the chosen type of search remained on screen for its duration.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{DoKnowGoSocial}\\
+\caption{Colour coding on Jellibean dashboard.}
+\label{colourCoding}
+\end{center}
+\end{figure}
+
+The modals (floating window reminders) for each of the colour themes were useful for newer users, when they were unfamiliar with the colours. The associations for all user groups, including users with Autism, were quick to learn, these were single link visual (rather than verbal) associations.\\
+
+One tester with high functioning Autism described that the direct question (i.e., `What do you want to do on the web?'), with suggestions (`Shop', `Watch', `Listen'), was useful when he was ``at a total blank". He disclosed that often his need for perfectionism and sameness could have him staring at a blank screen until he came up with the `perfect' query. However, the suggestions were helpful for him to get started, and so his experience was that the queries were completed faster than usual.  \\
+
+During the focus group, participants agreed that one of the major positives of Jellibeans was that unlike Google, users did not receive back hundreds and thousands of mostly irrelevant results. Jellibeans held their interest for longer because of the reduced number of results that users had to sift through. Testing also revealed that the parametric search style meant that they did not need to try and remember all the key words to search for, rather the cues helped them remember points they would have missed otherwise. \\
+
+Another common comment was the time/reward payoff from completing a detailed search form. Users agreed that although they would spend more time formulating their search query, they were likely to save time that would usually be spent sifting through search results.\\
+
+All users positively commented on the reduced number of search results presented (top 3). The amount of textual information that was presented back on the results page is signifiantly reduced in Jellibeans. 
+
+
+\subsubsection{The negatives}
+One participant commented that the suggestions on the `Do', `Know', `Go' and `Social' pages were not user-specific. He suggested implementing something that is user-centred, or, trending, rather than static, as these may not be suited for all users. However, one of the aims of the current project was to reduce the restricted and repetitive nature of search queries for people with Autism. One future suggestion for Jellibeans in order to achieve a balance between user-specific suggestions but not restricted interests, is to include a recommendation system that change often enough for them not to be repetitive. 
+
+One (possible) negative that was identified with Jellibeans was that the time/reward payoff is really only apprent, over and beyond a tradtional search engine, when the search query is complex, or if users are searching for something they have yet to identify, or something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
+
+
+Describe the verification process you used in your project\\
+Unit Testing, Static Analysis for methods in javascript etc.\\
+Manual testing, Selenium, Cucumber etc for html.\\
 Regression tests
-Selenium
-Cucumber
+
 
 \section{Conclusions and Discussion.}
 
@@ -545,6 +581,8 @@ ways in which the project could be improved or extended etc.
 recommendations for the project
 You can also describe possible future work in the area of your project
 \end{comment}
+
+
 
 Robots
 Apache Lucene
