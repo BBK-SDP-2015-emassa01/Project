@@ -137,31 +137,20 @@ In programmatic terms, Jellibeans is designed to implement a research-guided use
 
 Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
+
+Despite Autism being amongst the most common neurodevelopmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}), no user model has yet been developed for Autism within Search. In the current project, I descibe my efforts to build a user model within search for individuals with Autism.
+
 \begin{comment}
 Individual characteristics of each user will be measured using a 50 item questionnaire, the Autism Quotient (AQ \cite{Baron Cohen et al}) which measures tendency towards autistic traits. A score of 32 or higher indicates a strong likelihood of Autism or Asperger syndrome (the questionnaire has a 79\% sensitivity score). Individuals who score highly on the AQ will be offered the current user model for their search. The questionnaire data will be stored in the user's Google+ profile????
 \subsection {User Models in Search}
 \subsection {Rule and Transformation Engine}
 \subsection {Motion Controlled Navigation in Search}
-\end{comment}
-
-\section {Aims}
-The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\
-The core features for Jellibeans to implement and test for suitability within an environment for users with autism are:
-\begin{enumerate}
-\item{A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine.}
-\item{Research, develop and test iterations of a \textit{stereotyped} user model of Autism within Search.}
-\item{To integrate Jellibeans with Google+, to enhancing the feel of a personalised search engine.}
-\item{Jellibeans will include a review and assessment of autistic-like traits or characteristcs, so that users can be aware of, and save a copy of their diagnostic information.}
-\item{Jellibeans will prioritise and display the three highest precision search results for users. The overall goal of Jellibeans is to increase precision of the search results.}
-\item{Jellibeans will }
-
-\end{enumerate}
-
 
 
 Are there any specific work packages that need to be done? If so, list those out here.
+\end{comment}
 
-\section {Background Research}\label{background} 
+\subsection {Background Research}\label{background} 
 
 \begin{comment}
 What is the problem we are trying to solve?
@@ -174,14 +163,20 @@ Restrict yourself to what’s relevant to the specific context of your project (
 state-of-the-art)
 \end{comment}
 
-People with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. This means that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, as opposed to a context-driven processing style, resulting in web-search queries that are more likely formed of single-order associations. For example,  To address this issue, the current project aims to build a user model within search for individuals with Autism.
-
-Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
-
-There are many stages to the search process. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. The stage at which the user model will have most possible impact is before results are returned to the user, that is, at the query formulation stage. It is this stage that the user model will be implemeted (stage 2 on the user web-search process.)
+According to the Diagnostic and Statistical Manual \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction, so interaction with computers is prominent in this group. It is also well established that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. This project will combine interactive, motion recognition hardware with search to also improve the UI (user interface) of search for individuals with Autism.\\
 
 
-\begin{center}
+Research has shown that people with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. There is good reason to postulate then, that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, resulting in web-search queries that are more likely formed of single-order associations. In addition to a detailed, item-specific processing style, individuals with Autism are also less likely to engage in a contextual processing style. For example in a search for `Guitar', a contextual style of processing would imply an awareness that the word is related to `Piano', but also that both words are hierarchically related to `Instrument'. In day to day life, a major factor determining the effectivness of working-memory (the transient holding and processing of information for updating, learning and comprehension), and the amount and quality of information that an individual can recall and enter into the web-search, is greatly influenced by the number of cues that are available at the time. For example, if presented with a list of 50 items to remember, you are more likely to remember that I presented `Zebra' if I tell you that I presented an animal. This type of `cued' recall can be used to bolster recall of information for people with Autism, and is a technique that will be applied in the current project. \\
+
+\subsection{The Problems with Current Web-Search}\label{What should search offer people with Autism}
+
+The Internet is one of the largest resources of information. Search engines allow users to collate hundreds of links on a single topic, using only a few words or phrases. The typical user sorts the returned results into `relevant' or `irrelevant' categories, flexibly shifting (mentally) between one result and the next, to determine the relevance of each page returned by the search engine. Search allows the user to assimilate the information on the page into their knowledge and is an important learning tool. For people with Autism, the requirement is no different, however, current search is not adequate. A large body of research has shown that `mental shifts' are a known area of weakness for people with Autism \cite{disengagement}. The information is therefore harder to assimilate or learn, and judging the relevance of each document becomes near impossible. One successful theraputic technique to increase the assimilation of information for individuals with Autism is to present it in clearer, smaller amounts \cite{AdultsWithAutism}. This technique avoids overwhelming individuals, and although less information is presented as a whole, whatever is presented to the user becomes `digestable' and ultimately, the information as a whole becomes more understandable.  \\
+
+Because the aim of Jellibeans is to reduce the amount of information returned presented, one of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved by Jellibeans and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
+
+
+Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as \textit{buy a plane ticket}, \textit{listen to a song} or, \textit{download a screensaver}. `Know' type queries, which are informational in nature, usually covering a broad topic, for example, the \textit{name of a band} or \textit{restaurant in London}, \textit{trucks}, or \textit{Colorado}. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web, \textit{YouTube} or \textit{American Airlines}. There are also many stages to the search process \cite{seo}. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. 
+
 \begin{enumerate}
 \item{Experience the need for an answer,
 solution, or piece of information.}
@@ -195,10 +190,29 @@ solution, or piece of information.}
 \label{search flows}
 \end {enumerate}
 
-\hspace{1.5cm}
-The User Web-Search Process \cite{seo}
 
-\end{center}
+As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to takle the issue of simplifying the search process for people with Autism. If users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism. For example, using Jellibeans, at the query formulation stage, the user will be assisted through the process of formulating a search query, with concrete questions and suggestions being offered. The suggestions will act as cues, and will be useful to simplify the search process. The process of forming a query will be more tightly defined than the current systems for web search available, and the process more predictable.  
+
+wanted to see if combination search engine enhanced the search process or not
+whether a parametric search was useful
+whether reducing results back to the user was a good idea
+
+
+
+\subsection {Aims}
+The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\
+The core features for Jellibeans to implement and test for suitability within an environment for users with autism are:
+\begin{enumerate}
+\item{A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine.}
+\item{Research, develop and test iterations of a \textit{stereotyped} user model of Autism within Search.}
+\item{To integrate Jellibeans with Google+, to enhancing the feel of a personalised search engine.}
+\item{Jellibeans will include a review and assessment of autistic-like traits or characteristcs, so that users can be aware of, and save a copy of their diagnostic information.}
+\item{To provide a parametric search process, and reduce ambiguity of forming a search query for users with Autism.}
+\item{To provide suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.}
+\item{Jellibeans will prioritise and display the three highest ranking search results for users. The overall goal of this feature is to reduce the amount of text on the page, to minimize the chance of overwhelming users and to retain as high precision of the search results as possible.}
+\item{Jellibeans will utilise a motion controlled UI to enhance the search experience for individuals with Autism, and to maintain the user's attention for longer. It has been shown that individuals with Autism are more engaged when using technology that is receptive and interactive.}
+
+\end{enumerate}
 
 \section{Project Trailer}
 \begin{enumerate}
@@ -474,6 +488,9 @@ The aim for Jellibeans is to return search results that are more in line with lo
 Jellibeans works to address more than one observation made during the data collection stage. As a general rule, changes will take the form of add on questions that aim to structure the individual to form a search query in a logical order so that key search terms are not dropped. The structure of the query's formation should also assist the user with less idiosyncratic search queries. \\
 
 \vspace{5mm} %5mm vertical space
+
+Jellibenas will support a `Social' query applies particularly to the user group in question. Social queries specifically help users when performing a social search, for example when they are looking for a person on the web. The social page has hints and suggestions that can be added into search to assist the user with cues that may be helpful for their search, and to improve search results that are returned from Jellibeans.
+
 To address observation \ref{idiosyncracy} and to make high AQ scorer search queries less idiosyncratic, Jellibeans will prompt the user to categorise their search query into one of 4 possible types of queries, a `DO', `Know', `Go' or `Social' query. Each type of query will be associated with a colour, and this colour will be prominent on the page, to serve as a visual reminder of the task. This works to reduce the working memory load for the user, and to serve as a goal-directed que -- Two things we know are difficult for people with Autism are maintenance of information in working memory, and goal-directed tasks involving a high demand on Executive Functioning (Executive functions (also known as cognitive control and supervisory attentional system) is an umbrella term for the management (regulation, control) of cognitive processes, including working memory, reasoning, task flexibility, and problem solving as well as planning and execution \cite{EF}.) 
 
 \vspace{5mm} %5mm vertical space
@@ -632,16 +649,21 @@ colour blindness considerations - accessibility for people with Autism
 
 \clearpage
 \begin{thebibliography}{100}
-\bibitem{Baron Cohen et al} Baron-Cohen, Wheelrigjt, Skinner, Martin, Clubley (2001).   The Autism-Spectrum Quotient (AQ): evidence from Asperger Syndrome/high-functioning autism, males and females, scientists and mathematicians.  Journal of Autism and Developmental Disorders, 31, 5-17.
-\bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Asperger's syndrome. Journal of Autism and Developmental Disorders, 38(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
+\bibitem{Baron Cohen et al} Baron-Cohen, Wheelrigjt, Skinner, Martin, Clubley (2001).  The Autism-Spectrum Quotient (AQ): evidence from Asperger Syndrome/high-functioning autism, males and females, scientists and mathematicians.  \textit{Journal of Autism and Developmental Disorders, 31}, 5-17.
+\bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Asperger's syndrome. \textit{Journal of Autism and Developmental Disorders, 38}(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
+\bibitem {CDC}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58},
 \bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:1–20
 \bibitem{EF} Executive Function, https://en.wikipedia.org/wiki/Executivefunctions, Retrieved 27 August 2015.
+\bibitem{disengagement}
+Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S., Bolton, P., Charman, T., Baird, G. and Johnson, M. H. (2009), Visual orienting in the early broader autism phenotype: disengagement and facilitation. \textit{Journal of Child Psychology and Psychiatry, 50}, 637â642. doi: 10.1111/j.1469-7610.2008.02051.x
+\bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
+\bibitem{motioncontrollerforautism} Garzotto, F., Valoriani, M. and Bartoli, L. (2014), Touchless Motion-Based Interaction for Therapy of Autistic Children, Virtual, Augmented Reality and Serious Games for Healthcare, \textit{Intelligent Systems Reference Library, 68}, 2014, pp 471-494
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
 \bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
-\bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. Journal of Child Psychology and Psychiatry 40, (2), 203211. doi:10.1111/1469-7610.00433.
-\bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). Clinical Linguistics and Phonetics, 27(2), 85-93. 
+\bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. \textit{Journal of Child Psychology and Psychiatry 40}, (2), 203211. doi:10.1111/1469-7610.00433.
+\bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). \textit{Clinical Linguistics and Phonetics, 27}(2), 85-93. 
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
-\bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
+\bibitem{AdultsWithAutism} Slavin, S (2013) Autism: Successful communication,10 things to make it easier, http://adultswithautism.org.uk/autism-successful-communication-10-things-to-make-it-easier/, Retrieved September 1 2015.
 \bibitem{surveymonkey}Surveymonkey, https://www.surveymonkey.com/home/, Retrieved 5 August 2015.
 \bibitem{tfidf} Term Frequency Inverse Document Frequency Weighting, http://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html, Retrieved 9 August 2015.
 \bibitem{wordfrequncy} Word Frequency Information, http://www.wordfrequency.info/free.asp?s=y, Retrieved 6 August 2015.

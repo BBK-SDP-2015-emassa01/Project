@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="33" width="817" height="585" text="Jellibeans&#xA;" measuredWidth="817" measuredHeight="585">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="2" x="328" y="120" text="JELLIBEANS" measuredWidth="234" measuredHeight="59">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="3" x="408" y="178" text="SEARCH" measuredWidth="68" measuredHeight="26">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="4" x="720" y="104" width="102" height="91" measuredWidth="102" measuredHeight="91" background="#ffff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="5" x="264" y="227" width="361" height="33" measuredWidth="361" measuredHeight="33"/>
+  <widgets xsi:type="model:Button" id="6" x="301" y="424" width="132" text="Search in Google" measuredWidth="132" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="7" x="448" y="424" width="129" text="Jellibean Search" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="301" y="203" text="What do you want to know from the web?" measuredWidth="288" measuredHeight="25">
+    <font size="14px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="9" x="264" y="308" width="361" height="33" measuredWidth="361" measuredHeight="33"/>
+  <widgets xsi:type="model:Label" id="10" x="264" y="284" text="What information do you want back from your search?" measuredWidth="375" measuredHeight="25">
+    <font size="14px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="11" x="264" y="384" width="361" height="33" measuredWidth="361" measuredHeight="33"/>
+  <widgets xsi:type="model:Label" id="12" x="274" y="360" text="Enter any other information to complete your query." measuredWidth="361" measuredHeight="25">
+    <font size="14px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="13" x="664" y="227" width="129" text="Music" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="14" x="664" y="312" width="129" text="Restaurants" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="15" x="664" y="388" width="129" text="Shopping Centre" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="16" x="104" y="231" width="129" text="Cinema" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="17" x="104" y="312" width="129" text="Leisure" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="18" x="104" y="388" width="129" text="Outdoors" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="19" x="225" y="208" text="                                                 KNOW" measuredWidth="400" measuredHeight="300"/>
+  <widgets xsi:type="model:Shape" id="20" x="351" y="244" width="153" height="137" measuredWidth="153" measuredHeight="137" background="#ffff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="21" x="278" y="390" width="313" height="46" text="The Yellow circle means that you want to KNOW something on the web." measuredWidth="313" measuredHeight="46">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="22" x="569" y="475" text="Close" measuredWidth="43" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="23" x="40" y="208" width="817" measuredWidth="817" measuredHeight="6" foreground="#cccccc"/>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,38 +1,39 @@
 \contentsline {section}{\numberline {1}Introduction}{5}
-\contentsline {section}{\numberline {2}Aims}{5}
-\contentsline {section}{\numberline {3}Background Research}{6}
-\contentsline {section}{\numberline {4}Project Trailer}{6}
-\contentsline {section}{\numberline {5}Product Specification}{8}
-\contentsline {subsection}{\numberline {5.1}Design Patterns (for web applications)}{8}
-\contentsline {section}{\numberline {6}Software Architecture}{9}
-\contentsline {subsection}{\numberline {6.1}Design Patterns}{9}
-\contentsline {subsection}{\numberline {6.2}Use Case Diagram}{9}
-\contentsline {subsection}{\numberline {6.3}High Level UML Class Diagram of the System}{10}
-\contentsline {section}{\numberline {7}Implementation}{10}
-\contentsline {subsection}{\numberline {7.1}Synthesis of Search Results}{10}
-\contentsline {subsection}{\numberline {7.2}JSoup API}{11}
-\contentsline {subsection}{\numberline {7.3}Storage of information}{11}
-\contentsline {subsection}{\numberline {7.4}Classification of Users}{11}
-\contentsline {subsection}{\numberline {7.5}Bootstrap and CSS}{11}
-\contentsline {subsection}{\numberline {7.6}HTML pages and JavaScript}{11}
-\contentsline {subsection}{\numberline {7.7}Java}{11}
-\contentsline {subsection}{\numberline {7.8}LEAP motion detector and LEAP SDK}{11}
-\contentsline {subsection}{\numberline {7.9}API's and Development Tools}{11}
-\contentsline {section}{\numberline {8}Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}{11}
-\contentsline {subsection}{\numberline {8.1}Web Scraping}{13}
-\contentsline {subsection}{\numberline {8.2}User Research and Testing of Core Feature 1}{14}
-\contentsline {section}{\numberline {9}Core Feature 2: Building a User Model of Autism.}{14}
-\contentsline {subsection}{\numberline {9.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{15}
-\contentsline {section}{\numberline {10}Core Features 3 and 4: Jellibeans -- A Transformation Rule Engine}{17}
-\contentsline {section}{\numberline {11}Core Feature 5: Integration with a Motion Controlled Interface.}{18}
-\contentsline {subsection}{\numberline {11.1}Evaluation and Review of the Leap Motion Controller.}{19}
-\contentsline {section}{\numberline {12}User Testing the System.}{20}
-\contentsline {subsection}{\numberline {12.1}User Verification}{20}
-\contentsline {subsubsection}{\numberline {12.1.1}The positives}{20}
-\contentsline {subsubsection}{\numberline {12.1.2}The negatives}{21}
-\contentsline {section}{\numberline {13}Conclusions and Discussion.}{21}
-\contentsline {subsection}{\numberline {13.1}Signals of Quality Content}{21}
-\contentsline {subsection}{\numberline {13.2}Future Directions}{22}
-\contentsline {section}{\numberline {14}Appendices}{24}
-\contentsline {subsection}{\numberline {14.1}Search Query Survey}{25}
-\contentsline {subsection}{\numberline {14.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{29}
+\contentsline {subsection}{\numberline {1.1}Background Research}{5}
+\contentsline {subsection}{\numberline {1.2}The Problems with Current Web-Search}{6}
+\contentsline {subsection}{\numberline {1.3}Aims}{7}
+\contentsline {section}{\numberline {2}Project Trailer}{7}
+\contentsline {section}{\numberline {3}Product Specification}{9}
+\contentsline {subsection}{\numberline {3.1}Design Patterns (for web applications)}{9}
+\contentsline {section}{\numberline {4}Software Architecture}{10}
+\contentsline {subsection}{\numberline {4.1}Design Patterns}{10}
+\contentsline {subsection}{\numberline {4.2}Use Case Diagram}{10}
+\contentsline {subsection}{\numberline {4.3}High Level UML Class Diagram of the System}{12}
+\contentsline {section}{\numberline {5}Implementation}{12}
+\contentsline {subsection}{\numberline {5.1}Synthesis of Search Results}{12}
+\contentsline {subsection}{\numberline {5.2}JSoup API}{13}
+\contentsline {subsection}{\numberline {5.3}Storage of information}{13}
+\contentsline {subsection}{\numberline {5.4}Classification of Users}{13}
+\contentsline {subsection}{\numberline {5.5}Bootstrap and CSS}{13}
+\contentsline {subsection}{\numberline {5.6}HTML pages and JavaScript}{13}
+\contentsline {subsection}{\numberline {5.7}Java}{13}
+\contentsline {subsection}{\numberline {5.8}LEAP motion detector and LEAP SDK}{13}
+\contentsline {subsection}{\numberline {5.9}API's and Development Tools}{13}
+\contentsline {section}{\numberline {6}Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}{13}
+\contentsline {subsection}{\numberline {6.1}Web Scraping}{15}
+\contentsline {subsection}{\numberline {6.2}User Research and Testing of Core Feature 1}{16}
+\contentsline {section}{\numberline {7}Core Feature 2: Building a User Model of Autism.}{16}
+\contentsline {subsection}{\numberline {7.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{17}
+\contentsline {section}{\numberline {8}Core Features 3 and 4: Jellibeans -- A Transformation Rule Engine}{19}
+\contentsline {section}{\numberline {9}Core Feature 5: Integration with a Motion Controlled Interface.}{20}
+\contentsline {subsection}{\numberline {9.1}Evaluation and Review of the Leap Motion Controller.}{21}
+\contentsline {section}{\numberline {10}User Testing the System.}{22}
+\contentsline {subsection}{\numberline {10.1}User Verification}{22}
+\contentsline {subsubsection}{\numberline {10.1.1}The positives}{22}
+\contentsline {subsubsection}{\numberline {10.1.2}The negatives}{23}
+\contentsline {section}{\numberline {11}Conclusions and Discussion.}{23}
+\contentsline {subsection}{\numberline {11.1}Signals of Quality Content}{24}
+\contentsline {subsection}{\numberline {11.2}Future Directions}{24}
+\contentsline {section}{\numberline {12}Appendices}{27}
+\contentsline {subsection}{\numberline {12.1}Search Query Survey}{28}
+\contentsline {subsection}{\numberline {12.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{32}
