@@ -191,55 +191,7 @@ solution, or piece of information.}
 \end {enumerate}
 
 
-As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to takle the issue of simplifying the search process for people with Autism. If users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism. For example, using Jellibeans, at the query formulation stage, the user will be assisted through the process of formulating a search query, with concrete questions and suggestions being offered. The suggestions will act as cues, and will be useful to simplify the search process. The process of forming a query will be more tightly defined than the current systems for web search available, and the process more predictable.  
-
-wanted to see if combination search engine enhanced the search process or not
-whether a parametric search was useful
-whether reducing results back to the user was a good idea
-
-
-
-\subsection {Aims}
-The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\
-The core features for Jellibeans to implement and test for suitability within an environment for users with autism are:
-\begin{enumerate}
-\item{A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine.}
-\item{Research, develop and test iterations of a \textit{stereotyped} user model of Autism within Search.}
-\item{To integrate Jellibeans with Google+, to enhancing the feel of a personalised search engine.}
-\item{Jellibeans will include a review and assessment of autistic-like traits or characteristcs, so that users can be aware of, and save a copy of their diagnostic information.}
-\item{To provide a parametric search process, and reduce ambiguity of forming a search query for users with Autism.}
-\item{To provide suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.}
-\item{Jellibeans will prioritise and display the three highest ranking search results for users. The overall goal of this feature is to reduce the amount of text on the page, to minimize the chance of overwhelming users and to retain as high precision of the search results as possible.}
-\item{Jellibeans will utilise a motion controlled UI to enhance the search experience for individuals with Autism, and to maintain the user's attention for longer. It has been shown that individuals with Autism are more engaged when using technology that is receptive and interactive.}
-
-\end{enumerate}
-
-\section{Project Trailer}
-\begin{enumerate}
-\item{The development of a \textit{stereotyped} user model of Autism. The features of the model will be determined following analyses of survey responses gathered from individuals with Autism or autism-like symptomology. The survey will be administered online using a web-based survey engine www.surveymonkey.com \cite{surveymonkey}, and focus on identifying the differences in user search query generation for people with autism.}
-\item{Following the findings from above, Jellibeans will employ a parametric search feature, and suggestions to guide the user towards forming succinct and accurate search queries.}
-\item{Jellibeans will be integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine.}
-\item{Jellibeans will allow users to get feedback on the level of their autism-like symptomology. The Autism Quotient \cite{Baron Cohen et al}, a scientifically validated screening tool for autism spectrum disorders will feature on the Jellibean homepage, and users will be able to retrieve their score and save their responses for each question to a local file for their reference.}
-\item{Jellibeans will prioritise and display the three highest precision search results for users. The overall goal of Jellibeans is to increase precision of the search results.}
-\item{Jellibeans reduces the amound of text on the results page by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results.}
-\item{Due to the nature of the parametric search, and the reduction in number of search results displayed, the results from Jellibeans are more likely to be a direct semantic relation to the search query. This makes the selection of that result by the search engine more transparent to the user.}
-\item{Integration of the web application with a motion controlled user interface, the LEAP controller.}
-\end{enumerate}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{JellibeanFlow.png}
-\end{center}
-\caption{Jellibean User Flow}
-\label{JBeanUserFlow}
-\end{figure}
-
-
-\section{Product Specification}
-Functional and non-functional requirements and major dependencies.
-How I plan on tackling the problem to meet my requirements.
-
-\subsection{Design Patterns (for web applications)}
+\subsection{Design for Web Applications}
 
 Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to ‘make it easy’ for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
 
@@ -258,7 +210,66 @@ Parametric search queries allow users to define parameters in an increasingly lo
 
 For typical users, parametric search is more structured, and in some circumstances seems more natural than a free – keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user’s search results in line with their search query, ultimately leading to a higher precision for the search enginei.
 
-One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.   
+One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.\\  
+
+\subsection{Interim Summary of the Introduction}
+
+As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to takle the issue of simplifying the search process for people with Autism. If users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism. When using Jellibeans query formulation, the user will be assisted through the process of formulating a search query, much like a parametric search engine form (for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions will be aided by suggestions that appear at the side of the search boxes. These suggestions can be added into the search query without the need to type them in, just by using natural hand movements, tracked by the LEAP motion controller. The suggestions also serve as cues for the user, and to simplify the search process for them. The process of forming an search query thus becomes more tightly defined compared to the current systems for web search, the process will be more predictable, and the size of the result-set will be more understandable for users with Autism.  
+
+\subsection {Aims for Jellibeans}
+The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\
+The core features for Jellibeans to implement and test for suitability within an environment for users with autism are:
+\begin{enumerate}
+\item{A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine.}
+\item{Research, develop and test iterations of a \textit{stereotyped} user model of Autism within Search.}
+\item{To integrate Jellibeans with Google+, to enhancing the feel of a personalised search engine.}
+\item{Jellibeans will include a review and assessment of autistic-like traits or characteristcs, so that users can be aware of, and save a copy of their diagnostic information.}
+\item{To provide a parametric search process, and reduce ambiguity of forming a search query for users with Autism.}
+\item{To provide suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.}
+\item{Jellibeans will prioritise and display the three highest ranking search results for users. The overall goal of this feature is to reduce the amount of text on the page, to minimize the chance of overwhelming users and to retain as high precision of the search results as possible.}
+\item{Jellibeans will utilise a motion controlled UI to enhance the search experience for individuals with Autism, and to maintain the user's attention for longer. It has been shown that individuals with Autism are more engaged when using technology that is receptive and interactive.}
+
+\end{enumerate}
+
+\section{Project Trailer}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{JellibeanFlow.png}
+\end{center}
+\caption{Wireframe Sketches for Jellibean User Flow}
+\label{JBeanUserFlow}
+\end{figure}
+
+
+\begin{enumerate}
+\item{The development of a \textit{stereotyped} user model of Autism. The features of the model will be determined following analyses of survey responses gathered from individuals with Autism or autism-like symptomology. The survey will be administered online using a web-based survey engine www.surveymonkey.com \cite{surveymonkey}, and focus on identifying the differences in user search query generation for people with autism (see Figure~\ref{JBeanUserFlow}).}
+\item{Following the insights gathered from the first set of research findings above, Jellibeans will employ a parametric-like search, and include suggestions to guide the user towards forming succinct and accurate search queries.}
+\item{Jellibeans will be integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine.}
+\item{Jellibeans will allow users to get feedback on the level of their autism-like symptomology. The Autism Quotient \cite{Baron Cohen et al}, a scientifically validated screening tool for autism spectrum disorders will feature on the Jellibean homepage, and users will be able to retrieve their score and save their responses for each question to a local file for their reference.}
+\item{Jellibeans will prioritise and display the three highest precision search results for users. The goal of Jellibeans is to increase precision of the search results that are returned. Recall of the engine is sacrificed in line with the demands of the user model, to have less textual information on the page.}
+\item{Jellibeans reduces the amount of text on the webpage by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results (see Figure~\ref{resultsModal}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{ResultsModal}
+\end{center}
+\caption{Top 3 results are presented back to users in a modal to reduce information on the page. The modal can easily be closed and reopened.}
+\label{resultsModal}
+\end{figure}
+
+}
+\item{Due to the nature of the parametric search, and the reduction in number of search results displayed, the results from Jellibeans are more likely to be a direct semantic relation to the search query. This makes the selection of that result by the search engine more transparent to the user.}
+\item{Integration of the web application with a motion controlled user interface, the LEAP controller.}
+\end{enumerate}
+
+
+
+
+\section{Product Specification}
+Functional and non-functional requirements and major dependencies.
+How I plan on tackling the problem to meet my requirements.
+
 
 
 
@@ -269,7 +280,7 @@ One of the aims of the study is to reduce the amount of textual information on t
 
 \subsection{Use Case Diagram}
 
-Feature uses and high level description of the system.
+Feature uses and high level use-case descriptions of the system.
 
 \begin{figure}[H]
 \begin{center}
@@ -279,7 +290,9 @@ Feature uses and high level description of the system.
 \end{center}
 \end{figure}
 
-\subsection{High Level UML Class Diagram of the System}
+\subsection{Class Diagram}
+
+High level class diagram of the system. 
 
 \begin{figure}[H]
 \begin{center}
@@ -584,12 +597,16 @@ All users positively commented on the reduced number of search results presented
 
 
 \subsubsection{The negatives}
+
+One comment during the first iteration about Jellibeans was that the results were not specific enough to the search, and that a better precision needed to be acheived. To increase the precision of the engine, Jellibeans implemented `AND' boolean operators between each input of the parametric search. This increased precision significantly, and recall dropped. However it led to a better user experience than without this modification.
+
+
 One participant commented that the suggestions on the `Do', `Know', `Go' and `Social' pages were not user-specific (see Figure~\ref{suggestions}). 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.3]{suggestions}\\
-\caption{Suggestions on Jellibeans `Go' page for users to help with search query formulation.}
+\caption{Suggestions on Jellibeans `Go' page for users to help with search query formulation (suggestions are highlighted in red).}
 \label{suggestions}
 \end{center}
 \end{figure}
