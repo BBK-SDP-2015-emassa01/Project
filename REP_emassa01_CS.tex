@@ -40,7 +40,7 @@ MSc Computer Science\\Department of Computer Science and Information Systems\\Bi
 
 \section*{Abstract}
 \begin{justify}
-This project report presents the development of a prototype web application to assist users with Autism when they search the web. The developed system models user interactions with the search process into a user profile by integrating insights from the core features of autism into the model. The user profile is applied to a synthesis of three leading search engines, and the entire system is integrated with an infra-red user interface component to assist users with Autism during search.\\
+This project report presents my research and the development of a prototype web application to assist users with Autism when they search the web. The system has modeled user interactions with the search process into a user profile for this category of users, integrating insights from the core features of autism into the model. The system is integrated with an infra-red, motion controlled, user interface component to assist users with Autism during search. The project provides insights into how search can be improved for users with Autism.\\
 \end{justify}
 
 
@@ -133,19 +133,15 @@ remainder of the report
 This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans \footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
 
 
-In programmatic terms, Jellibeans is designed to implement a research-based user model in search. Development of the user model included iterations of the `research, development, test, evaluate' lifecycle. Research to identify the differences (sometimes shortfalls) in user queries formed by individuals with Autism. This involved collecting and analysing search behaviour patterns from people with and without ASD and building a set of features into a search engine to guide the user through forming a more complete search query. Development and evaluation included efforts to implement and test how the search process could be adapted to enhance the precision of the search engine for the users' intended search query. 
+In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research to identify the preferences within search, and the differences in user queries formed by individuals with Autism, by conducting surveys and collecting and analysing search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
 
 
-Jellibeans will additionally improve the search experience for users with ASD by integrating a motion controlled user interface (UI) using the LEAP motion controller. The interface will be dynamic as opposed to static and this afford many advantages over traditional search engine interfaces.
+Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
 \begin{comment}
 Individual characteristics of each user will be measured using a 50 item questionnaire, the Autism Quotient (AQ \cite{Baron Cohen et al}) which measures tendency towards autistic traits. A score of 32 or higher indicates a strong likelihood of Autism or Asperger syndrome (the questionnaire has a 79\% sensitivity score). Individuals who score highly on the AQ will be offered the current user model for their search. The questionnaire data will be stored in the user's Google+ profile????
-
-
 \subsection {User Models in Search}
-
 \subsection {Rule and Transformation Engine}
-
 \subsection {Motion Controlled Navigation in Search}
 \end{comment}
 
@@ -178,6 +174,8 @@ This should be a synopsis of the relevant part of your project proposal (do not 
 Restrict yourself to what’s relevant to the specific context of your project (the proposal can have a more general look at the
 state-of-the-art)
 \end{comment}
+
+People with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. This means that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, as opposed to a context-driven processing style, resulting in web-search queries that are more likely formed of single-order associations. For example,  To address this issue, the current project aims to build a user model within search for individuals with Autism.
 
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as buy a plane ticket or listen to a song. There are also `Know' type queries. These are informational queries for example, the name of a band or restaurant in London. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web. 
 
@@ -284,30 +282,41 @@ Feature uses and high level description of the system.
 \section{Implementation}
 
 \subsection{Synthesis of Search Results}
-For search results returned by Google, the Custom Search API was be used in line with the Google terms of service (`screen scraping', or copying the data directly from the website is prohibited). It is a RESTful api with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of  results, alternative search queries, and (3) custom search engine metadata. The data model depends on \cite{opensearch}.
+For search results returned by Google, the Custom Search API was used in line with the Google terms of service (`screen scraping', or copying the data directly from the website is prohibited). It is a RESTful api with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of  results, alternative search queries, and (3) custom search engine metadata. The data model depends on \cite{opensearch}.
 For Bing and Yahoo search results, JSoup (a Java HTML parser) will be used to identify the links from the resulting query. The JSoup HTML parser was considered more effient for retrieving search results, as it reduced the number of lines of code required to complete the task from both search engines, using a slightly different href element filter. Jsoup also has its advantages over html parsing. It contains a class representing a list of nodes, `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
 The resulting links are written to text file which stores the links in a text file in the projects source directory.
 
 
 The system aims to deliver relevant results to the user, but what is ``relevant"? Not all users or groups of users search in the same way, so it is important to consider user intention. The first part of the current project aimed to investigate the differences between search queries of people with and without Autism, and to use those findings to build a stereotyped user model (a user model that will infer characteristics about the user from their diagnostic information) for a person with autism. Users are asked to complete the Autism Quotient Questionnaire and obtain a score of autistic-like traits.
 
+\subsection{JSoup API}
+
 \subsection{Storage of information}
 Google+ and storing to file on computer.
+Javascript to return aboutMe profile.
 Returning AQ score to user.
 
 
 \subsection{Classification of Users}
 Classification used the AQ into high and low scorers and feeding that information back in a downloadable file/on the screen in an alert.
+Javascript methods
 
 
 
-\subsection{What was actually done?}
+\subsection{Bootstrap and CSS}
+
+\subsection{HTML pages and JavaScript}
+
+\subsection{Java}
+Java was chosen for quick development of packages of features to test with users as I was most proficient with Java, and could quickly develop prototypes which could then be later implemented fully.
+
+\subsection{LEAP motion detector and LEAP SDK}
 
 \subsection{API's and Development Tools}
 Describe the technologies used in the project, why they where
 chosen and what were the other options:\\
 Tools and programming languages\\
-Data-base, servers etc.
+
 
 
 \section{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}
@@ -630,6 +639,7 @@ colour blindness considerations - accessibility for people with Autism
 \bibitem{EF} Executive Function, https://en.wikipedia.org/wiki/Executivefunctions, Retrieved 27 August 2015.
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
 \bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
+\bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. Journal of Child Psychology and Psychiatry 40, (2), 203211. doi:10.1111/1469-7610.00433.
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). Clinical Linguistics and Phonetics, 27(2), 85-93. 
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
