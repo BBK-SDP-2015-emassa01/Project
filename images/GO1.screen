@@ -30,6 +30,16 @@
   <widgets xsi:type="model:Label" id="12" x="274" y="360" text="Enter any other information to complete your query." measuredWidth="361" measuredHeight="25">
     <font size="14px" bold="false"/>
   </widgets>
+  <widgets xsi:type="model:Button" id="18" x="104" y="388" width="129" text="Wikipedia" measuredWidth="129" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="19" x="904" y="318" text="                                                 GO" measuredWidth="400" measuredHeight="300"/>
+  <widgets xsi:type="model:Shape" id="20" x="1030" y="354" width="153" height="137" measuredWidth="153" measuredHeight="137" background="#00ff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="21" x="957" y="500" width="313" height="46" text="The Green circle means that you want to GO somewhere on the web." measuredWidth="313" measuredHeight="46">
+    <font/>
+  </widgets>
   <widgets xsi:type="model:Button" id="13" x="664" y="227" width="129" text="YouTube" measuredWidth="129" measuredHeight="25">
     <font/>
   </widgets>
@@ -45,21 +55,13 @@
   <widgets xsi:type="model:Button" id="17" x="104" y="312" width="129" text="BBC News" measuredWidth="129" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="18" x="104" y="388" width="129" text="Wikipedia" measuredWidth="129" measuredHeight="25">
+  <widgets xsi:type="model:TextField" id="22" x="1248" y="585" text="Close" measuredWidth="43" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Window" id="19" x="235" y="208" text="                                                 GO" measuredWidth="400" measuredHeight="300"/>
-  <widgets xsi:type="model:Shape" id="20" x="361" y="244" width="153" height="137" measuredWidth="153" measuredHeight="137" background="#00ff00">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:TextArea" id="21" x="288" y="390" width="313" height="46" text="The Green circle means that you want to GO somewhere on the web." measuredWidth="313" measuredHeight="46">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="22" x="579" y="475" text="Close" measuredWidth="43" measuredHeight="23">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:HLine" id="23" x="40" y="208" width="817" measuredWidth="817" measuredHeight="6" foreground="#cccccc"/>
-  <hRuler/>
+  <widgets xsi:type="model:HLine" id="23" x="48" y="201" width="817" measuredWidth="817" measuredHeight="6" foreground="#cccccc"/>
+  <hRuler>
+    <guides position="837"/>
+  </hRuler>
   <vRuler/>
   <font size="12px"/>
 </model:Screen>
