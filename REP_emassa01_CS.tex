@@ -1,8 +1,8 @@
 \documentclass[a4paper, 11pt]{article}
-\setlength{\topmargin}{-0.5in}
-\setlength{\textheight}{9.5in}
-\setlength{\oddsidemargin}{-.1in}
-\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8in}
+\setlength{\oddsidemargin}{.1in}
+\setlength{\textwidth}{6in}
 
 \usepackage{multirow}
 \usepackage{float}
@@ -37,19 +37,12 @@ MSc Computer Science\\Department of Computer Science and Information Systems\\Bi
 
 \maketitle
 
-\begin{verbatim}
-
-
-\end{verbatim}
 
 \section*{Abstract}
 \begin{justify}
 This project report presents my research and the development of a prototype web application to assist users with Autism when they search the web. The system has modelled user interactions with the search process into a user profile for this category of users, integrating insights from the core features of autism into the model. The system is integrated with an infra-red, motion controlled, user interface component to assist users with Autism during search. The project provides insights into how search can be improved for users with Autism.\\
 \end{justify}
 \begin{verbatim}
-
-
-
 
 
 
@@ -102,6 +95,7 @@ Autism & Autism is amongst the most common neuro-developmental condition and it 
 Stereotyped User Model & Stereotyped user models infer characteristics about a user from data gathered from other users within that distinct subset. They can be built quickly using clusters of characteristics of groups of individuals. 
 
 \end{tabular}
+\clearpage
 
 \section*{Search Engine Measures}
 \newcommand{\cfplus}{\mathbin{\genfrac{}{}{0pt}{}{}{+}}}
@@ -134,14 +128,14 @@ remainder of the report
 \end{comment}
 
 This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans \footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
-
+\vspace{5mm}
 
 In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research to identify the preferences within search, and the differences in user queries formed by individuals with Autism, by conducting surveys and collecting and analysing search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
-
+\vspace{5mm}
 
 Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
-
+\vspace{5mm}
 Despite Autism being amongst the most common neuro-developmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}), no user model has yet been developed for Autism within Search. In the current project, I describe my efforts to build a user model within search for individuals with Autism.
 
 \begin{comment}
@@ -169,15 +163,15 @@ state-of-the-art)
 
 According to the Diagnostic and Statistical Manual \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction, so interaction with computers is prominent in this group. It is also well established that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. This project will combine interactive, motion recognition hardware with search to also improve the UI (user interface) of search for individuals with Autism.\\
 
-
+\vspace{5mm}
 Research has shown that people with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. There is good reason to postulate then, that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, resulting in web-search queries that are more likely formed of single-order associations. In addition to a detailed, item-specific processing style, individuals with Autism are also less likely to engage in a contextual processing style. For example in a search for `Guitar', a contextual style of processing would imply an awareness that the word is related to `Piano', but also that both words are hierarchically related to `Instrument'. In day to day life, a major factor determining the effectiveness of working-memory (the transient holding and processing of information for updating, learning and comprehension), and the amount and quality of information that an individual can recall and enter into the web-search, is greatly influenced by the number of cues that are available at the time. For example, if presented with a list of 50 items to remember, you are more likely to remember that I presented `Zebra' if I tell you that I presented an animal. This type of `cued' recall can be used to bolster recall of information for people with Autism, and is a technique that will be applied in the current project. \\
 
 \subsection{The Problems with Current Web-Search}\label{What should search offer people with Autism}
 
 The Internet is one of the largest resources of information. Search engines allow users to collate hundreds of links on a single topic, using only a few words or phrases. The typical user sorts the returned results into `relevant' or `irrelevant' categories, flexibly shifting (mentally) between one result and the next, to determine the relevance of each page returned by the search engine. Search allows the user to assimilate the information on the page into their knowledge and is an important learning tool. For people with Autism, the requirement is no different, however, current search is not adequate. A large body of research has shown that `mental shifts' are a known area of weakness for people with Autism \cite{disengagement}. The information is therefore harder to assimilate or learn, and judging the relevance of each document becomes near impossible. One successful therapeutic technique to increase the assimilation of information for individuals with Autism is to present it in clearer, smaller amounts \cite{AdultsWithAutism}. This technique avoids overwhelming individuals, and although less information is presented as a whole, whatever is presented to the user becomes `digestible' and ultimately, the information as a whole becomes more understandable.  \\
-
-Because the aim of Jellibeans is to reduce the amount of information returned presented, one of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved by Jellibeans and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
-
+\vspace{5mm}
+One of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved by Jellibeans and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
+\vspace{5mm}
 
 Search queries usually fall into one of three broad categories.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as \textit{buy a plane ticket}, \textit{listen to a song} or, \textit{download a screensaver}. `Know' type queries, which are informational in nature, usually covering a broad topic, for example, the \textit{name of a band} or \textit{restaurant in London}, \textit{trucks}, or \textit{Colorado}. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web, \textit{YouTube} or \textit{American Airlines}. There are also many stages to the search process \cite{seo}. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. 
 
@@ -199,8 +193,9 @@ solution, or piece of information.}
 
 Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to `make it easy' for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
 
+\vspace{5mm}
 As we have seen in the introduction, users with Autism behave in different ways to typical users when navigating search. Users with Autism do not use the same key phrases when looking for documents with several attributes, i.e., queries that would be best formulated using several iterations of search, or multiple search parameters. This leads to an ineffective search; one that requires users to sift through results which are in large-part irrelevant, and a bad user experience.  
-
+\vspace{5mm}
 Parametric search queries allow users to define parameters in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination, or for a person. This requires high cognitive `load' (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
 
 \begin{figure}[H]
@@ -213,7 +208,7 @@ Parametric search queries allow users to define parameters in an increasingly lo
 \end{figure}
 
 For typical users, parametric search is more structured, and in some circumstances seems more natural than a free â€“ keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user'€™s search results in line with their search query, ultimately leading to a higher precision for the search engine.
-
+\vspace{5mm}
 One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.\\  
 
 
@@ -274,7 +269,7 @@ The goal of the project is to build a prototype search tool that assists users w
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.3]{ResultsModal}
+\includegraphics[scale=0.25]{ResultsModal}
 \end{center}
 \caption{Top 3 results are presented back to users in a modal to reduce information on the page. The modal can easily be closed and reopened.}
 \label{resultsModal}
@@ -329,11 +324,11 @@ To gather feedback from a sample of individuals with Autism who have used Jellib
 \subsection{Design Patterns}
 
 \begin{enumerate}
-\item{Builder Design Pattern.}
+\item{Builder Design Pattern.}\\
 For Jellibeans to successfully create the user's query string, http GET requests were used to extract parameters from the URL. The Builder Design pattern was used to achieve this. Once the parameters from the URL are retrieved, Jellibeans builds them into the user's search query string. The search query string can then be passed to the JavaScript methods in the relevant class (dependent upon the user's search behaviours), parsed into the correct format, before a POST request is then made to the Jellibeans Custom Search Engine to process the request.
-\item{Chain of responsibility Pattern.}
+\item{Chain of responsibility Pattern.}\\
 Because there are many behaviours that the user can perform before their query string is formulated and ready to be posted to the search engine, the software also makes use of the Chain of responsibility pattern where at each stage the user's query is passed along a chain, with added functionality and methods depending on what the behaviour of the user was.
-\item{Adapter Pattern.}
+\item{Adapter Pattern.}\\
 I accessed the user's Google+ profile data (name and profile picture) and presented these on the Jellibeans homepage. I then used the Adapter design pattern to build my own functionality onto the existing profile. For example, to present the user's Autism Quotient score, and to guide the user through forming their search query. 
 \end{enumerate}
 
@@ -347,7 +342,7 @@ The main use cases which are required by the Jellibeans application are:
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{JBeanUseCase}
+\includegraphics[scale=0.55]{JBeanUseCase}
 \caption{Jellibean Feature Uses and High Level UML Use Case Diagram}
 \label{JBeanUseCase1}
 \end{center}
@@ -358,7 +353,7 @@ The main use cases which are required by the Jellibeans application are:
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.60]{jBeanClassDiagram}
+\includegraphics[scale=0.55]{jBeanClassDiagram}
 \caption{Jellibean High Level UML Class Diagram of Jellibeans}
 \label{jBeanClassDiagram1}
 \end{center}
@@ -373,24 +368,33 @@ The main use cases which are required by the Jellibeans application are:
 For search results returned by Google, the Custom Search API was used in line with the Google terms of service, that is that `screen scraping', or copying the data directly from the website is prohibited. The Google Custom Search API is a RESTful API with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of results, alternative search queries, and (3) custom search engine metadata. 
 
 \subsection{JSoup API}
-For Bing and Yahoo search results, JSoup (a Java HTML parser) was used to identify the links from the resulting query. The JSoup HTML parser was considered more efficient for retrieving search results, as it could be used to complete the task from both search engines, using a slightly different href element filter for each. Jsoup also has advantages over html parsing. It contains a class representing a list of nodes called `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
+For Bing and Yahoo search results, JSoup (a Java HTML parser) was used to identify the links from the resulting query. The JSoup HTML parser was considered more efficient for retrieving search results, as it could be used to complete the task from both search engines, using a slightly different href element filter for each. JSoup also has advantages over html parsing. It contains a class representing a list of nodes called `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
 
 \subsection{Java}
-To test the combined output from the three search engines with a group of users, and gather their feedback on the results, I developed a Java Applet to run the programme. The search results from the Java Applet were written to a text file.
-\vspace{5mm}
+To test the combined output from the three search engines with a group of users, and gather their feedback on the results, I developed a Java Applet to run the programme (see Figure~\ref{applet}). The search results from the Java Applet were written to a text file.
 
-Java was chosen for quick development of packages of features to test with users as the developer for the project is most proficient with Java, and could quickly develop prototypes which could then be later implemented after user testing.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.40]{Applet}
+\caption{Applet Built to User Test the Combination Search Engine. }
+\label{applet}
+\end{center}
+\end{figure}
+
+Java was chosen for development of `to be tested' packages of features (e.g., the combination search engine). The developer for the project was most proficient with Java, and could quickly develop prototypes for user testing.
 
 \subsection{JavaScript}
-JavaScript was used to return the aboutMe profile information from Google+ to the user.
 
 JavaScript is commonly used in HTML as it can run locally in a browser (rather than remote server). The Google+ API provided good documentation for using JavaScript. Furthermore the JavaScript code could be easily embedded into the Jellibean HTML code to interact with the Document Object Model (DOM) of the page. The browser was able to respond to user demand quickly, which made Jellibeans more responsive.
+\vspace{5mm}
+JavaScript was used in this way to return the aboutMe profile information from Google+ to the user.
 
 \vspace{5mm}
-JavaScript was also used to calculate the user's Autism Quotient and display the score. Users can also save the data to a local Excel file on the users computer so that they can access the data at a later stage.
+JavaScript was also used to calculate the user's Autism Quotient, display the score in the browser, and to save the user's responses to a local Excel file on the users computer so that they can access the data at a later stage.
 
 \subsection{HTTP: Client and Server Set-up}
-The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. When the user submits a HTTP request to the Jellibean server, it responds with the appropriate behaviour to the client so that the user can formulate their search query. 
+The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in the web server so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. 
 
 \vspace{5mm}
 Jellibeans can be viewed at http://esha.mseth.co.
@@ -420,7 +424,7 @@ Tools and programming languages\\
 \subsection{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}
 
 To implement the combination search engine I used three APIâ€™s provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
-
+\vspace{5mm}
 To get started with the Google Custom Search API, I created a project called \textit{Jellibeans} in the Google Developers Console, and an OAuth 2.0 Client ID. I obtained a Consumer Key and Secret to use the API, and used these in the application code to access the Google Custom Search Engine (see Figure~\ref{JBeanAppletGoogleCustomSearch1}). 
 
 \begin{figure}[H]
@@ -478,24 +482,25 @@ So, instead, I used the Jsoup API \cite{jsoup}, which is a java â€“written 
 
 \subsubsection{User Research and Testing of Core Feature 1}
 To test the integrated combined search engine, the returned documents from 10 pre-determined search queries were presented to 10 participants who were identified as high AQ scorers. Participants were asked to comment on the search results that had been returned, and to choose three out of the links returned to follow up with, and to observe if anything was odd about the results returned. The responses from the 10 users were analysed to test core feature 1 and whether a combination search would be a good option for Jellibean Search, or whether it would introduce redundancy in the search results. 
+\vspace{5mm}
 Somewhat non-surprisingly (given the statistics of preferred search engines) the results revealed Bing Search was favoured the least, and Google results the most, with Yahoo falling somewhere in between. Out of the 30 responses participants indicated to follow up with, 21 were Google results, 3 were Yahoo, and 1 was Bing and 5 results overlapped between Google and Yahoo.
 4 participants commented that the Bing results were distracting rather than helpful.
-
+\vspace{5mm}
 Given these findings from the user group, it was decided to continue using the Google results, but to drop the results from Yahoo and Bing, in line with the aim of the project as a whole â€“ to improve returned search results for users with Autism.
 
 
 
 \subsection{Core Feature 2: Building a User Model of Autism.}
 To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distributed widely via Surveymonkey.com \cite{surveymonkey} and can be seen in Appendix ~\ref{AppendixA}. Participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix ~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
-
+\vspace{5mm}
 The range of scores for the AQ is 0 to 50 with high scores indicating increased likelihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or Aspergers. A score above 30 suggests a likelihood of Aspergers syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}).For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
-
+\vspace{5mm}
 Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 30 low AQ scorers and 7 high AQ scorers. 
 
 
 \subsubsection{Differences in Search Queries Between Users With and Without Autistic-like traits.}
 I conducted a qualitative analysis on the search query strings from both low and high AQ scorer groups.
-
+\vspace{5mm}
 In both groups, Google was the prefered search engine by far, with all participants reporting that they used Google as a first choice. No one in the current sample used Yahoo or Bing. 
 The low AQ scorer responses were analysed as a group. A baseline answer was generated using a frequency criterion of 40\% i.e., if 12 out of 30 respondents or more generated the same query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. Data was discarded when a response indicated that the participant would do an image search, as this was not the aim of the survey. The results from the frequency analysis are presented below.
 
@@ -646,6 +651,12 @@ Disadvantages
 \item{Lighting works best when the hand is seen in silhouette fashion by the controller. }
 \end{enumerate}
 
+\section{Software Testing}
+
+The JavaScript Console was used for testing JavaScript code. \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle} to ensure the code contained no bugs, and was particularly good for seeing how the JavaScript code integrated with the HTML code and CSS.
+
+\vspace{5mm}
+JUnit was used to test the Combination Search Engine, which was written using Java code. Unit testing was completed, mostly at the method level.
 
 \section{User Verification and Testing}
 Five high AQ scorers were called back for interviews and a focus group. During the interview, individuals were given the same user search queries as in the data collection and research phase of the study. For each transformation that was implemented, users were asked to comment on whether it enhanced or took away from the ease of their search experience, and from their satisfaction with the search results. Users were asked to comment on:
@@ -671,12 +682,16 @@ Users verified that the `Dashboard' colour coding was helpful (see Figure~\ref{c
 
 The modals (floating window reminders) for each of the colour themes were useful for newer users, when they were unfamiliar with the colours. The associations for all user groups, including users with Autism, were quick to learn, these were single link visual (rather than verbal) associations.\\
 
+\vspace{5mm}
 One tester with high functioning Autism described that the direct question (i.e., `What do you want to do on the web?'), with suggestions (`Shop', `Watch', `Listen'), was useful when he was ``at a total blank". He disclosed that often his need for perfectionism and sameness could have him staring at a blank screen until he came up with the `perfect' query. However, the suggestions were helpful for him to get started, and so his experience was that the queries were completed faster than usual.  \\
 
+\vspace{5mm}
 During the focus group, participants agreed that one of the major positives of Jellibeans was that unlike Google, users did not receive back hundreds and thousands of mostly irrelevant results. Jellibeans held their interest for longer because of the reduced number of results that users had to sift through. Testing also revealed that the parametric search style meant that they did not need to try and remember all the key words to search for, rather the cues helped them remember points they would have missed otherwise. \\
 
+\vspace{5mm}
 Another common comment was the time/reward payoff from completing a detailed search form. Users agreed that although they would spend more time formulating their search query, they were likely to save time that would usually be spent sifting through search results.\\
 
+\vspace{5mm}
 All users positively commented on the reduced number of search results presented (top 3). The amount of textual information that was presented back on the results page is significantly reduced in Jellibeans. 
 
 
@@ -684,7 +699,7 @@ All users positively commented on the reduced number of search results presented
 
 One comment during the first iteration about Jellibeans was that the results were not specific enough to the search, and that a better precision needed to be achieved. To increase the precision of the engine, Jellibeans implemented `AND' boolean operators between each input of the parametric search. This increased precision significantly, and recall dropped. However it led to a better user experience than without this modification.
 
-
+\vspace{5mm}
 One participant commented that the suggestions on the `Do', `Know', `Go' and `Social' pages were not user-specific (see Figure~\ref{suggestions}). 
 
 \begin{figure}[H]
@@ -697,9 +712,10 @@ One participant commented that the suggestions on the `Do', `Know', `Go' and `So
 
 He suggested implementing something that is user-centred, or, trending, rather than static, as these may not be suited for all users. However, one of the aims of the current project was to reduce the restricted and repetitive nature of search queries for people with Autism. One future suggestion for Jellibeans in order to achieve a balance between user-specific suggestions but not restricted interests, is to include a recommendation system that change often enough for them not to be repetitive. 
 
+\vspace{5mm}
 One (possible) negative that was identified with Jellibeans was that the time/reward payoff is really only apparent, over and beyond a traditional search engine, when the search query is complex, or if users are searching for something they have yet to identify, or something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
 
-
+\vspace{5mm}
 Describe the verification process you used in your project\\
 Unit Testing, Static Analysis for methods in javascript etc.\\
 Manual testing, Selenium, Cucumber etc for html.\\
@@ -750,10 +766,12 @@ Apache Solr\\
 \subsection{Future Directions}
 Future directions for the current project would be to develop an API or library for word frequencies in the written English language. These frequency data could have been used to suggest words that were more frequent in the written language for people with Autism, who tend to use idiosyncratic language. This would suggest alternatives for the user.\\
 
+\vspace{5mm}
 Alternatively, to use a thesaurus in the current project would be a useful addition.\\
 
 Maybe google which has access to current trending searches would be able to have the `floating' modals to reflect the trends but the current version of Jellibeans is a working example of what could be achieved but with searches that are generally common, rather than trending.
 
+\vspace{5mm}
 colour blindness considerations - accessibility for people with Autism  
 
 
@@ -775,6 +793,8 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{leap} Leap Motion, \textit{Java SDK Documentation}, \\https://developer.leapmotion.com/documentation/java/index.html Retrieved 1 April 2015.
 \bibitem{motioncontrollerforautism} Garzotto, F., Valoriani, M. and Bartoli, L. (2014), Touchless Motion-Based Interaction for Therapy of Autistic Children, Virtual, Augmented Reality and Serious Games for Healthcare, \textit{Intelligent Systems Reference Library, 68}, 2014, pp 471-494
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
+\bibitem{javascripttesting} JavaScript Console, https://developer.chrome.com/devtools/docs/console, Retrieved September 3 2015.
+\bibitem{jsfiddle} JS Fiddle, https://jsfiddle.net/, Retrieved September 3 2015.
 \bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
 \bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. \textit{Journal of Child Psychology and Psychiatry 40}, (2), 203211. doi:10.1111/1469-7610.00433.
 \bibitem{moore}Moore, D. J., McGrath, P., \& Thorpe, J. (2000). Computer aided learning for people with autismâa framework for research and development. \textit{Innovations in Education and Training International, 37}
