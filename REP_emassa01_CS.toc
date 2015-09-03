@@ -29,15 +29,16 @@
 \contentsline {subsubsection}{\numberline {6.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{24}
 \contentsline {subsection}{\numberline {6.3}Core Features 3 and 4: Jellibeans -- Transforming the User Query.}{27}
 \contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{30}
-\contentsline {subsubsection}{\numberline {6.4.1}Evaluation of the LEAP Motion Controller in Jellibeans.}{33}
-\contentsline {section}{\numberline {7}Software Testing}{33}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{33}
-\contentsline {subsection}{\numberline {8.1}The Positives}{34}
-\contentsline {subsection}{\numberline {8.2}The Negatives}{35}
-\contentsline {subsection}{\numberline {8.3}The Neutrals}{36}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{37}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{37}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{37}
-\contentsline {section}{\numberline {10}Appendices}{42}
-\contentsline {subsection}{\numberline {10.1}Search Query Survey}{43}
-\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{47}
+\contentsline {subsubsection}{\numberline {6.4.1}Using LEAP in the IDE.}{32}
+\contentsline {subsubsection}{\numberline {6.4.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{36}
+\contentsline {section}{\numberline {7}Software Testing}{36}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{36}
+\contentsline {subsection}{\numberline {8.1}The Positives}{37}
+\contentsline {subsection}{\numberline {8.2}The Negatives}{38}
+\contentsline {subsection}{\numberline {8.3}The Neutrals}{39}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{40}
+\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{40}
+\contentsline {subsection}{\numberline {9.2}Future Directions}{40}
+\contentsline {section}{\numberline {10}Appendices}{45}
+\contentsline {subsection}{\numberline {10.1}Search Query Survey}{46}
+\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{50}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  3 SEP 2015 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  3 SEP 2015 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -642,62 +642,89 @@ LaTeX Warning: Reference `bootstrap' on page 30 undefined on input line 631.
 File: images/leap.jpg Graphic file (type jpg)
  <use images/leap.jpg>
 Package pdftex.def Info: images/leap.jpg used on input line 643.
-(pdftex.def)             Requested size: 285.05995pt x 105.59262pt.
+(pdftex.def)             Requested size: 213.8004pt x 79.19647pt.
 
 [30 <./images/saveScores.png>]
 
-LaTeX Warning: Reference `vrVsLEAP' on page 31 undefined on input line 650.
+LaTeX Warning: Reference `vrVsLEAP' on page 31 undefined on input line 652.
 
 <images/VRvsLEAP.png, id=138, 718.685pt x 287.0725pt>
 File: images/VRvsLEAP.png Graphic file (type png)
 
 <use images/VRvsLEAP.png>
-Package pdftex.def Info: images/VRvsLEAP.png used on input line 654.
+Package pdftex.def Info: images/VRvsLEAP.png used on input line 656.
 (pdftex.def)             Requested size: 359.34161pt x 143.53589pt.
 
-Overfull \hbox (9.67291pt too wide) in paragraph at lines 660--661
+Overfull \hbox (9.67291pt too wide) in paragraph at lines 662--663
 []\OT1/cmr/m/n/10.95 I also took into con-sid-er-a-tion the way in which the de
 -vice man-i-fests ac-tions into be-haviours. 
  []
 
-<images/UserMakingQuery.png, id=139, 1606.0pt x 1204.5pt>
+[31 <./images/leap.jpg> <./images/VRvsLEAP.png>]
+<images/leapCode.png, id=144, 801.99625pt x 194.7275pt>
+File: images/leapCode.png Graphic file (type png)
+
+<use images/leapCode.png>
+Package pdftex.def Info: images/leapCode.png used on input line 669.
+(pdftex.def)             Requested size: 400.99713pt x 97.3635pt.
+
+<images/LEAPPollingFrames.png, id=145, 775.89874pt x 932.48375pt>
+File: images/LEAPPollingFrames.png Graphic file (type png)
+
+<use images/LEAPPollingFrames.png>
+Package pdftex.def Info: images/LEAPPollingFrames.png used on input line 677.
+(pdftex.def)             Requested size: 387.94843pt x 466.24074pt.
+ [32 <./images/leapCode.png>]
+<images/Monty.png, id=150, 1602.3865pt x 1073.2095pt>
+File: images/Monty.png Graphic file (type png)
+ <use images/Monty.png>
+Package pdftex.def Info: images/Monty.png used on input line 685.
+(pdftex.def)             Requested size: 400.59564pt x 268.30171pt.
+
+[33 <./images/LEAPPollingFrames.png>]
+Overfull \hbox (9.78236pt too wide) in paragraph at lines 691--692
+[]\OT1/cmr/m/n/10.95 I ran the code to check how well it worked in Eclipse IDE 
+(see https://youtu.be/ikfiul[]JPBk 
+ []
+
+<images/UserMakingQuery.png, id=154, 1606.0pt x 1204.5pt>
 File: images/UserMakingQuery.png Graphic file (type png)
 
 <use images/UserMakingQuery.png>
-Package pdftex.def Info: images/UserMakingQuery.png used on input line 665.
+Package pdftex.def Info: images/UserMakingQuery.png used on input line 695.
 (pdftex.def)             Requested size: 321.19432pt x 240.89574pt.
- [31 <./images/leap.jpg> <./images/VRvsLEAP.png>] <images/OneHanded.png, id=145
-, 1606.0pt x 1204.5pt>
+ [34 <./images/Monty.png>]
+<images/OneHanded.png, id=158, 1606.0pt x 1204.5pt>
 File: images/OneHanded.png Graphic file (type png)
-
-<use images/OneHanded.png>
-Package pdftex.def Info: images/OneHanded.png used on input line 673.
+ <use images/OneHanded.png>
+Package pdftex.def Info: images/OneHanded.png used on input line 703.
 (pdftex.def)             Requested size: 321.19432pt x 240.89574pt.
- [32 <./images/UserMakingQuery.png> <./images/OneHanded.png>] Excluding 'commen
-t' comment. [33]
-<images/DoKnowGoSocialDashboard.png, id=152, 1261.71375pt x 544.0325pt>
+
+[35 <./images/UserMakingQuery.png> <./images/OneHanded.png>]
+Excluding 'comment' comment. [36]
+<images/DoKnowGoSocialDashboard.png, id=165, 1261.71375pt x 544.0325pt>
 File: images/DoKnowGoSocialDashboard.png Graphic file (type png)
 
 <use images/DoKnowGoSocialDashboard.png>
 Package pdftex.def Info: images/DoKnowGoSocialDashboard.png used on input line 
-718.
+748.
 (pdftex.def)             Requested size: 315.42766pt x 136.00778pt.
 
-<images/floatingModals.png, id=153, 1261.71375pt x 544.0325pt>
+<images/floatingModals.png, id=166, 1261.71375pt x 544.0325pt>
 File: images/floatingModals.png Graphic file (type png)
 
 <use images/floatingModals.png>
-Package pdftex.def Info: images/floatingModals.png used on input line 728.
+Package pdftex.def Info: images/floatingModals.png used on input line 758.
 (pdftex.def)             Requested size: 315.42766pt x 136.00778pt.
- [34 <./images/DoKnowGoSocialDashboard.png>]
-[35 <./images/floatingModals.png>]
-<images/suggestions.png, id=162, 722.7pt x 542.025pt>
+ [37 <./images/DoKnowGoSocialDashboard.png>]
+[38 <./images/floatingModals.png>]
+<images/suggestions.png, id=176, 722.7pt x 542.025pt>
 File: images/suggestions.png Graphic file (type png)
 
 <use images/suggestions.png>
-Package pdftex.def Info: images/suggestions.png used on input line 755.
+Package pdftex.def Info: images/suggestions.png used on input line 785.
 (pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
- Excluding 'comment' comment. [36 <./images/suggestions.png>] [37] [38]
+ Excluding 'comment' comment. [39 <./images/suggestions.png>] [40] [41]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¢ in font cmr10!
 Missing character: There is no â in font cmr10!
@@ -720,7 +747,7 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
- [39
+ [42
 
 ]
 Missing character: There is no Ã in font cmr10!
@@ -730,74 +757,74 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ” in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--863
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
 []\OT1/cmr/m/n/10.95 Term Fre-quency In-verse Doc-u-ment Fre-quency Weight-ing,
  
  []
 
-[40] [41] [42] <images/survey1.png, id=186, 956.57375pt x 555.07375pt>
+[43] [44] [45] <images/survey1.png, id=200, 956.57375pt x 555.07375pt>
 File: images/survey1.png Graphic file (type png)
 
 <use images/survey1.png>
-Package pdftex.def Info: images/survey1.png used on input line 879.
+Package pdftex.def Info: images/survey1.png used on input line 909.
 (pdftex.def)             Requested size: 478.2857pt x 277.53618pt.
 
-Overfull \hbox (44.66571pt too wide) in paragraph at lines 879--879
+Overfull \hbox (44.66571pt too wide) in paragraph at lines 909--909
  [] 
  []
 
-<images/survey2.png, id=187, 966.61125pt x 495.8525pt>
+<images/survey2.png, id=201, 966.61125pt x 495.8525pt>
 File: images/survey2.png Graphic file (type png)
 
 <use images/survey2.png>
-Package pdftex.def Info: images/survey2.png used on input line 880.
+Package pdftex.def Info: images/survey2.png used on input line 910.
 (pdftex.def)             Requested size: 483.30444pt x 247.92564pt.
 
-Overfull \hbox (49.68445pt too wide) in paragraph at lines 880--880
+Overfull \hbox (49.68445pt too wide) in paragraph at lines 910--910
  [][] 
  []
 
-[43 <./images/survey1.png> <./images/survey2.png>]
-<images/survey3.png, id=194, 965.6075pt x 411.5375pt>
+[46 <./images/survey1.png> <./images/survey2.png>]
+<images/survey3.png, id=207, 965.6075pt x 411.5375pt>
 File: images/survey3.png Graphic file (type png)
  <use images/survey3.png>
-Package pdftex.def Info: images/survey3.png used on input line 886.
+Package pdftex.def Info: images/survey3.png used on input line 916.
 (pdftex.def)             Requested size: 482.80257pt x 205.76825pt.
 
-Overfull \hbox (49.18257pt too wide) in paragraph at lines 886--886
+Overfull \hbox (49.18257pt too wide) in paragraph at lines 916--916
  [] 
  []
 
-<images/survey4.png, id=195, 962.59625pt x 324.21124pt>
+<images/survey4.png, id=208, 962.59625pt x 324.21124pt>
 File: images/survey4.png Graphic file (type png)
 
 <use images/survey4.png>
-Package pdftex.def Info: images/survey4.png used on input line 887.
+Package pdftex.def Info: images/survey4.png used on input line 917.
 (pdftex.def)             Requested size: 481.29695pt x 162.10522pt.
 
-Overfull \hbox (47.67696pt too wide) in paragraph at lines 887--887
+Overfull \hbox (47.67696pt too wide) in paragraph at lines 917--917
  [][] 
  []
 
-[44 <./images/survey3.png> <./images/survey4.png>]
-<images/survey5.png, id=201, 965.6075pt x 626.34pt>
+[47 <./images/survey3.png> <./images/survey4.png>]
+<images/survey5.png, id=214, 965.6075pt x 626.34pt>
 File: images/survey5.png Graphic file (type png)
  <use images/survey5.png>
-Package pdftex.def Info: images/survey5.png used on input line 893.
+Package pdftex.def Info: images/survey5.png used on input line 923.
 (pdftex.def)             Requested size: 482.80257pt x 313.16922pt.
 
-Overfull \hbox (49.18257pt too wide) in paragraph at lines 893--893
+Overfull \hbox (49.18257pt too wide) in paragraph at lines 923--923
  [] 
  []
 
-<images/survey6.png, id=202, 966.61125pt x 623.32875pt>
+<images/survey6.png, id=215, 966.61125pt x 623.32875pt>
 File: images/survey6.png Graphic file (type png)
 
 <use images/survey6.png>
-Package pdftex.def Info: images/survey6.png used on input line 894.
+Package pdftex.def Info: images/survey6.png used on input line 924.
 (pdftex.def)             Requested size: 483.30444pt x 311.6636pt.
 
-Overfull \hbox (49.68445pt too wide) in paragraph at lines 894--894
+Overfull \hbox (49.68445pt too wide) in paragraph at lines 924--924
  [][] 
  []
 
@@ -805,18 +832,18 @@ Overfull \hbox (49.68445pt too wide) in paragraph at lines 894--894
 Overfull \vbox (60.67284pt too high) has occurred while \output is active []
 
 
-[45 <./images/survey5.png> <./images/survey6.png>]
-<images/survey7.png, id=208, 963.6pt x 362.35374pt>
+[48 <./images/survey5.png> <./images/survey6.png>]
+<images/survey7.png, id=221, 963.6pt x 362.35374pt>
 File: images/survey7.png Graphic file (type png)
  <use images/survey7.png>
-Package pdftex.def Info: images/survey7.png used on input line 901.
+Package pdftex.def Info: images/survey7.png used on input line 931.
 (pdftex.def)             Requested size: 481.79883pt x 181.17642pt.
 
-Overfull \hbox (48.17883pt too wide) in paragraph at lines 901--901
+Overfull \hbox (48.17883pt too wide) in paragraph at lines 931--931
  [] 
  []
 
-[46 <./images/survey7.png>]
+[49 <./images/survey7.png>]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¢ in font cmr10!
 Missing character: There is no â in font cmr10!
@@ -851,7 +878,7 @@ Missing character: There is no ¬ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no „ in font cmr10!
 Missing character: There is no ¢ in font cmr10!
- [47] [48] (./REP_emassa01_CS.aux)
+ [50] [51] (./REP_emassa01_CS.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -860,10 +887,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5046 strings out of 493117
- 74914 string characters out of 6135433
- 139450 words of memory out of 5000000
- 8358 multiletter control sequences out of 15000+600000
+ 5065 strings out of 493117
+ 75319 string characters out of 6135433
+ 139480 words of memory out of 5000000
+ 8374 multiletter control sequences out of 15000+600000
  14659 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,1550b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -879,11 +906,12 @@ texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb>
-Output written on REP_emassa01_CS.pdf (48 pages, 36436912 bytes).
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb>
+Output written on REP_emassa01_CS.pdf (51 pages, 51820140 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+ 281 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -640,11 +640,13 @@ Jellibeans is integrated with the LEAP Motion Controller Hardware (see Figure~\r
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{leap}\\
+\includegraphics[scale=0.3]{leap}\\
 \caption{The LEAP controller, with 150 degree view \cite{leap}.}
 \label{leap}
 \end{center}
 \end{figure}
+
+The LEAP will recognize and track hands, fingers, finger-like tools, positions, motions and gestures using infrared light and optical sensors along the cartesian coordinate system. The controller has a 150-degree field of view, and operates in a range of 1 inch to 2 feet.  
 
 \vspace{5mm}
 Each of our senses operates with a different lag time. Hearing has the fastest sense-to-cognition/understanding, and surprisingly, sight -- the slowest. If the device interferes with the processing of the sense, it will confuse the combinatorial configuration of the senses, leading to misunderstandings in the meaning and a worse user experience. The LEAP does not have the best cognitive lag time compared to other devices such as the Oculus VR Rift, but it is a completely non-invasive device in comparison (see Figure~\ref{vrVsLEAP}), so was considered a better option for the current user group.
@@ -659,6 +661,34 @@ Each of our senses operates with a different lag time. Hearing has the fastest s
 
 I also took into consideration the way in which the device manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? The LEAP was considered very realistic in terms of the behaviours the user uses when operating the device, and how these transtition into real-world environments.
 
+\subsubsection{Using LEAP in the IDE.}
+The code that tracked frames from the LEAP used the \texttt{Frames} class, to track detected motion. I created frames by calling \texttt{Controller.frame()}. The following code was used to implement a forward poking pointing motion to control mouse clicks.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{leapCode}\\
+\caption{Pointing and Poke Motion Used to Control Mouse Clicks.}
+\label{leapCode}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{LEAPPollingFrames}\\
+\caption{Code to Display Polling of Frame Data from the LEAP.}
+\label{LEAPPollingFrames}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{Monty}\\
+\caption{Using the LEAP to Control the Cursor in the IDE.}
+\label{Monty}
+\end{center}
+\end{figure}
+
+I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE).
 
 \begin{figure}[H]
 \begin{center}
@@ -690,7 +720,7 @@ I used Behaviour Driven Development (BDD) to test the integration of my HTML, CS
 The JavaScript Console was used for testing JavaScript code. \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle} to ensure the code contained no bugs, and was particularly good for seeing how the JavaScript code integrated with the HTML code and CSS.
 
 \vspace{5mm}
-JUnit was used to test the Combination Search Engine, which was written using Java code. Unit testing was completed, at the method level.
+JUnit was used to test the Combination Search Engine and the LEAP motion controller methods, which were written using Java. Unit testing was completed, at the method level.
 
 
 \begin{comment}
