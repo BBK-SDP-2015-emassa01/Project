@@ -20,7 +20,8 @@
 \contentsline {subsection}{\numberline {5.5}HTTP: Client and Server Set-up}{19}
 \contentsline {subsection}{\numberline {5.6}HTML}{19}
 \contentsline {subsubsection}{\numberline {5.6.1}Bootstrap and CSS}{19}
-\contentsline {subsection}{\numberline {5.7}LEAP motion detector and LEAP SDK}{19}
+\contentsline {subsection}{\numberline {5.7}LEAP Motion Detector and LEAP SDK}{19}
+\contentsline {subsection}{\numberline {5.8}LeapStrap for the LEAP Motion Controller}{19}
 \contentsline {section}{\numberline {6}Software Development Process}{20}
 \contentsline {subsection}{\numberline {6.1}Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.}{20}
 \contentsline {subsubsection}{\numberline {6.1.1}Web Scraping}{21}
@@ -30,7 +31,9 @@
 \contentsline {subsection}{\numberline {6.3}Core Features 3 and 4: Jellibeans -- Transforming the User Query.}{27}
 \contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{30}
 \contentsline {subsubsection}{\numberline {6.4.1}Using LEAP in the IDE.}{32}
-\contentsline {subsubsection}{\numberline {6.4.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{36}
+\contentsline {subsubsection}{\numberline {6.4.2}Using LeapStrap in the Web-browser.}{34}
+\contentsline {subsubsection}{\numberline {6.4.3}Using the LEAP with Jellibeans.}{35}
+\contentsline {subsubsection}{\numberline {6.4.4}Evaluation of the LEAP Motion Controller in Jellibeans.}{36}
 \contentsline {section}{\numberline {7}Software Testing}{36}
 \contentsline {section}{\numberline {8}User Verification and User Testing}{36}
 \contentsline {subsection}{\numberline {8.1}The Positives}{37}

@@ -410,8 +410,12 @@ HyperText Markup Language (HTML 5) was used to create the webpages for Jellibean
 For front-end development and to style the Jellibean web pages I used the Bootstrap framework \cite{bootstrap} for it's clear styles, good design and ease of use for the current project. I included my own Cascading Style Sheet (css file) where I needed extra styling beyond what the Bootstrap framework could offer. 
 
 
-\subsection{LEAP motion detector and LEAP SDK}
+\subsection{LEAP Motion Detector and LEAP SDK}
 The LEAP motion controller is a light-weight, portable device that detects user motions using infra-red light. The LEAP has accurate timing, and works well with the combinatorial configuration of senses (sight, hearing and touch). As this is a tool to be used with individuals with Autism, who have increased sensitivity to touch, the LEAP is the perfect choice as there is no additional sensations to the users body. The LEAP is affordable for users to integrate with search at home, and currently retails for about \pounds60.
+
+
+\subsection{LeapStrap for the LEAP Motion Controller}
+The LeapStrap SDK was used to integrate the LEAP into the web broswer. LeapStrap is a HTML5 front-end framework for websites, and gives them fill LEAP motion functionality. 
 
 \begin{comment}
 \subsection*{TODO}
@@ -662,7 +666,7 @@ Each of our senses operates with a different lag time. Hearing has the fastest s
 I also took into consideration the way in which the device manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? The LEAP was considered very realistic in terms of the behaviours the user uses when operating the device, and how these transtition into real-world environments.
 
 \subsubsection{Using LEAP in the IDE.}
-The code that tracked frames from the LEAP used the \texttt{Frames} class, to track detected motion. I created frames by calling \texttt{Controller.frame()}. The following code was used to implement a forward poking pointing motion to control mouse clicks.
+The code that tracked frames from the LEAP used the \texttt{Frames} class, to track detected motion. I created frames by calling \texttt{Controller.frame()}. The following code was used to implement a forward poking pointing motion to control mouse clicks. I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE).
 
 \begin{figure}[H]
 \begin{center}
@@ -688,11 +692,24 @@ The code that tracked frames from the LEAP used the \texttt{Frames} class, to tr
 \end{center}
 \end{figure}
 
-I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE).
+
+\subsubsection{Using LeapStrap in the Web-browser.}
+To use the LEAP in a web-browser I used LeapStrap \cite{leapstrap}, which is built on top of Bootrap and was easy to integrate into the project.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.20]{UserMakingQuery}
+\includegraphics[scale=0.60]{leapstrap}
+\caption{LeapStrap Code Used to Implement the LEAP Motion Controller in the Browser.}
+\label{leapstrap}
+\end{center}
+\end{figure}
+
+Once the LEAP was enabled for Jellibeans I was able to test the application with users to gather feedback. 
+
+\subsubsection{Using the LEAP with Jellibeans.}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.15]{UserMakingQuery}
 \caption{User Forming A Jellibean Search Query with LEAP Using Both Hands.}
 \label{UserMakingQuery}
 \end{center}
@@ -700,7 +717,7 @@ I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.20]{OneHanded}
+\includegraphics[scale=0.15]{OneHanded}
 \caption{User Forming A Jellibean Search Query with LEAP Using One Hand.}
 \label{OneHanded}
 \end{center}
@@ -876,6 +893,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
 \bibitem {gameshealth} Games for Health (2012) \textit{Screen-based technologies and Autism. 1}: 248-53
 \bibitem{leap} Leap Motion, \textit{Java SDK Documentation}, \\https://developer.leapmotion.com/documentation/java/index.html Retrieved 1 April 2015.
+\bibitem{leapstrap} LeapStrap, http://wilkesalex.github.io/leapstrap/getting-started/, Retrieved September 3 2015.
 \bibitem{motioncontrollerforautism} Garzotto, F., Valoriani, M. and Bartoli, L. (2014), Touchless Motion-Based Interaction for Therapy of Autistic Children, Virtual, Augmented Reality and Serious Games for Healthcare, \textit{Intelligent Systems Reference Library, 68}, 2014, pp 471-494
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
 \bibitem{javascripttesting} JavaScript Console, https://developer.chrome.com/devtools/docs/console, Retrieved September 3 2015.
