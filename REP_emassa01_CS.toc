@@ -10,8 +10,8 @@
 \contentsline {section}{\numberline {3}Product Specification}{14}
 \contentsline {section}{\numberline {4}Software Architecture}{15}
 \contentsline {subsection}{\numberline {4.1}Design Patterns}{15}
-\contentsline {subsection}{\numberline {4.2}Use Case Diagram TODO-redo images}{16}
-\contentsline {subsection}{\numberline {4.3}Class Diagram TODO-redo images}{17}
+\contentsline {subsection}{\numberline {4.2}Use Case Diagram}{16}
+\contentsline {subsection}{\numberline {4.3}Class Diagram}{16}
 \contentsline {section}{\numberline {5}Implementation}{17}
 \contentsline {subsection}{\numberline {5.1}Synthesis of Search Results From Different Engines.}{17}
 \contentsline {subsection}{\numberline {5.2}JSoup API}{17}
@@ -28,15 +28,15 @@
 \contentsline {subsection}{\numberline {6.2}Core Feature 2: Building a User Model of Autism.}{24}
 \contentsline {subsubsection}{\numberline {6.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{24}
 \contentsline {subsection}{\numberline {6.3}Core Features 3 and 4: Jellibeans -- Transforming the User Query.}{27}
-\contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{29}
-\contentsline {subsubsection}{\numberline {6.4.1}Evaluation and Review of the Leap Motion Controller.}{29}
-\contentsline {section}{\numberline {7}Software Testing}{30}
-\contentsline {section}{\numberline {8}User Verification and Testing}{31}
-\contentsline {subsection}{\numberline {8.1}The positives}{31}
-\contentsline {subsection}{\numberline {8.2}The negatives}{32}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{33}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{34}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{34}
-\contentsline {section}{\numberline {10}Appendices}{37}
-\contentsline {subsection}{\numberline {10.1}Search Query Survey}{38}
-\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{42}
+\contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{30}
+\contentsline {subsubsection}{\numberline {6.4.1}Evaluation of the LEAP Motion Controller in Jellibeans.}{31}
+\contentsline {section}{\numberline {7}Software Testing}{31}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{32}
+\contentsline {subsection}{\numberline {8.1}The positives}{32}
+\contentsline {subsection}{\numberline {8.2}The negatives}{34}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{35}
+\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{35}
+\contentsline {subsection}{\numberline {9.2}Future Directions}{36}
+\contentsline {section}{\numberline {10}Appendices}{40}
+\contentsline {subsection}{\numberline {10.1}Search Query Survey}{41}
+\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{45}
