@@ -127,39 +127,9 @@ At the end of the introduction, provide a road map for the
 remainder of the report
 \end{comment}
 
-This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans \footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
-\vspace{5mm}
-
-In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research to identify the preferences within search, and the differences in user queries formed by individuals with Autism, by conducting surveys and collecting and analysing search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
-\vspace{5mm}
-
-Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
-
-\vspace{5mm}
-Despite Autism being amongst the most common neuro-developmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}), no user model has yet been developed for Autism within Search. In the current project, I describe my efforts to build a user model within search for individuals with Autism.
-
-\begin{comment}
-Individual characteristics of each user will be measured using a 50 item questionnaire, the Autism Quotient (AQ \cite{Baron Cohen et al}) which measures tendency towards autistic traits. A score of 32 or higher indicates a strong likelihood of Autism or Aspergers syndrome (the questionnaire has a 79\% sensitivity score). Individuals who score highly on the AQ will be offered the current user model for their search. The questionnaire data will be stored in the user's Google+ profile????
-\subsection {User Models in Search}
-\subsection {Rule and Transformation Engine}
-\subsection {Motion Controlled Navigation in Search}
-
-
-Are there any specific work packages that need to be done? If so, list those out here.
-\end{comment}
+This proect report presents my aim to research and develop a prototype web application for people with Autism when they search the web. Despite Autism being amongst the most common neuro-developmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}), no user model has yet been developed for Autism within Search. 
 
 \subsection {Background Research}\label{background} 
-
-\begin{comment}
-What is the problem we are trying to solve?
-define concepts and previous approaches.
-This chapter should focus on the context that you are operating in, e.g., by describing typical applications
-alternative tools and development approaches and how they have been used in practice
-alternative systems and what they achieve and do not achieve
-This should be a synopsis of the relevant part of your project proposal (do not just copy your proposal)
-Restrict yourself to what'€™s relevant to the specific context of your project (the proposal can have a more general look at the
-state-of-the-art)
-\end{comment}
 
 According to the Diagnostic and Statistical Manual \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction, so interaction with computers is prominent in this group. It is also well established that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. This project will combine interactive, motion recognition hardware with search to also improve the UI (user interface) of search for individuals with Autism.\\
 
@@ -170,7 +140,7 @@ Research has shown that people with Autism are less context-sensitive and prefer
 
 The Internet is one of the largest resources of information. Search engines allow users to collate hundreds of links on a single topic, using only a few words or phrases. The typical user sorts the returned results into `relevant' or `irrelevant' categories, flexibly shifting (mentally) between one result and the next, to determine the relevance of each page returned by the search engine. Search allows the user to assimilate the information on the page into their knowledge and is an important learning tool. For people with Autism, the requirement is no different, however, current search is not adequate. A large body of research has shown that `mental shifts' are a known area of weakness for people with Autism \cite{disengagement}. The information is therefore harder to assimilate or learn, and judging the relevance of each document becomes near impossible. One successful therapeutic technique to increase the assimilation of information for individuals with Autism is to present it in clearer, smaller amounts \cite{AdultsWithAutism}. This technique avoids overwhelming individuals, and although less information is presented as a whole, whatever is presented to the user becomes `digestible' and ultimately, the information as a whole becomes more understandable.  \\
 \vspace{5mm}
-One of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved by Jellibeans and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
+One of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
 \vspace{5mm}
 
 Search queries usually fall into one of three broad categories \cite{seo}.  `Do' queries which characterise transactions between the user and the search engine, for example when the user wants to do something such as \textit{buy a plane ticket}, \textit{listen to a song} or, \textit{download a screensaver}. `Know' type queries, which are informational in nature, usually covering a broad topic, for example, the \textit{name of a band} or \textit{restaurant in London}, \textit{trucks}, or \textit{Colorado}. The third broad category is `Go' type queries, which are navigational in nature, for example, searching for a particular home page on the web, \textit{YouTube} or \textit{American Airlines}. There are also many stages to the search process \cite{seo}. After identifying the information need, the user must formulate a search query. The user must browse through results once the query has been entered into a search engine. The whole process can be repeated if the user is not satisfied. 
@@ -188,6 +158,14 @@ solution, or piece of information.}
 \label{search flows}
 \end {enumerate}
 
+\vspace{5mm}
+This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans\footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
+
+\vspace{5mm}
+In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research to identify the preferences within search, and the differences in user queries formed by individuals with Autism, by conducting surveys and collecting and analysing search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
+
+\vspace{5mm}
+Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
 \subsection{Design Patterns for Web Applications}
 
@@ -224,12 +202,18 @@ Individuals with Autism have poor attention \cite{attention}. The static 2-dimen
 \end{figure}
 
 
-\subsection{Summary}
-
-As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. When using Jellibeans query formulation, the user will be assisted through the process of formulating a search query (much like a parametric search engine form for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions will be aided by suggestions that appear laterally on the page. These suggestions can be added into the search query without the need to type them in, just by using natural hand movements, tracked by the LEAP motion controller. The suggestions also serve as cues for the user, and to simplify the search process for them.  The UI component will make the whole experience more interactive and the search engine more receptive to user input. The process of forming an search query thus becomes more tightly defined compared to the current systems for web search, the process will be more predictable, and the size of the result-set will be adapted towards users with Autism.  
 
 \subsection {Aims for Jellibeans}
-The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. These prototype features will be tested on a group of users with Autism. The final product will be integrated within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
+The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. 
+
+\vspace{5mm}
+When using Jellibeans, the user will be assisted through the process of formulating a search query (much like a parametric search engine form for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions will be aided by suggestions that appear laterally on the page. These suggestions can be added into the search query without the need to type them in, just by using natural hand movements, tracked by the LEAP motion controller. The suggestions also serve as cues for the user, and to simplify the search process for them.  
+
+\vspace{5mm}
+The UI component will make the experience more interactive and the search engine more receptive to user input. With the implementation of a parametric-like search the process of forming a query will become more tightly defined compared to the current systems for web search, the process will be more predictable, and the size of the result-set will be adapted towards users with Autism.  
+
+\vspace{5mm}
+These prototype features will be tested on a group of users with Autism. The final product will be integrated in the web browser and within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
 
 \begin{enumerate}
 \item  {To implement and test a combination search web application that synthesises the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.}
@@ -637,10 +621,10 @@ To further address Core Feature 3 of Jellibeans, that is, that results should be
 
 \subsection{Core Feature 5: Integration with a Motion Controlled Interface.}
 
-The selection process for which hardware to integrate with Jellibeans considered the timing of the device, the `volume', the applicability to real-world environments and the affordability for users.
+The selection process for the hardware to integrate with Jellibeans considered 4 factors; the timing of the device, the `volume', the applicability to real-world environments and the affordability for users.
 
 \vspace{5mm}
-Jellibeans is integrated with the LEAP Motion Controller Hardware (see Figure~\ref{leap}). The LEAP has good timing because it polls frames at a constant rate to keep to timining of accurate movement, which is important for user experience. It is very easy to use, and only requires a short calibration period, and is very non-invasive and has a low sensory experience (sensory experiences are not tolerated well by individuals with Autism). The cognitive demand that is required to operate the LEAP is low, and given the web search task is a highly cognitive task, this is a real benefit for the user.
+Jellibeans is integrated with the LEAP Motion Controller Hardware (see Figure~\ref{leap}) which has good timing as it polls frames at a constant rate to keep to timining of accurate movement, and this is important for user experience. It is very easy to use and only requires a short calibration period. It is non-invasive and has a low sensory experience (sensory stimulation is not tolerated well by individuals with Autism). The cognitive demand needed to operate the LEAP is low, and given that web search is a highly cognitive task, this is of real benefit for the user.
 
 \begin{figure}[H]
 \begin{center}
@@ -650,10 +634,10 @@ Jellibeans is integrated with the LEAP Motion Controller Hardware (see Figure~\r
 \end{center}
 \end{figure}
 
-The LEAP will recognize and track hands, fingers, finger-like tools, positions, motions and gestures using infrared light and optical sensors along the cartesian coordinate system. The controller has a 150-degree field of view, and operates in a range of 1 inch to 2 feet.  
+The LEAP recognises and tracks hands, fingers, finger-like tools, positions, motions and gestures using infrared light and optical sensors along the cartesian coordinate system. The controller has a 150-degree field of view, and operates in a range of 1 inch to 2 feet.  
 
 \vspace{5mm}
-Each of our senses operates with a different lag time. Hearing has the fastest sense-to-cognition/understanding, and surprisingly, sight -- the slowest. If the device interferes with the processing of the sense, it will confuse the combinatorial configuration of the senses, leading to misunderstandings in the meaning and a worse user experience. The LEAP does not have the best cognitive lag time compared to other devices such as the Oculus VR Rift, but it is a completely non-invasive device in comparison (see Figure~\ref{vrVsLEAP}), so was considered a better option for the current user group.
+Each of our senses operates with a different lag time. Hearing has the fastest sense-to-cognition/understanding, and surprisingly, sight -- the slowest. If the device interferes with the processing of the sense, it will confuse the combinatorial configuration of the senses, leading to misunderstandings in the meaning and a worse user experience. The LEAP does not have the best cognitive lag time compared to other devices such as the Oculus VR Rift. However, for Jellibeans, the browser refresh rate will likely be the biggest bottleneck for performance, rather than the motion-controller chosen. The LEAP is a completely non-invasive in comparison to the Rift (see Figure~\ref{vrVsLEAP}), so it was considered a better option for the current user group.
 
 \begin{figure}[H]
 \begin{center}
@@ -663,10 +647,10 @@ Each of our senses operates with a different lag time. Hearing has the fastest s
 \end{center}
 \end{figure}
 
-I also took into consideration the way in which the device manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? The LEAP was considered very realistic in terms of the behaviours the user uses when operating the device, and how these transtition into real-world environments.
+I also took into consideration the way in which the device manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? The LEAP was considered very realistic in terms of the transition of behaviour into real-world environments.
 
 \subsubsection{Using LEAP in the IDE.}
-The code that tracked frames from the LEAP used the \texttt{Frames} class, to track detected motion. I created frames by calling \texttt{Controller.frame()}. The following code was used to implement a forward poking pointing motion to control mouse clicks. I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE).
+Frames (cartesian coordinate data) from the LEAP were traked using the \texttt{Frames} class, and detected user motions. The following code was used to implement a forward-poking pointing motion to control mouse clicks. I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE). 
 
 \begin{figure}[H]
 \begin{center}
@@ -678,35 +662,28 @@ The code that tracked frames from the LEAP used the \texttt{Frames} class, to tr
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{LEAPPollingFrames}\\
-\caption{Code to Display Polling of Frame Data from the LEAP.}
-\label{LEAPPollingFrames}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.25]{Monty}\\
+\includegraphics[scale=0.65]{Monty1}\\
 \caption{Using the LEAP to Control the Cursor in the IDE.}
 \label{Monty}
 \end{center}
 \end{figure}
 
+Although using the device this way was interesting and novel, the user has little control over the cursor, and often hand movements aren't precise enough to have a good experience using the hardware. I decided to look for a library that I could use with the LEAP to overcome this. One such library is LeapStrap which I discuss in the next section.
+
 
 \subsubsection{Using LeapStrap in the Web-browser.}
-To use the LEAP in a web-browser I used LeapStrap \cite{leapstrap}, which is built on top of Bootrap and was easy to integrate into the project.
+To use the LEAP in a web-browser I used LeapStrap \cite{leapstrap}, which is built on top of Bootrap and was easy to integrate into the project. To integrate LeapStrap into the HTML I added link in the LeapStrap CSS , jQuery, Leap.js and LeapStrap.js. I also initialised the Leap in the body of the HTML code, and finally made all elements of the class ``leap-interactive" (see Figure~\ref{leapstrap}). 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.60]{leapstrap}
-\caption{LeapStrap Code Used to Implement the LEAP Motion Controller in the Browser.}
+\caption{LeapStrap Library to Implement the LEAP for Jellibeans.}
 \label{leapstrap}
 \end{center}
 \end{figure}
 
-Once the LEAP was enabled for Jellibeans I was able to test the application with users to gather feedback. 
+Once the LEAP was enabled for the web browser I was able to test Jellibeans with users to gather feedback. 
 
-\subsubsection{Using the LEAP with Jellibeans.}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.15]{UserMakingQuery}
@@ -724,7 +701,7 @@ Once the LEAP was enabled for Jellibeans I was able to test the application with
 \end{figure}
 
 \subsubsection {Evaluation of the LEAP Motion Controller in Jellibeans.}
-The LEAP motion controller is an impressive device that uses infra-red light to embed the users (phantom) hands onto the screen. It is a novel, portable and `at home' technology, and because of the portable nature of the device, it is one that has been introduced to laptops. The LEAP offers a recalibration process if the controller is persistently jumpy, which is good because jumpy movements and mannerisms could be an issue for some of the users in the current user group. The device will recalibrate if there are discontinuities or aberrations in the tracking data in certain field of view, or in poor tracking ranges. 
+The LEAP motion controller is an impressive device that uses infra-red light to embed the users (phantom) hands onto the screen. It is a novel, `at home' technology, and because of the portable nature of the device, it is one that has been introduced to laptops. The LEAP offers a recalibration process if the controller is persistently jumpy, which is good because jumpy movements and mannerisms could be an issue for some of the users in the current user group. The device will recalibrate if there are discontinuities or aberrations in the tracking data in certain field of view, or in poor tracking ranges. 
 
 \vspace{5mm}
 The LEAP does however miss small hand movements, and also very large ones (outside of the 150 degree angle along the y axis (see Figure~\ref{leap})). The LEAP also neglects to track the bottom left and right-most corners of the screen. I have tried to take this into consideration when designing Jellibeans, so that the user does not need to reach to the corners of the screen.

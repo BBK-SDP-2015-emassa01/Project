@@ -1,10 +1,9 @@
 \contentsline {section}{\numberline {1}Introduction}{6}
 \contentsline {subsection}{\numberline {1.1}Background Research}{6}
-\contentsline {subsection}{\numberline {1.2}The Problems with Current Web-Search}{7}
+\contentsline {subsection}{\numberline {1.2}The Problems with Current Web-Search}{6}
 \contentsline {subsection}{\numberline {1.3}Design Patterns for Web Applications}{8}
 \contentsline {subsection}{\numberline {1.4}Motion controllers}{9}
-\contentsline {subsection}{\numberline {1.5}Summary}{10}
-\contentsline {subsection}{\numberline {1.6}Aims for Jellibeans}{10}
+\contentsline {subsection}{\numberline {1.5}Aims for Jellibeans}{10}
 \contentsline {section}{\numberline {2}Project Trailer}{12}
 \contentsline {subsection}{\numberline {2.1}Description of What Jellibeans Does}{12}
 \contentsline {section}{\numberline {3}Product Specification}{14}
@@ -31,17 +30,16 @@
 \contentsline {subsection}{\numberline {6.3}Core Features 3 and 4: Jellibeans -- Transforming the User Query.}{27}
 \contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{30}
 \contentsline {subsubsection}{\numberline {6.4.1}Using LEAP in the IDE.}{32}
-\contentsline {subsubsection}{\numberline {6.4.2}Using LeapStrap in the Web-browser.}{34}
-\contentsline {subsubsection}{\numberline {6.4.3}Using the LEAP with Jellibeans.}{35}
-\contentsline {subsubsection}{\numberline {6.4.4}Evaluation of the LEAP Motion Controller in Jellibeans.}{36}
-\contentsline {section}{\numberline {7}Software Testing}{36}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{36}
-\contentsline {subsection}{\numberline {8.1}The Positives}{37}
-\contentsline {subsection}{\numberline {8.2}The Negatives}{38}
-\contentsline {subsection}{\numberline {8.3}The Neutrals}{39}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{40}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{40}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{40}
-\contentsline {section}{\numberline {10}Appendices}{45}
-\contentsline {subsection}{\numberline {10.1}Search Query Survey}{46}
-\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{50}
+\contentsline {subsubsection}{\numberline {6.4.2}Using LeapStrap in the Web-browser.}{33}
+\contentsline {subsubsection}{\numberline {6.4.3}Evaluation of the LEAP Motion Controller in Jellibeans.}{34}
+\contentsline {section}{\numberline {7}Software Testing}{34}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{35}
+\contentsline {subsection}{\numberline {8.1}The Positives}{35}
+\contentsline {subsection}{\numberline {8.2}The Negatives}{37}
+\contentsline {subsection}{\numberline {8.3}The Neutrals}{37}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{38}
+\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{38}
+\contentsline {subsection}{\numberline {9.2}Future Directions}{38}
+\contentsline {section}{\numberline {10}Appendices}{43}
+\contentsline {subsection}{\numberline {10.1}Search Query Survey}{44}
+\contentsline {subsection}{\numberline {10.2}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{48}
