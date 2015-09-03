@@ -31,11 +31,11 @@
 \contentsline {subsection}{\numberline {6.4}Core Feature 5: Integration with a Motion Controlled Interface.}{29}
 \contentsline {subsubsection}{\numberline {6.4.1}Evaluation and Review of the Leap Motion Controller.}{29}
 \contentsline {section}{\numberline {7}Software Testing}{30}
-\contentsline {section}{\numberline {8}User Verification and Testing}{30}
+\contentsline {section}{\numberline {8}User Verification and Testing}{31}
 \contentsline {subsection}{\numberline {8.1}The positives}{31}
 \contentsline {subsection}{\numberline {8.2}The negatives}{32}
 \contentsline {section}{\numberline {9}Evaluation and Discussion.}{33}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{33}
+\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{34}
 \contentsline {subsection}{\numberline {9.2}Future Directions}{34}
 \contentsline {section}{\numberline {10}Appendices}{37}
 \contentsline {subsection}{\numberline {10.1}Search Query Survey}{38}
