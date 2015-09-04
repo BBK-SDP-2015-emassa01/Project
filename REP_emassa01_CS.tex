@@ -11,6 +11,7 @@
 \usepackage{comment} 
 \usepackage{subcaption}
 \usepackage{amssymb,amsmath}
+\usepackage[font={small,it}]{caption}
 
 \usepackage{datetime}
 
@@ -196,7 +197,7 @@ Individuals with Autism have poor attention \cite{attention}. The static 2-dimen
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{vision}\\
-\caption{Envisioned UI component for the project \cite{leap}.}
+\caption{UI component for the project \cite{leap}.}
 \label{vision}
 \end{center}
 \end{figure}
@@ -204,34 +205,37 @@ Individuals with Autism have poor attention \cite{attention}. The static 2-dimen
 
 
 \subsection {Aims for Jellibeans}
-The goal of the project is to build a prototype search tool that assists users with Autism search and navigate the web. As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out, the search engine can better phrase a question to guide the user through their informational demand. Each stage of the search process described above, can be better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. 
+Jellibeans is a prototype search tool that assists users with Autism search and navigate the web. As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out. Then Jellibeans better phrases a question to guide the user through their informational demand. Each stage of the search flow process (see Section~\ref{search flows}, is better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. 
 
 \vspace{5mm}
-When using Jellibeans, the user will be assisted through the process of formulating a search query (much like a parametric search engine form for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions will be aided by suggestions that appear laterally on the page. These suggestions can be added into the search query without the need to type them in, just by using natural hand movements, tracked by the LEAP motion controller. The suggestions also serve as cues for the user, and to simplify the search process for them.  
+When using Jellibeans, users are assisted through the process of formulating a search query (much like a parametric search engine form for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions are aided by suggestions that appear laterally on the page.
 
 \vspace{5mm}
-The UI component will make the experience more interactive and the search engine more receptive to user input. With the implementation of a parametric-like search the process of forming a query will become more tightly defined compared to the current systems for web search, the process will be more predictable, and the size of the result-set will be adapted towards users with Autism.  
+The user can add these suggestions into their search query without the need to type them in, just by using natural hand movements, tracked by the LEAP motion controller. The UI component makes the experience of searching the web more interactive and receptive for user input. The suggestions also serve as cues for the user, and to simplify the search process for them. 
 
 \vspace{5mm}
-These prototype features will be tested on a group of users with Autism. The final product will be integrated in the web browser and within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
+The implementation of a parametric-like search means the process of forming a query is more tightly defined and predictable for the user compared to the current systems for web search. The size of the result-set is also reduced, and adapted towards users with Autism.   
+
+\vspace{5mm}
+Each of these prototype features were tested on a group of users with Autism\footnote{Autism diagnostic status was determined using the Autism Quotient, which strictly speaking is not a diagnostic assessment tool. However the measure has a 79\% sensitivity to Autism if the user scores above 32 on the measure.}. The final product will be integrated in the web browser and within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
 
 \begin{enumerate}
-\item  {To implement and test a combination search web application that synthesises the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.}
+\item {A web-based search tool, that uses a \textit{stereotyped} user model of Autism to filter search results. The features of the model were determined following analyses of survey responses gathered from individuals with Autism or a high occurrence of autism-like symptoms. The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism). The user model for Jellibeans also takes into account the user's demographic data and other group-wide characteristics have been inferred from the Autism subset of users.}
 
-\item {The design and implementation of a user model of Autism to filter user search results. This will be a \textit{stereotyped} model, i.e., some characteristics of the model will be based upon the user's demographic data, other characteristics will be inferred from the Autism subset of users for an explanation of the different types of user models.)}
+\item {Jellibeans implements a parametric-like search to present search results in the context in which they were searched. Jellibeans returns small snippets on the results page (the result page is not verbally-overloaded).}
 
-\item {To Present Words In their Context; returning query terms in context, within small snippets (not verbally-overloaded).}
+\item {Jellibeans prioritises results which have first-order semantic relations to the query words. Jellibeans employs a boolean `AND' between each query word searched for, so that results are more likely first order semantic relations to the searched query.}
 
-\item {Prioritisation of results which have first-order semantic relations to the query words i.e., they appear in matched context to the search query.}
+\item {Jellibeans implements within a motion controlled UI which uses the LEAP controller. This makes search more interactive and receptive for users. The LEAP also works to maintain the attention of the user.}
 
-\item {Motion controlled UI (see Figure~\ref{vision}).}
+\item  {A prior iteration of Jellibeans implemented a combination search web application that synthesised the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}. However, feedback from users during the user-testing phase suggested the feature should be dropped. The development and testing of the feature is presented in the current report, as it demonstrates how Jellibeans has evolved after gathering user feedback.} 
+
 \end{enumerate}
 
 
-
-
-
 \section{Project Trailer}
+
+Jellibeans is a web-browser based application to assist users with Autism when they search the web. Jellibeans can be found at http://esha.mseth.co, and the wireframe sketch and user flow can be seen in Figure~\ref{JBeanUserFlow}.  
 
 \begin{figure}[H]
 \begin{center}
@@ -241,15 +245,41 @@ These prototype features will be tested on a group of users with Autism. The fin
 \label{JBeanUserFlow}
 \end{figure}
 
-\subsection{Description of What Jellibeans Does}
-\begin{enumerate}
-\item{Jellibeans is a web-browser based application to assist users with Autism when they search the web. Jellibeans can be found at http://esha.mseth.co. }
-\item{Jellibeans utilises a \textit{stereotyped} user model of Autism for Web Search. The features of the model were determined following analyses of survey responses gathered from individuals with Autism or a high occurrence of autism-like symptoms. The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism (see Figure~\ref{JBeanUserFlow}).}
-\item{Following the insights gathered from the first set of research findings above, Jellibeans employed a parametric-like search, and include suggestions to guide the user towards forming succinct and accurate search queries.}
-\item{Jellibeans was integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine.}
-\item{Jellibeans allows users to get feedback on the level of their autism-like symptoms. The Autism Quotient \cite{Baron Cohen et al}, a scientifically validated screening tool for autism spectrum disorders will feature on the Jellibean homepage, and users can retrieve their score and save their responses for each question to a local file for their reference (the file is formatted for Microsoft Excel).}
-\item{Jellibeans prioritises and displays the three highest precision search results for users. The goal of Jellibeans is to increase precision of the search results that are returned. Recall of the engine is sacrificed in line with the demands of the user model, to have less textual information on the page.}
-\item{Jellibeans reduces the amount of text on the webpage by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results (see Figure~\ref{resultsModal}).
+Jellibeans was integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine (see Figure~\ref{googlesignin}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{Googleplus}
+\end{center}
+\caption{Using the Google+ API Allowed the User to Sign In and Retrieve User Name and Profile Picture.}
+\label{googlesignin}
+\end{figure}
+
+Jellibeans employs a parametric-like search, and includes \textit{suggestions} to guide the user towards forming succinct and accurate search queries (see Figure~\ref{JBeanUserFlow}). Once signed in, the user can fill out the Autism Quotient and Jellibeans get feedback regarding their autism symptomology. The Autism Quotient \cite{Baron Cohen et al} is a Psychological assessment and validated screening tool for autism spectrum disorders. Users can also save their responses for each question to a local file for their reference.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{SocialPage}
+\end{center}
+\caption{An example page from Jellibeans: the Social Query page.}
+\label{SocialPage}
+\end{figure}
+
+
+Jellibeans web application is integrated with a motion controlled user interface, the LEAP controller (see Figure~\ref{UserMakingQuery}) giving the application a receptive and interactive user interface.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.15]{UserMakingQuery}
+\caption{User Forming A Jellibean Search Query with LEAP Using Both Hands.}
+\label{UserMakingQuery}
+\end{center}
+\end{figure}
+
+Jellibeans prioritises and displays the three highest precision search results for users. Recall of the search engine is sacrificed in line with the demands of the user model, to have less textual information on the page.
+
+\vspace{5mm}
+Jellibeans reduces the amount of text on the webpage by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results (see Figure~\ref{resultsModal}). Due to the nature of parametric search, strict boolean operators used in Jellibeans, and the reduced number of search results displayed, the results from Jellibeans are a direct semantic relation to the search query. 
 
 \begin{figure}[H]
 \begin{center}
@@ -259,92 +289,81 @@ These prototype features will be tested on a group of users with Autism. The fin
 \label{resultsModal}
 \end{figure}
 
-}
-\item{Due to the nature of the parametric search, and the reduction in number of search results displayed, the results from Jellibeans are more likely to be a direct semantic relation to the search query. This makes the selection of that result by the search engine more transparent to the user.}
-\item{Integration of the web application with a motion controlled user interface, the LEAP controller.}
-\end{enumerate}
-
-
 
 
 \section{Product Specification}
-Major dependencies and How I plan on tackling the problem to meet my requirements.\\
-
-The core features for Jellibeans are to implement and test for suitability within an environment for users with Autism are:
+Jellibeans consists of 4 main modules. 
 
 \begin{enumerate}
-\item{A combination search engine.} \\
-A combination search engine that will synthesise the search results from three engines, Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine. 
-\item{User Testing.}\\
-To test the combination search engine with a sample of users with Autism, and typically developing individuals to ensure that the combination search engine enhances search experience without introducing redundancies. To understand more about the likes, dislikes and preferences of user's self-selected search engines.
-\item{User Research.}\\
-Research and develop iterations of a \textit{stereotyped} user model of Autism within Search.
-\item{Retriving Google+ Data.}\\
-To integrate the user model and Jellibeans with Google+, to enhancing the feel of a personalised search engine.
-\item{Assessment of the User's Autistic Traits.}\\
-To develop a diagnostic assessment page for Jellibeans based on a Psychological assessment, the Autism Quotient \cite{Baron Cohen et al}. Jellibeans will review and assess autistic-like traits or characteristics, so that users can be aware of, and save a copy of their diagnostic information.
-\item{Assisting the User to Break Down their Search Query.}\\
-To allow the user to navigate Jellibeans to break down their search query into smaller manageable questions to ask, i.e., breaking the query up into `Do', `Know', `Go', `Social' questions.
-\item{Parametric Search Process.} \\
-To provide a parametric search process, and reduce ambiguity of forming a search query for users with Autism.
-\item{Jellibean Suggestions and Assitance.}\\
-To provide suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.
-\item{Prioritising Search Results and Minimising Text Displayed to User.}\\
+\item{}
+A combination search engine that synthesises the search results from Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine. The feature has been tested with a sample of users with Autism, and typically developing individuals to ensure that the combination search engine enhances search experience without introducing redundancies. 
+
+\item{}
+Jellibeans integrates with Google+ to retrive user profile data to enhance the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). Users can save a copy of their diagnostic information to a local file on their computer.
+
+\item{Parametric Search Process.}
+Jellibeans allows the user to break down their search query into smaller manageable questions, i.e., into `Do', `Know', `Go', `Social' queries. The process reduces ambiguity of forming a search query. Jellibeans provides suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.
+
+\vspace{1mm}
 Jellibeans will prioritise and display the three highest ranking search results for users. The overall goal of this feature is to reduce the amount of text on the page, to minimise the chance of overwhelming users and to retain as high precision of the search results as possible.
-\item{User Testing.}\\
-To test the \textit{stereotyped} user model embedded within Jellibeans on a sample of individuals with Autism and gather feedback.
-\item{Motion Controlled User Interface.}\\
-Jellibeans will utilise a motion controlled UI to enhance the search experience for individuals with Autism by making it more receptive and interactive, and to maintain the user's attention for longer.
-\item{User Testing.}\\
-To gather feedback from a sample of individuals with Autism who have used Jellibeans, and present the findings in the Evaluation and Conclusions (see Section~\ref{eval}).
+
+\item{Motion Controlled User Interface.}
+Jellibeans is a LEAP enabled website. The motion controller provides an interactive search experience, which maintains user attention.
+
 \end{enumerate}
 
 
 
 
 
-\section{Software Architecture}
+\section{System and Software Architecture}
 
-\subsection{Design Patterns}
+\subsection{3-tier Architecture}
+A client-server software architecture was used for Jellibeans. The user interface and motion controller formed the presentation layer, the logic layer was made up of the JavaScript code used to implement the custom search, and storage of data in the data store were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
 
-\begin{enumerate}
-\item{Builder Design Pattern.}\\
-For Jellibeans to successfully create the user's query string, http GET requests were used to extract parameters from the URL. The Builder Design pattern was used to achieve this. Once the parameters from the URL are retrieved, Jellibeans builds them into the user's search query string. The search query string can then be passed to the JavaScript methods in the relevant class (dependent upon the user's search behaviours), parsed into the correct format, before a POST request is then made to the Jellibeans Custom Search Engine to process the request.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.70]{ntier}
+\caption{3-tier architecture implementation}
+\label{ntier}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{jBeanClassDiagram}
+\caption{High Level UML Class Diagram of the Web Presentation Module}
+\label{jBeanClassDiagram}
+\end{center}
+\end{figure}
+
+Classes that were implemented in the web presentation module can be seen in Figure~\ref{jBeanClassDiagram}.
+
+\vspace{5mm}
+
+At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query. The Builder Design pattern was used to retrieve parameters from the URL, build these into a complete search query, and submit these to the Jellibean Custom Search Engine, so that the correct result pages can be returned to the user. 
+
+\vspace{5mm}
+
+
+A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCase}
+
+\begin{comment}
+ to the JavaScript methods in the relevant class (dependent upon the user's search behaviours), parsed into the correct format, before a POST request is then made to the Jellibeans Custom Search Engine to process the request.
 \item{Chain of responsibility Pattern.}\\
 Because there are many behaviours that the user can perform before their query string is formulated and ready to be posted to the search engine, the software also makes use of the Chain of responsibility pattern where at each stage the user's query is passed along a chain, with added functionality and methods depending on what the behaviour of the user was.
 \item{Adapter Pattern.}\\
 I accessed the user's Google+ profile data (name and profile picture) and presented these on the Jellibeans homepage. I then used the Adapter design pattern to build my own functionality onto the existing profile. For example, to present the user's Autism Quotient score, and to guide the user through forming their search query. 
-\end{enumerate}
+
+The software design patterns that were chosen to implement the logic layer, and software architecture (3 tier) to implement Jellibeans work together to reduce coupling between the interface (web browswer and motion controller), logic (classes and the query), and data store layers. 
+\end{comment}
 
 
-These patterns reduced coupling between the classes and the query, so it was chosen because it follows programming best practice.
 
 
-\subsection{Use Case Diagram}
-The main use cases which are required by the Jellibeans application are:\\
-A SHORT DESCRIPTION WILL GO HERE.
-
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.40]{JBeanUseCase}
-\caption{Jellibean Feature Uses and High Level UML Use Case Diagram}
-\label{JBeanUseCase}
-\end{center}
-\end{figure}
-
-\subsection{Class Diagram}
-
-A SHORT DESCRIPTION WILL GO HERE.
-
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.35]{jBeanClassDiagram}
-\caption{Jellibean High Level UML Class Diagram of Jellibeans}
-\label{jBeanClassDiagram}
-\end{center}
-\end{figure}
 
 
 
@@ -374,6 +393,7 @@ Java was chosen for development of `to be tested' packages of features (e.g., th
 \subsection{JavaScript}
 
 JavaScript is commonly used in HTML as it can run locally in a browser (rather than remote server). The Google+ API provided good documentation for using JavaScript. Furthermore the JavaScript code could be easily embedded into the Jellibean HTML code to interact with the Document Object Model (DOM) of the page. The browser was able to respond to user demand quickly, which made Jellibeans more responsive.
+
 \vspace{5mm}
 JavaScript was used in this way to return the aboutMe profile information from Google+ to the user.
 
@@ -381,7 +401,7 @@ JavaScript was used in this way to return the aboutMe profile information from G
 JavaScript was also used to calculate the user's Autism Quotient, display the score in the browser, and to save the user's responses to a local Excel file on the users computer so that they can access the data at a later stage.
 
 \subsection{HTTP: Client and Server Set-up}
-The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in textbf{nginx} (pronounded `engine x') HTTP web server, and digitalocean.com was used to host the web servers, so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. 
+The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in textbf{nginx} HTTP web server, and digitalocean.com was used to host the web servers, so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. 
 
 \vspace{5mm}
 Jellibeans can be viewed at http://esha.mseth.co.
@@ -686,14 +706,6 @@ Once the LEAP was enabled for the web browser I was able to test Jellibeans with
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.15]{UserMakingQuery}
-\caption{User Forming A Jellibean Search Query with LEAP Using Both Hands.}
-\label{UserMakingQuery}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
 \includegraphics[scale=0.15]{OneHanded}
 \caption{User Forming A Jellibean Search Query with LEAP Using One Hand.}
 \label{OneHanded}
@@ -895,6 +907,17 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 
 \newpage
 \section {Appendices}
+
+\newpage
+\subsection{Use Case Diagram}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.40]{JBeanUseCase}
+\caption{Jellibean Feature Uses and High Level UML Use Case Diagram}
+\label{JBeanUseCase}
+\end{center}
+\end{figure}
 
 \newpage
 \subsection{Search Query Survey} \label{AppendixA}
