@@ -60,7 +60,7 @@ This project is substantially the result of my own work, expressed in my own wor
 
 
 \begin{center}
-word count (project text only) : 8955 words
+word count (project text only) : 8443 words
 \end{center}
 
 \clearpage
@@ -136,11 +136,11 @@ This proect report presents my aim to research and develop a prototype web appli
 According to the Diagnostic and Statistical Manual \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction, so interaction with computers is prominent in this group. It is also well established that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. This project will combine interactive, motion recognition hardware with search to also improve the UI (user interface) of search for individuals with Autism.\\
 
 \vspace{5mm}
-Research has shown that people with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. There is good reason to postulate then, that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, resulting in web-search queries that are more likely formed of single-order associations. In addition to a detailed, item-specific processing style, individuals with Autism are also less likely to engage in a contextual processing style. For example in a search for `Guitar', a contextual style of processing would imply an awareness that the word is related to `Piano', but also that both words are hierarchically related to `Instrument'. In day to day life, a major factor determining the effectiveness of working-memory (the transient holding and processing of information for updating, learning and comprehension), and the amount and quality of information that an individual can recall and enter into the web-search, is greatly influenced by the number of cues that are available at the time. For example, if presented with a list of 50 items to remember, you are more likely to remember that I presented `Zebra' if I tell you that I presented an animal. This type of `cued' recall can be used to bolster recall of information for people with Autism, and is a technique that will be applied in the current project. \\
+Research has shown that people with Autism are less context-sensitive and prefer a more detail-focused processing style \cite{mottron}. There is good reason to postulate then, that web-search queries are formed very differently to the typical population. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style, resulting in web-search queries that are more likely formed of single-order associations. In addition to a detailed, item-specific processing style, individuals with Autism are also less likely to engage in a contextual processing style. For example in a search for `Guitar', a contextual style of processing would imply an awareness that the word is related to `Piano', but also that both words are hierarchically related to `Instrument'. In day to day life, a major factor determining the effectiveness of working-memory (the transient holding and processing of information for updating, learning and comprehension), and the amount and quality of information that an individual can recall and enter into the web-search, is greatly influenced by the number of cues that are available at the time. For example, if presented with a list of 50 items to remember, you are more likely to remember that I presented `Zebra' if I tell you that I presented an animal. This type of `cued' recall can be used to bolster recall of information, and is a technique that will be applied in the current project to enable individuals with Autism to formulate better search queries in their browser. \\
 
 \subsection{The Problems with Current Web-Search}\label{What should search offer people with Autism}
 
-The Internet is one of the largest resources of information. Search engines allow users to collate hundreds of links on a single topic, using only a few words or phrases. The typical user sorts the returned results into `relevant' or `irrelevant' categories, flexibly shifting (mentally) between one result and the next, to determine the relevance of each page returned by the search engine. Search allows the user to assimilate the information on the page into their knowledge and is an important learning tool. For people with Autism, the requirement is no different, however, current search is not adequate. A large body of research has shown that `mental shifts' are a known area of weakness for people with Autism \cite{disengagement}. The information is therefore harder to assimilate or learn, and judging the relevance of each document becomes near impossible. One successful therapeutic technique to increase the assimilation of information for individuals with Autism is to present it in clearer, smaller amounts \cite{AdultsWithAutism}. This technique avoids overwhelming individuals, and although less information is presented as a whole, whatever is presented to the user becomes `digestible' and ultimately, the information as a whole becomes more understandable.  \\
+The Internet is one of the largest resources of information. Search engines allow users to collate hundreds of links on a single topic, using only a few words or phrases. The typical user sorts the returned results into `relevant' or `irrelevant' categories, flexibly shifting (mentally) between one result and the next, to determine the relevance of each page returned by the search engine. Search allows the user to assimilate the information on the page into their knowledge and is an important learning tool. For people with Autism, the requirement is no different, however, current search is not adequate. A large body of research has shown that `mental shifts' are a known area of weakness for people with Autism \cite{disengagement}. The information is therefore harder to assimilate or learn, and judging the relevance of each document becomes near impossible. One successful Psychological technique to increase the assimilation of information for individuals with Autism is to present it in clearer, smaller amounts \cite{AdultsWithAutism}. This technique avoids overwhelming individuals, and although less information is presented as a whole, whatever is presented to the user becomes `digestible' and ultimately, the information as a whole becomes more understandable.  \\
 \vspace{5mm}
 One of the first aims of the current project was to build a synthesis of three leading search engines, to ensure the best possible results were retrieved and presented to the user. The first stage was to therefore build the combination search engine and test the results on a user group with Autism. The goal of the research was to understand if the synthesis of the search engines enhanced search experience (in other words were users happy with the combination search), or, whether the results introduced redundancies or oddities in the results (some users may not use a certain search engine because they do not find the results helpful).\\
 \vspace{5mm}
@@ -160,14 +160,14 @@ solution, or piece of information.}
 \label{search flows}
 \end {enumerate}
 
-\vspace{5mm}
-This project report presents the development and evaluation of a prototype web-browser based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans\footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP). 
+\subsection{Current Project}
+This project report presents a prototype browser-based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans\footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP) to enable an interactive search in the web browser. 
 
 \vspace{5mm}
-In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research to identify the preferences within search, and the differences in user queries formed by individuals with Autism, by conducting surveys and collecting and analysing search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
+In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research surveys to identify differences in user queries and analysed search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
 
 \vspace{5mm}
-Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, and can hold users' attention for longer periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
+Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, which can hold users' attention for long periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
 \subsection{Design Patterns for Web Applications}
 
@@ -175,38 +175,33 @@ Search engines like Google apply strong reduction techniques to navigation of th
 
 \vspace{5mm}
 As we have seen in the introduction, users with Autism behave in different ways to typical users when navigating search. Users with Autism do not use the same key phrases when looking for documents with several attributes, i.e., queries that would be best formulated using several iterations of search, or multiple search parameters. This leads to an ineffective search; one that requires users to sift through results which are in large-part irrelevant, and a bad user experience.  
+
 \vspace{5mm}
-Parametric search queries allow users to define parameters in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination, or for a person. This requires high cognitive `load' (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
+Parametric search queries allow users to specify parameters for their search in an increasingly logical and structured way. As an example, consider the experience of searching for flights to a particular holiday destination. This requires high cognitive `load' (remembering and manipulating arrival, departure, destination, timings, airlines, seat preferences etc.) so searches are often structured using fixed options (see Figure~\ref{exped}).
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.3]{expedia}\\
-
+\includegraphics[scale=0.27]{expedia}
 \caption{Expedia Parametric Search Example}
 \label{exped}
 \end{center}
 \end{figure}
 
-For typical users, parametric search is more structured, and in some circumstances seems more natural than a free â€“ keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. However, when used in addition to the original search query itself, the parametric search will refine the user'€™s search results in line with their search query, ultimately leading to a higher precision for the search engine.
-\vspace{5mm}
-One of the aims of the study is to reduce the amount of textual information on the webpage presented to the user, so the solution implemented here tries to find a balance between these two aims.\\  
-
+For typical users, parametric search is more structured, and in some circumstances seems more natural than a free keyword search. It makes search queries easier to formulate in situations where there is a high cognitive load.  We can apply this idea to web search for people with Autism, by asking them to enter criteria that can be applied to subgroups of search queries. Parametric search can assist the user with capturing the search parameters that are useful for a query it does not ultimately reduce the number of search results returned; the possibility of a large result set is most definitely true. So, although this tackles one aim of Jellibeans, further refinement of the search results would also be necessary.
 
 \subsection{Motion controllers}
 Individuals with Autism have poor attention \cite{attention}. The static 2-dimensional interface of many current search engines is unlikely to maintain adequate (sustained) interest levels. Individuals (and especially teenagers) with Autism spend a substantial amount of their time using computers, web, portable or console devices \cite{Shane and Albert}, as they find these more stimulating and attention-grabbing. For these individuals, computer-based technologies provide a stable, consistent learning environment that can be customized \cite{moore}. Furthermore, motion recognition devices can be programmed to make consistent responses to environmental triggers. These controlled and interactive environments have shown promise for improving social communication skills and reducing repetitive behaviours \cite{gameshealth}. For the current project a motion-controlled learning environment will be bolstered to improve attention within search for people with autism. 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{vision}\\
+\includegraphics[scale=0.47]{vision}
 \caption{UI component for the project \cite{leap}.}
 \label{vision}
 \end{center}
 \end{figure}
 
-
-
 \subsection {Aims for Jellibeans}
-Jellibeans is a prototype search tool that assists users with Autism search and navigate the web. As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out. Then Jellibeans better phrases a question to guide the user through their informational demand. Each stage of the search flow process (see Section~\ref{search flows}, is better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. 
+Jellibeans is a prototype search tool that assists users with Autism search and navigate the web. As search can be compartmentalised into `Do', `Know' and `Go' type queries, it provides a natural way to tackle the issue of simplifying the search process for people with Autism. Users first identify the type of search they would like to carry out. Then Jellibeans better phrases a question to guide the user through their informational demand. Each stage of the search flow process (see Section~\ref{search flows}), is better tailored towards providing a concrete and unambiguous experience for the user with Autism, and reducing the amount of text on the page. 
 
 \vspace{5mm}
 When using Jellibeans, users are assisted through the process of formulating a search query (much like a parametric search engine form for example when you buy a car, you fill out many criteria which must be simultaneously searched for). Concretely phrased questions are aided by suggestions that appear laterally on the page.
@@ -218,10 +213,10 @@ The user can add these suggestions into their search query without the need to t
 The implementation of a parametric-like search means the process of forming a query is more tightly defined and predictable for the user compared to the current systems for web search. The size of the result-set is also reduced, and adapted towards users with Autism.   
 
 \vspace{5mm}
-Each of these prototype features were tested on a group of users with Autism\footnote{Autism diagnostic status was determined using the Autism Quotient, which strictly speaking is not a diagnostic assessment tool. However the measure has a 79\% sensitivity to Autism if the user scores above 32 on the measure.}. The final product will be integrated in the web browser and within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
+Each of these features were tested on a group of users with Autism\footnote{Autism diagnostic status was determined using the Autism Quotient, which strictly speaking is not a diagnostic assessment tool. However the measure has a 79\% sensitivity to Autism if the user scores above 32 on the measure.}. The final product will be integrated in the web browser and within a motion-controlled environment. The prototype will be modified accordingly in line with the outcome of several stages of user research.\\ The core features of Jellibeans are:
 
 \begin{enumerate}
-\item {A web-based search tool, that uses a \textit{stereotyped} user model of Autism to filter search results. The features of the model were determined following analyses of survey responses gathered from individuals with Autism or a high occurrence of autism-like symptoms. The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism). The user model for Jellibeans also takes into account the user's demographic data and other group-wide characteristics have been inferred from the Autism subset of users.}
+\item {A web-based search tool, that uses a \textit{stereotyped}\footnote{Stereotyped user models infer characteristics about a user from data gathered from other users within that distinct subset.} user model of Autism to filter search results. The features of the model were determined following analyses of survey responses gathered from individuals with Autism or a high occurrence of autism-like symptoms. The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism. The user model for Jellibeans also takes into account the user's demographic data and other group-wide characteristics have been inferred from the Autism subset of users.}
 
 \item {Jellibeans implements a parametric-like search to present search results in the context in which they were searched. Jellibeans returns small snippets on the results page (the result page is not verbally-overloaded).}
 
@@ -229,34 +224,38 @@ Each of these prototype features were tested on a group of users with Autism\foo
 
 \item {Jellibeans implements within a motion controlled UI which uses the LEAP controller. This makes search more interactive and receptive for users. The LEAP also works to maintain the attention of the user.}
 
-\item  {A prior iteration of Jellibeans implemented a combination search web application that synthesised the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}. However, feedback from users during the user-testing phase suggested the feature should be dropped. The development and testing of the feature is presented in the current report, as it demonstrates how Jellibeans has evolved after gathering user feedback.} 
-
+\item  {A prior iteration of Jellibeans implemented a combination search web application that synthesised the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}. The development and testing of the feature is presented in the current report, as it demonstrates how Jellibeans has evolved after gathering user feedback.} 
 \end{enumerate}
 
 
-\section{Project Trailer}
+\section{Project Specification and Design} 
 
-Jellibeans is a web-browser based application to assist users with Autism when they search the web. Jellibeans can be found at http://esha.mseth.co, and the wireframe sketch and user flow can be seen in Figure~\ref{JBeanUserFlow}.  
+The following requirements were proposed for Jellibeans web application. 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{JellibeanUserFlow.png}
+\includegraphics[scale=0.65]{JellibeanUserFlow.png}
 \end{center}
-\caption{Wireframe Sketches for Jellibeans User Flow}
+\caption{Wireframe Sketches for Jellibeans User Flow. Jellibeans can be found at http://esha.mseth.co}
 \label{JBeanUserFlow}
 \end{figure}
 
-Jellibeans was integrated with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine (see Figure~\ref{googlesignin}).
+\vspace{5mm}
+Jellibeans implemented a combination search web application that synthesised the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.
+
+\vspace{5mm}
+
+Jellibeans integrates with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine (see Figure~\ref{googlesignin}).
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.25]{Googleplus}
+\includegraphics[scale=0.25]{helloEsha}
 \end{center}
 \caption{Using the Google+ API Allowed the User to Sign In and Retrieve User Name and Profile Picture.}
 \label{googlesignin}
 \end{figure}
 
-Jellibeans employs a parametric-like search, and includes \textit{suggestions} to guide the user towards forming succinct and accurate search queries (see Figure~\ref{JBeanUserFlow}). Once signed in, the user can fill out the Autism Quotient and Jellibeans get feedback regarding their autism symptomology. The Autism Quotient \cite{Baron Cohen et al} is a Psychological assessment and validated screening tool for autism spectrum disorders. Users can also save their responses for each question to a local file for their reference.
+Jellibeans employs a parametric-like search, including \textit{suggestions} to guide the user towards forming succinct and accurate search queries (see Figure~\ref{JBeanUserFlow}). Once signed in, the user can fill out the Autism Quotient and get feedback regarding their autism symptomology. The Autism Quotient \cite{Baron Cohen et al} is a Psychological assessment and validated screening tool for autism spectrum disorders. Users can also save their responses for each question to a local file for their reference.
 
 \begin{figure}[H]
 \begin{center}
@@ -267,7 +266,7 @@ Jellibeans employs a parametric-like search, and includes \textit{suggestions} t
 \end{figure}
 
 
-Jellibeans web application is integrated with a motion controlled user interface, the LEAP controller (see Figure~\ref{UserMakingQuery}) giving the application a receptive and interactive user interface.
+Jellibeans web application is integrated with a motion controlled UI, the LEAP controller (see Figure~\ref{UserMakingQuery}) giving the application a receptive and interactive user interface.
 
 \begin{figure}[H]
 \begin{center}
@@ -290,66 +289,81 @@ Jellibeans reduces the amount of text on the webpage by having results display o
 \label{resultsModal}
 \end{figure}
 
-
+\begin{comment}
 
 \section{Product Specification}
-Jellibeans consists of 4 main modules. 
+The Functional Requirements of Jellibeans are: 
 
-\begin{enumerate}
-\item{}
-A combination search engine that synthesises the search results from Google, Bing and Yahoo. The aim of this feature is to increase recall of the engine. The feature has been tested with a sample of users with Autism, and typically developing individuals to ensure that the combination search engine enhances search experience without introducing redundancies. 
+\begin{itemize}
+\item{Java Applet for the Combination Search Engine (Java).}
+\item{Rendering the Application to the Web Browser (HTML, CSS, BootStrap).}
+\subitem{Integration with Google+ API (JavaScript).}
+\subitem{Integration with Google Custom Search API (JavaScript).}
+\item{LEAP Motion Controller (LEAP SDK and LeapStrap).}
 
-\item{}
-Jellibeans integrates with Google+ to retrive user profile data to enhance the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). Users can save a copy of their diagnostic information to a local file on their computer.
+\end{itemize}
 
-\item{Parametric Search Process.}
-Jellibeans allows the user to break down their search query into smaller manageable questions, i.e., into `Do', `Know', `Go', `Social' queries. The process reduces ambiguity of forming a search query. Jellibeans provides suggestions or cues for users to assist them with forming a search query, and to help ease some users need of a `perfect' search query.
+\end{comment}
 
-\vspace{1mm}
-Jellibeans will prioritise and display the three highest ranking search results for users. The overall goal of this feature is to reduce the amount of text on the page, to minimise the chance of overwhelming users and to retain as high precision of the search results as possible.
-
-\item{Motion Controlled User Interface.}
-Jellibeans is a LEAP enabled website. The motion controller provides an interactive search experience, which maintains user attention.
-
-\end{enumerate}
-
-
-
-
-
-\section{System and Software Architecture}
+\section{Software Architecture}
 
 \subsection{3-tier Architecture}
 A client-server software architecture was used for Jellibeans. The user interface and motion controller formed the presentation layer, the logic layer was made up of the JavaScript code used to implement the custom search, and storage of data in the data store were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
-
-
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.70]{ntier}
+\includegraphics[scale=0.65]{ntier}
 \caption{3-tier architecture implementation}
 \label{ntier}
 \end{center}
 \end{figure}
 
+To see a list of the API's, development languages used and their justifications, see Appendix~\ref{implementation}. The APIs and languages are listed in the context they were used below.\\
 
+\vspace{5mm}
+
+\begin{itemize}
+\item{Presentation Module\\
+The presentation module consists of:}
+
+\subitem{Jellibean Web Application: Rendering the web application to the browser (HTML, CSS and Bootstrap).}
+
+\subitem{Rendering a Parametric-Like Search in the browser: The user is asked specific questions to break down their search query into smaller manageable terms, i.e., into `Do', `Know', `Go', or `Social' queries, and then into direct search terms. This reduces the ambiguity individuals with Autism face when forming a search query. The web application provides suggestions or cues for users. Once the search terms are entered by the user, they are sent to the logic module to form the search query string, and then onto the data store to retrieve the results which are subsequently rendered onto the screen for the user (HTML, CSS and Bootstrap).}
+
+\subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (JavaScript and Google+ API).}
+
+\subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (LEAP SDK and LeapStrap).}
+
+\item{Logic Module\\
+At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query at the presentation layer. The Builder Design pattern was used to build a complete search query, and submit these to the Data Store so that the result pages could be returned to the user. \\
+The logic module enables:}
+
+\subitem{Logic to produce a combination search engine that synthesises the search results from Google, Bing and Yahoo. The aim of this feature is to increase recall of the search engine (Java).}
+
+\subitem{Logic to integrate with the Google+ API (JavaScript and Google+ API).}
+
+\subitem{Calculation of the users' AQ Score using the questionnaire entries that are entered at the presentation layer. The score is returned to the presentation layer after calculation (JavaScript).}
+
+\subitem{Logic to formulate the user's search query, given their entries at the presentation layer (JavaScript).}
+
+\subitem{Logic to send the query to the Google Data Store, and, to retrieve the search results to render them to the presentation layer (JavaScript and Google Custom Search API).}
+
+\subitem{Logic to prioritise the three highest ranking search results and to reduce the text and verbal information on the page (in line with the aims of Jellibean Search), (JavaScript and Google Custom Search API).} 
+
+\item{Data Store Module}
+
+\subitem{The Data Store Module works with the Google Custom Search engine to retrieve the (indexed) documents from the data store. The documents that are retrieved match the participants' search query string after processing at the logic module level. }
+\end{itemize}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.3]{jBeanClassDiagram}
-\caption{High Level UML Class Diagram of the Web Presentation Module}
+\includegraphics[scale=0.55]{jBeanClassDiagram}
+\caption{High Level UML Class Diagram of Jellibeans.}
 \label{jBeanClassDiagram}
 \end{center}
 \end{figure}
-
-Classes that were implemented in the web presentation module can be seen in Figure~\ref{jBeanClassDiagram}.
-
-\vspace{5mm}
-
-At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query. The Builder Design pattern was used to retrieve parameters from the URL, build these into a complete search query, and submit these to the Jellibean Custom Search Engine, so that the correct result pages can be returned to the user. 
+A class diagram of the system can be seen in Figure~\ref{jBeanClassDiagram}.
 
 \vspace{5mm}
-
-
 A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCaseA}.
 
 \begin{comment}
@@ -371,14 +385,9 @@ chosen and what were the other options:\\
 Tools and programming languages\\
 \end{comment}
 
+\section{Implementation}
 
-
-
-\section{Software Development Process}
-
-To see a list of the API's, development languages used and their justifications, see Appendix~\ref{implementation}. The APIs and languages are explained in the context they were used below.
-
-\subsection{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.} 
+\subsection{Combination Search Engine: Google, Yahoo and Bing.} 
 To implement the combination search engine I used three API's provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
 
 \vspace{5mm}
@@ -397,68 +406,62 @@ Following that I also registered my JavaScript origins within the console to acc
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.3]{GoogleSignIn}
+\includegraphics[scale=0.65]{aboutme}
 \end{center}
-\caption{Google Sign In Pop-Up.}
+\caption{Google+ Integration Code and Sign In Pop-Up.}
 \label{GoogleSignInPage}
-
 \end{figure}
 
-Following a similar protocol for Yahoo and Bing Search API's, I created projects in the Yahoo Developers Network, and Microsoft Azure Marketplace, and purchased an API Consumer Keys and Secrets (needed to use the APIs). 
+Following a similar protocol for Yahoo and Bing Search API's, I created projects in the Yahoo Developers Network, and Microsoft Azure Marketplace, and purchased an API Consumer Keys and Secrets (for use with the APIs). 
 
 \subsubsection{Web Scraping}
-As Web Scraping for Bing and Yahoo search ( using the JSoup API) was an option, and it quickly became a preferred choice because of the flexibility/manipulation of the results if they were returned using the same API rather than two different ones. Web-Scraping is against terms of service set out by Google, however (see section 5.3 of Figure~\ref{GoogleToS1}). Furthermore, the web-links that were returned using web-scraping on any Google results pages were erroneous and incomplete.
+As Bing and Yahoo Search API's were not opensource, I explored the efficacy of web scraping using the JSoup API. With the JSoup API I was able to retrieve the search results in line with the goal for the first aim of project, using a different href filter for each search engine. Web-Scraping is however, against Google policies (see section 5.3 of Appendix~\ref{GoogleToS1} for Google Terms of Service). 
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.6]{GoogleToS}
-\caption{Google Terms of Service}
-\label{GoogleToS1}
-
-\end{center}
-\end{figure}
-
-
-I used the Jsoup API \cite{jsoup}, which is a Java-written API for HTML. The library provides methods to conveniently extract data using DOM (Data Object Model) and CSS (Cascading Style Sheet) methods. 
+\vspace{5mm}
+I used the Jsoup API \cite{jsoup}, which is a Java-written API for HTML. The library provides methods to conveniently extract data using the DOM (Data Object Model) and CSS (Cascading Style Sheet) methods. 
 
 \vspace{5mm}
 The combined Google, Yahoo and Bing results were integrated these into a Java Applet that runs in Eclipse Luna IDE (see Figure~\ref{AppletFig}). The program ran so that the user could enter a search query and the results would be presneted back to them for inspection. The top 10 links, from each search engine were presented to users. Results were ranked prior to presentation, such that result 1 from Google was followed by result 1 from Yahoo, and that was followed by result 1 from Bing. Then results 2 from Google, Yahoo and Bing were presented and so on, until the 30 links were produced (top 10 links for a search from each search engine), in ranked order from the three search engines. 
 
 \begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.60]{htmlParsers}
+\end{center}
+\caption{JSoup HTML Parser.}
+\label{GoogleSignInPage}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.47]{Applet}
+\end{center}
+\caption{Integration with Google Custom Search to Produce the Complete Query Results.}
+\label{AppletFig}
+\end{figure}
+
+\begin{comment}
+\begin{figure}[H]
 \centering
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}{.55\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth]{htmlParsers}
+  \includegraphics[width=.75\linewidth]{htmlParsers}
   \caption{JSoup HTML Parser.}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}{.60\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth]{Applet}
+  \includegraphics[width=.75\linewidth]{Applet}
   \caption{Integration with Google Custom Search to Produce the Complete Query Results.}
 \end{subfigure}
 \caption{(a) JSoup HTML Parsers for Yahoo and Bing. (b) JSoup HTML Parsers working with Google Custom Search API in Java Applet for User Testing.}
 \label{AppletFig}
 \end{figure}
-
-\subsubsection{User Research and Testing of Core Feature 1}
-To test the integrated combined search engine, 10 participants took part in a study to evaluate the quality of it's output. The participants were selected because they scored highly (above 30, where 32 is threshold for Autism Spectrum Disorder with a 79\% sensitivity) on a 50-item screening measure of Autism-like tratis (the Autism Quotient \cite{Baron Cohen et al}), and these individuals were thought to be most suited to test the current system. 
-
-\vspace{5mm}
-The range of scores for the AQ is 0 to 50 with high scores indicating increased likelihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or Aspergers. A score above 30 suggests a likelihood of Aspergers syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}).For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
-
-\vspace{5mm}
-Results from 10 pre-determined search queries were presented to the 10 participants and they were asked to comment on the search results that had been returned, and to choose three out of the links returned that they would follow up with. They were also asked to observe if anything was odd about the results returned. The responses from the 10 users were analysed to determine whether a combination search would be an enhancement in Jellibean Search, or whether it would introduce redundancy in the search results. 
-
-\vspace{5mm}
-Somewhat non-surprisingly (given the statistics of most preferred search engines (Google's unique monthly visitors: 1,100,000,000 and query
-volume: 64.5\% ; Bing: 350,000,000, 12.8\%; and Yahoo!: 300,000,000, 64.5\% (\cite{ebiz} \cite{adam})), the results revealed Bing Search was favoured the least, and Google results the most, with Yahoo falling somewhere in between. Out of the 30 responses participants indicated to follow up with (3 per participant), 21 were Google results, 3 were Yahoo, and 1 was Bing and 5 results overlapped between Google and Yahoo. Four participants commented specifically, that the Bing results were distracting rather than helpful.
-
-\vspace{5mm}
-Given these findings from the user group, it was decided to continue using the Google results, but to drop the results from Yahoo and Bing, in line with the aim of the project as a whole, that is, to improve returned search results for users with Autism.
+\end{comment}
 
 
 
-\subsection{Core Feature 2: Building a User Model of Autism.}
+
+
+\subsection{Building a User Model of Autism.}
 To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to, for example, identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distributed widely via Surveymonkey.com \cite{surveymonkey} and can be seen in the Appendix ~\ref{AppendixA}. All participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix ~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
 
 
@@ -477,13 +480,13 @@ The low AQ scorer responses were analysed together to establish a baseline answe
 
 \begin{enumerate}
 \item{You hear a song on the radio with the lyrics, `Look at your children', and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{Look at your children song}. \\\textit{Look at your children lyrics}.}
-\item{You've lost touch with an old school friend (you went to St. Mary'€™s School). What key words/queries would you use to find them?\\\textit{St. Maryâ€'s School Year of X}.}
-\item{How would you identify what this is using a search engine (pretend you don'€™t know what it is called). What key words/queries would you use?\\\textit{Star shaped brown plant}.}
+\item{You've lost touch with an old school friend (you went to St. Mary's School). What key words/queries would you use to find them?\\\textit{St. Mary's School Year of X}.}
+\item{How would you identify what this is using a search engine (pretend you don't know what it is called). What key words/queries would you use?\\\textit{Star shaped brown plant}.}
 \item{How would you find out the name of this famous person using a search engine? What key words/queries would you use?\\\textit{Brown hair famous young women}.}
 \item{How would you identify what breed this animal is using a search engine? What key words/queries would you use?\\\textit{Small dog fluffy breed}.}
-\item{Your friend and you can'€™t agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{Thandie Newton pronunciation}.}
-\item{What would you search for to identify this pattern'€™s name, and which country it originates from?\\\textit{Repeating square maze pattern border}.}
-\item{How would you search for delay'€™s relating to your (imminent) flight to Paris?\\\textit{Flight number, carrier, Paris, airport, flight time}.}
+\item{Your friend and you can't agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{Thandie Newton pronunciation}.}
+\item{What would you search for to identify this pattern's name, and which country it originates from?\\\textit{Repeating square maze pattern border}.}
+\item{How would you search for delay's relating to your (imminent) flight to Paris?\\\textit{Flight number, carrier, Paris, airport, flight time}.}
 \end{enumerate}
 
 The following observations were made for the users in the high AQ group:
@@ -529,7 +532,7 @@ Lastly there were more spelling errors and typographical errors in the high AQ g
 \end{enumerate}
 
 
-\subsection{Core Features 3 and 4: Jellibeans -- Transforming the User Query.}
+\subsection{Transforming the User Query.}
 Given the set of observations in the data reported above, the aims were to `transform' queries made by individuals in the high AQ group to queries more similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns ('I' and `You') is already taken care of with the use of stop words. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. The rule engine is a concrete and operationalised framework, for a theoretically-grounded stereotyped user model of autism within search. \\
 
 \vspace{5mm} %5mm vertical space
@@ -584,7 +587,7 @@ The user can also choose `Calculate Your Score' which returns the score as an al
 To further address Core Feature 3 of Jellibeans, that is, that results should be returned to the user in smaller snippets rather than large sets of text, I modified the Jellibeans Custom Search Engine to select the 3 highest ranked (precision) results, and to present these back to the user on the first page of their search. The 3 top results are presented on a floating modal\footnote{A modal is a feature in the Bootstrap Framework, for more information see Appendix~\ref{implementation}}, so that the user has the option to close and reopen the results very easily, without having to redo the search itself (see Figure~\ref{resultsModal}).
 
 
-\subsection{Core Feature 5: Integration with a Motion Controlled Interface.}
+\subsection{Integration with a Motion Controlled Interface.}
 
 The selection process for the hardware to integrate with Jellibeans considered 4 factors; the timing of the device, the `volume', the applicability to real-world environments and the affordability for users.
 
@@ -657,7 +660,24 @@ Once the LEAP was enabled for the web browser I was able to test Jellibeans with
 \end{center}
 \end{figure}
 
-\subsubsection {Evaluation of the LEAP Motion Controller in Jellibeans.}
+\section{Testing and Critical Evaluation of Jellibeans}
+\subsection{Testing and Evaluation of the Combined Search Engine.}
+To test the integrated combined search engine, 10 participants took part in a study to evaluate the quality of it's output. The participants were selected because they scored highly (above 30, where 32 is threshold for Autism Spectrum Disorder with a 79\% sensitivity) on a 50-item screening measure of Autism-like tratis (the Autism Quotient \cite{Baron Cohen et al}), and these individuals were thought to be most suited to test the current system. 
+
+\vspace{5mm}
+The range of scores for the AQ is 0 to 50 with high scores indicating increased likelihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or Aspergers. A score above 30 suggests a likelihood of Aspergers syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}). For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
+
+\vspace{5mm}
+Participants were asked to comment on their search results from 10 (pre-determined) informational needs. Participants were also asked to choose three out of the links returned that they would choose to follow up with. They were also asked if anything was odd about the results returned. The responses from the 10 users were then analysed. 
+
+\vspace{5mm}
+Somewhat non-surprisingly (given the statistics of most preferred search engines (Google's unique monthly visitors: 1,100,000,000 and query
+volume: 64.5\% ; Bing: 350,000,000, 12.8\%; and Yahoo!: 300,000,000, 64.5\% (\cite{ebiz} \cite{adam})), the results revealed Bing Search was favoured the least, and Google results the most, with Yahoo falling somewhere in between. Out of the 30 responses participants indicated to follow up with (3 per participant), 21 were Google results, 3 were Yahoo, and 1 was Bing and 5 results overlapped between Google and Yahoo. Four participants commented specifically, that the Bing results were distracting rather than helpful.
+
+\vspace{5mm}
+Given these findings from the user group, future iterations of Jellibeans will continue using the Google results, but drop the results from Yahoo and Bing, in line with the aim of the project as a whole, that is, to improve returned search results for users with Autism.
+
+\subsection {Evaluation of the LEAP Motion Controller in Jellibeans.}
 The LEAP motion controller is an impressive device that uses infra-red light to embed the users (phantom) hands onto the screen. It is a novel, `at home' technology, and because of the portable nature of the device, it is one that has been introduced to laptops. The LEAP offers a recalibration process if the controller is persistently jumpy, which is good because jumpy movements and mannerisms could be an issue for some of the users in the current user group. The device will recalibrate if there are discontinuities or aberrations in the tracking data in certain field of view, or in poor tracking ranges. 
 
 \vspace{5mm}
@@ -755,7 +775,7 @@ Unit Testing, Static Analysis for methods in javascript etc.\\
 Manual testing, Selenium, Cucumber etc for html.\\
 Regression tests
 
-\end{comment}
+
 
 
 \section{Evaluation and Discussion.}\label{eval}
@@ -798,7 +818,7 @@ Evaluation of the system will include comparisons to existing search engines; as
 
 
 Apache Solr\\
-
+\end{comment}
 
 \subsection{Future Directions}
 A future direction for Jellibeans would be to use an API or library for word frequencies in the written English language, which could be integrated with a thesaurus. This type of API requires significant research into the natural language processing of written (rather than spoken) English text. These frequency data could have been used to replace infrequent words in queries formed by individuals with Autism with more frequent words to suggest alternatives for the user. Of course this product would not be scalable, and only apply to users with a particular dialect. This is because word frequency is considerably variable across, and even within a language (e.g., consider South-West England compared to the North of England).
@@ -819,7 +839,7 @@ Individuals with Autism have increased comorbidity with Attention Hyperactivity 
 \bibitem{attention} Bronwyn, M, Murray, M, and Durkin, K. (2003) Weak central coherence, poor joint attention, and low verbal ability: Independent deficits in early autism. \textit{Developmental Psychology, 39}, (4), 646-656. http://dx.doi.org/10.1037/0012-1649.39.4.646
 \bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Aspergers syndrome. \textit{Journal of Autism and Developmental Disorders, 38}(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
 \bibitem {CDC}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58},
-\bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:1â€“20
+\bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:120
 \bibitem{ebiz}eBizMBA inc, \textit{The eBusiness Guide}, www.eBizMBA.com; Retrieved 20 March 2015
 \bibitem{EF} Executive Function, https://en.wikipedia.org/wiki/Executivefunctions, Retrieved 27 August 2015.
 \bibitem{disengagement}
@@ -885,6 +905,15 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \end{tabular}
 
 \newpage
+\subsection{Google Terms of Servive} \label{GoogleToS1}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{GoogleToS}
+\caption{Google Terms of Service}
+\end{center}
+\end{figure}
+
+\newpage
 \subsection{Search Query Survey} \label{AppendixA}
 
 \begin{figure}[H]
@@ -928,10 +957,10 @@ If I try to imagine something, I find it very easy to create a picture in my min
 I frequently get so strongly absorbed in one thing that I lose sight of other things.\\
 I often notice small sounds when others do not.\\
 I usually notice car number plates or similar strings of information.\\
-Other people frequently tell me that what Iâ€™ve said is impolite, even though I think it is polite.\\
+Other people frequently tell me that what I've said is impolite, even though I think it is polite.\\
 When I'm reading a story, I can easily imagine what the characters might look like.\\
 I am fascinated by dates.\\
-In a social group, I can easily keep track of several different peopleâ€™s conversations.\\
+In a social group, I can easily keep track of several different people's conversations.\\
 I find social situations easy.\\
 I tend to notice details that others do not.\\
 I would rather go to a library than a party.\\
@@ -951,7 +980,7 @@ I frequently find that I don't know how to keep a conversation going.\\
 I find it easy to read between the lines when someone is talking to me.\\
 I usually concentrate more on the whole picture, rather than the small details.\\
 I am not very good at remembering phone numbers.\\
-I donâ€™t usually notice small changes in a situation, or a personâ€™s appearance.\\
+I don't usually notice small changes in a situation, or a person's appearance.\\
 I know how to tell if someone listening to me is getting bored.\\
 I find it easy to do more than one thing at once.\\
 When I talk on the phone, I'm not sure when it's my turn to speak.\\
