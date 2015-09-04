@@ -29,15 +29,6 @@
 \contentsline {subsection}{\numberline {8.2}Future Directions}{38}
 \contentsline {section}{\numberline {9}Appendices}{43}
 \contentsline {subsection}{\numberline {9.1}Use Case Diagram}{44}
-\contentsline {subsection}{\numberline {9.2}Implementation}{45}
-\contentsline {subsubsection}{\numberline {9.2.1}Synthesis of Search Results From Different Engines.}{45}
-\contentsline {subsubsection}{\numberline {9.2.2}JSoup API}{45}
-\contentsline {subsubsection}{\numberline {9.2.3}Java}{45}
-\contentsline {subsubsection}{\numberline {9.2.4}JavaScript}{46}
-\contentsline {subsubsection}{\numberline {9.2.5}HTTP: Client and Server Set-up}{47}
-\contentsline {subsubsection}{\numberline {9.2.6}HTML}{47}
-\contentsline {subsubsection}{\numberline {9.2.7}Bootstrap and CSS}{47}
-\contentsline {subsubsection}{\numberline {9.2.8}LEAP Motion Detector and LEAP SDK}{47}
-\contentsline {subsubsection}{\numberline {9.2.9}LeapStrap for the LEAP Motion Controller}{47}
-\contentsline {subsection}{\numberline {9.3}Search Query Survey}{48}
-\contentsline {subsection}{\numberline {9.4}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{52}
+\contentsline {subsection}{\numberline {9.2}APIs Used in Jellibean Implementation}{45}
+\contentsline {subsection}{\numberline {9.3}Search Query Survey}{47}
+\contentsline {subsection}{\numberline {9.4}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{51}
