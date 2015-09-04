@@ -14,6 +14,7 @@
 \usepackage[font={small,it}]{caption}
 
 \usepackage{datetime}
+\usepackage{tgbonum}
 
 \newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
 
@@ -349,7 +350,7 @@ At the logic layer, Jellibeans works to build user search queries from the eleme
 \vspace{5mm}
 
 
-A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCase}
+A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCaseA}.
 
 \begin{comment}
  to the JavaScript methods in the relevant class (dependent upon the user's search behaviours), parsed into the correct format, before a POST request is then made to the Jellibeans Custom Search Engine to process the request.
@@ -361,65 +362,6 @@ I accessed the user's Google+ profile data (name and profile picture) and presen
 The software design patterns that were chosen to implement the logic layer, and software architecture (3 tier) to implement Jellibeans work together to reduce coupling between the interface (web browswer and motion controller), logic (classes and the query), and data store layers. 
 \end{comment}
 
-
-
-
-
-
-
-
-\section{Implementation}
-
-\subsection{Synthesis of Search Results From Different Engines.}
-For search results returned by Google, the Custom Search API was used in line with the Google terms of service, that is that `screen scraping', or copying the data directly from the website is prohibited. The Google Custom Search API is a RESTful API with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of results, alternative search queries, and (3) custom search engine metadata. 
-
-\subsection{JSoup API}
-For Bing and Yahoo search results, JSoup (a Java HTML parser) was used to identify the links from the resulting query. The JSoup HTML parser was considered more efficient for retrieving search results, as it could be used to complete the task from both search engines, using a slightly different href element filter for each. JSoup also has advantages over html parsing. It contains a class representing a list of nodes called `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
-
-\subsection{Java}
-To test the combined output from the three search engines with a group of users, and gather their feedback on the results, I developed a Java Applet to run the programme (see Figure~\ref{applet}). The search results from the Java Applet were written to a text file.
-
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.40]{Applet}
-\caption{Applet Built to User Test the Combination Search Engine. }
-\label{applet}
-\end{center}
-\end{figure}
-
-Java was chosen for development of `to be tested' packages of features (e.g., the combination search engine). The developer for the project was most proficient with Java, and could quickly develop prototypes for user testing.
-
-\subsection{JavaScript}
-
-JavaScript is commonly used in HTML as it can run locally in a browser (rather than remote server). The Google+ API provided good documentation for using JavaScript. Furthermore the JavaScript code could be easily embedded into the Jellibean HTML code to interact with the Document Object Model (DOM) of the page. The browser was able to respond to user demand quickly, which made Jellibeans more responsive.
-
-\vspace{5mm}
-JavaScript was used in this way to return the aboutMe profile information from Google+ to the user.
-
-\vspace{5mm}
-JavaScript was also used to calculate the user's Autism Quotient, display the score in the browser, and to save the user's responses to a local Excel file on the users computer so that they can access the data at a later stage.
-
-\subsection{HTTP: Client and Server Set-up}
-The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in textbf{nginx} HTTP web server, and digitalocean.com was used to host the web servers, so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. 
-
-\vspace{5mm}
-Jellibeans can be viewed at http://esha.mseth.co.
-
-\subsection{HTML}
-HyperText Markup Language (HTML 5) was used to create the webpages for Jellibeans, so that the web browser could render the wesite.
-
-
-\subsubsection{Bootstrap and CSS}\label{boostrap}
-For front-end development and to style the Jellibean web pages I used the Bootstrap framework \cite{bootstrap} for it's clear styles, good design and ease of use for the current project. I included my own Cascading Style Sheet (css file) where I needed extra styling beyond what the Bootstrap framework could offer. 
-
-
-\subsection{LEAP Motion Detector and LEAP SDK}
-The LEAP motion controller is a light-weight, portable device that detects user motions using infra-red light. The LEAP has accurate timing, and works well with the combinatorial configuration of senses (sight, hearing and touch). As this is a tool to be used with individuals with Autism, who have increased sensitivity to touch, the LEAP is the perfect choice as there is no additional sensations to the users body. The LEAP is affordable for users to integrate with search at home, and currently retails for about \pounds60.
-
-
-\subsection{LeapStrap for the LEAP Motion Controller}
-The LeapStrap SDK was used to integrate the LEAP into the web broswer. LeapStrap is a HTML5 front-end framework for websites, and gives them fill LEAP motion functionality. 
 
 \begin{comment}
 \subsection*{TODO}
@@ -433,6 +375,9 @@ Tools and programming languages\\
 
 
 \section{Software Development Process}
+
+To see a list of the API's, development languages used and their justifications, see Appendix~\ref{implementation}. The APIs and languages are explained in the context they were used below.
+
 \subsection{Core Feature 1: Research and Data Collection for a Combination Search Engine using Google, Yahoo and Bing.} 
 To implement the combination search engine I used three API's provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
 
@@ -909,7 +854,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \section {Appendices}
 
 \newpage
-\subsection{Use Case Diagram}
+\subsection{Use Case Diagram}\label{JBeanUseCaseA}
 
 \begin{figure}[H]
 \begin{center}
@@ -918,6 +863,63 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \label{JBeanUseCase}
 \end{center}
 \end{figure}
+
+
+\newpage
+
+\subsection{Implementation}\label{implementation}
+
+\subsubsection{Synthesis of Search Results From Different Engines.}
+For search results returned by Google, the Custom Search API was used in line with the Google terms of service, that is that `screen scraping', or copying the data directly from the website is prohibited. The Google Custom Search API is a RESTful API with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of results, alternative search queries, and (3) custom search engine metadata. 
+
+\subsubsection{JSoup API}
+For Bing and Yahoo search results, JSoup (a Java HTML parser) was used to identify the links from the resulting query. The JSoup HTML parser was considered more efficient for retrieving search results, as it could be used to complete the task from both search engines, using a slightly different href element filter for each. JSoup also has advantages over html parsing. It contains a class representing a list of nodes called `Elements', which implements Iterable to iterate over a list in an enhanced for loop.
+
+\subsubsection{Java}
+To test the combined output from the three search engines with a group of users, and gather their feedback on the results, I developed a Java Applet to run the programme (see Figure~\ref{applet}). The search results from the Java Applet were written to a text file.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.40]{Applet}
+\caption{Applet Built to User Test the Combination Search Engine. }
+\label{applet}
+\end{center}
+\end{figure}
+
+Java was chosen for development of `to be tested' packages of features (e.g., the combination search engine). The developer for the project was most proficient with Java, and could quickly develop prototypes for user testing.
+
+\subsubsection{JavaScript}
+
+JavaScript is commonly used in HTML as it can run locally in a browser (rather than remote server). The Google+ API provided good documentation for using JavaScript. Furthermore the JavaScript code could be easily embedded into the Jellibean HTML code to interact with the Document Object Model (DOM) of the page. The browser was able to respond to user demand quickly, which made Jellibeans more responsive.
+
+\vspace{5mm}
+JavaScript was used in this way to return the aboutMe profile information from Google+ to the user.
+
+\vspace{5mm}
+JavaScript was also used to calculate the user's Autism Quotient, display the score in the browser, and to save the user's responses to a local Excel file on the users computer so that they can access the data at a later stage.
+
+\subsubsection{HTTP: Client and Server Set-up}
+The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in textbf{nginx} HTTP web server, and digitalocean.com was used to host the web servers, so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. 
+
+\vspace{5mm}
+Jellibeans can be viewed at http://esha.mseth.co.
+
+\subsubsection{HTML}
+HyperText Markup Language (HTML 5) was used to create the webpages for Jellibeans, so that the web browser could render the wesite.
+
+
+\subsubsection{Bootstrap and CSS}\label{boostrap}
+For front-end development and to style the Jellibean web pages I used the Bootstrap framework \cite{bootstrap} for it's clear styles, good design and ease of use for the current project. I included my own Cascading Style Sheet (css file) where I needed extra styling beyond what the Bootstrap framework could offer. 
+
+
+\subsubsection{LEAP Motion Detector and LEAP SDK}
+The LEAP motion controller is a light-weight, portable device that detects user motions using infra-red light. The LEAP has accurate timing, and works well with the combinatorial configuration of senses (sight, hearing and touch). As this is a tool to be used with individuals with Autism, who have increased sensitivity to touch, the LEAP is the perfect choice as there is no additional sensations to the users body. The LEAP is affordable for users to integrate with search at home, and currently retails for about \pounds60.
+
+
+\subsubsection{LeapStrap for the LEAP Motion Controller}
+The LeapStrap SDK was used to integrate the LEAP into the web broswer. LeapStrap is a HTML5 front-end framework for websites, and gives them fill LEAP motion functionality. 
+
 
 \newpage
 \subsection{Search Query Survey} \label{AppendixA}
