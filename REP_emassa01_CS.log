@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  5 SEP 2015 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  5 SEP 2015 01:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -777,7 +777,7 @@ Overfull \hbox (15.60265pt too wide) in paragraph at lines 762--763
 ricted and repet-i-tive be-haviours, 
  []
 
-Excluding 'comment' comment. [37 <./images/suggestions.png>] [38]
+Excluding 'comment' comment. [37 <./images/suggestions.png>] [38] [39]
 Underfull \hbox (badness 1728) in paragraph at lines 839--840
 []\OT1/qbk/m/n/10.95 Bronwyn, M, Mur-ray, M, and Durkin, K. (2003) Weak cen-tra
 l co- 
@@ -789,7 +789,7 @@ Underfull \hbox (badness 1389) in paragraph at lines 839--840
 In-de-pen-dent 
  []
 
-[39
+[40
 
 ]
 Overfull \hbox (1.80577pt too wide) in paragraph at lines 853--854
@@ -803,7 +803,7 @@ Underfull \hbox (badness 1584) in paragraph at lines 862--863
  things to 
  []
 
-[40]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 864--865
 []\OT1/qbk/m/n/10.95 Term Fre-quency In-verse Doc-u-ment Fre-quency Weight-ing,
  
@@ -815,7 +815,7 @@ Overfull \hbox (2.2438pt too wide) in paragraph at lines 865--866
 nfo/free.asp?s=y, 
  []
 
-[41] [42] <images/JBeanUseCase.png, id=185, 1140.26pt x 801.99625pt>
+[42] [43] <images/JBeanUseCase.png, id=189, 1140.26pt x 801.99625pt>
 File: images/JBeanUseCase.png Graphic file (type png)
 
 <use images/JBeanUseCase.png>
@@ -826,7 +826,7 @@ Overfull \hbox (22.47592pt too wide) in paragraph at lines 881--882
  [] 
  []
 
-[43 <./images/JBeanUseCase.png>]
+[44 <./images/JBeanUseCase.png>]
 Overfull \hbox (1.14362pt too wide) in paragraph at lines 892--899
 []  
  []
@@ -835,7 +835,7 @@ Overfull \hbox (1.14362pt too wide) in paragraph at lines 892--899
 Overfull \vbox (91.66234pt too high) has occurred while \output is active []
 
 
-[44]
+[45]
 
 LaTeX Font Warning: Font shape `OT1/qbk/m/ui' undefined
 (Font)              using `OT1/qbk/m/n' instead on input line 903.
@@ -845,7 +845,7 @@ Overfull \hbox (5.19513pt too wide) in paragraph at lines 900--906
 [][]  
  []
 
-[45] <images/GoogleToS.png, id=196, 770.88pt x 378.41376pt>
+[46] <images/GoogleToS.png, id=199, 770.88pt x 378.41376pt>
 File: images/GoogleToS.png Graphic file (type png)
 
 <use images/GoogleToS.png>
@@ -856,8 +856,8 @@ Overfull \hbox (28.91158pt too wide) in paragraph at lines 911--912
  [] 
  []
 
-[46 <./images/GoogleToS.png>]
-<images/survey1.png, id=201, 956.57375pt x 555.07375pt>
+[47 <./images/GoogleToS.png>]
+<images/survey1.png, id=204, 956.57375pt x 555.07375pt>
 File: images/survey1.png Graphic file (type png)
 
 <use images/survey1.png>
@@ -868,7 +868,7 @@ Overfull \hbox (44.66571pt too wide) in paragraph at lines 921--921
  [] 
  []
 
-<images/survey2.png, id=202, 966.61125pt x 495.8525pt>
+<images/survey2.png, id=205, 966.61125pt x 495.8525pt>
 File: images/survey2.png Graphic file (type png)
 
 <use images/survey2.png>
@@ -879,8 +879,8 @@ Overfull \hbox (49.68445pt too wide) in paragraph at lines 922--922
  [][] 
  []
 
-[47 <./images/survey1.png> <./images/survey2.png>]
-<images/survey3.png, id=208, 965.6075pt x 411.5375pt>
+[48 <./images/survey1.png> <./images/survey2.png>]
+<images/survey3.png, id=211, 965.6075pt x 411.5375pt>
 File: images/survey3.png Graphic file (type png)
  <use images/survey3.png>
 Package pdftex.def Info: images/survey3.png used on input line 928.
@@ -890,7 +890,7 @@ Overfull \hbox (49.18257pt too wide) in paragraph at lines 928--928
  [] 
  []
 
-<images/survey4.png, id=209, 962.59625pt x 324.21124pt>
+<images/survey4.png, id=212, 962.59625pt x 324.21124pt>
 File: images/survey4.png Graphic file (type png)
 
 <use images/survey4.png>
@@ -901,8 +901,8 @@ Overfull \hbox (47.67696pt too wide) in paragraph at lines 929--929
  [][] 
  []
 
-[48 <./images/survey3.png> <./images/survey4.png>]
-<images/survey5.png, id=215, 965.6075pt x 626.34pt>
+[49 <./images/survey3.png> <./images/survey4.png>]
+<images/survey5.png, id=219, 965.6075pt x 626.34pt>
 File: images/survey5.png Graphic file (type png)
  <use images/survey5.png>
 Package pdftex.def Info: images/survey5.png used on input line 935.
@@ -912,7 +912,7 @@ Overfull \hbox (49.18257pt too wide) in paragraph at lines 935--935
  [] 
  []
 
-<images/survey6.png, id=216, 966.61125pt x 623.32875pt>
+<images/survey6.png, id=220, 966.61125pt x 623.32875pt>
 File: images/survey6.png Graphic file (type png)
 
 <use images/survey6.png>
@@ -927,8 +927,8 @@ Overfull \hbox (49.68445pt too wide) in paragraph at lines 936--936
 Overfull \vbox (60.67284pt too high) has occurred while \output is active []
 
 
-[49 <./images/survey5.png> <./images/survey6.png>]
-<images/survey7.png, id=223, 963.6pt x 362.35374pt>
+[50 <./images/survey5.png> <./images/survey6.png>]
+<images/survey7.png, id=227, 963.6pt x 362.35374pt>
 File: images/survey7.png Graphic file (type png)
  <use images/survey7.png>
 Package pdftex.def Info: images/survey7.png used on input line 943.
@@ -938,7 +938,7 @@ Overfull \hbox (48.17883pt too wide) in paragraph at lines 943--943
  [] 
  []
 
-[50 <./images/survey7.png>]
+[51 <./images/survey7.png>]
 Overfull \hbox (7.2806pt too wide) in paragraph at lines 951--951
 \OT1/qbk/m/n/10.95 Participants are asked to read each state-ment very care-ful
 ly and rate how strongly 
@@ -950,7 +950,7 @@ Overfull \hbox (1.14871pt too wide) in paragraph at lines 957--957
 I lose sight of other things.  
  []
 
-[51] [52] (./REP_emassa01_CS.aux)
+[52] [53] (./REP_emassa01_CS.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -962,10 +962,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5153 strings out of 493117
- 76931 string characters out of 6135433
+ 5154 strings out of 493117
+ 76937 string characters out of 6135433
  141823 words of memory out of 5000000
- 8453 multiletter control sequences out of 15000+600000
+ 8454 multiletter control sequences out of 15000+600000
  52700 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,1605b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -977,10 +977,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 texlive/2014/texmf-dist/fonts/type1/public/tex-gyre/qbkb.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/tex-gyre/qbkr.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/tex-gyre/qbkri.pfb>
-Output written on REP_emassa01_CS.pdf (52 pages, 36835590 bytes).
+Output written on REP_emassa01_CS.pdf (53 pages, 36837364 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

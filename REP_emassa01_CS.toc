@@ -25,10 +25,12 @@
 \contentsline {subsection}{\numberline {7.1}The Positives}{34}
 \contentsline {subsection}{\numberline {7.2}The Negatives}{36}
 \contentsline {subsection}{\numberline {7.3}The Neutrals}{37}
-\contentsline {subsection}{\numberline {7.4}Future Directions}{37}
-\contentsline {section}{\numberline {8}Appendices}{42}
-\contentsline {subsection}{\numberline {8.1}Use Case Diagram}{43}
-\contentsline {subsection}{\numberline {8.2}APIs Used in Jellibean Implementation}{44}
-\contentsline {subsection}{\numberline {8.3}Google Terms of Servive}{46}
-\contentsline {subsection}{\numberline {8.4}Search Query Survey}{47}
-\contentsline {subsection}{\numberline {8.5}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{51}
+\contentsline {section}{\numberline {8}Evaluation and Discussion.}{37}
+\contentsline {subsection}{\numberline {8.1}Signals of Quality Content}{38}
+\contentsline {subsection}{\numberline {8.2}Future Directions}{38}
+\contentsline {section}{\numberline {9}Appendices}{43}
+\contentsline {subsection}{\numberline {9.1}Use Case Diagram}{44}
+\contentsline {subsection}{\numberline {9.2}APIs Used in Jellibean Implementation}{45}
+\contentsline {subsection}{\numberline {9.3}Google Terms of Servive}{47}
+\contentsline {subsection}{\numberline {9.4}Search Query Survey}{48}
+\contentsline {subsection}{\numberline {9.5}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{52}

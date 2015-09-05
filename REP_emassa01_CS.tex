@@ -427,7 +427,7 @@ The combined Google, Yahoo and Bing results were integrated these into a Java Ap
 \begin{center}
 \includegraphics[scale=0.60]{htmlParsers}
 \end{center}
-\caption{JSoup HTML Parser.}
+\caption{JSoup HTML Parser for Yahoo and Bing Search Engines.}
 \label{GoogleSignInPage}
 \end{figure}
 
@@ -435,7 +435,7 @@ The combined Google, Yahoo and Bing results were integrated these into a Java Ap
 \begin{center}
 \includegraphics[scale=0.47]{Applet}
 \end{center}
-\caption{Integration with Google Custom Search to Produce the Complete Query Results.}
+\caption{Yahoo and Bing Results Integrated with Google Custom Search to Produce the Complete Query Results.}
 \label{AppletFig}
 \end{figure}
 
@@ -445,7 +445,7 @@ The combined Google, Yahoo and Bing results were integrated these into a Java Ap
 \begin{subfigure}{.55\textwidth}
   \centering
   \includegraphics[width=.75\linewidth]{htmlParsers}
-  \caption{JSoup HTML Parser.}
+  \caption{JSoup HTML Parser for Yahoo and Bing Search Engines.}
 \end{subfigure}%
 \begin{subfigure}{.60\textwidth}
   \centering
@@ -631,12 +631,12 @@ Frames (cartesian coordinate data) from the LEAP were traked using the \texttt{F
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.65]{Monty1}\\
-\caption{Using the LEAP to Control the Cursor in the IDE.}
+\caption{Using the LEAP to Control the Cursor in the IDE. Console Output is Hand Coordinates along the x, y, and z Axes.}
 \label{Monty}
 \end{center}
 \end{figure}
 
-Although using the device this way was interesting and novel, the user has little control over the cursor, and often hand movements aren't precise enough to have a good experience using the hardware. I decided to look for a library that I could use with the LEAP to overcome this. One such library is LeapStrap which I discuss in the next section.
+Although using the device this way was interesting and novel, the user has unstable control over the cursor, and often hand movements aren't precise enough to have a good experience using the hardware. I decided to look for a library that I could use with the LEAP to overcome this. One such library is LeapStrap which I discuss in the next section.
 
 
 \subsubsection{Using LeapStrap in the Web-browser.}
@@ -776,7 +776,7 @@ Manual testing, Selenium, Cucumber etc for html.\\
 Regression tests
 
 
-
+\end{comment}
 
 \section{Evaluation and Discussion.}\label{eval}
 
@@ -818,7 +818,7 @@ Evaluation of the system will include comparisons to existing search engines; as
 
 
 Apache Solr\\
-\end{comment}
+
 
 \subsection{Future Directions}
 A future direction for Jellibeans would be to use an API or library for word frequencies in the written English language, which could be integrated with a thesaurus. This type of API requires significant research into the natural language processing of written (rather than spoken) English text. These frequency data could have been used to replace infrequent words in queries formed by individuals with Autism with more frequent words to suggest alternatives for the user. Of course this product would not be scalable, and only apply to users with a particular dialect. This is because word frequency is considerably variable across, and even within a language (e.g., consider South-West England compared to the North of England).
