@@ -20,6 +20,7 @@
 
 \newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
 
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 
@@ -306,7 +307,7 @@ The Functional Requirements of Jellibeans are:
 
 \end{comment}
 
-\section{Software Architecture}
+\section{System and Software Architecture}
 
 \subsection{Architecture of the System: 3-tier Architecture}
 A client-server software architecture was used for Jellibeans. The user interface and motion controller formed the presentation layer, the logic layer was made up of the JavaScript code used to implement the custom search, and storage of data in the data store were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
@@ -358,24 +359,46 @@ The logic module enables:}
 \end{itemize}
 
 \section{Software Design Pattern}
+I will now describe the design pattern that guided the software development process. Jellibeans uses the model-view-controller (MVC) software design pattern. There are three components to the MVC pattern (see Figure ~\ref{laravelMVC}). 
 
-To fully describe Jellibeans' Product Design, I will introduce the design pattern that guided the software development process. Jellibeans uses the model-view-controller (MVC) software design pattern. There are three components to the MVC pattern; for Jellibeans:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{laravelMVC}
+\end{center}
+\caption{Application Model-View-Controller pattern as described by \cite{laravel}.}
+\label{laravelMVC}
+\end{figure}
+
+For Jellibeans this results in the following components and classes:
 
 \begin{itemize}
 \item{The \textbf{Model}- is the domain or real world entity that the software is built around. The model in this case is the User.}
-\item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user(model). The view doesn't handle the data that comes in (although users input the data into the view that is presented).}
-\item{The \textbf{Controller}- Coordinators provide links between the view and the model. Coordinators are responsible for input-processing and determining the behaviour of Jellibeans, such as rendering a new screen. Jellibeans has the following Controllers:}
-\subitem{Controller.php is an abstract class that all other controllers extend.}
+\item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user(model). The view doesn't handle the data that comes in (although users input the data into the view that is presented). There are 6 views of the system.}
+\subitem{\tab{index.php renders the homepage}}
+\subitem{\tab{search.php renders the Search screen}}
+\subitem{\tab{do.php renders the Do search page}}
+\subitem{\tab{know.php renders the Know search page}}
+\subitem{\tab{go.php renders the Go search page}}
+\subitem{\tab{social.php renders the Social search page}}
+\subitem{\tab{result.php renders the Results page}}
+\item{The \textbf{Controller}- Coordinators provide links between the view and the model. Coordinators are responsible for input-processing and determining the behaviour of Jellibeans, such as rendering a new screen. Controller.php is an abstract class that all other controllers extend see Figure~\ref{controller}. Jellibeans has the following Controllers:}
 \subitem{PagesController.php controls the page behaviour when a user clicks on the navigation buttons, for example, return the user back to the homepage.}
 \subitem{RegistrationController.php controls the model's storing and registering of the user and user credentials.}
 \subitem{SearchController.php controls the behaviour of which search to carry out given the view.}
 \subitem{SessionsController.php controls the behaviour of the view depending on whether the user is logged in or logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button. It also }
 \subitem{UserController.php verifies the CRUD (Create, Read, Update and Delete) actions form the resource.}
-
 \end{itemize}
 
-Then present a class diagram which has 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.55]{controllers}
+\caption{Example of a Controller Class to return views of the system dependent on user behaviour..}
+\label{controller}
+\end{center}
+\end{figure}
 
+Then present a class diagram which has 
+\begin{comment}
 Views-> resources/views/search
 do.php
 go.php
@@ -404,6 +427,7 @@ UsersController - CRUD Create, Read, Update and Delete form the resource.
 
 Model - User -> app/user
 database table to be used by the model
+\end{comment}
 
 \vspace{5mm}
 A high level class diagram of the system can be seen in Appendix~\ref{jBeanClassDiagram}.
@@ -431,6 +455,13 @@ Tools and programming languages\\
 \end{comment}
 
 \section{Implementation}
+The prototype version of Jellibeans is hosted at esha.mseth.co. This prototype was used for user testing, to quickly and cheaply develop and test the system. The prototype version of Jellibeans used static web pages which allowed the prototype to be quickly tested and finalised.
+
+\vspace{5mm}
+Jellibeans was finalised into a dynamic website and is hosted at jellibeans.mseth.so. The advantages of a dynamic website are that it is much more functional, no need to edit individual html pages, and no code repetition. 
+
+\vspace{5mm}
+The next section of the report describes how each module of work was completed.
 
 \subsection{Combination Search Engine: Google, Yahoo and Bing.} 
 To implement the combination search engine I used three API's provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
@@ -916,6 +947,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{javascripttesting} JavaScript Console, https://developer.chrome.com/devtools/docs/console, Retrieved September 3 2015.
 \bibitem{jsfiddle} JS Fiddle, https://jsfiddle.net/, Retrieved September 3 2015.
 \bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
+\bibitem{laravel}Laravel, laravel}http://laravelbook.com/laravel-architecture/ Retrieved Sep 6 2015
 \bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. \textit{Journal of Child Psychology and Psychiatry 40}, (2), 203211. doi:10.1111/1469-7610.00433.
 \bibitem {adam}Lella, A., (2014). \textit{comScore Releases March 2014 U.S. search Engine Rankings.} ComScore.com. Retrieved 21 Feb 2015
 \bibitem{moore}Moore, D. J., McGrath, P., \& Thorpe, J. (2000). Computer aided learning for people with autismâa framework for research and development. \textit{Innovations in Education and Training International, 37}
@@ -936,13 +968,23 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \newpage
 \section {Appendices}
 
+\begin{comment}
+\newpage
+\subection{}\label{}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.55]{}
+\caption{}
+\end{center}
+\end{figure}
+\end{comment}
+
 \newpage
 \subsection{Class Diagram}\label{jBeanClassDiagram}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{jBeanClassDiagram}
 \caption{High Level UML Class Diagram of Jellibeans.}
-
 \end{center}
 \end{figure}
 
