@@ -76,7 +76,6 @@ DSM & Diagnostic and Statistical Manual\\
 GCS & Google Custom Search\\
 HCI & Human Computer Interaction\\
 HTTP & Hypertext Transfer Protocol\\
-JSON & JavaScript Object Notation\\
 IDE & Integrated Development Environment\\
 KWIC & Key Word In Context\\
 LEAP & LEAP Motion Controller\\
@@ -164,12 +163,14 @@ solution, or piece of information.}
 This project report presents a prototype browser-based application to assist users with Autism when they search the web. The application is hereafter referred to as Jellibeans\footnote{Jellibeans are a rainbow of colours, different sizes and shades, and the name represents the difference in style of processing of individuals with ASD.}. Jellibeans utilises gesture and hand movement data recorded using the Leap Motion Controller (LEAP) to enable an interactive search in the web browser. 
 
 \vspace{5mm}
-In programmatic terms, Jellibeans is designed to implement a research-guided user model in search. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research surveys to identify differences in user queries and analysed search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
+In programmatic terms, Jellibeans is 
+
+ed to implement a research-guided user model in search. The developer for the current project has extensive research experience from working with individuals with Autism, and will apply these insights into the development of the Jellibeans. The development of this user model consisted of iterations of the `research, development, test, evaluate' lifecycle. I conducted research surveys to identify differences in user queries and analysed search behaviour patterns from people with and without Autism. Using these data I built a set of features into search, to guide the user through forming a more complete search query. Development and evaluation included the implementation and testing of the features, and further implementation and revision of the software to enhance the search process and the precision of the search engine for the users' intended search query. 
 
 \vspace{5mm}
 Jellibeans integrates a motion controlled user interface (UI) using the LEAP motion controller. The interface is very dynamic as opposed to static, which can hold users' attention for long periods of time. In the past, users with Autism have struggled to maintain their attention to sift through the large number of search results. In line with the attention difficulties individuals with Autism face, Jellibeans has been designed to reduce the amount of text on the search results page, presenting only 3 results per page, instead of the default 10. 
 
-\subsection{Design Patterns for Web Applications}
+\subsection{Parametric Search Design for Web Applications}
 
 Search engines like Google apply strong reduction techniques to navigation of the web. For example, one common way this reduction pattern is implemented is by assuming the behaviour of the current user is similar to the behaviour of other users in similar situations. This is often seen in recommendation engines, e.g., Amazon. The principle applied by Google is to `make it easy' for the user \cite{googleTerms}, by assuming that users form search queries similarly, and returning similar results to those users.
 
@@ -236,7 +237,7 @@ The following requirements were proposed for Jellibeans web application.
 \begin{center}
 \includegraphics[scale=0.65]{JellibeanUserFlow.png}
 \end{center}
-\caption{Wireframe Sketches for Jellibeans User Flow. Jellibeans can be found at http://esha.mseth.co}
+\caption{Wireframe Sketches for Jellibeans User Flow. A prototype version of Jellibeans using static html pages can be found at http://esha.mseth.co. A dynamic and near-production version of Jellibeans using routes rather than static html, which is fully LEAP motion controller-enabled can be found at jellibeans.mseth.co. }
 \label{JBeanUserFlow}
 \end{figure}
 
@@ -296,8 +297,8 @@ The Functional Requirements of Jellibeans are:
 
 \begin{itemize}
 \item{Java Applet for the Combination Search Engine (Java).}
-\item{Rendering the Application to the Web Browser (HTML, CSS, BootStrap).}
-\subitem{Integration with Google+ API (JavaScript).}
+\item{Rendering the Application to the Web Browser (HTML, CSS, BootStrap, php).}
+\subitem{Integration with Google+ API (JavaScript and JQuery).}
 \subitem{Integration with Google Custom Search API (JavaScript).}
 \item{LEAP Motion Controller (LEAP SDK and LeapStrap).}
 
@@ -307,7 +308,7 @@ The Functional Requirements of Jellibeans are:
 
 \section{Software Architecture}
 
-\subsection{3-tier Architecture}
+\subsection{Architecture of the System: 3-tier Architecture}
 A client-server software architecture was used for Jellibeans. The user interface and motion controller formed the presentation layer, the logic layer was made up of the JavaScript code used to implement the custom search, and storage of data in the data store were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
 \begin{figure}[H]
 \begin{center}
@@ -327,9 +328,9 @@ The presentation module consists of:}
 
 \subitem{Jellibean Web Application: Rendering the web application to the browser (HTML, CSS and Bootstrap).}
 
-\subitem{Rendering a Parametric-Like Search in the browser: The user is asked specific questions to break down their search query into smaller manageable terms, i.e., into `Do', `Know', `Go', or `Social' queries, and then into direct search terms. This reduces the ambiguity individuals with Autism face when forming a search query. The web application provides suggestions or cues for users. Once the search terms are entered by the user, they are sent to the logic module to form the search query string, and then onto the data store to retrieve the results which are subsequently rendered onto the screen for the user (HTML, CSS and Bootstrap).}
+\subitem{Rendering a Parametric-Like Search in the browser: The user is asked specific questions to break down their search query into smaller manageable terms, i.e., into `Do', `Know', `Go', or `Social' queries, and then into direct search terms. This reduces the ambiguity individuals with Autism face when forming a search query. The web application provides suggestions or cues for users. Once the search terms are entered by the user, they are sent to the logic module to form the search query string, and then onto the data store to retrieve the results which are subsequently rendered onto the screen for the user (HTML, CSS, php and Bootstrap).}
 
-\subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (JavaScript and Google+ API).}
+\subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (JQuery, JavaScript and Google+ API).}
 
 \subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (LEAP SDK and LeapStrap).}
 
@@ -349,19 +350,63 @@ The logic module enables:}
 
 \subitem{Logic to prioritise the three highest ranking search results and to reduce the text and verbal information on the page (in line with the aims of Jellibean Search), (JavaScript and Google Custom Search API).} 
 
+\subitem{The logic layer communicates with the Google Data Store layer to retrieve the search results for the user.}
+
 \item{Data Store Module}
 
-\subitem{The Data Store Module works with the Google Custom Search engine to retrieve the (indexed) documents from the data store. The documents that are retrieved match the participants' search query string after processing at the logic module level. }
+\subitem{Jellibeans works with the Google Custom Search engin to retrieve the (indexed) documents from the Google data store. The documents that are retrieved match the participants' search query string after processing at the logic module level. }
 \end{itemize}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.55]{jBeanClassDiagram}
-\caption{High Level UML Class Diagram of Jellibeans.}
-\label{jBeanClassDiagram}
-\end{center}
-\end{figure}
-A class diagram of the system can be seen in Figure~\ref{jBeanClassDiagram}.
+\section{Software Design Pattern}
+
+To fully describe Jellibeans' Product Design, I will introduce the design pattern that guided the software development process. Jellibeans uses the model-view-controller (MVC) software design pattern. There are three components to the MVC pattern; for Jellibeans:
+
+\begin{itemize}
+\item{The \textbf{Model}- is the domain or real world entity that the software is built around. The model in this case is the User.}
+\item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user(model). The view doesn't handle the data that comes in (although users input the data into the view that is presented).}
+\item{The \textbf{Controller}- Coordinators provide links between the view and the model. Coordinators are responsible for input-processing and determining the behaviour of Jellibeans, such as rendering a new screen. Jellibeans has the following Controllers:}
+\subitem{Controller.php is an abstract class that all other controllers extend.}
+\subitem{PagesController.php controls the page behaviour when a user clicks on the navigation buttons, for example, return the user back to the homepage.}
+\subitem{RegistrationController.php controls the model's storing and registering of the user and user credentials.}
+\subitem{SearchController.php controls the behaviour of which search to carry out given the view.}
+\subitem{SessionsController.php controls the behaviour of the view depending on whether the user is logged in or logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button. It also }
+\subitem{UserController.php verifies the CRUD (Create, Read, Update and Delete) actions form the resource.}
+
+\end{itemize}
+
+Then present a class diagram which has 
+
+Views-> resources/views/search
+do.php
+go.php
+know
+social
+results
+index
+
+-------
+
+Controllers -> app/http/controllers 
+implemented to control the flow of the pages
+controller.php abstract which all other controllers extend
+
+PagesController -  returns the user back to the homepage.
+
+RegistrationController - the Registration controller returns views for storing and registering the user.
+
+SearchController - controlls the flow html pages that are related to search, including the homepage, do, know, go, social, and the search results page.
+
+SessionsController - controls the flow between pages if the user is logged in versus logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button.
+
+UsersController - CRUD Create, Read, Update and Delete form the resource.
+
+-------
+
+Model - User -> app/user
+database table to be used by the model
+
+\vspace{5mm}
+A high level class diagram of the system can be seen in Appendix~\ref{jBeanClassDiagram}.
 
 \vspace{5mm}
 A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCaseA}.
@@ -489,7 +534,7 @@ The low AQ scorer responses were analysed together to establish a baseline answe
 \item{How would you search for delay's relating to your (imminent) flight to Paris?\\\textit{Flight number, carrier, Paris, airport, flight time}.}
 \end{enumerate}
 
-The following observations were made for the users in the high AQ group:
+There was a lot more variation in the responses gathered from the group with Autistic-like traits. The responses can be seen in Appendix~\ref{asdresponses}. The following observations were made for the users in the high AQ group:
 \begin{enumerate}
 \item{There were an increased number of incompletely-formed queries. In the high AQ group, participants were more likely to miss off words in the query string. For example, when analysing the results from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}). A larger number of results are returned to the incomplete query (302,000,000 compared to 32,900,000). In this instance, the high AQ user group were presented with results that have a lower precision, i.e., more irrelevant information that they must sift through to find the answer to their search query.}
 \label{incomplete}
@@ -764,7 +809,7 @@ However, one of the characteristics of Autism is restricted and repetitive behav
 \vspace{5mm}
 Nevertheless, one future direction for Jellibeans in order to achieve a balance between user-specific suggestions but not restricted interests, is to include a recommendation system that changes often enough for them not to be repetitive, but still within a range of possible interests for that individual. 
 
-\subsection{The Neutrals}
+\subsection{Other observations}
 
 Users agreed during the focus group that with Jellibeans the time/reward payoff is really only apparent, over and beyond a traditional search engine, when the search query is complex. For example, if users are searching for something they have yet to identify, i.e., something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
 
@@ -774,9 +819,27 @@ Describe the verification process you used in your project\\
 Unit Testing, Static Analysis for methods in javascript etc.\\
 Manual testing, Selenium, Cucumber etc for html.\\
 Regression tests
-
-
 \end{comment}
+
+\subsection{Quantifiable results}
+The 5 participants were also asked to re-construct the same search queries they had been asked to construct in the first research study, but this time using Jellibeans. The search strings that these users would formulare without and then with Jellibeans are 5 participants are presented in Figure~\ref{results}.
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{suggestions}
+  \caption{Search strings formed by users with Autism without Jellibeans.}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{suggestions}
+  \caption{Search strings formed by users with Autism with Jellibeans.}
+\end{subfigure}
+\label{results}
+\end{figure}
+
 
 \section{Evaluation and Discussion.}\label{eval}
 
@@ -874,6 +937,16 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \section {Appendices}
 
 \newpage
+\subsection{Class Diagram}\label{jBeanClassDiagram}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.55]{jBeanClassDiagram}
+\caption{High Level UML Class Diagram of Jellibeans.}
+
+\end{center}
+\end{figure}
+
+\newpage
 \subsection{Use Case Diagram}\label{JBeanUseCaseA}
 
 \begin{figure}[H]
@@ -887,7 +960,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 
 \newpage
 
-\subsection{APIs Used in Jellibean Implementation}\label{implementation}
+\subsection{Languages and APIs Used in Jellibean Implementation}\label{implementation}
 
 \begin{tabular}{l p{11cm} }
 Google Search API & A RESTful API with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of results, alternative search queries, and (3) custom search engine metadata. Google terms of service, state that `screen scraping', or copying the data directly from the website is prohibited.\\
@@ -895,6 +968,9 @@ JSoup API & For Bing and Yahoo search results, JSoup (a Java HTML parser) was us
 Java & To test the combined output from the three search engines with a group of users, and gather their feedback on the results, I developed a Java Applet to run the programme. The search results from the Java Applet were written to a text file. Java was chosen for development of `to be tested' packages of features (e.g., the combination search engine). The developer for the project was most proficient with Java, and could quickly develop prototypes for user testing.\\
 JavaScript & JavaScript is commonly used in HTML as it can run locally in a browser (rather than remote server). The Google+ API provided good documentation for using JavaScript. Furthermore the JavaScript code could be easily embedded into the Jellibean HTML code to interact with the Document Object Model (DOM) of the page. The browser was able to respond to user demand quickly, which made Jellibeans more responsive. JavaScript was used in this way to return the aboutMe profile information from Google+ to the user.\\
 HTTP Set-Up & The Hypertext Transfer Protocol (HTTP) enables communications between web-browsers (clients) and the server (the computer that hosts Jellibeans) using a request-response protocol. Jellibeans was deployed in textbf{nginx} HTTP web server, and digitalocean.com was used to host the web servers, so that it was ready to be used remotely by users (and for me to gather feedback easily). When the user submits a HTTP request to the server that hosts Jellibeans, it responds with the appropriate behaviour to the client so that the user can formulate their search query and retrieve the results from their search. \\
+JQuery & \\
+php & \\
+
 \end{tabular}
 
 \begin{tabular}{l p{11cm} }
@@ -944,6 +1020,86 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \caption{Search Query Survey on Surveymonkey.com \cite{surveymonkey}}
 \end{center}
 \end{figure}
+
+\newpage
+Search strings formed by users with Autism, without using Jellibeans. 
+\begin{enumerate}\label{asdresponses}
+\item{You hear a song on the radio with the lyrics, `Look at your children', and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{Song lyrics look at your children\\
+look at your children\\
+Look at your children song\\
+``Look at your children" lyric\\
+Look at your children\\
+``Look at your children" lyrics\\
+Look at your children song\\}}
+\item{You've lost touch with an old school friend (you went to St. Mary's School). What key words/queries would you use to find them?\\\textit{*Persons name* and St Mary's school on Facebook\\Full name of friend, St Mary's School, year of graduation (i.e. `class of')\\
+The friend's full name and ``St. Marys"\\
+Me and St Marys\\
+I wouldn't want to know. I wouldn't bother\\
+St Mary's school with the year we left \\
+Google their name}}
+\item{How would you identify what this is using a search engine (pretend you don't know what it is called). What key words/queries would you use?\\\textit{Google image search, or failing that: dried herb star 8 points\\
+Star shaped seed pod\\
+Star eight spice wikipedia\\
+Star shaped flower \\
+Wooden flower\\
+Star shape hard shell \\
+Post a picture on Facebook}}
+\item{How would you find out the name of this famous person using a search engine? What key words/queries would you use?\\\textit{Pale brunette brown(or hazelnut) eyes freckles natural beauty earring\\
+Not something I would search for\\
+Model actress long brown hair, brown eyes, big lips\\
+Celebrity female young long dark hair earring\\
+I wouldn't expect to be able to find out their name unless I had more information than just a physical description\\
+Famous females\\
+Pretty white brunette \\}}
+\item{How would you identify what breed this animal is using a search engine? What key words/queries would you use?\\\textit{Small dog breeds terriers\\
+Small dog fluffy head moustache breed\\
+Dog breed grey furry miniature\\
+Yorkie pooh \\
+Small pet dog\\
+Small dog fluffy head moustache breed\\
+`Small dog breeds' }}
+\item{Your friend and you can't agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{Interview with Thandie Newton\\
+Pronounce `Thandie Newton'\\
+How to pronounce Thandie Newton\\
+Thandie Newton pronunciation\\
+`Thandie Newton pronunciation'\\
+Thandie Newton\\
+YouTube Thandie Newton}}
+\item{What would you search for to identify this pattern's name, and which country it originates from?\\\textit{Some combination of: tiling symmetry \\
+Tessellating ``interlocking s"\\
+Square spiral repeating pattern name origin\\
+Square spiral originates from\\
+Repeating square patten\\
+5 part wave pattern square \\
+Celtic patterns}}
+\item{How would you search for delay's relating to your (imminent) flight to Paris?\\No answer given\\\textit{
+Airport website\\
+Flight number plus the date and time\\
+Aeroplane\\
+Departures from airport X\\
+Search for confirmation email in my inbox\\
+Paris departure Heathrow\\
+}}
+\end{enumerate}
+
+\newpage
+Search strings formed by users with Autism, with Jellibeans. 
+\begin{enumerate}\label{asdresponses}
+\item{You hear a song on the radio with the lyrics, `Look at your children', and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{1}}
+\item{You've lost touch with an old school friend (you went to St. Mary's School). What key words/queries would you use to find them?\\\textit{2}}
+\item{How would you identify what this is using a search engine (pretend you don't know what it is called). What key words/queries would you use?\\\textit{3}}
+\item{How would you find out the name of this famous person using a search engine? What key words/queries would you use?\\\textit{
+Lady with brown hair name Brown Young Chic Sexy\\
+Brown eyes woman Famous Female Brown Young Modest Moody\\
+Pale brunette natural Female Brown Middle aged \\
+Celebrity female long hair dark earring name Famous Female Brown Middle aged Serious \\
+Pretty white brunette name Famous Female Brown Young Chic
+}}
+\item{How would you identify what breed this animal is using a search engine? What key words/queries would you use?\\\textit{5}}
+\item{Your friend and you can't agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{6}}
+\item{What would you search for to identify this pattern's name, and which country it originates from?\\\textit{5}}
+\item{How would you search for delay's relating to your (imminent) flight to Paris?\\No answer given\\\textit{6}}
+\end{enumerate}
 
 \newpage
 \subsection{Questions on the Autism Spectrum Quotient \cite{Baron Cohen et al}} \label{AQ}
