@@ -16,17 +16,18 @@
 \contentsline {subsection}{\numberline {5.2}Building a User Model of Autism.}{27}
 \contentsline {subsubsection}{\numberline {5.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{28}
 \contentsline {subsection}{\numberline {5.3}Transforming the User Query.}{31}
-\contentsline {subsection}{\numberline {5.4}Integration with a Motion Controlled Interface.}{34}
-\contentsline {subsubsection}{\numberline {5.4.1}Using LEAP in the IDE.}{36}
-\contentsline {subsubsection}{\numberline {5.4.2}Using LeapStrap in the Web-browser.}{37}
+\contentsline {subsection}{\numberline {5.4}Storing the User Autism Score Data.}{34}
+\contentsline {subsection}{\numberline {5.5}Integration with a Motion Controlled Interface.}{34}
+\contentsline {subsubsection}{\numberline {5.5.1}Using LEAP in the IDE.}{36}
+\contentsline {subsubsection}{\numberline {5.5.2}Using LeapStrap in the Web-browser.}{37}
 \contentsline {section}{\numberline {6}Testing and Critical Evaluation of Jellibeans}{39}
 \contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{39}
 \contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{40}
 \contentsline {section}{\numberline {7}Software Testing}{40}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{40}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{41}
 \contentsline {subsection}{\numberline {8.1}Interviews}{41}
 \contentsline {subsection}{\numberline {8.2}Quantifiable results}{41}
-\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{44}
+\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{45}
 \contentsline {subsubsection}{\numberline {8.2.2}Result 2}{46}
 \contentsline {subsubsection}{\numberline {8.2.3}Result 3}{47}
 \contentsline {subsection}{\numberline {8.3}Focus Group}{48}

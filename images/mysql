@@ -1,0 +1,7 @@
+mysql> CREATE DATABASE JELLIBEANS;
+mysql> SHOW DATABASES;
+mysql> USE JELLIBEANS;
+mysql> CREATE USER 'ESHA'@'localhost' IDENTIFIED BY 'X';
+mysql> GRANT ALL PRIVILIDGES ON * . * TO 'ESHA'@'localhost';
+mysql>
+mysql>

@@ -345,6 +345,8 @@ The presentation module consists of:}
 
 \subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (JQuery, JavaScript and Google+ API).}
 
+\subitem{The user's AQ score is saved to the database once the score is calculated. The score is fetched from the database whenever the user logs in. A unique identification number assures that the user data is never overwritten or duplicated.}
+
 \subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (LEAP SDK and LeapStrap).}
 
 \item{Logic Module\\
@@ -355,7 +357,7 @@ The logic module enables:}
 
 \subitem{Logic to integrate with the Google+ API (JavaScript and Google+ API).}
 
-\subitem{Calculation of the users' AQ Score using the questionnaire entries that are entered at the presentation layer. The score is returned to the presentation layer after calculation (JavaScript).}
+\subitem{Calculation of the users' AQ Score using the questionnaire entries that are entered at the presentation layer. The request is sent to the database (MySQL). The score is returned to the presentation layer after calculation (JavaScript).}
 
 \subitem{Logic to formulate the user's search query, given their entries at the presentation layer (JavaScript).}
 
@@ -510,7 +512,7 @@ Following that I also registered my JavaScript origins within the console to acc
 \begin{center}
 \includegraphics[scale=0.65]{aboutme}
 \end{center}
-\caption{Google+ Integration Code and Sign In Pop-Up.}
+\caption{Google+ Integration Code and Sign In Pop-Up (JQuery).}
 \label{GoogleSignInPage}
 \end{figure}
 
@@ -670,23 +672,37 @@ Once the user has pressed `Jellibean Search', and requested their search results
 \end{center}
 \end{figure}
 
-
 \vspace{5mm} %5mm vertical space
+To further address Core Feature 3 of Jellibeans, that is, that results should be returned to the user in smaller snippets rather than large sets of text, I modified the Jellibeans Custom Search Engine to select the 3 highest ranked (precision) results, and to present these back to the user on the first page of their search. The 3 top results are presented on a floating modal\footnote{A modal is a feature in the Bootstrap Framework, for more information see Appendix~\ref{implementation}}, so that the user has the option to close and reopen the results very easily, without having to redo the search itself (see Figure~\ref{resultsModal}).
 
-The Autism Quotient score and all 50 of the responses from the user will be stored locally to an Excel file, if the user chooses, by selecting the `Save Your Answers' button on the Jellibean Homepage (see Figure~\ref{saveScores}).
+\subsection{Storing the User Autism Score Data.}
+
+The Autism Quotient score and all 50 of the responses from the user will be stored on a database (MySQL).
+
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.3]{saveScores}
-\caption{Example of User's Social Search in Jellibeans.}
+\includegraphics[scale=0.8]{mysql}
+\caption{MySQL Used to Create and Query the Jellibeans Database.}
+\label{mysql}
+\end{center}
+\end{figure}
+[NEED TO INSERT MYSQL CODE HERE.]
+
+\vspace{5mm} 
+The user can also save their data locally to an Excel file by selecting the `Save Your Answers' button on the Jellibean Homepage (see Figure~\ref{saveScores}). Alternatively the user can choose `Calculate Your Score' which returns the score as an alert to the page.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{saveScores}
+\caption{The User Can Choose to Save Their Scores to an Excel File.}
 \label{saveScores}
 \end{center}
 \end{figure}
 
-The user can also choose `Calculate Your Score' which returns the score as an alert to the page
 
-\vspace{5mm} %5mm vertical space
-To further address Core Feature 3 of Jellibeans, that is, that results should be returned to the user in smaller snippets rather than large sets of text, I modified the Jellibeans Custom Search Engine to select the 3 highest ranked (precision) results, and to present these back to the user on the first page of their search. The 3 top results are presented on a floating modal\footnote{A modal is a feature in the Bootstrap Framework, for more information see Appendix~\ref{implementation}}, so that the user has the option to close and reopen the results very easily, without having to redo the search itself (see Figure~\ref{resultsModal}).
+
 
 
 \subsection{Integration with a Motion Controlled Interface.}
@@ -746,7 +762,7 @@ To use the LEAP in a web-browser I used LeapStrap \cite{leapstrap}, which is bui
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.60]{leapstrap}
+\includegraphics[scale=0.55]{leapstrap}
 \caption{LeapStrap Library to Implement the LEAP for Jellibeans.}
 \label{leapstrap}
 \end{center}
