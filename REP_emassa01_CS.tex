@@ -365,7 +365,7 @@ I will now describe the design pattern that guided the software development proc
 \begin{center}
 \includegraphics[scale=0.45]{laravelMVC}
 \end{center}
-\caption{Application Model-View-Controller pattern as described by \cite{laravel}.}
+\caption{Application Model-View-Controller pattern as described by the Laravel framework\cite{laravel}.}
 \label{laravelMVC}
 \end{figure}
 
@@ -392,8 +392,22 @@ For Jellibeans this results in the following components and classes:
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{controllers}
-\caption{Example of a Controller Class to return views of the system dependent on user behaviour..}
+\caption{Example of a Controller Class (the SearchController class) which return views of the system dependent on user behaviour.}
 \label{controller}
+\end{center}
+\end{figure}
+
+
+\begin{itemize}
+\item{The \textbf{Routes} - decompose the configuration of which action of that controller should receive the request.} 
+\subitem{Application Routes were set up which listed the URIs that Jellibeans should respond to, and the Controller to call when that URI is requested (see Figure~\ref{routes}).}
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{routes}
+\caption{Example class of how Routes were defined.}
+\label{routes}
 \end{center}
 \end{figure}
 
@@ -562,7 +576,7 @@ The low AQ scorer responses were analysed together to establish a baseline answe
 \item{How would you identify what breed this animal is using a search engine? What key words/queries would you use?\\\textit{Small dog fluffy breed}.}
 \item{Your friend and you can't agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{Thandie Newton pronunciation}.}
 \item{What would you search for to identify this pattern's name, and which country it originates from?\\\textit{Repeating square maze pattern border}.}
-\item{How would you search for delay's relating to your (imminent) flight to Paris?\\\textit{Flight number, carrier, Paris, airport, flight time}.}
+\item{How would you search for delay's relating to your (imminent) flight to Paris?\\\textit{Flight number, Paris, airport, flight time}.}
 \end{enumerate}
 
 There was a lot more variation in the responses gathered from the group with Autistic-like traits. The responses can be seen in Appendix~\ref{asdresponses}. The following observations were made for the users in the high AQ group:
@@ -736,6 +750,16 @@ Once the LEAP was enabled for the web browser I was able to test Jellibeans with
 \end{center}
 \end{figure}
 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{leapweb}
+\caption{Screenshot of how the LEAP projects a pointing finger onto the Jellibeans. Holding a finger pointer on a button for longer than a second, makes the pointer flash on the screen (indicating a mouse click has occured).}
+\label{LeapOnTheWebsite}
+\end{center}
+\end{figure}
+
 \section{Testing and Critical Evaluation of Jellibeans}
 \subsection{Testing and Evaluation of the Combined Search Engine.}
 To test the integrated combined search engine, 10 participants took part in a study to evaluate the quality of it's output. The participants were selected because they scored highly (above 30, where 32 is threshold for Autism Spectrum Disorder with a 79\% sensitivity) on a 50-item screening measure of Autism-like tratis (the Autism Quotient \cite{Baron Cohen et al}), and these individuals were thought to be most suited to test the current system. 
@@ -761,13 +785,14 @@ The LEAP does however miss small hand movements, and also very large ones (outsi
 
 \section{Software Testing}
 
+
 I used Behaviour Driven Development (BDD) to test the integration of my HTML, CSS and JavaScript code. The testing process consisted of development, test, make modifications, test (and so on) until the behaviour of the website was what I intended.\\
 
 \vspace{5mm}
 The JavaScript Console was used for testing JavaScript code. \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle} to ensure the code contained no bugs, and was particularly good for seeing how the JavaScript code integrated with the HTML code and CSS.
 
 \vspace{5mm}
-JUnit was used to test the Combination Search Engine and the LEAP motion controller methods, which were written using Java. Unit testing was completed, at the method level.
+JUnit was used to test the Combination Search Engine and the LEAP motion controller methods, which were written using Java. Test Driven Development unit testing was completed, at the level of each method implemented.
 
 
 \begin{comment}
@@ -776,87 +801,23 @@ TODO consider using CUCUMBER IN ECLIPSE.https://hjrlive.wordpress.com/2014/02/15
 \end{comment}
 
 \section{User Verification and User Testing}
-Five high AQ scorers were called back from the previous research study for one-to-one interviews and a combined focus group. During the interview, individuals were given the same user search queries as previously, and for each search that was implemented, users were asked to comment on whether it enhanced, or took away from their search experience, and from their satisfaction with the search results. Users were asked to comment on:
-\begin{enumerate}
-\item{Whether the colour coding for each category of search was helpful.}
-\item{Whether they liked the parametric search style of Jellibeans}
-\item{Whether they felt Jellibeans `narrowed' the scope for irrelevant detail.}
-\item{If they would choose Jellibeans over other search engines, for example, Google, and why.}
-\item{The speed and efficiency of search with Jellibeans}
-\item{Their thought on search results.}
-\item{The integration of Jellibeans with the LEAP motion controller.}
-\end{enumerate}
+Five high AQ scorers were called back from the previous research study for one-to-one interviews and a combined focus group. During the interview, individuals were given the same user search queries as previously, and for each search that was implemented, users were asked to comment on whether it enhanced, or took away from their search experience, and from their satisfaction with the search results. 
 
-\subsection{The Positives}
-All 5 users verified that the `Dashboard' colour coding was helpful (see Figure~\ref{colourCoding}), and liked that the colour of the chosen type of search remained on screen for its duration.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.25]{DoKnowGoSocialDashboard}
-\caption{Colour coding on Jellibean dashboard.}
-\label{colourCoding}
-\end{center}
-\end{figure}
-
-The modals (floating window reminders) for each of the colour themes were useful for all new users, as they were originally unfamiliar with the colours. The associations for all user groups, including users with Autism, were quick to learn, these were single link visual (rather than verbal) associations.\\
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.25]{floatingModals}
-\caption{Modals Assist New Users To Lean the Colour Associations.}
-\label{colourCoding}
-\end{center}
-\end{figure}
-
-
-Four out of 5 participants agreed that one of the major positives of Jellibeans was that unlike Google, users did not receive back hundreds and thousands of mostly irrelevant results. Jellibeans held their interest for longer because of the reduced number of results that users had to sift through. Testing also revealed that the parametric search style meant that they did not need to try and remember all the key words to search for, rather the cues helped them remember points they would have missed otherwise. \\
-
-\vspace{5mm}
-A common comment (3 out of 5 users) was the time/reward payoff from completing a detailed search form. Users agreed that although they would spend more time formulating their search query, they were likely to save time that would usually be spent sifting through search results. These participants indicated that they would use Jellibeans over other search engines if continued use on other queries also showed such benefit.\\
-
-\vspace{5mm}
-All users positively commented on the reduced number of search results presented (top 3). The amount of textual information that was presented back on the results page is significantly reduced in Jellibeans. 
-
-\vspace{5mm}
-During the focus group one user with high functioning Autism described that the direct questions (e.g., `What do you want to do on the web?'), with suggestions (`Shop', `Watch', `Listen'), was useful when he was ``at a total blank". He disclosed that often his need for perfectionism and sameness could have him staring at a blank screen until he came up with the `perfect' query. However, the suggestions were helpful for him to get started, and so his experience was that the queries were completed faster than usual.  \\
-
-\subsection{The Negatives}
-
-Two users however, had considerations about the `missing' results from their search and commented that for them, 3 results were too few and perhaps 5 or 6 results would have been a better choice. It must be said that these individuals were amongst the lowest AQ scorers, suggesting that the amount of text individuals with Autism find optimal is a function of the severity of Autism traits in that individual.
-
-\vspace{5mm}
-One participant commented that the suggestions that appear on the sides of the `Do', `Know', `Go' and `Social' pages were not user-specific (see Figure~\ref{suggestions}). He suggested implementing something that is user-centred, user-driven, or, trending, rather than static.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.3]{suggestions}\\
-\caption{Suggestions on Jellibeans `Go' page for users to help with search query formulation (suggestions are highlighted in red).}
-\label{suggestions}
-\end{center}
-\end{figure}
-
-However, one of the characteristics of Autism is restricted and repetitive behaviours, and an aims of the current project was to reduce the restricted and repetitive nature of search queries for people with Autism. In other words, this comment was suggesting that Jellibeans was achieving the aim it had set out to do.
-
-\vspace{5mm}
-Nevertheless, one future direction for Jellibeans in order to achieve a balance between user-specific suggestions but not restricted interests, is to include a recommendation system that changes often enough for them not to be repetitive, but still within a range of possible interests for that individual. 
-
-\subsection{Other observations}
-
-Users agreed during the focus group that with Jellibeans the time/reward payoff is really only apparent, over and beyond a traditional search engine, when the search query is complex. For example, if users are searching for something they have yet to identify, i.e., something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
-
-\begin{comment}
-\vspace{5mm}
-Describe the verification process you used in your project\\
-Unit Testing, Static Analysis for methods in javascript etc.\\
-Manual testing, Selenium, Cucumber etc for html.\\
-Regression tests
-\end{comment}
-
+\subsection{Interviews}
 \subsection{Quantifiable results}
-The 5 participants were also asked to re-construct the same search queries they had been asked to construct in the first research study, but this time using Jellibeans. The search strings that these users formulated are presented below.
+The 5 participants were asked to re-construct the same search queries they had been asked to construct in the first research study, using the search engine they identified as their usual choice (all participants said they would usually Google), and also using Jellibeans. 
+
+\vspace{5mm}
+Participants were asked to comment on:
+\begin{itemize}
+\item{Whether they found a result they would be satisfied with using both search tools, Jellibeans only, Google only, or neither.}
+\item{Which search tool gave them the most relevant results overall, and how many were relevant (focusing only on the top 3 links for comparison purposes, as Jellibeans only returns 3 results.)}
+\end{itemize}
+
+\vspace{5mm}
+The search strings that these users formulated are presented below.
 
 
-\newpage
 \textbf{Search strings formed by users with Autism, \underline{without using Jellibeans}. }
 \begin{enumerate}\label{asdresponses}
 \item{You hear a song on the radio with the lyrics, `Look at your children', and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{Song lyrics look at your children\\
@@ -878,7 +839,8 @@ Star eight spice wikipedia\\
 Star shaped flower \\
 Wooden flower\\
 Star shape hard shell \\
-Post a picture on Facebook}}
+Post a picture on Facebook\\
+No answer}}
 \item{How would you find out the name of this famous person using a search engine? What key words/queries would you use?\\\textit{Pale brunette brown(or hazelnut) eyes freckles natural beauty earring\\
 Not something I would search for\\
 Model actress long brown hair, brown eyes, big lips\\
@@ -918,10 +880,6 @@ Paris departure Heathrow\\
 \end{enumerate}
 
 
-
-
-\newpage
-
 \textbf{Search strings formed by users with Autism, \underline{with Jellibeans}. }
 \begin{enumerate}\label{asdresponses}
 \item{You hear a song on the radio with the lyrics, `Look at your children', and you want to download it. What would you type into search on your favourite search engine to find out what song it was?\\\textit{
@@ -946,18 +904,18 @@ Organic brown star name flower \\
 Name of  organic spice wikipedia  natural wooden     
 }}
 \item{How would you find out the name of this famous person using a search engine? What key words/queries would you use?\\\textit{
-Lady with brown hair name Brown Young Chic Sexy\\
+Famous lady with brown hair name Brown Young Chic Sexy\\
 Brown eyes woman Famous Female Brown Young Modest Moody\\
-Pale brunette natural Female Brown Middle aged \\
+Actress pale brunette natural Female Brown Middle aged \\
 Celebrity female long hair dark earring name Famous Female Brown Middle aged Serious \\
 Pretty white brunette name Famous Female Brown Young Chic
 }}
 \item{How would you identify what breed this animal is using a search engine? What key words/queries would you use?\\\textit{
-Lady with brown hair name Brown Young Chic Sexy \\
-Brown eyes woman Famous Female Brown Young Modest Moody \\
-Pale brunette natural Female Brown Middle aged \\
-Celebrity female long hair dark earring name Famous Female Brown Middle aged Serious \\ 
-Pretty white brunette name Famous Female Brown Young Chic
+Name of small white fluffy dog name \\       
+White dog small poofy hair name \\      
+Name of dog white small  yorkie  \\
+Grey and white dog small  name of dog \\
+Pet dog name name white small moustache breed      
 }}
 \item{Your friend and you can't agree on how Thandie Newton pronounces her first name. How would you resolve this using a search engine?\\\textit{
 Thandie Newton interview YouTube \\    
@@ -981,6 +939,137 @@ Departure to paris flight delay  information \\
 Airport website flight delay to Paris  
 }}
 \end{enumerate}
+
+\subsubsection{Result 1}
+The first question was whether participants found results they would be satisfied with using both search tools, Jellibeans only, Google only, or neither.
+
+\vspace{5mm}
+\begin{itemize}
+\item{For each question the defining criteria of a succesful search was defined according to the base model (from typically developing individuals):}
+\subitem{A reference to the `name of the song' / `lyrics' and `Look at your your children'.}
+\subitem{A reference to `St Marys School', [year of graduation] and a description of the person.}
+\subitem{Reference to the `star' shape, the colour `brown', and the fact it was a `plant'/`organic'.}
+\subitem{Reference to a famous woman with brown hair and young. }
+\subitem{Reference to a `small' `dog', and `fluffy' breed.}
+\subitem{A query with the keywords `Thandie Newton' and `Pronunciation'}
+\subitem{A reference to a `square pattern' which is `repeating' (`tiles' or `spiral' interchangably used), with `origin'. }
+\subitem{A reference to `Paris', `airport/aeroplane', `flight time/information'.}
+\end{itemize}
+
+Out of the 40 queries in total, considering the top 3 results from Google (for comparison with Jellibeans), Jellibeans showed a modest improvement in precision rate see Figure ~\ref{result1}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{Result1}
+\caption{Precision for Jellibeans versus other search tool used by participants. Y axis represents search queries retrieved out of a total of 40.}
+\label{result1}
+\end{center}
+\end{figure}
+
+The full data file can be found in Appendix~\ref{datacoding}.
+
+\subsubsection{Result 2}
+Participants were asked to count the number of results (in the top three) that they felt were relevant to the search query. These data are presented in Figure ~\ref{result2}. The results show that the recall was comparable (albeit variable) between Jellibeans and the usual search tool for the participant.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{result2}
+\caption{Recall for Jellibeans versus the usual participant search tool.}
+\label{result2}
+\end{center}
+\end{figure}
+
+\subsubsection{Result 3}
+There was a significant difference in the number of words used to form search queries when comparing Jellibeans to other search tools. Significantly more words were used to form search queries using Jellibeans (mean number of words in Jellibeans = 3.53, mean number of words in other search tools = 6.55). A paired-samples t-test was run to confirm this observation (t = -7.79, df = 39, p $<$ 0.001, see Figure~\ref{result3}). This is interesting because it means that individuals use more words and to narrow down the scope of their search, which is useful for increasing precision scores of the search tool.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.47]{Result3}
+\caption{Result of t-test comparing number of words used to form search queries. Participants used more words to define their queries using Jellibeans compared to other search tools.}
+\label{result3}
+\end{center}
+\end{figure}
+
+There was also more repetition in words used to form search queries in Jellibeans. This is probably due to the nature of the search process using this tool -- there are more search inputs to complete and drop down input boxes (to select `keywords') which are added to the search in Jellibeans. To remove this confound, keywords that were repeated were dropped from the analysis.
+
+\subsection{Focus Group}
+During the focus group users were asked to comment on:
+\begin{enumerate}
+\item{Whether the colour coding for each category of search was helpful.}
+\item{Whether they liked the parametric search style of Jellibeans}
+\item{Whether they felt Jellibeans `narrowed' the scope for irrelevant detail.}
+\item{If they would choose Jellibeans over other search engines, for example, Google, and why.}
+\item{The speed and efficiency of search with Jellibeans}
+\item{Their thought on search results.}
+\item{The integration of Jellibeans with the LEAP motion controller.}
+\end{enumerate}
+
+\subsubsection{The Positives}
+All 5 users verified that the `Dashboard' colour coding was helpful (see Figure~\ref{colourCoding}), and liked that the colour of the chosen type of search remained on screen for its duration.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{DoKnowGoSocialDashboard}
+\caption{Colour coding on Jellibean dashboard.}
+\label{colourCoding}
+\end{center}
+\end{figure}
+
+The modals (floating window reminders) for each of the colour themes were useful for all new users, as they were originally unfamiliar with the colours. The associations for all user groups, including users with Autism, were quick to learn, these were single link visual (rather than verbal) associations.\\
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.25]{floatingModals}
+\caption{Modals Assist New Users To Lean the Colour Associations.}
+\label{colourCoding}
+\end{center}
+\end{figure}
+
+
+Four out of 5 participants agreed that one of the major positives of Jellibeans was that unlike Google, users did not receive back hundreds and thousands of mostly irrelevant results. Jellibeans held their interest for longer because of the reduced number of results that users had to sift through. Testing also revealed that the parametric search style meant that they did not need to try and remember all the key words to search for, rather the cues helped them remember points they would have missed otherwise. \\
+
+\vspace{5mm}
+A common comment (3 out of 5 users) was the time/reward payoff from completing a detailed search form. Users agreed that although they would spend more time formulating their search query, they were likely to save time that would usually be spent sifting through search results. These participants indicated that they would use Jellibeans over other search engines if continued use on other queries also showed such benefit.\\
+
+\vspace{5mm}
+All users positively commented on the reduced number of search results presented (top 3). The amount of textual information that was presented back on the results page is significantly reduced in Jellibeans. 
+
+\vspace{5mm}
+During the focus group one user with high functioning Autism described that the direct questions (e.g., `What do you want to do on the web?'), with suggestions (`Shop', `Watch', `Listen'), was useful when he was ``at a total blank". He disclosed that often his need for perfectionism and sameness could have him staring at a blank screen until he came up with the `perfect' query. However, the suggestions were helpful for him to get started, and so his experience was that the queries were completed faster than usual.  \\
+
+\subsubsection{The Negatives}
+
+Two users however, had considerations about the `missing' results from their search and commented that for them, 3 results were too few and perhaps 5 or 6 results would have been a better choice. It must be said that these individuals were amongst the lowest AQ scorers, suggesting that the amount of text individuals with Autism find optimal is a function of the severity of Autism traits in that individual.
+
+\vspace{5mm}
+One participant commented that the suggestions that appear on the sides of the `Do', `Know', `Go' and `Social' pages were not user-specific (see Figure~\ref{suggestions}). He suggested implementing something that is user-centred, user-driven, or, trending, rather than static.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{suggestions}\\
+\caption{Suggestions on Jellibeans `Go' page for users to help with search query formulation (suggestions are highlighted in red).}
+\label{suggestions}
+\end{center}
+\end{figure}
+
+However, one of the characteristics of Autism is restricted and repetitive behaviours, and an aims of the current project was to reduce the restricted and repetitive nature of search queries for people with Autism. In other words, this comment was suggesting that Jellibeans was achieving the aim it had set out to do.
+
+\vspace{5mm}
+Nevertheless, one future direction for Jellibeans in order to achieve a balance between user-specific suggestions but not restricted interests, is to include a recommendation system that changes often enough for them not to be repetitive, but still within a range of possible interests for that individual. 
+
+\subsubsection{Other observations}
+
+Users agreed during the focus group that with Jellibeans the time/reward payoff is really only apparent, over and beyond a traditional search engine, when the search query is complex. For example, if users are searching for something they have yet to identify, i.e., something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
+
+\begin{comment}
+\vspace{5mm}
+Describe the verification process you used in your project\\
+Unit Testing, Static Analysis for methods in javascript etc.\\
+Manual testing, Selenium, Cucumber etc for html.\\
+Regression tests
+\end{comment}
+
+
+
 
 
 \section{Evaluation and Discussion.}\label{eval}
@@ -1064,6 +1153,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{moore}Moore, D. J., McGrath, P., \& Thorpe, J. (2000). Computer aided learning for people with autismâa framework for research and development. \textit{Innovations in Education and Training International, 37}
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). \textit{Clinical Linguistics and Phonetics, 27}(2), 85-93. 
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
+\bibitem{phptester} Online PHP tester, http://phptester.net/, Retrieved September 7 2015.
 \bibitem {Shane and Albert}Shane, H. C. and Albert, P. D. (2008) Electronic screen media for persons with autism spectrum disorders: results of a survey. \textit{Journal of Autism Developmental Disorders, 38},8 :1499-508. doi: 10.1007/s10803-007-0527-5.
 \bibitem{AdultsWithAutism} Slavin, S (2013) Autism: Successful communication,10 things to make it easier, http://adultswithautism.org.uk/autism-successful-communication-10-things-to-make-it-easier/, Retrieved September 1 2015.
 \bibitem{surveymonkey}Surveymonkey, https://www.surveymonkey.com/home/, Retrieved 5 August 2015.
@@ -1173,6 +1263,16 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \caption{Search Query Survey on Surveymonkey.com \cite{surveymonkey}}
 \end{center}
 \end{figure}
+
+\newpage
+\subsection{Data Coding for Result 1 and 2}\label{datacoding}
+
+\begin{figure}[H]
+\includegraphics[angle=90, scale=0.57]{resultsCoding}\\
+\caption{Data File for Results 1 and 2}
+
+\end{figure}
+
 
 
 
