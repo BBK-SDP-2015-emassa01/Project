@@ -27,14 +27,14 @@
 \contentsline {subsection}{\numberline {8.2}Quantifiable results}{41}
 \contentsline {subsubsection}{\numberline {8.2.1}Result 1}{44}
 \contentsline {subsubsection}{\numberline {8.2.2}Result 2}{46}
-\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{46}
-\contentsline {subsection}{\numberline {8.3}Focus Group}{47}
-\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{47}
-\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{49}
-\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{50}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{50}
+\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{47}
+\contentsline {subsection}{\numberline {8.3}Focus Group}{48}
+\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{48}
+\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{50}
+\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{51}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{51}
 \contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{51}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{51}
+\contentsline {subsection}{\numberline {9.2}Future Directions}{52}
 \contentsline {section}{\numberline {10}Appendices}{56}
 \contentsline {subsection}{\numberline {10.1}Class Diagram}{57}
 \contentsline {subsection}{\numberline {10.2}Use Case Diagram}{58}

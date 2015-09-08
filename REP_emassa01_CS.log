@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  8 SEP 2015 01:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.23)  8 SEP 2015 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -795,87 +795,104 @@ ts from 10 (pre-determined)
  []
 
 [39] Excluding 'comment' comment. [40] [41] [42] [43] [44]
-<images/Result1.png, id=190, 362.7954pt x 217.7736pt>
-File: images/Result1.png Graphic file (type png)
- <use images/Result1.png>
-Package pdftex.def Info: images/Result1.png used on input line 962.
+
+LaTeX Warning: Reference `result1spss' on page 45 undefined on input line 959.
+
+<images/Result1star.png, id=190, 362.7954pt x 217.7736pt>
+File: images/Result1star.png Graphic file (type png)
+
+<use images/Result1star.png>
+Package pdftex.def Info: images/Result1star.png used on input line 962.
 (pdftex.def)             Requested size: 362.79451pt x 217.77306pt.
 
-Overfull \hbox (1.4772pt too wide) in paragraph at lines 959--966
-[]\OT1/qbk/m/n/10.95 Out of the 40 queries in to-tal, con-sid-er-ing the top 3 
-re-sults from Google (for com- 
+Overfull \hbox (1.09392pt too wide) in paragraph at lines 959--966
+[]\OT1/qbk/m/n/10.95 A cat-e-gor-i-cal anal-y-sis was con-ducted to val-i-date 
+the search ef-fi-cacy of Jel-libeans. 
  []
 
-[45 <./images/Result1.png>]
+[45] <images/Result1spss.png, id=194, 913.4125pt x 150.5625pt>
+File: images/Result1spss.png Graphic file (type png)
+
+<use images/Result1spss.png>
+Package pdftex.def Info: images/Result1spss.png used on input line 970.
+(pdftex.def)             Requested size: 429.30394pt x 70.76437pt.
+
 <images/result2.png, id=195, 362.7954pt x 218.2554pt>
 File: images/result2.png Graphic file (type png)
  <use images/result2.png>
-Package pdftex.def Info: images/result2.png used on input line 975.
+Package pdftex.def Info: images/result2.png used on input line 986.
 (pdftex.def)             Requested size: 362.79451pt x 218.25485pt.
 
-Overfull \hbox (13.48936pt too wide) in paragraph at lines 982--983
+[46 <./images/Result1star.png> <./images/Result1spss.png>]
+Overfull \hbox (13.48936pt too wide) in paragraph at lines 993--994
 \OT1/qbk/m/n/10.95 in Jel-libeans = 3.53, mean num-ber of words in other search
  tools = 6.55). A paired- 
  []
 
-<images/Result3.png, id=196, 952.55875pt x 114.4275pt>
+<images/Result3.png, id=200, 952.55875pt x 114.4275pt>
 File: images/Result3.png Graphic file (type png)
 
 <use images/Result3.png>
-Package pdftex.def Info: images/Result3.png used on input line 986.
+Package pdftex.def Info: images/Result3.png used on input line 997.
 (pdftex.def)             Requested size: 447.70268pt x 53.78093pt.
 
-Overfull \hbox (14.08269pt too wide) in paragraph at lines 986--987
+Overfull \hbox (14.08269pt too wide) in paragraph at lines 997--998
  [] 
  []
 
-[46 <./images/result2.png>]
-Overfull \hbox (7.06172pt too wide) in paragraph at lines 992--993
+
+Overfull \hbox (7.06172pt too wide) in paragraph at lines 1003--1004
 []\OT1/qbk/m/n/10.95 There was also more rep-e-ti-tion in words used to form se
 arch queries in Jel-libeans. 
  []
 
+[47 <./images/result2.png> <./images/Result3.png>]
+Overfull \hbox (3.4701pt too wide) in paragraph at lines 1006--1007
+\OT1/qbk/m/n/10.95 words in Jel-libeans. This is most likely the rea-son why Je
+l-libeans is able to main- 
+ []
 
-Overfull \hbox (5.36444pt too wide) in paragraph at lines 1007--1008
+
+Overfull \hbox (5.36444pt too wide) in paragraph at lines 1022--1023
 \OT1/qbk/m/n/10.95 All 5 users ver-i-fied that the `Dash-board' colour cod-ing 
 was help-ful (see Fig-ure 30[]), 
  []
 
-<images/DoKnowGoSocialDashboard.png, id=201, 1261.71375pt x 544.0325pt>
+<images/DoKnowGoSocialDashboard.png, id=205, 1261.71375pt x 544.0325pt>
 File: images/DoKnowGoSocialDashboard.png Graphic file (type png)
 
 <use images/DoKnowGoSocialDashboard.png>
 Package pdftex.def Info: images/DoKnowGoSocialDashboard.png used on input line 
-1011.
+1026.
 (pdftex.def)             Requested size: 315.42766pt x 136.00778pt.
- [47 <./images/Result3.png>]
-<images/floatingModals.png, id=205, 1261.71375pt x 544.0325pt>
+ [48 <./images/DoKnowGoSocialDashboard.png>] <images/floatingModals.png, id=210
+, 1261.71375pt x 544.0325pt>
 File: images/floatingModals.png Graphic file (type png)
 
 <use images/floatingModals.png>
-Package pdftex.def Info: images/floatingModals.png used on input line 1021.
+Package pdftex.def Info: images/floatingModals.png used on input line 1036.
 (pdftex.def)             Requested size: 315.42766pt x 136.00778pt.
- [48 <./images/DoKnowGoSocialDashboard.png> <./images/floatingModals.png>]
-<images/suggestions.png, id=211, 722.7pt x 542.025pt>
+ [49 <./images/floatingModals.png>]
+<images/suggestions.png, id=216, 722.7pt x 542.025pt>
 File: images/suggestions.png Graphic file (type png)
 
 <use images/suggestions.png>
-Package pdftex.def Info: images/suggestions.png used on input line 1048.
+Package pdftex.def Info: images/suggestions.png used on input line 1063.
 (pdftex.def)             Requested size: 216.81166pt x 162.60875pt.
- [49]
-Overfull \hbox (15.60265pt too wide) in paragraph at lines 1054--1055
+
+Overfull \hbox (15.60265pt too wide) in paragraph at lines 1069--1070
 []\OT1/qbk/m/n/10.95 However, one of the char-ac-ter-is-tics of Autism is re-st
 ricted and repet-i-tive be-haviours, 
  []
 
-Excluding 'comment' comment. [50 <./images/suggestions.png>] [51] [52]
-Underfull \hbox (badness 1728) in paragraph at lines 1133--1134
+[50 <./images/suggestions.png>] Excluding 'comment' comment. [51] [52]
+Underfull \hbox (badness 1728) in paragraph at lines 1148--1149
 []\OT1/qbk/m/n/10.95 Bronwyn, M, Mur-ray, M, and Durkin, K. (2003) Weak cen-tra
 l co- 
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 1133--1134
+Underfull \hbox (badness 1389) in paragraph at lines 1148--1149
 \OT1/qbk/m/n/10.95 her-ence, poor joint at-ten-tion, and low ver-bal abil-ity: 
 In-de-pen-dent 
  []
@@ -883,55 +900,55 @@ In-de-pen-dent
 [53
 
 ]
-Overfull \hbox (1.80577pt too wide) in paragraph at lines 1147--1148
+Overfull \hbox (1.80577pt too wide) in paragraph at lines 1162--1163
 []\OT1/qbk/m/n/10.95 JavaScript Con-sole, https://developer.chrome.com/devtools
 /docs/console, 
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1158--1159
+Underfull \hbox (badness 1584) in paragraph at lines 1173--1174
 []\OT1/qbk/m/n/10.95 Slavin, S (2013) Autism: Suc-cess-ful com-mu-ni-ca-tion,10
  things to 
  []
 
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1161
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
 []\OT1/qbk/m/n/10.95 Term Fre-quency In-verse Doc-u-ment Fre-quency Weight-ing,
  
  []
 
 
-Overfull \hbox (2.2438pt too wide) in paragraph at lines 1161--1162
+Overfull \hbox (2.2438pt too wide) in paragraph at lines 1176--1177
 []\OT1/qbk/m/n/10.95 Word Fre-quency In-for-ma-tion, http://www.wordfrequency.i
 nfo/free.asp?s=y, 
  []
 
 [55] Excluding 'comment' comment. [56]
-<images/jBeanClassDiagram.png, id=240, 817.0525pt x 473.77pt>
+<images/jBeanClassDiagram.png, id=241, 817.0525pt x 473.77pt>
 File: images/jBeanClassDiagram.png Graphic file (type png)
 
 <use images/jBeanClassDiagram.png>
-Package pdftex.def Info: images/jBeanClassDiagram.png used on input line 1187.
+Package pdftex.def Info: images/jBeanClassDiagram.png used on input line 1202.
 (pdftex.def)             Requested size: 449.38028pt x 260.57431pt.
 
-Overfull \hbox (15.76028pt too wide) in paragraph at lines 1187--1188
+Overfull \hbox (15.76028pt too wide) in paragraph at lines 1202--1203
  [] 
  []
 
 [57 <./images/jBeanClassDiagram.png>]
-<images/JBeanUseCase.png, id=244, 1140.26pt x 801.99625pt>
+<images/JBeanUseCase.png, id=245, 1140.26pt x 801.99625pt>
 File: images/JBeanUseCase.png Graphic file (type png)
 
 <use images/JBeanUseCase.png>
-Package pdftex.def Info: images/JBeanUseCase.png used on input line 1197.
+Package pdftex.def Info: images/JBeanUseCase.png used on input line 1212.
 (pdftex.def)             Requested size: 456.09592pt x 320.79282pt.
 
-Overfull \hbox (22.47592pt too wide) in paragraph at lines 1197--1198
+Overfull \hbox (22.47592pt too wide) in paragraph at lines 1212--1213
  [] 
  []
 
 [58 <./images/JBeanUseCase.png>]
-Overfull \hbox (1.14362pt too wide) in paragraph at lines 1208--1218
+Overfull \hbox (1.14362pt too wide) in paragraph at lines 1223--1233
 []  
  []
 
@@ -942,88 +959,88 @@ Overfull \vbox (119.2823pt too high) has occurred while \output is active []
 [59]
 
 LaTeX Font Warning: Font shape `OT1/qbk/m/ui' undefined
-(Font)              using `OT1/qbk/m/n' instead on input line 1222.
+(Font)              using `OT1/qbk/m/n' instead on input line 1237.
 
 
-Overfull \hbox (5.19513pt too wide) in paragraph at lines 1219--1225
+Overfull \hbox (5.19513pt too wide) in paragraph at lines 1234--1240
 [][]  
  []
 
-[60] <images/GoogleToS.png, id=254, 770.88pt x 378.41376pt>
+[60] <images/GoogleToS.png, id=255, 770.88pt x 378.41376pt>
 File: images/GoogleToS.png Graphic file (type png)
 
 <use images/GoogleToS.png>
-Package pdftex.def Info: images/GoogleToS.png used on input line 1230.
+Package pdftex.def Info: images/GoogleToS.png used on input line 1245.
 (pdftex.def)             Requested size: 462.53157pt x 227.05pt.
 
-Overfull \hbox (28.91158pt too wide) in paragraph at lines 1230--1231
+Overfull \hbox (28.91158pt too wide) in paragraph at lines 1245--1246
  [] 
  []
 
 [61 <./images/GoogleToS.png>]
-<images/survey1.png, id=260, 956.57375pt x 555.07375pt>
+<images/survey1.png, id=261, 956.57375pt x 555.07375pt>
 File: images/survey1.png Graphic file (type png)
 
 <use images/survey1.png>
-Package pdftex.def Info: images/survey1.png used on input line 1240.
+Package pdftex.def Info: images/survey1.png used on input line 1255.
 (pdftex.def)             Requested size: 478.2857pt x 277.53618pt.
 
-Overfull \hbox (44.66571pt too wide) in paragraph at lines 1240--1240
+Overfull \hbox (44.66571pt too wide) in paragraph at lines 1255--1255
  [] 
  []
 
-<images/survey2.png, id=261, 966.61125pt x 495.8525pt>
+<images/survey2.png, id=262, 966.61125pt x 495.8525pt>
 File: images/survey2.png Graphic file (type png)
 
 <use images/survey2.png>
-Package pdftex.def Info: images/survey2.png used on input line 1241.
+Package pdftex.def Info: images/survey2.png used on input line 1256.
 (pdftex.def)             Requested size: 483.30444pt x 247.92564pt.
 
-Overfull \hbox (49.68445pt too wide) in paragraph at lines 1241--1241
+Overfull \hbox (49.68445pt too wide) in paragraph at lines 1256--1256
  [][] 
  []
 
 [62 <./images/survey1.png> <./images/survey2.png>]
-<images/survey3.png, id=267, 965.6075pt x 411.5375pt>
+<images/survey3.png, id=268, 965.6075pt x 411.5375pt>
 File: images/survey3.png Graphic file (type png)
  <use images/survey3.png>
-Package pdftex.def Info: images/survey3.png used on input line 1247.
+Package pdftex.def Info: images/survey3.png used on input line 1262.
 (pdftex.def)             Requested size: 482.80257pt x 205.76825pt.
 
-Overfull \hbox (49.18257pt too wide) in paragraph at lines 1247--1247
+Overfull \hbox (49.18257pt too wide) in paragraph at lines 1262--1262
  [] 
  []
 
-<images/survey4.png, id=268, 962.59625pt x 324.21124pt>
+<images/survey4.png, id=269, 962.59625pt x 324.21124pt>
 File: images/survey4.png Graphic file (type png)
 
 <use images/survey4.png>
-Package pdftex.def Info: images/survey4.png used on input line 1248.
+Package pdftex.def Info: images/survey4.png used on input line 1263.
 (pdftex.def)             Requested size: 481.29695pt x 162.10522pt.
 
-Overfull \hbox (47.67696pt too wide) in paragraph at lines 1248--1248
+Overfull \hbox (47.67696pt too wide) in paragraph at lines 1263--1263
  [][] 
  []
 
 [63 <./images/survey3.png> <./images/survey4.png>]
-<images/survey5.png, id=274, 965.6075pt x 626.34pt>
+<images/survey5.png, id=275, 965.6075pt x 626.34pt>
 File: images/survey5.png Graphic file (type png)
  <use images/survey5.png>
-Package pdftex.def Info: images/survey5.png used on input line 1254.
+Package pdftex.def Info: images/survey5.png used on input line 1269.
 (pdftex.def)             Requested size: 482.80257pt x 313.16922pt.
 
-Overfull \hbox (49.18257pt too wide) in paragraph at lines 1254--1254
+Overfull \hbox (49.18257pt too wide) in paragraph at lines 1269--1269
  [] 
  []
 
-<images/survey6.png, id=275, 966.61125pt x 623.32875pt>
+<images/survey6.png, id=276, 966.61125pt x 623.32875pt>
 File: images/survey6.png Graphic file (type png)
 
 <use images/survey6.png>
-Package pdftex.def Info: images/survey6.png used on input line 1255.
+Package pdftex.def Info: images/survey6.png used on input line 1270.
 (pdftex.def)             Requested size: 483.30444pt x 311.6636pt.
 
-Overfull \hbox (49.68445pt too wide) in paragraph at lines 1255--1255
+Overfull \hbox (49.68445pt too wide) in paragraph at lines 1270--1270
  [][] 
  []
 
@@ -1032,35 +1049,35 @@ Overfull \vbox (60.67284pt too high) has occurred while \output is active []
 
 
 [64 <./images/survey5.png> <./images/survey6.png>]
-<images/survey7.png, id=281, 963.6pt x 362.35374pt>
+<images/survey7.png, id=282, 963.6pt x 362.35374pt>
 File: images/survey7.png Graphic file (type png)
  <use images/survey7.png>
-Package pdftex.def Info: images/survey7.png used on input line 1262.
+Package pdftex.def Info: images/survey7.png used on input line 1277.
 (pdftex.def)             Requested size: 481.79883pt x 181.17642pt.
 
-Overfull \hbox (48.17883pt too wide) in paragraph at lines 1262--1262
+Overfull \hbox (48.17883pt too wide) in paragraph at lines 1277--1277
  [] 
  []
 
 [65 <./images/survey7.png>]
-<images/resultsCoding.png, id=286, 1075.01625pt x 558.085pt>
+<images/resultsCoding.png, id=287, 1075.01625pt x 558.085pt>
 File: images/resultsCoding.png Graphic file (type png)
 
 <use images/resultsCoding.png>
-Package pdftex.def Info: images/resultsCoding.png used on input line 1271.
+Package pdftex.def Info: images/resultsCoding.png used on input line 1286.
 (pdftex.def)             Requested size: 1075.01364pt x 558.08365pt.
 
 Overfull \vbox (89.54774pt too high) has occurred while \output is active []
 
 
 [66 <./images/resultsCoding.png>]
-Overfull \hbox (7.2806pt too wide) in paragraph at lines 1282--1282
+Overfull \hbox (7.2806pt too wide) in paragraph at lines 1297--1297
 \OT1/qbk/m/n/10.95 Participants are asked to read each state-ment very care-ful
 ly and rate how strongly 
  []
 
 
-Overfull \hbox (1.14871pt too wide) in paragraph at lines 1288--1288
+Overfull \hbox (1.14871pt too wide) in paragraph at lines 1303--1303
 []\OT1/qbk/m/n/10.95 I fre-quently get so strongly ab-sorbed in one thing that 
 I lose sight of other things.  
  []
@@ -1077,10 +1094,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5206 strings out of 493117
- 77939 string characters out of 6135433
+ 5212 strings out of 493117
+ 78094 string characters out of 6135433
  141954 words of memory out of 5000000
- 8498 multiletter control sequences out of 15000+600000
+ 8503 multiletter control sequences out of 15000+600000
  52700 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,1605b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1092,10 +1109,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 texlive/2014/texmf-dist/fonts/type1/public/tex-gyre/qbkb.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/tex-gyre/qbkr.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/tex-gyre/qbkri.pfb>
-Output written on REP_emassa01_CS.pdf (68 pages, 37204825 bytes).
+Output written on REP_emassa01_CS.pdf (68 pages, 37219815 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 325 PDF objects out of 1000 (max. 8388607)
  175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
