@@ -1126,19 +1126,16 @@ Regression tests
 
 \section{Evaluation and Discussion.}\label{eval}
 
-The final section of the project summarises the challenges and successes of the project.  
+Several unexpected challenges and successes occured during the course of the project's execution.  
 
 \subsection {Challenges}
-There were many challenges for the current project. Some of these challenges were expected, while others have arisin during the course of the project exectution. 
-
-\vspace{5mm}
 The first challenge that was encountered was that the Apache Lucene Library that was to be implemented was not well maintained, and the event 4j log was broken. Several attempts on my own part (and with the help of my supervisor) did not resolve this. KWIC library did not offer methods that were required to complete the task. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. 
 
 \vspace{5mm}
-Google+ API and Google+ did not allow me to store a field to the profile for it to remain after the session. Rather any information stored to the profile would be removed after the session (i.e., after the user logged out of Google+). To overcome this challenge, I used my own datastore, to store user Autism Quotient, and in the final prototype the application is not integrated with Google+ (although in prototype models, Google+ was integrated).
+It was originally thought that user Autism Scores would be stored in their Google+ profile, to be retrieved when users sign in to Jellibeans using Google+. However, Google+ did not allow for a field to persist after the session ended to retrieve the user's score. Rather, any data stored to Google+ would not be retrievable after the user's session had ended (i.e., after the user logged out of Google+). To overcome this challenge I used my own datastore for user's Autism Quotient Scores. The final prototype of the application is therefore not integrated with Google+ (although in prototype models, Google+ was integrated with Jellibeans).
 
 \vspace{5mm}
-To deploy the application, with a database in te webrowser, I had to learn a number of development languages that I had not used before. This included php, jQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using a dynamic website framework which was a personal challenge and steep learning curve. 
+To deploy the application, with a database in te webrowser, I learned a number of development languages that I had not used before. This included php, JQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using this dynamic website framework which was a personal challenge and steep learning curve. 
 
 \vspace{5mm}
 Robots\\
