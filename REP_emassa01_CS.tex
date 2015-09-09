@@ -227,19 +227,36 @@ The final product is presented at the end of this report, and is written using p
 The core features of Jellibeans are:
 
 \begin{enumerate}
-\item {A web-based search tool, that uses a \textit{stereotyped}\footnote{Stereotyped user models infer characteristics about a user from data gathered from other users within that distinct subset.} user model of Autism to filter search results. The features of the model were determined following analyses of survey responses gathered from 7 individuals with Autism or a high occurrence of autism-like symptoms. The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism. The individual participants also took part in a one on one interview session and focus group.}
+\item {A web-based search tool, that uses a \textit{stereotyped}\footnote{Stereotyped user models infer characteristics about a user from data gathered from other users within that distinct subset.} user model of Autism to filter search results. The features of the model were determined following analyses of survey responses gathered from 7 individuals with Autism or a high occurrence of autism-like symptoms (above a score of 30 on the Autism Quotient). The survey was administered online using a web-based survey engine \cite{surveymonkey}, and focused on identifying the differences in user search query generation for people with autism. The individual participants also took part in a one on one interview session and focus group at the end of project.}
 
 \item {Jellibeans implements a parametric-like search to gather a number of search keywords from the user. Jellibeans returns small snippets on the results page to a maximum of 3 search results per page (the result page is not verbally-overloaded).}
 
 \item {Jellibeans prioritises results which have first-order semantic relations to the query words. Jellibeans employs a boolean `AND' between each search word searched for, so that results are more likely first order semantic relations to the searched query.}
 
+\item {Jellibeans uses a data store to saves the user's Autism score for the next time they sign in. The user's score and the search queries that were formed using Jellibeans, were used to evaluate the search tool. The datastore was implemented using MySQL.}
+
 \item {Jellibeans implements within a motion controlled UI which uses the LEAP controller. This makes search more interactive and receptive for users. The LEAP also works to maintain the attention of the user.}
 
-\item {Jellibeans saves the user's Autism score for the next time they sign in, so that this information can be used to evaluate the search tool (i.e., see if it assists users with Autism form search queries. This feature will be implemented using MySQL and a database to store the records.}
 
 \end{enumerate}
 
 \subsection {Challenges}
+There were many challenges for the current project. Some of these challenges were expected, while others have arisin during the course of the project exectution. 
+
+\vspace{5mm}
+The first challenge that was encountered was that the Apache Lucene Library that was to be implemented was not well maintained, and the event 4j log was broken. Several attempts on my own part (and with the help of my supervisor) did not resolve this. KWIC library did not offer methods that were required to complete the task. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. 
+
+\vspace{5mm}
+Google+ API and Google+ did not allow me to store a field to the profile for it to remain after the session. Rather any information stored to the profile would be removed after the session (i.e., after the user logged out of Google+). To overcome this challenge, I used my own datastore, to store user Autism Quotient, and in the final prototype the application is not integrated with Google+ (although in prototype models, Google+ was integrated).
+
+\vspace{5mm}
+To deploy the application, with a database in te webrowser, I had to learn a number of development languages that I had not used before. This included php, jQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using a dynamic website framework which was a personal challenge and steep learning curve. 
+
+\subsection{Successes}
+User testing with 37 individuals, 7 of whom were high Autism scorers. Five individuals responded when recontacted to take part in further research to gather feedback on the final product\\
+User testing shows that the model works well in search.\\
+LEAP integrated really well inside the browser\\
+There was time to implement the user feedback and drop frustations that users identified during user testing\\
 
 
 \section{Project Specification and Design} 

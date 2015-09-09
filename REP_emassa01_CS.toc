@@ -6,42 +6,43 @@
 \contentsline {subsection}{\numberline {1.5}Motion controllers}{10}
 \contentsline {subsection}{\numberline {1.6}Aims for Jellibeans}{10}
 \contentsline {subsection}{\numberline {1.7}Challenges}{12}
-\contentsline {section}{\numberline {2}Project Specification and Design}{12}
-\contentsline {section}{\numberline {3}System and Software Architecture}{16}
-\contentsline {subsection}{\numberline {3.1}Architecture of the System: 3-tier Architecture}{16}
-\contentsline {section}{\numberline {4}Software Design Pattern}{19}
-\contentsline {section}{\numberline {5}Implementation}{23}
-\contentsline {subsection}{\numberline {5.1}Combination Search Engine: Google, Yahoo and Bing.}{23}
-\contentsline {subsubsection}{\numberline {5.1.1}Web Scraping}{25}
-\contentsline {subsection}{\numberline {5.2}Building a User Model of Autism.}{27}
-\contentsline {subsubsection}{\numberline {5.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{28}
-\contentsline {subsection}{\numberline {5.3}Transforming the User Query.}{31}
-\contentsline {subsection}{\numberline {5.4}Storing the User Autism Score Data.}{34}
-\contentsline {subsection}{\numberline {5.5}Integration with a Motion Controlled Interface.}{34}
-\contentsline {subsubsection}{\numberline {5.5.1}Using LEAP in the IDE.}{36}
-\contentsline {subsubsection}{\numberline {5.5.2}Using LeapStrap in the Web-browser.}{37}
-\contentsline {section}{\numberline {6}Testing and Critical Evaluation of Jellibeans}{39}
-\contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{39}
-\contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{40}
-\contentsline {section}{\numberline {7}Software Testing}{40}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{41}
-\contentsline {subsection}{\numberline {8.1}Interviews}{41}
-\contentsline {subsection}{\numberline {8.2}Quantifiable results}{41}
-\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{45}
-\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{46}
-\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{47}
-\contentsline {subsection}{\numberline {8.3}Focus Group}{48}
-\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{48}
-\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{50}
-\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{51}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{51}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{51}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{52}
-\contentsline {section}{\numberline {10}Appendices}{56}
-\contentsline {subsection}{\numberline {10.1}Class Diagram}{57}
-\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{58}
-\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{59}
-\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{61}
-\contentsline {subsection}{\numberline {10.5}Search Query Survey}{62}
-\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{66}
-\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{67}
+\contentsline {subsection}{\numberline {1.8}Successes}{13}
+\contentsline {section}{\numberline {2}Project Specification and Design}{13}
+\contentsline {section}{\numberline {3}System and Software Architecture}{17}
+\contentsline {subsection}{\numberline {3.1}Architecture of the System: 3-tier Architecture}{17}
+\contentsline {section}{\numberline {4}Software Design Pattern}{20}
+\contentsline {section}{\numberline {5}Implementation}{24}
+\contentsline {subsection}{\numberline {5.1}Combination Search Engine: Google, Yahoo and Bing.}{24}
+\contentsline {subsubsection}{\numberline {5.1.1}Web Scraping}{26}
+\contentsline {subsection}{\numberline {5.2}Building a User Model of Autism.}{28}
+\contentsline {subsubsection}{\numberline {5.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{29}
+\contentsline {subsection}{\numberline {5.3}Transforming the User Query.}{32}
+\contentsline {subsection}{\numberline {5.4}Storing the User Autism Score Data.}{35}
+\contentsline {subsection}{\numberline {5.5}Integration with a Motion Controlled Interface.}{35}
+\contentsline {subsubsection}{\numberline {5.5.1}Using LEAP in the IDE.}{37}
+\contentsline {subsubsection}{\numberline {5.5.2}Using LeapStrap in the Web-browser.}{38}
+\contentsline {section}{\numberline {6}Testing and Critical Evaluation of Jellibeans}{40}
+\contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{40}
+\contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{41}
+\contentsline {section}{\numberline {7}Software Testing}{41}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{42}
+\contentsline {subsection}{\numberline {8.1}Interviews}{42}
+\contentsline {subsection}{\numberline {8.2}Quantifiable results}{42}
+\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{46}
+\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{47}
+\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{48}
+\contentsline {subsection}{\numberline {8.3}Focus Group}{49}
+\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{49}
+\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{51}
+\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{52}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{52}
+\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{52}
+\contentsline {subsection}{\numberline {9.2}Future Directions}{53}
+\contentsline {section}{\numberline {10}Appendices}{57}
+\contentsline {subsection}{\numberline {10.1}Class Diagram}{58}
+\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{59}
+\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{60}
+\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{62}
+\contentsline {subsection}{\numberline {10.5}Search Query Survey}{63}
+\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{67}
+\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{68}
