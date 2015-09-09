@@ -237,27 +237,22 @@ The core features of Jellibeans are:
 
 \item {Jellibeans implements within a motion controlled UI which uses the LEAP controller. This makes search more interactive and receptive for users. The LEAP also works to maintain the attention of the user.}
 
-
 \end{enumerate}
 
-\subsection {Challenges}
-There were many challenges for the current project. Some of these challenges were expected, while others have arisin during the course of the project exectution. 
+\subsection{Challenges}
+There are several expected challenges for the current project. One such challenge concerns the very nature of trying to develop a tool for individuals with Autism, knowing that there is a large variability in the phenotype (or presentation) of the condition. Trying to address the clinical features of Autism across the entire spectrum is no mean feat. The sample selected for the current study were \textit{verbal} adults with high functioning Autism, or Asperger Syndrome. 
+
+\vspace{5mm} 
+Another challenge relates to gathering feedback on Jellibeans. I conducted focus groups and interviews which required lot of verbal communication. This is always a challenge when working with individuals who are known to have difficulties with communication.
 
 \vspace{5mm}
-The first challenge that was encountered was that the Apache Lucene Library that was to be implemented was not well maintained, and the event 4j log was broken. Several attempts on my own part (and with the help of my supervisor) did not resolve this. KWIC library did not offer methods that were required to complete the task. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. 
+More of a technical challenge concered the reliance on open source APIs which were not regularly maintained. For resources that were incomplete, I implemented the tools myself, or, I searched for alternative ways to achieve that goal. The same applied for the open source libraries and packages that I used for the current project.
 
 \vspace{5mm}
-Google+ API and Google+ did not allow me to store a field to the profile for it to remain after the session. Rather any information stored to the profile would be removed after the session (i.e., after the user logged out of Google+). To overcome this challenge, I used my own datastore, to store user Autism Quotient, and in the final prototype the application is not integrated with Google+ (although in prototype models, Google+ was integrated).
+To complete the aims for the current project within the time frame was chanllenging given that most of the project used novel technologies for the developer. These included building the user model within a dynamic website, learning php, HTML, CSS, JavaScript and JQuery, and, integrating the motion controlled user interface within that framework. 
 
 \vspace{5mm}
-To deploy the application, with a database in te webrowser, I had to learn a number of development languages that I had not used before. This included php, jQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using a dynamic website framework which was a personal challenge and steep learning curve. 
-
-\subsection{Successes}
-User testing with 37 individuals, 7 of whom were high Autism scorers. Five individuals responded when recontacted to take part in further research to gather feedback on the final product\\
-User testing shows that the model works well in search.\\
-LEAP integrated really well inside the browser\\
-There was time to implement the user feedback and drop frustations that users identified during user testing\\
-
+Conducting surveys, interviews and a focus group to gather feedback on the tool, and to implement this feedback into a revised prototype for Jellibeans was a time consuming task. Often this required that I worked around participant schedules. Two participants out of the 7 were unavailable during the user feedack stage of the study, and so these particpants were excluded from any subsequent analyses.
 
 \section{Project Specification and Design} 
 
@@ -1129,50 +1124,35 @@ Regression tests
 \end{comment}
 
 
-
-
-
 \section{Evaluation and Discussion.}\label{eval}
 
+The final section of the project summarises the challenges and successes of the project.  
 
-The final section summarises the project as a whole
-A critical evaluation by the student, emphasising
-strong points and weak points
-lessons learnt
+\subsection {Challenges}
+There were many challenges for the current project. Some of these challenges were expected, while others have arisin during the course of the project exectution. 
+
+\vspace{5mm}
+The first challenge that was encountered was that the Apache Lucene Library that was to be implemented was not well maintained, and the event 4j log was broken. Several attempts on my own part (and with the help of my supervisor) did not resolve this. KWIC library did not offer methods that were required to complete the task. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. 
+
+\vspace{5mm}
+Google+ API and Google+ did not allow me to store a field to the profile for it to remain after the session. Rather any information stored to the profile would be removed after the session (i.e., after the user logged out of Google+). To overcome this challenge, I used my own datastore, to store user Autism Quotient, and in the final prototype the application is not integrated with Google+ (although in prototype models, Google+ was integrated).
+
+\vspace{5mm}
+To deploy the application, with a database in te webrowser, I had to learn a number of development languages that I had not used before. This included php, jQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using a dynamic website framework which was a personal challenge and steep learning curve. 
+
+\vspace{5mm}
+Robots\\
+Apache Lucene\\
+Sandboxes\\
+
+\vspace{5mm}
 design decisions which, looking back, would be made differently
-ways in which the project could be improved or extended etc.
-recommendations for the project
-You can also describe possible future work in the area of your project
 
-
-
-
-Robots
-Apache Lucene
-Sandboxes
-JavaScript html can't access third party pages
-Yahoo and Bing was easier and faster to do html scraping
-
-
-How does it compare to the original specification
-This work has successfully completed aims XXX
-
-The final section summarises the project as a whole\\
-A critical evaluation by the student, emphasising\\
-strong points and weak points\\
-lessons learnt\\
-design decisions which, looking back, would be made differently\\
-ways in which the project could be improved or extended etc.\\
-recommendations for the project\\
-You can also describe possible future work in the area of your project
-
-\subsection{Signals of Quality Content}
-I will test and evaluate the system. Testing will involve assessing the reliability and robustness of Jellibeans; the ease of its interaction; boundary conditions; ease of use; does it fulfil the aims of the project.
-Evaluation of the system will include comparisons to existing search engines; assessing how this idea can be implemented to tailor an existing systems; assessing how well the system does compared to existing systems on a set of criteria that are only relevant to the user group in question (a collective measure of user happiness). Evaluation will also include quantitative metrics such as Recall, Precision, and False Negative/Positive rates.
-
-
-Apache Solr\\
-
+\subsection{Successes}
+User testing with 37 individuals, 7 of whom were high Autism scorers. Five individuals responded when recontacted to take part in further research to gather feedback on the final product\\
+User testing shows that the model works well in search.\\
+LEAP integrated really well inside the browser\\
+There was time to implement the user feedback and drop frustations that users identified during user testing\\
 
 \subsection{Future Directions}
 A future direction for Jellibeans would be to use an API or library for word frequencies in the written English language, which could be integrated with a thesaurus. This type of API requires significant research into the natural language processing of written (rather than spoken) English text. These frequency data could have been used to replace infrequent words in queries formed by individuals with Autism with more frequent words to suggest alternatives for the user. Of course this product would not be scalable, and only apply to users with a particular dialect. This is because word frequency is considerably variable across, and even within a language (e.g., consider South-West England compared to the North of England).
@@ -1182,7 +1162,6 @@ Another future direction for Jellibeans would be to implement current trending s
 
 \vspace{5mm}
 Individuals with Autism have increased comorbidity with Attention Hyperactivity Disorder (ADHD), and Colour Blindness, and so these can be taken into account for future iterations of Jellibeans. For example, the colours used for Jellibeans are in the RGB colour scheme, but these could be replaced with gradients or patterns so that individuals with colour blindness can also also benefit.
-
 
 
 \clearpage

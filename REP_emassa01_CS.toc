@@ -6,7 +6,6 @@
 \contentsline {subsection}{\numberline {1.5}Motion controllers}{10}
 \contentsline {subsection}{\numberline {1.6}Aims for Jellibeans}{10}
 \contentsline {subsection}{\numberline {1.7}Challenges}{12}
-\contentsline {subsection}{\numberline {1.8}Successes}{13}
 \contentsline {section}{\numberline {2}Project Specification and Design}{13}
 \contentsline {section}{\numberline {3}System and Software Architecture}{17}
 \contentsline {subsection}{\numberline {3.1}Architecture of the System: 3-tier Architecture}{17}
@@ -36,8 +35,9 @@
 \contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{51}
 \contentsline {subsubsection}{\numberline {8.3.3}Other observations}{52}
 \contentsline {section}{\numberline {9}Evaluation and Discussion.}{52}
-\contentsline {subsection}{\numberline {9.1}Signals of Quality Content}{52}
-\contentsline {subsection}{\numberline {9.2}Future Directions}{53}
+\contentsline {subsection}{\numberline {9.1}Challenges}{52}
+\contentsline {subsection}{\numberline {9.2}Successes}{53}
+\contentsline {subsection}{\numberline {9.3}Future Directions}{53}
 \contentsline {section}{\numberline {10}Appendices}{57}
 \contentsline {subsection}{\numberline {10.1}Class Diagram}{58}
 \contentsline {subsection}{\numberline {10.2}Use Case Diagram}{59}
