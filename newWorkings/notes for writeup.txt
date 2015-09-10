@@ -57,6 +57,14 @@ I tried several ways to parse the html, but rather than it being relatively simp
 Tried simply spam notting (WebPageImpl class)
 
 Google:
+
+
+Project: Jellibeans
+Project ID: jellibeans-981
+Project number: 677279234093
+
+
+id: 
 String key="AIzaSyCnAIDiZchNkR0OTBH3NMMNt4GmRiwpdnA";//server key
 String cx = "008818185974073145685:ga_fmgk9gf0";
 

@@ -1129,36 +1129,51 @@ Regression tests
 Several unexpected challenges and successes occured during the course of the project's execution.  
 
 \subsection {Challenges}
-The first challenge that was encountered was that the Apache Lucene Library that was to be implemented was not well maintained, and the event 4j log was broken. Several attempts on my own part (and with the help of my supervisor) did not resolve this. KWIC library did not offer methods that were required to complete the task. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. 
+One challenge was encountered when integrating the Apache Lucene Library with Jellibeans. The library was not well maintained and the org.apache.log4j file log was broken. I considered Apache Solr \cite{solr}, and Apache Nutch \cite{nutch}, but these libraries requires a large document collections to create indices prior to text search. It was not feasible to index the entire document colletion on the web for Jellibeans, and to sift the web \textit{on the fly} would have resulted in a long duration for participant user queries. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. User testing showed that the implemented solution was senstive enough to retrieve documents that satisfied user search queries.
 
 \vspace{5mm}
-It was originally thought that user Autism Scores would be stored in their Google+ profile, to be retrieved when users sign in to Jellibeans using Google+. However, Google+ did not allow for a field to persist after the session ended to retrieve the user's score. Rather, any data stored to Google+ would not be retrievable after the user's session had ended (i.e., after the user logged out of Google+). To overcome this challenge I used my own datastore for user's Autism Quotient Scores. The final prototype of the application is therefore not integrated with Google+ (although in prototype models, Google+ was integrated with Jellibeans).
+It was originally thought that user Autism Scores would be stored in their Google+ profile, to be retrieved when users sign in to Jellibeans using Google+. However, Google+ did not allow for a field to persist after the session ended to retrieve the user's score. Conversely, any data stored to Google+ would not be retrievable after the user's session had ended (i.e., after the user logged out of Google+). To overcome this challenge I implemented my own datastore for user's Autism Quotient Scores. The final prototype of the application is therefore integrated with Google+ and this additional datastore (although in prototype models only Google+ was integrated with Jellibeans).
 
 \vspace{5mm}
-To deploy the application, with a database in te webrowser, I learned a number of development languages that I had not used before. This included php, JQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel to deploy the application in the browser. Rather than using static HTML I chose to implement the application using this dynamic website framework which was a personal challenge and steep learning curve. 
+To deploy the application, with a database in the web browser, I learned a number of development languages that I had not used before. This included php, JQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel\cite{laravel} to deploy the application in the browser. Although the prototype of Jellibeans (at esha.mseth.co) is implemented using static HTML, I chose to implement the final application using this dynamic website framework. This was one of the biggest personal challenges of the project, and steepest learning curve. 
 
 \vspace{5mm}
-Robots\\
-Apache Lucene\\
-Sandboxes\\
+Web Robots automatically traverse the web to retrieve a document, and in a recursive fashion these robots retrieve all documents that are referenced. This does not include web searches, which are operated by human queries, as these are not programatically requested but instead are genuine user and human queries. \\
+However, when Jellibeans was implemented programatically from Eclipse IDE \cite{eclipse}, I often received blocked requests in the console. This was because several websites implement \texttt{robot.txt} files to block web crawlers. This was a challenge that was unexpected and originally seemed unsurmountable. After some research it became apparent that to overcome this challenge, I needed to register Jellibeans as a project in the Google Developers Console \cite{GDC}, after which correct privilidges would be assigned.
 
-\vspace{5mm}
-design decisions which, looking back, would be made differently
+\begin{comment}
+Sandboxes
+\end{comment}
 
 \subsection{Successes}
-User testing with 37 individuals, 7 of whom were high Autism scorers. Five individuals responded when recontacted to take part in further research to gather feedback on the final product\\
-User testing shows that the model works well in search.\\
-LEAP integrated really well inside the browser\\
-There was time to implement the user feedback and drop frustations that users identified during user testing\\
+During the course of the project, user testing was conducted on 52 occasions (surveys = 37 participants, feedback on combined search engine = 10 participants and interviews/focus group = 5 participants). Seven of the individuals who participated in the survey had an increased Autism Score, and 5 of these individuals were included in the feedback stages of user testing for Jellibeans. 
 
-\subsection{Future Directions}
-A future direction for Jellibeans would be to use an API or library for word frequencies in the written English language, which could be integrated with a thesaurus. This type of API requires significant research into the natural language processing of written (rather than spoken) English text. These frequency data could have been used to replace infrequent words in queries formed by individuals with Autism with more frequent words to suggest alternatives for the user. Of course this product would not be scalable, and only apply to users with a particular dialect. This is because word frequency is considerably variable across, and even within a language (e.g., consider South-West England compared to the North of England).
+\vspace{5mm}
+User testing demonstrated that the user model that Jellibeans implements works well in the search tool. Participants reported a number of positives with the application that shows promise for the future development of Jellibeans.
+
+\vspace{5mm}
+The LEAP integrated behaviour into the web browser in a very naturalistic way. The movements are smooth and the visual aesthetics of the pointer on the screen are a gret balance of fun, \textit{and} function. The cursor is easy to use even for people with uncontrolled, or, jerky hand movements. 
+
+\vspace{5mm}
+Although not part of the original proposal for the project, and even with a number of challenges along the way, there was time to implement some of the user feedback to drop frustations that users identified during user testing before the final prototype was implemented. Other modifications suggested by users required the purchase of data (such as `current trends') which I have spoken about in Section {future}.
+
+\subsection{Future Directions}\label{future}
+There are many avenues to consider for the future of Jellibeans. For example, modifications to the asthetic appeal, user needs, and functionality of the application.
+
+\vspace{5mm}
+A future aesthetic consideration is to improve the visual design of the website itself. In the current version Bootstrap was used, which helped considerably with visual aesthetics, however this could be further considered along with functionality as well. If I were to redesign Jellibeans, I would not present the Autism Questionnaire on the first page of the application, but instead have this on a separate page. I would also choose to implement an abbreviated version of the test, or a version for parents or carers to complete on behalf of the user (as a 50-item optional questionnaire may not have the best response rate from individuals with Autism themselves).
+
+\vspace{5mm}
+A future functional direction for Jellibeans would be to use an API or library for word frequencies in the written English language, which could be integrated with a thesaurus. This type of API requires significant research into the natural language processing of written (rather than spoken) English text. These frequency data could have been used to replace infrequent words in queries formed by individuals with Autism with more frequent words to suggest alternatives for the user. Of course this product would not be scalable, and only apply to users with a particular dialect. This is because word frequency is considerably variable across, and even within a language (e.g., consider South-West England compared to the North of England).
 
 \vspace{5mm}
 Another future direction for Jellibeans would be to implement current trending searches, which could be a contributing factor in the future for why users choose other search engines over Jellibeans. 
 
 \vspace{5mm}
 Individuals with Autism have increased comorbidity with Attention Hyperactivity Disorder (ADHD), and Colour Blindness, and so these can be taken into account for future iterations of Jellibeans. For example, the colours used for Jellibeans are in the RGB colour scheme, but these could be replaced with gradients or patterns so that individuals with colour blindness can also also benefit.
+
+
+
 
 
 \clearpage
@@ -1170,6 +1185,7 @@ Individuals with Autism have increased comorbidity with Attention Hyperactivity 
 \bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Aspergers syndrome. \textit{Journal of Autism and Developmental Disorders, 38}(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
 \bibitem {CDC}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58},
 \bibitem {DSM}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58}, 10:120
+\bibitem{eclipse} Eclipse Luna IDE, https://eclipse.org/luna/, Retrieved 27 August 2015.
 \bibitem{ebiz}eBizMBA inc, \textit{The eBusiness Guide}, www.eBizMBA.com; Retrieved 20 March 2015
 \bibitem{EF} Executive Function, https://en.wikipedia.org/wiki/Executivefunctions, Retrieved 27 August 2015.
 \bibitem{disengagement}
@@ -1177,6 +1193,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
 \bibitem {gameshealth} Games for Health (2012) \textit{Screen-based technologies and Autism. 1}: 248-53
 \bibitem{leap} Leap Motion, \textit{Java SDK Documentation}, \\https://developer.leapmotion.com/documentation/java/index.html Retrieved 1 April 2015.
+\bibitem{GDC} Google Developers Console, https://console.developers.google.com, Retrieved 1 April 2015.
 \bibitem{leapstrap} LeapStrap, http://wilkesalex.github.io/leapstrap/getting-started/, Retrieved September 3 2015.
 \bibitem{motioncontrollerforautism} Garzotto, F., Valoriani, M. and Bartoli, L. (2014), Touchless Motion-Based Interaction for Therapy of Autistic Children, Virtual, Augmented Reality and Serious Games for Healthcare, \textit{Intelligent Systems Reference Library, 68}, 2014, pp 471-494
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
@@ -1188,10 +1205,12 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem {adam}Lella, A., (2014). \textit{comScore Releases March 2014 U.S. search Engine Rankings.} ComScore.com. Retrieved 21 Feb 2015
 \bibitem{moore}Moore, D. J., McGrath, P., \& Thorpe, J. (2000). Computer aided learning for people with autismâa framework for research and development. \textit{Innovations in Education and Training International, 37}
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). \textit{Clinical Linguistics and Phonetics, 27}(2), 85-93. 
+\bibitem{nutch} Apache Nutch, http://nutch.apache.org/, Retrieved September 10 2015.
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{phptester} Online PHP tester, http://phptester.net/, Retrieved September 7 2015.
 \bibitem {Shane and Albert}Shane, H. C. and Albert, P. D. (2008) Electronic screen media for persons with autism spectrum disorders: results of a survey. \textit{Journal of Autism Developmental Disorders, 38},8 :1499-508. doi: 10.1007/s10803-007-0527-5.
 \bibitem{AdultsWithAutism} Slavin, S (2013) Autism: Successful communication,10 things to make it easier, http://adultswithautism.org.uk/autism-successful-communication-10-things-to-make-it-easier/, Retrieved September 1 2015.
+\bibitem{solr} Apache Solr, http://lucene.apache.org/solr/, Retrieved September 10 2015.
 \bibitem{surveymonkey}Surveymonkey, https://www.surveymonkey.com/home/, Retrieved 5 August 2015.
 \bibitem{tfidf} Term Frequency Inverse Document Frequency Weighting, http://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html, Retrieved 9 August 2015.
 \bibitem{wordfrequncy} Word Frequency Information, http://www.wordfrequency.info/free.asp?s=y, Retrieved 6 August 2015.

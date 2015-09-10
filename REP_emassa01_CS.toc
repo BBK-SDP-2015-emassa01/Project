@@ -37,12 +37,12 @@
 \contentsline {section}{\numberline {9}Evaluation and Discussion.}{52}
 \contentsline {subsection}{\numberline {9.1}Challenges}{52}
 \contentsline {subsection}{\numberline {9.2}Successes}{53}
-\contentsline {subsection}{\numberline {9.3}Future Directions}{53}
-\contentsline {section}{\numberline {10}Appendices}{57}
-\contentsline {subsection}{\numberline {10.1}Class Diagram}{58}
-\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{59}
-\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{60}
-\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{62}
-\contentsline {subsection}{\numberline {10.5}Search Query Survey}{63}
-\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{67}
-\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{68}
+\contentsline {subsection}{\numberline {9.3}Future Directions}{54}
+\contentsline {section}{\numberline {10}Appendices}{58}
+\contentsline {subsection}{\numberline {10.1}Class Diagram}{59}
+\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{60}
+\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{61}
+\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{63}
+\contentsline {subsection}{\numberline {10.5}Search Query Survey}{64}
+\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{68}
+\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{69}
