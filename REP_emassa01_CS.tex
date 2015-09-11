@@ -341,16 +341,31 @@ The Functional Requirements of Jellibeans are:
 \section{System and Software Architecture}
 
 \subsection{Architecture of the System: 3-tier Architecture}
-A client-server software architecture was used for Jellibeans. The user interface and motion controller formed the presentation layer, the logic layer was made up of the JavaScript code used to implement the custom search, and storage of data in the data store were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
+A client-server software architecture was used for Jellibeans. The presentation layer consisted of the user interface and motion controller. The presentation layer, in turn, has access to the application layer, which controls the functionality of the system by performing detailed processing. This included management of Jellibeans within the \textbf{Laravel} framework. 
+
+\vspace{5mm}
+Laravel is a PAAS (platform as a service), which manages the deployment of Jellibeans to \textbf{Digital Ocean} Cloud Server. Laravel implements a \textit{rewrite engine}, which is software that modifies the URLs appearance so that the URL is shorter and more informative/relevant for the user. The technique loosens the coupling between the HTML files and the URL that is presented to the user.
+
+\vspace{5mm}
+The application layer therefore included (amongst other things) the php routing code. The routing code allowed the URI (Uniform Resource Identifier) to be broken up into parameters and processed to determine which view (presentation/html file/web page) to present to the user.
+
+\vspace{5mm}
+The application layer also accessed the JavaScript code used to implement the custom search, and storage of data in the data store, which manages the storage and retrieval of data via the application layer.
+
+\vspace{5mm}
+The presentation, application and data store layers were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.65]{ntier}
+\includegraphics[scale=0.45]{ntier}
 \caption{3-tier architecture implementation}
 \label{ntier}
 \end{center}
 \end{figure}
 
-To see a list of the API's, development languages used and their justifications, see Appendix~\ref{implementation}. The APIs and languages are listed in the context they were used below.\\
+To see a list of the API's, development languages used and their justifications, see Appendix~\ref{implementation}. 
+
+\vspace{5mm}
+Using the Laravel framework the following modules were implemented. The APIs and languages are listed in the context they were used below.\\
 
 \vspace{5mm}
 
@@ -368,8 +383,10 @@ The presentation module consists of:}
 
 \subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (LEAP SDK and LeapStrap).}
 
+\subitem{Importantly - it includes the routing logic to determine the view or page to present to the user.}
+
 \item{Logic Module\\
-At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query at the presentation layer. The Builder Design pattern was used to build a complete search query, and submit these to the Data Store so that the result pages could be returned to the user. \\
+At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query at the presentation layer. \\
 The logic module enables:}
 
 \subitem{Logic to produce a combination search engine that synthesises the search results from Google, Bing and Yahoo. The aim of this feature is to increase recall of the search engine (Java).}
