@@ -218,7 +218,7 @@ The implementation of a parametric-like search means the process of forming a qu
 Each of these features were tested in one-on-one interviews and a group of users with Autism\footnote{Autism diagnostic status was determined using the Autism Quotient, which strictly speaking is not a diagnostic assessment tool. However the measure has a 79\% sensitivity to Autism if the user scores above 32 on the measure.}. The prototype was integrated into the web browser and within a motion-controlled environment. The prototype was modified accordingly in line with the outcome of several stages of user research. An agile methodology was used to build the final prototype using static HTML. The static website prototype can be found at esha.mseth.co. \\
 
 \vspace{5mm}
-Using Jellibeans, users can complete a screening tool for Autism and save their score to a database so that they can log in and out of Jellibeans at their convenience. Jellibeans will remember their Autism score the next time they sign in.
+Using Jellibeans, users can complete a screening tool for Autism and save their score (which is stored in a database), so that they can log in and out of Jellibeans without having to complete the Autism quotient each time they log in. Jellibeans will remember their Autism score the next time they sign in.
 
 \vspace{5mm}
 The final product is presented at the end of this report, and is written using php, JavaScript, HTML and CSS (using BootStrap). The dynamic website has a greater degree of functionality and promise for future updating. The dynamic website was created once the `quick and dirty' prototype was completed. The final prototype can be found at jellibeans.mseth.co.
@@ -246,17 +246,21 @@ There are several expected challenges for the current project. One such challeng
 Another challenge relates to gathering feedback on Jellibeans. I conducted focus groups and interviews which required lot of verbal communication. This is always a challenge when working with individuals who are known to have difficulties with communication.
 
 \vspace{5mm}
-More of a technical challenge concered the reliance on open source APIs which were not regularly maintained. For resources that were incomplete, I implemented the tools myself, or, I searched for alternative ways to achieve that goal. The same applied for the open source libraries and packages that I used for the current project.
+More of a technical challenge concered the reliance on open source APIs, open source libraries and packages which were not regularly maintained. For resources that were incomplete, I implemented the tools myself, or, I searched for alternative ways to achieve that goal. 
 
 \vspace{5mm}
-To complete the aims for the current project within the time frame was chanllenging given that most of the project used novel technologies for the developer. These included building the user model within a dynamic website, learning php, HTML, CSS, JavaScript and JQuery, and, integrating the motion controlled user interface within that framework. 
+To complete the aims for the current project within the time frame was challenging given that most of the project used novel technologies for the developer. Jellibeans was implemented in an agile, iterative fashion, so that a static prototype (esha.mseth.co) could be quickly developed before I developed a final dynamic website for Jellibeans (at jellibeans.mseth.co). The project also included building the user model, using a dynamic website framework, learning to use several new or unfamiliar programming languages including php, HTML, CSS, SQL, JavaScript and JQuery, and, integrating the motion controlled user interface within that framework. Learning to use these novel technologies simultaneously, and with a time constraint was a challenge.
+
+\vspace{5mm}
+I did not expect to have to integrate Jellibeans with a SQL database, as it was expected that I could store user scores in their Google+ profile. However, as user scores would not persist after a session in user's Google+ profile, I decided to implement Jellibeans with its own database. The time needed to deploy the final website with a database was not accounted for in the planning for the project, so this was an additional challenge.
 
 \vspace{5mm}
 Conducting surveys, interviews and a focus group to gather feedback on the tool, and to implement this feedback into a revised prototype for Jellibeans was a time consuming task. Often this required that I worked around participant schedules. Two participants out of the 7 were unavailable during the user feedack stage of the study, and so these particpants were excluded from any subsequent analyses.
 
+\newpage
 \section{Project Specification and Design} 
 
-The following requirements were proposed for Jellibeans web application. 
+The requirements for Jellibeans web application are described below. 
 
 \begin{figure}[H]
 \begin{center}
@@ -266,11 +270,11 @@ The following requirements were proposed for Jellibeans web application.
 \label{JBeanUserFlow}
 \end{figure}
 
-\vspace{5mm}
-Jellibeans implemented a combination search web application that synthesised the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.
 
 \vspace{5mm}
+Jellibeans is a dynamic website and implements a combination search. This means it synthesises the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.
 
+\vspace{5mm}
 Jellibeans integrates with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine (see Figure~\ref{googlesignin}).
 
 \begin{figure}[H]
@@ -281,7 +285,10 @@ Jellibeans integrates with Google+, to allow the user to sign in and have their 
 \label{googlesignin}
 \end{figure}
 
-Jellibeans employs a parametric-like search, including \textit{suggestions} to guide the user towards forming succinct and accurate search queries (see Figure~\ref{JBeanUserFlow}). Once signed in, the user can fill out the Autism Quotient and get feedback regarding their autism symptomology. The Autism Quotient \cite{Baron Cohen et al} is a Psychological assessment and validated screening tool for autism spectrum disorders. Users can also save their responses for each question to a local file for their reference.
+Jellibeans implements a user-model for people with Autism, within search. The user-model employs a parametric-like search, that accurately quantifies the user's search query by `breaking it down' into smaller sub-queries, until the user has exhausted the information they can provide to complete their search. Jellibeans also offers \textit{suggestions} to guide the user towards forming succinct, accurate and complete search queries (see Figure~\ref{JBeanUserFlow}).
+
+\vspace{5mm} 
+Once signed in, the user can fill out the Autism Quotient\footnote{The Autism Quotient \cite{Baron Cohen et al} is a Psychological assessment and validated screening tool for autism spectrum disorders.} and get feedback regarding their autism symptomology. Users can save their responses for each question to a local comma-separated-values file for their reference. Their score is also saved to a data store (database).
 
 \begin{figure}[H]
 \begin{center}
@@ -305,7 +312,7 @@ Jellibeans web application is integrated with a motion controlled UI, the LEAP c
 Jellibeans prioritises and displays the three highest precision search results for users. Recall of the search engine is sacrificed in line with the demands of the user model, to have less textual information on the page.
 
 \vspace{5mm}
-Jellibeans reduces the amount of text on the webpage by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results (see Figure~\ref{resultsModal}). Due to the nature of parametric search, strict boolean operators used in Jellibeans, and the reduced number of search results displayed, the results from Jellibeans are a direct semantic relation to the search query. 
+Jellibeans reduces the amount of text on the webpage by having results display on a modal (a hovering display panel on the page) which can be easily closed, and reopened to display results (see Figure~\ref{resultsModal}). Due to the nature of parametric search, boolean `AND' operators are used in Jellibeans. This restricts the search results displayed. The results from Jellibeans are more likely a direct semantic relation to the search query. 
 
 \begin{figure}[H]
 \begin{center}

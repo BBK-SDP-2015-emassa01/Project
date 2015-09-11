@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.5}Motion controllers}{10}
 \contentsline {subsection}{\numberline {1.6}Aims for Jellibeans}{10}
 \contentsline {subsection}{\numberline {1.7}Challenges}{12}
-\contentsline {section}{\numberline {2}Project Specification and Design}{13}
+\contentsline {section}{\numberline {2}Project Specification and Design}{14}
 \contentsline {section}{\numberline {3}System and Software Architecture}{17}
 \contentsline {subsection}{\numberline {3.1}Architecture of the System: 3-tier Architecture}{17}
 \contentsline {section}{\numberline {4}Software Design Pattern}{20}
