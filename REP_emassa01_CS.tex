@@ -735,7 +735,15 @@ Fillable attributes for the user model were specified so that the `user' model i
 \label{fillable}
 \end{center}
 \end{figure}
-To prevent user's password information being compromised (in terms of security), this information was given the `guarded' property (rather than fillable by the user at registration/login).
+To prevent user's password information being compromised (in terms of security), this information was given the `guarded' property (rather than fillable by the user at registration/login). Passwords were also bcrypted\footnote{bcrypt is a key derivation function for passwords \cite {bcrypt}} before they were stored in the database (see Figure~\ref{bcrypt}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{bcrypt}
+\caption{User passwords were bcrypted before being stored to the database for security.}
+\label{bcrypt}
+\end{center}
+\end{figure}
 
 \vspace{5mm}
 The Jellibeans model / table had to also be created, as follows (see Figure~\ref{mysql}). 
@@ -772,7 +780,7 @@ Prior to the live deployment of Jellibeans (from the localhost), the database ne
 \end{figure}
 
 \subsubsection{Normal Forms}
-The database tables were created in 2NF (second Normal Form). The \texttt{SCORE} attribute was saved in the User Model with \texttt{ID},\texttt{NAME},\texttt{EMAIL}, \texttt{PASSWORD}, \texttt{SCORE}, \texttt{REMEMBER\_TOKEN}, \texttt{CREATED\_AT} and \texttt{UPDATED\_AT}. This was chosen as the most optimal normal form to limit the number of SQL \texttt{JOIN} operators needed to retrieve the user Autism Score (see Figure~\ref{usertable1}). 
+The database tables were created in 2NF (second Normal Form). The \texttt{SCORE} attribute was saved in the User Model with \texttt{ID}, \texttt{NAME}, \texttt{EMAIL}, \texttt{PASSWORD}, \texttt{SCORE}, \texttt{REMEMBER\_TOKEN}, \texttt{CREATED\_AT} and \texttt{UPDATED\_AT}. This was chosen as the most optimal normal form to limit the number of SQL \texttt{JOIN} operators needed to retrieve the user Autism Score (see Figure~\ref{usertable1}). 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.40]{usertable1}
@@ -1257,7 +1265,8 @@ Individuals with Autism have increased comorbidity with Attention Hyperactivity 
 \begin{thebibliography}{100}
 
 \bibitem{Baron Cohen et al} Baron-Cohen, Wheelrigjt, Skinner, Martin, Clubley (2001).  The Autism-Spectrum Quotient (AQ): evidence from Aspergers Syndrome/high-functioning autism, males and females, scientists and mathematicians.  \textit{Journal of Autism and Developmental Disorders, 31}, 5-17.
-\bibitem{bootstrap}Bootstrap, http://getbootstrap.com/ Retrieved September 2 2015
+\bibitem{bootstrap}Bootstrap, http://getbootstrap.com/ Retrieved September 2 2015.
+\bibitem{bcrypt} Provos, Niels, Mazières, David and Talan Jason Sutton (1999). \textit{A Future-Adaptable Password Scheme}. Proceedings of 1999 USENIX Annual Technical Conference: 81–92.
 \bibitem{attention} Bronwyn, M, Murray, M, and Durkin, K. (2003) Weak central coherence, poor joint attention, and low verbal ability: Independent deficits in early autism. \textit{Developmental Psychology, 39}, (4), 646-656. http://dx.doi.org/10.1037/0012-1649.39.4.646
 \bibitem{subjective organisation} Bowler, D. M., Gaigg, S. B., Gardiner, J. M. (2008). Subjective organisation in the free recall learning of adults with Aspergers syndrome. \textit{Journal of Autism and Developmental Disorders, 38}(1), pp. 104-113. doi: 10.1007/s10803-007-0366-4 
 \bibitem {CDC}Developmental Disabilities Monitoring Network Surveillance (2010) \textit{Centers for Disease Control and Prevention (CDC). Prevalence of autism spectrum disorders: Autism and Developmental Disabilities Monitoring Network, United States. MMWR Surveill Summ.2009; 58},
