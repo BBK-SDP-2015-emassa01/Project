@@ -266,7 +266,7 @@ The requirements for Jellibeans web application are described below.
 \begin{center}
 \includegraphics[scale=0.65]{JellibeanUserFlow.png}
 \end{center}
-\caption{Wireframe Sketches for Jellibeans User Flow. A prototype version of Jellibeans using static html pages can be found at http://esha.mseth.co. A dynamic and near-production version of Jellibeans using routes rather than static html, which is fully LEAP motion controller-enabled can be found at jellibeans.mseth.co. }
+\caption{Wireframe Sketches for Jellibeans User Flow. A prototype version of Jellibeans using static html pages can be found at http://esha.mseth.co. A `dynamic' version of Jellibeans using routes rather than static HTML, which is fully LEAP motion controller-enabled can be found at jellibeans.mseth.co. }
 \label{JBeanUserFlow}
 \end{figure}
 
@@ -427,9 +427,7 @@ I will now describe the design pattern that guided the software development proc
 For Jellibeans this results in the following components and classes:
 
 \begin{itemize}
-\item{The \textbf{Model}- is the domain or real world entity that the software is built around. The models in this case are:}
-\subitem{The User, and}
-\subitem{The User's Search Queries.}
+\item{The \textbf{Model}- is the domain or real world entity that the software is built around. The model in this case is the User.}
 \item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user (the Model). The view doesn't handle the data that comes in (although users input the data into the view that is presented to them on the application's webpage). There are 6 views of the system.}
 \subitem{\tab{index.php renders the homepage}}
 \subitem{\tab{search.php renders the Search screen}}
@@ -716,12 +714,50 @@ To further address Core Feature 3 of Jellibeans, that is, that results should be
 
 \subsection{Storing the User Autism Score Data.}
 
-The Autism Quotient score and all 50 of the responses from the user will be stored on a database (MySQL). The database was specified and created using several laravel migration files. Migrations are paired with Laravel's schema builder to build the Jellibeans database schema (see Figure~\ref{usertable}, Figure~\ref{passwordtable}, Figure~\ref{querytable}).
+The Autism Quotient score and all 50 of the responses from the user will be stored on a MySQL database system. The database configuration for the system was specified in a configuration php file  (see Figure~\ref{dbconfig}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{dbconfig}
+\caption{MySQL Database Configuration for Jellibeans.}
+\label{dbconfig}
+\end{center}
+\end{figure}
+
+
+Fillable attributes for the user model were specified so that the `user' model itself could be created. These fillable attributes are fed into the model constructor via mass-assignment (see Figure~\ref{fillable}). 
 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{userTable}
+\includegraphics[scale=0.5]{fillable}
+\caption{\texttt{fillable} and \texttt{guarded} properties were used for attributes in the database to prevent blind SQL injection / modification of password information, and to limit security concerns.}
+\label{fillable}
+\end{center}
+\end{figure}
+To prevent user's password information being compromised (in terms of security), this information was given the `guarded' property (rather than fillable by the user at registration/login).
+
+\vspace{5mm}
+The Jellibeans model / table had to also be created, as follows (see Figure~\ref{mysql}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{mysql}
+\caption{MySQL Used to Create and Query the Jellibeans Database.}
+\label{mysql}
+\end{center}
+\end{figure}
+
+
+I created users in Jellibeans to `test' that the user AQ scores were being saved to the Jellibeans database correctly. The User model /table was then queried using the SQL command: \texttt{SELECT * FROM USERS;}.
+
+\vspace{5mm}
+Prior to the live deployment of Jellibeans (from the localhost), the database needed to be migrated using \texttt{php artisan migrate} which made use of the Laravel migration files to build the columns in the database tables (see Figure~\ref{usertable}, and Figure~\ref{passwordtable}). These migrations were paired with Laravel's schema builder to build the Jellibeans database schema. Migrations are useful as they allow version control if ever an operation needed to be ``rolled back", or, if in the future it was decided that the table needed additional columns.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{userTable}
 \caption{User Model Migration (Database Table).}
 \label{usertable}
 \end{center}
@@ -729,30 +765,23 @@ The Autism Quotient score and all 50 of the responses from the user will be stor
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{passwordTable}
+\includegraphics[scale=0.65]{passwordTable}
 \caption{User Queries Model Migration (Database Table).}
 \label{passwordtable}
 \end{center}
 \end{figure}
 
+\subsubsection{Normal Forms}
+The database tables were created in 2NF (second Normal Form). The \texttt{SCORE} attribute was saved in the User Model with \texttt{ID},\texttt{NAME},\texttt{EMAIL}, \texttt{PASSWORD}, \texttt{SCORE}, \texttt{REMEMBER\_TOKEN}, \texttt{CREATED\_AT} and \texttt{UPDATED\_AT}. This was chosen as the most optimal normal form to limit the number of SQL \texttt{JOIN} operators needed to retrieve the user Autism Score (see Figure~\ref{usertable1}). 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{passwordTable}
-\caption{User Passwords Model Migration (Database Table).}
-\label{querytable}
+\includegraphics[scale=0.40]{usertable1}
+\caption{Using SQL tables to store AQ for each user of Jellibeans (User Table).}
+\label{usertable1}
 \end{center}
 \end{figure}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.8]{mysql}
-\caption{MySQL Used to Create and Query the Jellibeans Database.}
-\label{mysql}
-\end{center}
-\end{figure}
-[NEED TO INSERT MYSQL CODE HERE.]
 
-\vspace{5mm} 
-The user can also save their data locally to an Excel file by selecting the `Save Your Answers' button on the Jellibean Homepage (see Figure~\ref{saveScores}). Alternatively the user can choose `Calculate Your Score' which returns the score as an alert to the page.
+The user can also save their data locally to an Excel file by selecting the `Save Your Answers' button on the Jellibean Homepage if they do not wish to log in/ register with Jellibeans (see Figure~\ref{saveScores}). Alternatively the user can choose `Calculate Your Score' which returns the score as an alert to the page.
 
 
 \begin{figure}[H]
@@ -874,7 +903,6 @@ The LEAP motion controller is an impressive device that uses infra-red light to 
 The LEAP does however miss small hand movements, and also very large ones (outside of the 150 degree angle along the y axis (see Figure~\ref{leap})). The LEAP also neglects to track the bottom left and right-most corners of the screen. I have tried to take this into consideration when designing Jellibeans, so that the user does not need to reach to the corners of the screen.
 
 \section{Software Testing}
-
 
 I used Behaviour Driven Development (BDD) to test the integration of my HTML, CSS and JavaScript code. The testing process consisted of development, test, make modifications, test (and so on) until the behaviour of the website was what I intended.\\
 
@@ -1069,18 +1097,18 @@ The full data file can be found in Appendix~\ref{datacoding}.
 This means that Jellibeans is successfully reducing the number of results the participant has to sift through - down to just 3 results - without reducing precision of the search tool within those items.
 
 \subsubsection{Result 2}
-Participants were asked to count the number of results (in the top three) that they felt were relevant to the search query. These data are presented in Figure ~\ref{result2}. The results show that the recall was comparable (albeit variable) between Jellibeans and the usual search tool for the participant.
+Participants were asked to count the number of results (in the top three) that they felt were relevant to the search query. These data are presented in Figure ~\ref{result2}. The results show that the number was comparable (albeit variable) between Jellibeans and the usual search tool for the participant.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{result2}
-\caption{Recall for Jellibeans versus the usual participant search tool (for each participant).}
+\caption{Number of queries considered relevant for users: Jellibeans versus usual search tool (for each participant).}
 \label{result2}
 \end{center}
 \end{figure}
 
 \subsubsection{Result 3}
-There was a significant difference in the number of words used to form search queries when comparing Jellibeans to other search tools. Significantly more words were used to form search queries using Jellibeans (mean number of words in Jellibeans = 3.53, mean number of words in other search tools = 6.55). A paired-samples t-test was run to confirm this observation (t = -7.79, df = 39, p $<$ 0.001, see Figure~\ref{result3}). This is interesting because it means that individuals use more words and to narrow down the scope of their search, which is useful for increasing precision scores of the search tool.
+There was a significant difference in the number of words used to form search queries when comparing Jellibeans to other search tools. Significantly more words were used to form search queries using Jellibeans (mean number of words in Jellibeans = 3.53, mean number of words in other search tools = 6.55). A paired-samples t-test was run to confirm this observation (t = -7.79, df = 39, p $<$ 0.001, see Figure~\ref{result3}). This is interesting because it means that participants used more words in their search query, which in turn narrows down the scope of their search. This is useful for increasing precision scores of the Jellibeans search tool.
 
 \begin{figure}[H]
 \begin{center}
@@ -1090,10 +1118,10 @@ There was a significant difference in the number of words used to form search qu
 \end{center}
 \end{figure}
 
-There was also more repetition in words used to form search queries in Jellibeans. This is probably due to the nature of the search process using this tool -- there are more search inputs to complete and drop down input boxes (to select `keywords') which are added to the search in Jellibeans. To remove this confound, keywords that were repeated were dropped from the analysis.
+There was also more repetition in words used to form search queries in Jellibeans. This is probably due to the nature of the search process using this tool -- there are more search inputs to complete and drop down input boxes (to select `keywords') which are added to the search in Jellibeans. To remove this confound from the analysis, keywords that were repeated were dropped from any calculations.
 
 \vspace{5mm}
-This means that individuals are defining their search queries using more keywords in Jellibeans. This is most likely the reason why Jellibeans is able to maintain a good precision, with only three keywords returned to the user. 
+This suggests that individuals are defining their search queries better, and using more keywords in Jellibeans.  
 
 
 \subsection{Focus Group}
@@ -1182,14 +1210,13 @@ Several unexpected challenges and successes occured during the course of the pro
 One challenge was encountered when integrating the Apache Lucene Library with Jellibeans. The library was not well maintained and the org.apache.log4j file log was broken. I considered Apache Solr \cite{solr}, and Apache Nutch \cite{nutch}, but these libraries requires a large document collections to create indices prior to text search. It was not feasible to index the entire document colletion on the web for Jellibeans, and to sift the web \textit{on the fly} would have resulted in a long duration for participant user queries. To overcome this challenge I followed the mitigation protocol outlined in my project proposal that stated I should attempt to implement the methods needed. User testing showed that the implemented solution was senstive enough to retrieve documents that satisfied user search queries.
 
 \vspace{5mm}
-It was originally thought that user Autism Scores would be stored in their Google+ profile, to be retrieved when users sign in to Jellibeans using Google+. However, Google+ did not allow for a field to persist after the session ended to retrieve the user's score. Conversely, any data stored to Google+ would not be retrievable after the user's session had ended (i.e., after the user logged out of Google+). To overcome this challenge I implemented my own datastore for user's Autism Quotient Scores. The final prototype of the application is therefore integrated with Google+ and this additional datastore (although in prototype models only Google+ was integrated with Jellibeans).
+It was originally thought that user Autism Scores would be stored in their Google+ profile, to be retrieved when users sign in to Jellibeans using Google+. However, Google+ did not allow for a field to persist after the session ended to retrieve the user's score. Conversely, any data stored to Google+ would not be retrievable after the user's session had ended (i.e., after the user logged out of Google+). To overcome this challenge I implemented my own datastore for user's Autism Quotient Scores. The final prototype of the application is therefore not integrated with Google+, but instead the user can log in and out of the Jellibeans website. The users AQ score is saved in the SQL datastore that is integrated with the website (although in earlier prototype models Google+ was integrated with Jellibeans).
 
 \vspace{5mm}
-To deploy the application, with a database in the web browser, I learned a number of development languages that I had not used before. This included php, JQuery, JavaScript, HTML and CSS. I worked with a new php frameowrk called Laravel\cite{laravel} to deploy the application in the browser. Although the prototype of Jellibeans (at esha.mseth.co) is implemented using static HTML, I chose to implement the final application using this dynamic website framework. This was one of the biggest personal challenges of the project, and steepest learning curve. 
+To deploy the application, with a database in the web browser, I learned a number of development languages that I had not used before. This included php, JQuery, JavaScript, HTML and CSS. I also worked with an unfamiliar php framework called Laravel\cite{laravel} to deploy the application in the browser. Although the prototype of Jellibeans (at esha.mseth.co) is implemented using static HTML, I chose to implement the final application using this dynamic website framework. This was one of the biggest personal challenges of the project, and steepest learning curve. 
 
 \vspace{5mm}
-Web Robots automatically traverse the web to retrieve a document, and in a recursive fashion these robots retrieve all documents that are referenced. This does not include web searches, which are operated by human queries, as these are not programatically requested but instead are genuine user and human queries. \\
-However, when Jellibeans was implemented programatically from Eclipse IDE \cite{eclipse}, I often received blocked requests in the console. This was because several websites implement \texttt{robot.txt} files to block web crawlers. This was a challenge that was unexpected and originally seemed unsurmountable. After some research it became apparent that to overcome this challenge, I needed to register Jellibeans as a project in the Google Developers Console \cite{GDC}, after which correct privilidges would be assigned.
+Web Robots created many challenges for the current project. Robots automatically traverse the web to retrieve a document and in a recursive fashion these robots retrieve all documents that are referenced. Although this does not include web searches as these are operated by human queries (i.e, not programatically requested), when Jellibeans was implemented programatically from Eclipse IDE \cite{eclipse}, I often received blocked requests in the console. This was because several websites implement \texttt{robot.txt} files to block web crawlers, and Jellibeans was being blocked as though it were a web crawler. This was a challenge that was unexpected and originally seemed unsurmountable at the time. After some research it became apparent that to overcome this challenge, I needed to register Jellibeans as a project in the Google Developers Console \cite{GDC}, after which correct privilidges would be assigned.
 
 \begin{comment}
 Sandboxes
