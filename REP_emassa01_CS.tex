@@ -347,10 +347,15 @@ A client-server software architecture was used for Jellibeans. The presentation 
 Laravel is a PAAS (platform as a service), which manages the deployment of Jellibeans to \textbf{Digital Ocean} Cloud Server. Laravel implements a \textit{rewrite engine}, which is software that modifies the URLs appearance so that the URL is shorter and more informative/relevant for the user. The technique loosens the coupling between the HTML files and the URL that is presented to the user.
 
 \vspace{5mm}
-The application layer therefore included (amongst other things) the php routing code. The routing code allowed the URI (Uniform Resource Identifier) to be broken up into parameters and processed to determine which view (presentation/html file/web page) to present to the user.
+\begin{itemize}
+\item{The application layer therefore included (amongst other things):}
+\subitem{The php routing code. The routing code allowed the URI (Uniform Resource Identifier) to be broken up into parameters and processed to determine which view (presentation/html file/web page) to present to the user.}
+\subitem{The JavaScript code used to implement the custom search.}
+\subitem{The SQL execution code for the storage of data in the data store.}
+\end{itemize}
 
-\vspace{5mm}
-The application layer also accessed the JavaScript code used to implement the custom search, and storage of data in the data store, which manages the storage and retrieval of data via the application layer.
+The data store's primary responsibility was to manage the storage and retrieval of user data via the application layer.
+
 
 \vspace{5mm}
 The presentation, application and data store layers were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
@@ -373,43 +378,43 @@ Using the Laravel framework the following modules were implemented. The APIs and
 \item{Presentation Module\\
 The presentation module consists of:}
 
-\subitem{Jellibean Web Application: Rendering the web application to the browser (HTML, CSS PHP and Bootstrap).}
+\subitem{Jellibeans Web Application: Rendering the web application to the browser (HTML, CSS PHP and Bootstrap).}
 
-\subitem{Rendering a Parametric-Like Search in the browser: The user is asked specific questions to break down their search query into smaller manageable terms, i.e., into `Do', `Know', `Go', or `Social' queries, and then into direct search terms. This reduces the ambiguity individuals with Autism face when forming a search query. The web application provides suggestions or cues for users. Once the search terms are entered by the user, they are sent to the logic module to form the search query string, and then onto the data store to retrieve the results which are subsequently rendered onto the screen for the user (HTML, CSS, php and Bootstrap).}
+\subitem{Rendering a Parametric-Like Search in the browser: The user is asked specific questions to break down their search query into smaller manageable terms, i.e., into `Do', `Know', `Go', or `Social' queries, and then into direct search terms. This reduces the ambiguity individuals with Autism face when forming a search query. The web application provides suggestions or cues for users. Once the search terms are entered by the user, they are sent to the logic module to form the search query string, and then onto the data store to retrieve the results which are subsequently rendered onto the screen for the user (uses HTML, CSS, php and Bootstrap).}
 
-\subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (JQuery, JavaScript and Google+ API).}
+\subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (uses JQuery, JavaScript and Google+ API).}
 
 \subitem{The user's AQ score is saved to the database once the score is calculated. The score is fetched from the database whenever the user logs in. A unique identification number assures that the user data is never overwritten or duplicated.}
 
-\subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (LEAP SDK and LeapStrap).}
+\subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (uses LEAP SDK and LeapStrap).}
 
-\subitem{Importantly - it includes the routing logic to determine the view or page to present to the user.}
+\subitem{Importantly - the Presentation module includes the routing logic to determine the view (or web page) to present to the user.}
 
 \item{Logic Module\\
-At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The parameters are entered by the user when they form their search query at the presentation layer. \\
-The logic module enables:}
+At the logic layer, Jellibeans works to build user search queries from the elements on the web page. The user's search-parameters are entered when they form their search query at the presentation layer. \\
+The Logic module enables:}
 
-\subitem{Logic to produce a combination search engine that synthesises the search results from Google, Bing and Yahoo. The aim of this feature is to increase recall of the search engine (Java).}
+\subitem{Logic for the user to carry out a single search that retrieves results from a combination of search engines. The results returned are those synthesised from Google, Bing and Yahoo. The aim of this feature is to increase recall of the search engine by increasing the number of potential relevant results (programmed into a Java applet).}
 
-\subitem{Logic to integrate with the Google+ API (JavaScript and Google+ API).}
+\subitem{Logic to integrate with the Google+ API (uses JavaScript and Google+ API).}
 
-\subitem{Calculation of the users' AQ Score using the questionnaire entries that are entered at the presentation layer. The request is sent to the database (MySQL). The score is returned to the presentation layer after calculation (JavaScript).}
+\subitem{Calculation of the users' AQ Score using the questionnaire entries that are entered at the presentation layer. The request is sent to the database (MySQL). The score is returned to the presentation layer after calculation ( uses JavaScript).}
 
-\subitem{Logic to formulate the user's search query, given their entries at the presentation layer (JavaScript).}
+\subitem{Logic to formulate the user's search query, given their entries at the presentation layer (uses JavaScript).}
 
-\subitem{Logic to send the query to the Google Data Store, and, to retrieve the search results to render them to the presentation layer (JavaScript and Google Custom Search API).}
+\subitem{Logic to send the query to the Google Data Store, and, to retrieve the search results to render them to the presentation layer (uses JavaScript and Google Custom Search API).}
 
-\subitem{Logic to prioritise the three highest ranking search results and to reduce the text and verbal information on the page (in line with the aims of Jellibean Search), (JavaScript and Google Custom Search API).} 
+\subitem{Logic to prioritise the three highest ranking search results and to reduce the text and verbal information on the page (in line with the aims of Jellibean Search), (uses JavaScript and Google Custom Search API).} 
 
 \subitem{The logic layer communicates with the Google Data Store layer to retrieve the search results for the user.}
 
 \item{Data Store Module}
-\subitem{Jellibeans works with a database to store and retrieve the users Autism score each time the user signs in (MySQL). }
+\subitem{Jellibeans stores and retrieves the user's Autism score each time the user signs in from a database (uses MySQL). }
 \subitem{Jellibeans works with the Google Custom Search engine to retrieve the (indexed) documents from the Google data store. The documents that are retrieved match the participants' search query string after processing at the logic module level. }
 \end{itemize}
 
 \section{Software Design Pattern}
-I will now describe the design pattern that guided the software development process. The final Jellibeans prototype uses the model-view-controller (MVC) software design pattern. There are three components to the MVC pattern (see Figure ~\ref{laravelMVC}). 
+I will now describe the design pattern that guided the software development process. Jellibeans uses the model-view-controller (MVC) software design pattern. There are three components to the MVC pattern (see Figure ~\ref{laravelMVC}). 
 
 \begin{figure}[H]
 \begin{center}
@@ -422,8 +427,10 @@ I will now describe the design pattern that guided the software development proc
 For Jellibeans this results in the following components and classes:
 
 \begin{itemize}
-\item{The \textbf{Model}- is the domain or real world entity that the software is built around. The model in this case is the User.}
-\item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user(model). The view doesn't handle the data that comes in (although users input the data into the view that is presented). There are 6 views of the system.}
+\item{The \textbf{Model}- is the domain or real world entity that the software is built around. The models in this case are:}
+\subitem{The User, and}
+\subitem{The User's Search Queries.}
+\item{The \textbf{View}- is the visual representation of the user, given a context. So, in this case it is the resulting markup that the php framework (Laravel) renders to the users browser (i.e., the html code). The view generates the user interface, and is accessible via the user (the Model). The view doesn't handle the data that comes in (although users input the data into the view that is presented to them on the application's webpage). There are 6 views of the system.}
 \subitem{\tab{index.php renders the homepage}}
 \subitem{\tab{search.php renders the Search screen}}
 \subitem{\tab{do.php renders the Do search page}}
@@ -431,11 +438,11 @@ For Jellibeans this results in the following components and classes:
 \subitem{\tab{go.php renders the Go search page}}
 \subitem{\tab{social.php renders the Social search page}}
 \subitem{\tab{result.php renders the Results page}}
-\item{The \textbf{Controller}- Coordinators provide links between the view and the model. Coordinators are responsible for input-processing and determining the behaviour of Jellibeans, such as rendering a new screen. Controller.php is an abstract class that all other controllers extend see Figure~\ref{controller}. Jellibeans has the following Controllers:}
+\item{The \textbf{Controller}- Coordinators provide links between the view and the model. Coordinators are responsible for input-processing and determining the behaviour of Jellibeans, such as which new screen to render. Controller.php is an abstract class that all other controllers extend (see Figure~\ref{controller}). Jellibeans has the following Controllers:}
 \subitem{PagesController.php controls the page behaviour when a user clicks on the navigation buttons, for example, return the user back to the homepage.}
 \subitem{RegistrationController.php controls the model's storing and registering of the user and user credentials.}
 \subitem{SearchController.php controls the behaviour of which search to carry out given the view.}
-\subitem{SessionsController.php controls the behaviour of the view depending on whether the user is logged in or logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button. It also }
+\subitem{SessionsController.php controls the behaviour of the view depending on whether the user is logged in or logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button. }
 \subitem{UserController.php verifies the CRUD (Create, Read, Update and Delete) actions form the resource.}
 \end{itemize}
 
@@ -519,16 +526,16 @@ Tools and programming languages\\
 \end{comment}
 
 \section{Implementation}
-The prototype version of Jellibeans is hosted at esha.mseth.co. This prototype was used for user testing, to quickly and cheaply develop and test the system. The prototype version of Jellibeans used static web pages which allowed the prototype to be quickly tested and finalised.
+The prototype version of Jellibeans is hosted at esha.mseth.co. This prototype was implemented quickly for use with user testing. The prototype version of Jellibeans used static web pages which allowed the prototype to be quickly tested and finalised.
 
 \vspace{5mm}
-Jellibeans was finalised into a dynamic website and is hosted at jellibeans.mseth.so. The advantages of a dynamic website are that it is much more functional, no need to edit individual html pages, and no code repetition. 
+Jellibeans was finalised into a dynamic website and is hosted at jellibeans.mseth.co. The advantages of a dynamic website over a static website are that it offers increased functionality for users, no need to edit individual html pages if there are subsequent modifications, and no code repetition. 
 
 \vspace{5mm}
 The next section of the report describes how each module of work was completed.
 
 \subsection{Combination Search Engine: Google, Yahoo and Bing.} 
-To implement the combination search engine I used three API's provided by Google, Bing and Yahoo, namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
+To implement the combination search engine three API's were used. Namely, the Google Custom Search API, Yahoo BOSS Java API and Bing Search API. 
 
 \vspace{5mm}
 To get started with the Google Custom Search API, I created a project called \textit{Jellibeans} in the Google Developers Console, and an OAuth 2.0 Client ID. I obtained a Consumer Key and Secret to use the API, and used these in the application code to access the Google Custom Search Engine (see Figure~\ref{JBeanAppletGoogleCustomSearch1}). 
@@ -542,7 +549,7 @@ To get started with the Google Custom Search API, I created a project called \te
 \label{JBeanAppletGoogleCustomSearch1}
 \end{figure}
 
-Following that I also registered my JavaScript origins within the console to access the Google+ API, and redirected URIs so that once users Sign-In using their Google+ login credentials they will be redirected to Jellibeans (or http://esha.mseth.co). This was done because I wanted users to be able to sign in and access their google profile from Jellibeans (see Figure~\ref{GoogleSignInPage}), giving the user the feel of a more personalised search experience. 
+Following that I also registered my JavaScript origins within the console to access the Google+ API, and redirected URIs so that once users Sign-In using their Google+ login credentials they are redirected to the Jellibeans homepage. This was done so that when users sign in, they can access their google profile from Jellibeans and are greeted by the application (see Figure~\ref{GoogleSignInPage}), giving the user the feel of a more personalised search experience. 
 
 \begin{figure}[H]
 \begin{center}
@@ -555,13 +562,13 @@ Following that I also registered my JavaScript origins within the console to acc
 Following a similar protocol for Yahoo and Bing Search API's, I created projects in the Yahoo Developers Network, and Microsoft Azure Marketplace, and purchased an API Consumer Keys and Secrets (for use with the APIs). 
 
 \subsubsection{Web Scraping}
-As Bing and Yahoo Search API's were not opensource, I explored the efficacy of web scraping using the JSoup API. With the JSoup API I was able to retrieve the search results in line with the goal for the first aim of project, using a different href filter for each search engine. Web-Scraping is however, against Google policies (see section 5.3 of Appendix~\ref{GoogleToS1} for Google Terms of Service). 
+As Bing and Yahoo Search API's were not opensource, and charged per search, I explored the efficacy of web scraping using the JSoup API. With the JSoup API I was able to retrieve the search results, using a different  \texttt{href} filter for each search engine. Web-Scraping is against Google policies, so this could technique could not be used to retrieve Google Search links (see section 5.3 of Appendix~\ref{GoogleToS1} for Google Terms of Service). 
 
 \vspace{5mm}
 I used the Jsoup API \cite{jsoup}, which is a Java-written API for HTML. The library provides methods to conveniently extract data using the DOM (Data Object Model) and CSS (Cascading Style Sheet) methods. 
 
 \vspace{5mm}
-The combined Google, Yahoo and Bing results were integrated these into a Java Applet that runs in Eclipse Luna IDE (see Figure~\ref{AppletFig}). The program ran so that the user could enter a search query and the results would be presneted back to them for inspection. The top 10 links, from each search engine were presented to users. Results were ranked prior to presentation, such that result 1 from Google was followed by result 1 from Yahoo, and that was followed by result 1 from Bing. Then results 2 from Google, Yahoo and Bing were presented and so on, until the 30 links were produced (top 10 links for a search from each search engine), in ranked order from the three search engines. 
+The combined Google, Yahoo and Bing results were integrated these into a Java Applet that runs in Eclipse Luna IDE (see Figure~\ref{AppletFig}). The program ran so that the user could enter a search query and have the results presented back to them for inspection. Only the top 10 links from each search engine were presented to users. Results were ranked prior to presentation, such that result 1 from Google was followed by result 1 from Yahoo, and that was followed by result 1 from Bing. Then results 2 from Google, Yahoo and Bing were presented and so on, until the 30 links were produced (top 10 links for a search from each search engine), in ranked order from the three search engines. 
 
 \begin{figure}[H]
 \begin{center}
@@ -602,18 +609,18 @@ The combined Google, Yahoo and Bing results were integrated these into a Java Ap
 
 
 \subsection{Building a User Model of Autism.}
-To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs from 37 participants. The participants were asked to give examples of search queries they would use to, for example, identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 10 search queries; the study was distributed widely via Surveymonkey.com \cite{surveymonkey} and can be seen in the Appendix ~\ref{AppendixA}. All participants were also asked to complete the Autism Spectrum Quotient 50-item questionnaire see Appendix ~\ref{AQ}. The participants responses are analysed and reported back to surveymonkey.
+To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs. Data was gathered from 37 participants. The participants were asked to give examples of search queries they would use, for example, to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 8 search queries; the study was distributed widely via Surveymonkey.com \cite{surveymonkey} and can be seen in the Appendix ~\ref{AppendixA}. All participants were also asked to indicate which search engine they most often use and to complete the Autism Spectrum Quotient -- a 50-item screening questionnaire for Autism (see Appendix ~\ref{AQ}). The participant responses were then analysed.
 
 
 \vspace{5mm}
-Participants were divided into two groups; low AQ scorers (scores below 30), and high AQ scorers (scores equal to and above 30). There were 30 low AQ scorers and 7 high AQ scorers. 
+Participants were divided into two groups; low AQ scorers (scores below 30, indicating a low number of Autism traits), and high AQ scorers (scores equal to and above 30, indicating a high number of Autism traits). There were 30 low AQ scorers and 7 high AQ scorers. 
 
 
 \subsubsection{Differences in Search Queries Between Users With and Without Autistic-like traits.}
-I conducted a qualitative analysis on the search query strings from both low and high AQ scorers.
+A qualitative analysis on the search query strings from both low and high AQ scorers are reported below.
 
 \vspace{5mm}
-To confirm the results from the user testing of Core Feature 1, participants were asked to indicate which search engine they commonly use, and in both groups, Google was the prefered search engine by far, with all participants reporting that they used Google as a first choice. No one in the current sample used Yahoo or Bing.
+In both groups, Google was the prefered search engine by far, with all participants reporting that they used Google as a first choice. No one in the current sample used Yahoo or Bing.
 
 \vspace{5mm} 
 The low AQ scorer responses were analysed together to establish a baseline answer. This was generated using a frequency criterion of 40\% i.e., if 12 out of 30 respondents or more generated the same portion of a query string given an informational need, it was included in the model below. If two responses were equally as common, both are reported in the model. Data was discarded when a response indicated that the participant would do an image search, as this was not the aim of the survey. The results from the frequency analysis are presented below.
@@ -631,7 +638,7 @@ The low AQ scorer responses were analysed together to establish a baseline answe
 
 There was a lot more variation in the responses gathered from the group with Autistic-like traits. The responses can be seen in Appendix~\ref{asdresponses}. The following observations were made for the users in the high AQ group:
 \begin{enumerate}
-\item{There were an increased number of incompletely-formed queries. In the high AQ group, participants were more likely to miss off words in the query string. For example, when analysing the results from query 1 above, 2 out of 7 respondents in the high AQ group did not put `lyrics' or `song' in the search query when searching for the lyrics ``Look at your children". When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}). A larger number of results are returned to the incomplete query (302,000,000 compared to 32,900,000). In this instance, the high AQ user group were presented with results that have a lower precision, i.e., more irrelevant information that they must sift through to find the answer to their search query.}
+\item{There were an increased number of incompletely-formed queries. In the high AQ group, participants were more likely to miss off words in the query string. For example, when searching for the name of a song contating the lyrics ``Look at your children", \textit{all} low AQ scorers searched for ``Look at your children lyrics", whereas two out of seven respondents in the high AQ group did not put `lyrics' or `song' in the search query. When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}). A larger number of results are returned to the incomplete query (302,000,000 compared to 32,900,000). In this instance, the high AQ user group were presented with results that have a lower precision, i.e., more irrelevant information that they must sift through to find the answer to their search query.}
 \label{incomplete}
 
 \begin{figure}[H]
@@ -650,7 +657,7 @@ There was a lot more variation in the responses gathered from the group with Aut
 \label{someresults}
 \end{figure}
 
-\item{Although many high AQ scorers' formed query strings well, there was increased use of idiosyncratic words in the query strings that were formulated. This is in line with previous research that suggests that people with autism organise information in more subjective and individual ways \cite{subjective organisation}. For example, referring to the picture of the dog as `yorkie pooh'(not listed in frequency index), `aeroplane' (frequency of 8254 words per million) instead of plane (frequency of 33900 words per million) or flight (29535 words per million) , `miniature' (less than 4973 words per million) instead of small (185463 words per million). The idiosyncratic nature of the words is captured by their lower frequency of use in the English language. Search engines use term frequency to determine if a document is relevant to the users search query. If the frequency of words used to form search queries differs between low and high AQ scorers, so will the rankings of the returned search results.}
+\item{Although many high AQ scorers' formed query strings well, there was increased use of idiosyncratic words in the query strings that were formulated. This is in line with previous research that suggests that people with autism organise information in more subjective and individual ways \cite{subjective organisation}. For example, referring to the picture of the dog as `yorkie pooh' (not listed in frequency index), `aeroplane' (frequency of 8254 words per million) instead of `plane' (frequency of 33900 words per million) or `flight' (29535 words per million) , `miniature' (less than 4973 words per million) instead of `small' (185463 words per million). These words are considered more idiosyncratic because of their lower frequency of use in the English language. Search engines use term frequency to determine if a document is relevant to the users search query. If the frequency of words used to form search queries differs between low and high AQ scorers, so will the rankings of the returned search results.}
 \label{idiosyncrasy}
 
 
@@ -658,7 +665,7 @@ There was a lot more variation in the responses gathered from the group with Aut
 }\label{pronoun}
  
 \item{
-For questions that were `social' in nature (e.g., featuring a face of a famous woman), 2 out of 7 individuals in the high AQ group indicated that these were types of queries that they would not normally be interested in, and so ``wouldn't bother asking it". For these queries, it was more common for individuals in the high AQ group to include information in their search query string that was extraneous to the search question itself, compared to the low AQ group. For example, in query 4 above (which asked respondents to indicate how they would identify a famous person), 2 high AQ scorers included information about the woman's earring. Inevitably this `dilutes' the search query and results in reduced precision for the search engine.
+For questions that were `social' in nature (e.g., featuring a face of a famous woman), 2 out of 7 individuals in the high AQ group indicated that these were types of queries that they would not normally be interested in, and so ``wouldn't bother asking it". For these queries, it was common for individuals in the high AQ group to include information in their search query string that was extraneous to the search question itself. For example, in query 4 above (which asked respondents to indicate how they would identify a famous person), 2 high AQ scorers included information about the woman's earring. Inevitably this `dilutes' the search query, and in turn results in reduced precision for the search engine.
 }
 
 \begin{comment}
@@ -676,26 +683,22 @@ Lastly there were more spelling errors and typographical errors in the high AQ g
 Given the set of observations in the data reported above, the aims were to `transform' queries made by individuals in the high AQ group to queries more similar to the low AQ group. The search engines already handle some of the observations from high AQ scorer queries. For example, the use of pronouns ('I' and `You') is already taken care of with the use of stop words. The aim of the project is to therefore address issues that result in the search query string being misleading, and returning differnt results to low AQ scorer search queries. The rule engine is a concrete and operationalised framework, for a theoretically-grounded stereotyped user model of autism within search. \\
 
 \vspace{5mm} %5mm vertical space
-Jellibeans works to address multiple observations made during the data collection stage, so the order in which the observations are tackled in the user model is not linear. As a general rule, changes will take the form of `add on' questions that aim to structure the individuals search query logically, so that key search terms are not dropped. A structured query formation will assist the user with less idiosyncratic search queries. \\
+Jellibeans works to address multiple observations made during the data collection stage, so the order in which the observations are tackled in the user model is not linear or consecutive by any means. As a general rule, changes will take the form of `add on' questions that aim to structure the individuals search query in a logical way, so that key search terms are not dropped. A structured query formation will assist the user with less idiosyncratic search queries. \\
 
 
 \vspace{5mm} %5mm vertical space
 
-Building upon the reserach discussed in the introduction \cite{seo}, that search can be compartmentatlised into three broad categories (Do's, Know's and Go's), and, to address the observation of idiosyncrasy (point \ref{idiosyncrasy} above in the current research), Jellibeans will prompt the user to categorise their search query into one of 3 possible types of queries, a `Do', `Know' or, `Go'. `Do' queries are when they want to do something on the web like, buy a cinema ticket. `Know' queries for when they want to know something from the web like, what time the cinema closes. And, `Go' queries when they want to go somewhere specific on the web like the cinema homepage. Jellibeans will integrate a fourth subtype of query -- the `Social' query, especially for the user group in question. `Social' queries are for when their search is about something social; a person, or group of people. Social queries have additional functionality beyond the Do, Know and Go query pages, to reflect the additional difficulties individuals with Autism have when formulating Social search queries on the web.
+Building upon the reserach discussed in the introduction \cite{seo} (that is, that search can be compartmentatlised into three broad categories: Do's, Know's and Go's) and, to address the observation of idiosyncrasy (point \ref{idiosyncrasy} above in the current research), Jellibeans will prompt the user to categorise their search query into one of 3 possible types of queries, a `Do', `Know' or, `Go'. `Do' queries are when they want to do something on the web like, buy a cinema ticket. `Know' queries for when they want to know something from the web like, what time the cinema closes. And, `Go' queries when they want to go somewhere specific on the web like the cinema homepage. Jellibeans will integrate a fourth subtype of query -- the `Social' query, especially for the user group in question. `Social' queries are for when their search is about something social; a person, or group of people. Social queries have additional functionality beyond the Do, Know and Go query pages, to reflect the additional difficulties individuals with Autism have when formulating Social search queries on the web.
 
 \vspace{5mm}
-Each type of query will be associated with a different colour, and once the user has selected that type of query, this colour will be prominent on the page throughout their search, to serve as a visual reminder of the task. This works to reduce the \textbf{working memory load} for the user, and to serve as a \textbf{goal-directed cue}. Two things we know are difficult for people with Autism are maintenance of information in working memory, and goal-directed tasks involving a high demand on Executive Functioning (Executive functions (also known as cognitive control and supervisory attentional system) is an umbrella term for the management (regulation, control) of cognitive processes, including working memory, reasoning, task flexibility, and problem solving as well as planning and execution \cite{EF}.) 
+Each type of query is associated with a different colour. `Do' is blue, `Know' is yellow, `Go' is green and `Social' is red. Once the user has selected that type of query, this colour will be prominent on the page throughout their search to serve as a visual reminder of the task. For individuals with Autism, this technique works to reduce the \textbf{working memory load} for the user in the long-term, as it serves as a \textbf{goal-directed cue}. Two things we know are difficult for people with Autism are maintenance of information in working memory, and goal-directed tasks involving a high demand on Executive Functioning \footnote{Executive functions - also known as cognitive control and supervisory attentional system) is an umbrella term for the management, regulation and control of cognitive processes, including working memory, reasoning, task flexibility, and problem solving as well as planning and execution \cite{EF}.}.
 
 \vspace{5mm} %5mm vertical space
-
-The Jellibeans `Social' query applies particularly to the user group in question, and has hints and suggestions added into search to assist the user when forming their query. The cues take the form of suggestions, that the user may select if helpful for their search, and to improve search results that are returned from Jellibeans.
-
-\vspace{5mm} %5mm vertical space
-To address observation \ref{incomplete}, that user queries were often submitted when incomplete, suggestions as well as drop down menus have been implemented on each search page. Users can click on suggestions, and select from the menus if they want the keyword to be added to their search. Individuals with Autism have an uneven cognitive profile, where verbal ability is usually lower than performance skill \cite{DSM}, the cues will assist users who have particular word-finding difficulties.
+To address observation \ref{incomplete}, that user queries were often submitted when incomplete, suggestions as well as drop down menus have been implemented on each search page. Users can click on suggestions, and select from the menus if they want the keyword to be added to their search. As individuals with Autism characteristically have an uneven cognitive profile, where verbal ability is usually lower than performance skill \cite{DSM}, the cues will assist users who have particular word-finding difficulties.
 
 
 \vspace{5mm}
-Once the user has pressed `Jellibean Search', and requested their search results be returned, Jellibeans collates all information the user has entered into the search boxes, as well as any suggestions, and options from drop down menu's that were selected to be included in the search. To achieve a good precision and specificity, Jellibeans implemented `AND' boolean operators between each input of the parametric search. This resulted in increased precision and a drop in recall for Jellibeans. The results are then presented to the user, with the exact phrase that was searched for. This means that the user can clearly see their final search query, and rather than a `black-box' system, Jellibeans also works to train the user for the long-term about specific ways to improve their personal search query strings. 
+Once the user has pressed `Jellibean Search', and requested their search results be returned, Jellibeans collates all information the user has entered into the search boxes, as well as any suggestions, and options from drop down menu's that were selected. To achieve a good precision and specificity, Jellibeans implemented `AND' boolean operators between each input of the parametric search. This also resulted in a drop in recall, but as only the top 3 results were to be presented, this was in fact advantageous for Jellibeans. The results are then presented to the user, with the exact phrase that was searched for. This means that the user can clearly see their final search query, and rather than a `black-box' system, Jellibeans also works to train the user for the long-term about specific ways to improve their personal search query strings. 
 
  \vspace{5mm}
  Because the current research identified that user's with Autism formed search queries were particularly incomplete for socially-grounded informational needs, extra functionality has been added to the `Social' query page. For example, if the user has indicated that they are searching for a famous person, they will be prompted for descriptions about that famous person's personality, character age bracket, and physical descriptions amongst other attributes. These features work to ensure that for this type of query, where users with Autism have most difficulty, that user search queries are more complete than they otherwise would have been (see Figure~\ref{socialCompleted}).
@@ -713,9 +716,32 @@ To further address Core Feature 3 of Jellibeans, that is, that results should be
 
 \subsection{Storing the User Autism Score Data.}
 
-The Autism Quotient score and all 50 of the responses from the user will be stored on a database (MySQL).
+The Autism Quotient score and all 50 of the responses from the user will be stored on a database (MySQL). The database was specified and created using several laravel migration files. Migrations are paired with Laravel's schema builder to build the Jellibeans database schema (see Figure~\ref{usertable}, Figure~\ref{passwordtable}, Figure~\ref{querytable}).
 
 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{userTable}
+\caption{User Model Migration (Database Table).}
+\label{usertable}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{passwordTable}
+\caption{User Queries Model Migration (Database Table).}
+\label{passwordtable}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{passwordTable}
+\caption{User Passwords Model Migration (Database Table).}
+\label{querytable}
+\end{center}
+\end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.8]{mysql}
@@ -1048,7 +1074,7 @@ Participants were asked to count the number of results (in the top three) that t
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=1]{result2}
-\caption{Recall for Jellibeans versus the usual participant search tool.}
+\caption{Recall for Jellibeans versus the usual participant search tool (for each participant).}
 \label{result2}
 \end{center}
 \end{figure}

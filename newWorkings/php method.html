@@ -1,14 +1,16 @@
 <?php 
 
-
+function score = (){
+val score = 0;
 for ( var i = 1; i < 51; i++ ){
 	if ((document.getElementById('Q' + i + 'CALC').value >1) &&
 		(document.getElementById('Q' + i + 'CALC').value != ""))
 	{
-$nodes=$domDocument->getElementsByTagName('Q' + i + 'CALC') ; 
-if ($nodes->length==0) { 
-   // no results 
-} 
+
+		score = score + document.getElementById('Q' + i + 'CALC').value;
+
 }
+}
+return score;
 }
 ?>
