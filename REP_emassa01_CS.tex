@@ -61,7 +61,7 @@ This project is substantially the result of my own work, expressed in my own wor
 
 
 \begin{center}
-word count (project text only) : 8443 words
+word count (project text only) : 12543 words
 \end{center}
 
 \clearpage
@@ -117,6 +117,35 @@ The field of information retrieval defines recall as the fraction of relevant do
 Recall
 =\frac{|(relevant\ documents) \land (retrieved\ documents)|}{|(relevant\ documents)|}
 \end{equation*}
+\clearpage
+
+\begin{center}
+\section*{Programming Code and Other Useful and Resources}
+
+A static prototype of the application, can be found at \textbf{esha.mseth.co}.
+
+\vspace{10mm}
+A dynamic final version of the application can be found at \textbf{jellibeans.mseth.co}.
+
+\vspace{10mm}
+The programming code for the application can be found on \textbf{GitHub and on the CD} attached to this report..
+
+\vspace{5mm}
+The code for esha.mseth.co is called `MScProject' and is at \textbf{https://github.com/BBK-SDP-2015-emassa01/MScProject.git}.
+
+\vspace{5mm}
+The code for jellibeans.mseth.co is called `laravelJellibeans' and is at \textbf{https://github.com/BBK-SDP-2015-emassa01/laravelJellibeans.git}.
+
+\vspace{5mm}
+The code for the Java Applet is called `JellibeanApplet' and can be found at \textbf{https://github.com/BBK-SDP-2015-emassa01/JellibeanApplet.git}.
+
+\vspace{5mm}
+The code for using the LEAP motion controller in the IDE is called `Leap' and can be found at \textbf{https://github.com/BBK-SDP-2015-emassa01/Leap.git}.
+
+\vspace{10mm}
+The application uses the \textbf{LEAP motion controller}. The controller is required to experience the full functionality of the application.
+\end{center}
+
 \clearpage
 
 \section{Introduction}\label{intro}
@@ -466,62 +495,18 @@ For Jellibeans this results in the following components and classes:
 \end{center}
 \end{figure}
 
-Then present a class diagram which has 
-\begin{comment}
-Views-> resources/views/search
-do.php
-go.php
-know
-social
-results
-index
+A high level class diagram of the final version of Jellibeans can be seen in Figure~\ref{laravellClassD}.
 
--------
+\begin{figure}[H]
+\begin{center}
+\includegraphics[angle=90, scale=0.50]{laravellClassD}
+\caption{High level class diagram of Jellibeans.}
+\label{laravellClassD}
+\end{center}
+\end{figure}
 
-Controllers -> app/http/controllers 
-implemented to control the flow of the pages
-controller.php abstract which all other controllers extend
+A high level class diagram of the prototype system system can be seen in Appendix~\ref{jBeanClassDiagram}. A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCaseA}.
 
-PagesController -  returns the user back to the homepage.
-
-RegistrationController - the Registration controller returns views for storing and registering the user.
-
-SearchController - controlls the flow html pages that are related to search, including the homepage, do, know, go, social, and the search results page.
-
-SessionsController - controls the flow between pages if the user is logged in versus logged out. For example, if the user is logged out it will display the register and login buttons on the html page. If the user is logged in, it will return the logout button.
-
-UsersController - CRUD Create, Read, Update and Delete form the resource.
-
--------
-
-Model - User -> app/user
-database table to be used by the model
-\end{comment}
-
-\vspace{5mm}
-A high level class diagram of the system can be seen in Appendix~\ref{jBeanClassDiagram}.
-
-\vspace{5mm}
-A use case diagram of the system can be seen in Appendix~\ref{JBeanUseCaseA}.
-
-\begin{comment}
- to the JavaScript methods in the relevant class (dependent upon the user's search behaviours), parsed into the correct format, before a POST request is then made to the Jellibeans Custom Search Engine to process the request.
-\item{Chain of responsibility Pattern.}\\
-Because there are many behaviours that the user can perform before their query string is formulated and ready to be posted to the search engine, the software also makes use of the Chain of responsibility pattern where at each stage the user's query is passed along a chain, with added functionality and methods depending on what the behaviour of the user was.
-\item{Adapter Pattern.}\\
-I accessed the user's Google+ profile data (name and profile picture) and presented these on the Jellibeans homepage. I then used the Adapter design pattern to build my own functionality onto the existing profile. For example, to present the user's Autism Quotient score, and to guide the user through forming their search query. 
-
-The software design patterns that were chosen to implement the logic layer, and software architecture (3 tier) to implement Jellibeans work together to reduce coupling between the interface (web browswer and motion controller), logic (classes and the query), and data store layers. 
-\end{comment}
-
-
-\begin{comment}
-\subsection*{TODO}
-API's and Development Tools\\
-Describe the technologies used in the project, why they where
-chosen and what were the other options:\\
-Tools and programming languages\\
-\end{comment}
 
 \section{Implementation}
 The prototype version of Jellibeans is hosted at esha.mseth.co. This prototype was implemented quickly for use with user testing. The prototype version of Jellibeans used static web pages which allowed the prototype to be quickly tested and finalised.
@@ -780,7 +765,8 @@ Prior to the live deployment of Jellibeans (from the localhost), the database ne
 \end{figure}
 
 \subsubsection{Normal Forms}
-The database tables were created in 2NF (second Normal Form). The \texttt{SCORE} attribute was saved in the User Model with \texttt{ID}, \texttt{NAME}, \texttt{EMAIL}, \texttt{PASSWORD}, \texttt{SCORE}, \texttt{REMEMBER\_TOKEN}, \texttt{CREATED\_AT} and \texttt{UPDATED\_AT}. This was chosen as the most optimal normal form to limit the number of SQL \texttt{JOIN} operators needed to retrieve the user Autism Score (see Figure~\ref{usertable1}). 
+The database tables were created in 2NF (second Normal Form). The \texttt{SCORE} attribute was saved in the User Model with \texttt{ID}, \texttt{NAME}, \texttt{EMAIL}, \texttt{PASSWORD}, \texttt{SCORE}, \texttt{REMEMBER\_TOKEN}, \texttt{CREATED\_AT} and \texttt{UPDATED\_AT}. This was chosen as to reduce the number of SQL \texttt{JOIN} operators needed to retrieve the user Autism Score (see Figure~\ref{usertable1}). The user table was relatively small and easy to comprehend, however should the requirements of the system change, the normalization should change accordingly.
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.40]{usertable1}
@@ -789,13 +775,13 @@ The database tables were created in 2NF (second Normal Form). The \texttt{SCORE}
 \end{center}
 \end{figure}
 
-The user can also save their data locally to an Excel file by selecting the `Save Your Answers' button on the Jellibean Homepage if they do not wish to log in/ register with Jellibeans (see Figure~\ref{saveScores}). Alternatively the user can choose `Calculate Your Score' which returns the score as an alert to the page.
+The user can also save their data locally to an Excel file by selecting the `Save Your Answers' button on the Jellibean Homepage (see \cite{filhidtable}) if they do not wish to log in/ register with Jellibeans (see Figure~\ref{saveScores}). Alternatively the user can choose `Calculate Your Score' which returns the score as an alert to the page.
 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{saveScores}
-\caption{The User Can Choose to Save Their Scores to an Excel File.}
+\caption{The User Can Choose to Save Their Scores to an Excel File \cite{filhidtable}.}
 \label{saveScores}
 \end{center}
 \end{figure}
@@ -828,14 +814,14 @@ Each of our senses operates with a different lag time. Hearing has the fastest s
 \begin{center}
 \includegraphics[scale=0.5]{VRvsLEAP}
 \caption{Comparison of the invasivness of the Oculus VR Rift and LEAP motion controller.}
-\label{saveScores}
+\label{vrVsLEAP}
 \end{center}
 \end{figure}
 
 I also took into consideration the way in which the device manifests actions into behaviours. That is, how does the user engage behaviourally within the environment using the device? The LEAP was considered very realistic in terms of the transition of behaviour into real-world environments.
 
 \subsubsection{Using LEAP in the IDE.}
-Frames (cartesian coordinate data) from the LEAP were traked using the \texttt{Frames} class, and detected user motions. The following code was used to implement a forward-poking pointing motion to control mouse clicks. I ran the code to check how well it worked in Eclipse IDE (see https://youtu.be/ikfiul\_JPBk for a video of the LEAP working in my IDE). 
+Frames (cartesian coordinate data) from the LEAP were traked using the \texttt{Frames} class, and detected user motions. The following code was used to implement a forward-poking pointing motion to control mouse clicks \cite{leapide}. I ran the code to check how well it worked in Eclipse IDE (see Figure~\ref{Monty}). 
 
 \begin{figure}[H]
 \begin{center}
@@ -1082,10 +1068,10 @@ The first question was whether participants found results they would be satisfie
 \subitem{A reference to `Paris', `airport/aeroplane', `flight time/information'.}
 \end{itemize}
 
-A categorical analysis was conducted to validate the search efficacy of Jellibeans. There 40 queries in total. Participants were asked to consider the top 3 results from Google (for comparison with Jellibeans), and to explain if their search was satisfied by Jellibeans (only), their other search tool of choice (only), both, or neither. The graph below demonstrates that Jellibeans has a good precision rate (30\%) compared to other search tools (25\%), see asterix Figure ~\ref{result1}, although this was not a significant difference (see Figure ~\ref{result1spss}).
+A categorical analysis was conducted to validate the search efficacy of Jellibeans. There 40 queries in total. Participants were asked to consider the top 3 results from Google (for comparison with Jellibeans), and to explain if their search was satisfied by Jellibeans (only), their other search tool of choice (only), both, or neither. The graph below demonstrates that Jellibeans has a good precision rate (30\%) compared to other search tools (25\%), see asterix on Figure~\ref{result1}, although this was not a significant difference (see Figure ~\ref{result1spss}).
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=1]{Result1star}
+\includegraphics[scale=0.9]{Result1star}
 \caption{Y axis represents the number of search queries correctly retrieved (out of a possible total of 40). X axis shows number for each search tool, both or neither.}
 \label{result1}
 \end{center}
@@ -1277,6 +1263,7 @@ Individuals with Autism have increased comorbidity with Attention Hyperactivity 
 \bibitem{disengagement}
 Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S., Bolton, P., Charman, T., Baird, G. and Johnson, M. H. (2009), Visual orienting in the early broader autism phenotype: disengagement and facilitation. \textit{Journal of Child Psychology and Psychiatry, 50}, 637Ã¢Â€Â“642. doi: 10.1111/j.1469-7610.2008.02051.x
 \bibitem{seo} Fishkin (2015) https://moz.com/beginners-guide-to-seo/how-people-interact-with-search-engines, Retrieved 3 August 2015.
+\bibitem{filhidtable} Data Store Using HTML, http://stackoverflow.com/questions/27773788/how-do-i-store-data-from-an-offline-form-using-just-html-or-javascript, Retrieved July 1 2015.
 \bibitem {gameshealth} Games for Health (2012) \textit{Screen-based technologies and Autism. 1}: 248-53
 \bibitem{leap} Leap Motion, \textit{Java SDK Documentation}, \\https://developer.leapmotion.com/documentation/java/index.html Retrieved 1 April 2015.
 \bibitem{GDC} Google Developers Console, https://console.developers.google.com, Retrieved 1 April 2015.
@@ -1291,6 +1278,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem {adam}Lella, A., (2014). \textit{comScore Releases March 2014 U.S. search Engine Rankings.} ComScore.com. Retrieved 21 Feb 2015
 \bibitem{moore}Moore, D. J., McGrath, P., \& Thorpe, J. (2000). Computer aided learning for people with autismâa framework for research and development. \textit{Innovations in Education and Training International, 37}
 \bibitem{pronoun} Novogrodsky, R. (2013). Subject-pronoun use of Children with Autism Spectrum Disorders (ASD). \textit{Clinical Linguistics and Phonetics, 27}(2), 85-93. 
+\bibitem{leapide} Huppert, N. (2015) https://github.com/Noah-Huppert/Leap-Motion/blob/master/MouseFinal, Retrieved August 10 2015.
 \bibitem{nutch} Apache Nutch, http://nutch.apache.org/, Retrieved September 10 2015.
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{phptester} Online PHP tester, http://phptester.net/, Retrieved September 7 2015.
@@ -1326,7 +1314,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{jBeanClassDiagram}
-\caption{High Level UML Class Diagram of Jellibeans.}
+\caption{High Level UML Class Diagram of Jellibeans Prototype.}
 \end{center}
 \end{figure}
 
@@ -1473,5 +1461,8 @@ I enjoy meeting new people.\\
 I am a good diplomat.\\
 I am not very good at remembering people's date of birth.\\
 I find it very easy to play games with children that involve pretending.\\
+
+\newpage
+\subsection{Programming Code for the project.}
 
 \end{document} 
