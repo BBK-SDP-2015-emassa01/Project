@@ -43,7 +43,7 @@ MSc Computer Science\\Department of Computer Science and Information Systems\\Bi
 
 \section*{Abstract}
 \begin{justify}
-This project report presents my research and the development of a prototype web application to assist users with Autism when they search the web. The system has modelled user interactions with the search process into a user profile for this category of users, integrating insights from the core features of autism into the model. The system is integrated with an infra-red, motion controlled, user interface component to assist users with Autism during search. The project provides insights into how search can be improved for users with Autism.\\
+This project report presents my research and development of a prototype web application to assist users with Autism when they search the web. The system models user interactions with the search process into a user profile for people with Autism, integrating insights from the core features of to condition into the model. The system is integrated with an infra-red, motion controlled, user interface component to assist users with Autism during search. The project provides insights into how search can be improved for users with Autism.\\
 \end{justify}
 \begin{verbatim}
 
@@ -61,7 +61,7 @@ This project is substantially the result of my own work, expressed in my own wor
 
 
 \begin{center}
-word count (project text only) : 12543 words
+word count (project text only) : 12660 words
 \end{center}
 
 \clearpage
@@ -128,7 +128,7 @@ A static prototype of the application, can be found at \textbf{esha.mseth.co}.
 A dynamic final version of the application can be found at \textbf{jellibeans.mseth.co}.
 
 \vspace{10mm}
-The programming code for the application can be found on \textbf{GitHub and on the CD} attached to this report..
+The programming code for the application can be found on \textbf{GitHub and on the CD} attached to this report.
 
 \vspace{5mm}
 The code for esha.mseth.co is called `MScProject' and is at \textbf{https://github.com/BBK-SDP-2015-emassa01/MScProject.git}.
@@ -162,7 +162,7 @@ This project report presents my aim to research and develop a prototype web appl
 
 \subsection {Background Research}\label{background} 
 
-According to the Diagnostic and Statistical Manual \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction. Autism is the most common neurodevelopmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}). It is well known that interaction with computers is prominent in this group, and that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. 
+According to the Diagnostic and Statistical Manual of Mental Disorders \cite{CDC}, Autism is characterised by persistent and early deficits in reciprocal social interaction. Autism is the most common neurodevelopmental condition (1/68 children meet criteria for Autism Spectrum \cite{CDC}). It is well known that interaction with computers is prominent in this group, and that individuals with Autism are more engaged when using technology that is receptive and interactive (e.g., games, responsive consoles, motion controlled devices) compared to technology that is not \cite{motioncontrollerforautism}. 
 
 \vspace{5mm}
 Research has shown that people with Autism are less context-sensitive \cite{mottron}. Generally speaking, individuals with Autism prefer, and are more likely to engage in an item-specific, or detailed processing style. There is good reason to postulate then, that web-search queries are formed very differently to the typical population, more likely consisting of single-order associations. In addition to a detailed, item-specific processing style, individuals with Autism are also less likely to engage in a contextual processing style. For example in a search for `Guitar', a contextual style of processing would imply an awareness that the word is related to `Piano', but also that both words are hierarchically related to `Instrument'. 
@@ -301,10 +301,10 @@ The requirements for Jellibeans web application are described below.
 
 
 \vspace{5mm}
-Jellibeans is a dynamic website and implements a combination search. This means it synthesises the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.
+Jellibeans is a dynamic website (written using a server-side scripting language) and implements a combination search. This means it synthesises the results from three of the largest and most popular engines; Google, Bing and Yahoo \cite{adam}.
 
 \vspace{5mm}
-Jellibeans integrates with Google+, to allow the user to sign in and have their profile picture and name displayed, enhancing the feel of a personalised search engine (see Figure~\ref{googlesignin}).
+Jellibeans (jellibeans.mseth.co) allows the user to log in and out. User diagnostic information is persisted to a SQL database. Each user has a unique ID number and a password. Prototype versions of Jellibeans (esha.mseth.co) experimented integrating a Google+ sign in to Jellibeans so that users can have their profile picture and name displayed. Both sign-in functionalities enhance the feel of a personalised search engine (see Figure~\ref{googlesignin}).
 
 \begin{figure}[H]
 \begin{center}
@@ -370,12 +370,11 @@ The Functional Requirements of Jellibeans are:
 \section{System and Software Architecture}
 
 \subsection{Architecture of the System: 3-tier Architecture}
-A client-server software architecture was used for Jellibeans. The presentation layer consisted of the user interface and motion controller. The presentation layer, in turn, has access to the application layer, which controls the functionality of the system by performing detailed processing. This included management of Jellibeans within the \textbf{Laravel} framework. 
+A client-server software architecture was used for Jellibeans. The presentation layer consisted of the user interface and motion controller. The presentation layer, in turn, has access to the application layer, which controls the functionality of the system by performing detailed processing. This included management of Jellibeans within the \textbf{Laravel} PHP web-application framework. 
 
 \vspace{5mm}
-Laravel is a PAAS (platform as a service), which manages the deployment of Jellibeans to \textbf{Digital Ocean} Cloud Server. Laravel implements a \textit{rewrite engine}, which is software that modifies the URLs appearance so that the URL is shorter and more informative/relevant for the user. The technique loosens the coupling between the HTML files and the URL that is presented to the user.
+Laravel is a PAAS (platform as a service), which manages the deployment of Jellibeans to a \textbf{Digital Ocean} Cloud Server. Laravel implements a \textit{rewrite engine}, which is software that modifies the URLs appearance so that the URL is shorter and more informative/relevant for the user. The technique loosens the coupling between the HTML files and the URL that is presented to the user.
 
-\vspace{5mm}
 \begin{itemize}
 \item{The application layer therefore included (amongst other things):}
 \subitem{The php routing code. The routing code allowed the URI (Uniform Resource Identifier) to be broken up into parameters and processed to determine which view (presentation/html file/web page) to present to the user.}
@@ -385,12 +384,11 @@ Laravel is a PAAS (platform as a service), which manages the deployment of Jelli
 
 The data store's primary responsibility was to manage the storage and retrieval of user data via the application layer.
 
-
 \vspace{5mm}
 The presentation, application and data store layers were maintained as three distinct modules. The advantages of this type of design is that it allows each of the tiers to be modified, upgraded or replaced independently of one another. For example, if Jellibeans were to be implemented with another motion controller (e.g. the Oculus VR Rift), it would only impact the Presentation tier (see Figure~\ref{ntier}).
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{ntier}
+\includegraphics[scale=0.55]{ntier}
 \caption{3-tier architecture implementation}
 \label{ntier}
 \end{center}
@@ -413,7 +411,7 @@ The presentation module consists of:}
 
 \subitem{Google+ Integration: Jellibeans integrates with Google+ API to retrive and render user profile data. This enhances the feel of a personalised search engine. Once signed in, users complete a diagnostic assessment of Autism (the Autism Quotient \cite{Baron Cohen et al}). The user's entries are sent to the logic module to be calculated. A user can also save a copy of their diagnostic information to a local file on their computer (uses JQuery, JavaScript and Google+ API).}
 
-\subitem{The user's AQ score is saved to the database once the score is calculated. The score is fetched from the database whenever the user logs in. A unique identification number assures that the user data is never overwritten or duplicated.}
+\subitem{The user's AQ score is saved to a SQL database once the score is calculated. The score is fetched from the database whenever the user logs in. A unique identification number assures that the user data is never overwritten or duplicated.}
 
 \subitem{LEAP UI Component: Jellibeans is a LEAP enabled website, and has a Motion Controlled UI in the web browser. The motion controller provides an interactive search experience, and maintains the user's full attention during search (uses LEAP SDK and LeapStrap).}
 
@@ -536,7 +534,7 @@ Following that I also registered my JavaScript origins within the console to acc
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.65]{aboutme}
+\includegraphics[scale=0.70]{googlesignin2}
 \end{center}
 \caption{Google+ Integration Code and Sign In Pop-Up (JQuery).}
 \label{GoogleSignInPage}
@@ -699,7 +697,7 @@ To further address Core Feature 3 of Jellibeans, that is, that results should be
 
 \subsection{Storing the User Autism Score Data.}
 
-The Autism Quotient score and all 50 of the responses from the user will be stored on a MySQL database system. The database configuration for the system was specified in a configuration php file  (see Figure~\ref{dbconfig}).
+The calculated Autism Quotient score from the user will be stored on a MySQL database system. The database configuration for the system was specified in a configuration php file  (see Figure~\ref{dbconfig}).
 
 \begin{figure}[H]
 \begin{center}
@@ -745,7 +743,7 @@ The Jellibeans model / table had to also be created, as follows (see Figure~\ref
 I created users in Jellibeans to `test' that the user AQ scores were being saved to the Jellibeans database correctly. The User model /table was then queried using the SQL command: \texttt{SELECT * FROM USERS;}.
 
 \vspace{5mm}
-Prior to the live deployment of Jellibeans (from the localhost), the database needed to be migrated using \texttt{php artisan migrate} which made use of the Laravel migration files to build the columns in the database tables (see Figure~\ref{usertable}, and Figure~\ref{passwordtable}). These migrations were paired with Laravel's schema builder to build the Jellibeans database schema. Migrations are useful as they allow version control if ever an operation needed to be ``rolled back", or, if in the future it was decided that the table needed additional columns.
+Prior to the live deployment of Jellibeans (from the localhost), the database needed to be migrated using the \texttt{php artisan migrate} command which made use of the Laravel migration files to build the columns in the database tables (see Figure~\ref{usertable}, and Figure~\ref{passwordtable}). These migrations were paired with Laravel's schema builder to build the Jellibeans database schema. Migrations are useful as they allow version control if ever an operation needed to be ``rolled back", or, if in the future it was decided that the table needed additional columns.
 
 
 \begin{figure}[H]
@@ -875,13 +873,10 @@ Once the LEAP was enabled for the web browser I was able to test Jellibeans with
 
 \section{Testing and Critical Evaluation of Jellibeans}
 \subsection{Testing and Evaluation of the Combined Search Engine.}
-To test the integrated combined search engine, 10 participants took part in a study to evaluate the quality of it's output. The participants were selected because they scored highly (above 30, where 32 is threshold for Autism Spectrum Disorder with a 79\% sensitivity) on a 50-item screening measure of Autism-like tratis (the Autism Quotient \cite{Baron Cohen et al}), and these individuals were thought to be most suited to test the current system. 
+To test the integrated combined search engine, 10 participants took part in a study to evaluate the quality of it's output. The participants were selected because they scored highly on a 50-item screening measure of Autism traits (the Autism Quotient, or AQ \cite{Baron Cohen et al}). The range of scores for the AQ is 0 to 50 with high scores indicating increased likelihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or Aspergers. A score above 30 suggests a likelihood of Aspergers syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}). For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits', and were selected to take part as these individuals were thought to be most suited to test the current system. 
 
 \vspace{5mm}
-The range of scores for the AQ is 0 to 50 with high scores indicating increased likelihood of autism-like traits. A score under 21 is a low to average result (many women average around 15 and men around 17). A score of 22-25 indicates autistic tendencies slightly above the population average. A score above 26 gives a borderline indication of high functioning autism, or Aspergers. A score above 30 suggests a likelihood of Aspergers syndrome or autism (sensitivity of test measure = 79\% \cite{Baron Cohen et al}). For the purposes of this study, individuals with scores equal to, and above 30 were interpreted as having `autistic-like traits'.
-
-\vspace{5mm}
-Participants were asked to comment on their search results from 10 (pre-determined) informational needs. Participants were also asked to choose three out of the links returned that they would choose to follow up with. They were also asked if anything was odd about the results returned. The responses from the 10 users were then analysed. 
+Participants were asked to comment on their search results from 10 informational needs. Participants were also asked to choose three out of the links returned that they would choose to follow up with. They were also asked if anything was odd about the results returned. The responses from the 10 users were then analysed. 
 
 \vspace{5mm}
 Somewhat non-surprisingly (given the statistics of most preferred search engines (Google's unique monthly visitors: 1,100,000,000 and query

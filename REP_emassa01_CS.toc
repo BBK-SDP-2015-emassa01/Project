@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{7}
 \contentsline {subsection}{\numberline {1.1}Background Research}{7}
-\contentsline {subsection}{\numberline {1.2}The Problems with Current Web-Search}{7}
+\contentsline {subsection}{\numberline {1.2}The Problems with Current Web-Search}{8}
 \contentsline {subsection}{\numberline {1.3}Current Project}{9}
 \contentsline {subsection}{\numberline {1.4}Parametric Search Design for Web Applications}{10}
 \contentsline {subsection}{\numberline {1.5}Motion controllers}{11}
@@ -13,38 +13,38 @@
 \contentsline {section}{\numberline {5}Implementation}{27}
 \contentsline {subsection}{\numberline {5.1}Combination Search Engine: Google, Yahoo and Bing.}{27}
 \contentsline {subsubsection}{\numberline {5.1.1}Web Scraping}{29}
-\contentsline {subsection}{\numberline {5.2}Building a User Model of Autism.}{31}
-\contentsline {subsubsection}{\numberline {5.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{32}
-\contentsline {subsection}{\numberline {5.3}Transforming the User Query.}{35}
-\contentsline {subsection}{\numberline {5.4}Storing the User Autism Score Data.}{37}
-\contentsline {subsubsection}{\numberline {5.4.1}Normal Forms}{41}
-\contentsline {subsection}{\numberline {5.5}Integration with a Motion Controlled Interface.}{42}
-\contentsline {subsubsection}{\numberline {5.5.1}Using LEAP in the IDE.}{44}
-\contentsline {subsubsection}{\numberline {5.5.2}Using LeapStrap in the Web-browser.}{45}
-\contentsline {section}{\numberline {6}Testing and Critical Evaluation of Jellibeans}{47}
-\contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{47}
+\contentsline {subsection}{\numberline {5.2}Building a User Model of Autism.}{32}
+\contentsline {subsubsection}{\numberline {5.2.1}Differences in Search Queries Between Users With and Without Autistic-like traits.}{33}
+\contentsline {subsection}{\numberline {5.3}Transforming the User Query.}{36}
+\contentsline {subsection}{\numberline {5.4}Storing the User Autism Score Data.}{38}
+\contentsline {subsubsection}{\numberline {5.4.1}Normal Forms}{42}
+\contentsline {subsection}{\numberline {5.5}Integration with a Motion Controlled Interface.}{43}
+\contentsline {subsubsection}{\numberline {5.5.1}Using LEAP in the IDE.}{45}
+\contentsline {subsubsection}{\numberline {5.5.2}Using LeapStrap in the Web-browser.}{46}
+\contentsline {section}{\numberline {6}Testing and Critical Evaluation of Jellibeans}{48}
+\contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{48}
 \contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{48}
-\contentsline {section}{\numberline {7}Software Testing}{48}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{48}
-\contentsline {subsection}{\numberline {8.1}Interviews}{49}
-\contentsline {subsection}{\numberline {8.2}Quantifiable results}{49}
-\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{52}
-\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{54}
-\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{55}
-\contentsline {subsection}{\numberline {8.3}Focus Group}{55}
-\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{56}
-\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{57}
-\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{58}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{58}
-\contentsline {subsection}{\numberline {9.1}Challenges}{59}
-\contentsline {subsection}{\numberline {9.2}Successes}{60}
-\contentsline {subsection}{\numberline {9.3}Future Directions}{60}
-\contentsline {section}{\numberline {10}Appendices}{65}
-\contentsline {subsection}{\numberline {10.1}Class Diagram}{66}
-\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{67}
-\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{68}
-\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{70}
-\contentsline {subsection}{\numberline {10.5}Search Query Survey}{71}
-\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{75}
-\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{76}
-\contentsline {subsection}{\numberline {10.8}Programming Code for the project.}{78}
+\contentsline {section}{\numberline {7}Software Testing}{49}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{49}
+\contentsline {subsection}{\numberline {8.1}Interviews}{50}
+\contentsline {subsection}{\numberline {8.2}Quantifiable results}{50}
+\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{53}
+\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{55}
+\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{56}
+\contentsline {subsection}{\numberline {8.3}Focus Group}{56}
+\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{57}
+\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{58}
+\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{59}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{59}
+\contentsline {subsection}{\numberline {9.1}Challenges}{60}
+\contentsline {subsection}{\numberline {9.2}Successes}{61}
+\contentsline {subsection}{\numberline {9.3}Future Directions}{61}
+\contentsline {section}{\numberline {10}Appendices}{66}
+\contentsline {subsection}{\numberline {10.1}Class Diagram}{67}
+\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{68}
+\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{69}
+\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{71}
+\contentsline {subsection}{\numberline {10.5}Search Query Survey}{72}
+\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{76}
+\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{77}
+\contentsline {subsection}{\numberline {10.8}Programming Code for the project.}{79}
