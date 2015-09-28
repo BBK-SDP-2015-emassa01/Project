@@ -25,26 +25,26 @@
 \contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{48}
 \contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{48}
 \contentsline {section}{\numberline {7}Software Testing}{49}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{49}
-\contentsline {subsection}{\numberline {8.1}Interviews}{50}
-\contentsline {subsection}{\numberline {8.2}Quantifiable results}{50}
-\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{53}
-\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{55}
-\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{56}
-\contentsline {subsection}{\numberline {8.3}Focus Group}{56}
-\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{57}
-\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{58}
-\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{59}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{59}
-\contentsline {subsection}{\numberline {9.1}Challenges}{60}
-\contentsline {subsection}{\numberline {9.2}Successes}{61}
-\contentsline {subsection}{\numberline {9.3}Future Directions}{61}
-\contentsline {section}{\numberline {10}Appendices}{66}
-\contentsline {subsection}{\numberline {10.1}Class Diagram}{67}
-\contentsline {subsection}{\numberline {10.2}Use Case Diagram}{68}
-\contentsline {subsection}{\numberline {10.3}Languages and APIs Used in Jellibean Implementation}{69}
-\contentsline {subsection}{\numberline {10.4}Google Terms of Servive}{71}
-\contentsline {subsection}{\numberline {10.5}Search Query Survey}{72}
-\contentsline {subsection}{\numberline {10.6}Data Coding for Result 1 and 2}{76}
-\contentsline {subsection}{\numberline {10.7}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{77}
-\contentsline {subsection}{\numberline {10.8}Programming Code for the project.}{79}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{50}
+\contentsline {subsection}{\numberline {8.1}Interviews}{51}
+\contentsline {subsection}{\numberline {8.2}Quantifiable results}{51}
+\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{54}
+\contentsline {subsubsection}{\numberline {8.2.2}Result 2}{56}
+\contentsline {subsubsection}{\numberline {8.2.3}Result 3}{57}
+\contentsline {subsection}{\numberline {8.3}Focus Group}{57}
+\contentsline {subsubsection}{\numberline {8.3.1}The Positives}{58}
+\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{59}
+\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{60}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{60}
+\contentsline {subsection}{\numberline {9.1}Challenges}{61}
+\contentsline {subsection}{\numberline {9.2}Successes}{62}
+\contentsline {subsection}{\numberline {9.3}Future Directions}{62}
+\contentsline {section}{\numberline {A}UML Diagrams}{68}
+\contentsline {subsection}{\numberline {A.1}Class Diagram}{68}
+\contentsline {subsection}{\numberline {A.2}Use Case Diagram}{69}
+\contentsline {section}{\numberline {B}Languages and APIs Used in Jellibean Implementation}{70}
+\contentsline {section}{\numberline {C}Google Terms of Servive}{72}
+\contentsline {section}{\numberline {D}Search Query Survey}{73}
+\contentsline {section}{\numberline {E}Data Coding for Result 1 and 2}{77}
+\contentsline {section}{\numberline {F}Questions on the Autism Spectrum Quotient \cite {Baron Cohen et al}}{78}
+\contentsline {section}{\numberline {G}Programming Code for the project.}{80}

@@ -589,7 +589,7 @@ The combined Google, Yahoo and Bing results were integrated these into a Java Ap
 
 
 
-\subsection{Building a User Model of Autism.}
+\subsection{Building a User Model of Autism.}\label{requirements}
 To identify the features of the user model to build, I ran a study to collect example search queries on a set of informational needs. Data was gathered from 37 participants. The participants were asked to give examples of search queries they would use, for example, to identify the name of a song they had heard (given the lyrics), or the name of a breed of a dog they had seen (given a picture of the dog). There were in total 8 search queries; the study was distributed widely via Surveymonkey.com \cite{surveymonkey} and can be seen in the Appendix ~\ref{AppendixA}. All participants were also asked to indicate which search engine they most often use and to complete the Autism Spectrum Quotient -- a 50-item screening questionnaire for Autism (see Appendix ~\ref{AQ}). The participant responses were then analysed.
 
 
@@ -617,7 +617,7 @@ The low AQ scorer responses were analysed together to establish a baseline answe
 \item{How would you search for delay's relating to your (imminent) flight to Paris?\\\textit{Flight number, Paris, airport, flight time}.}
 \end{enumerate}
 
-There was a lot more variation in the responses gathered from the group with Autistic-like traits. The responses can be seen in Appendix~\ref{asdresponses}. The following observations were made for the users in the high AQ group:
+There was a lot more variation in the responses gathered from the group with Autistic-like traits. The responses can be seen in Section~\ref{asdresponses}. The following observations were made for the users in the high AQ group:
 \begin{enumerate}
 \item{There were an increased number of incompletely-formed queries. In the high AQ group, participants were more likely to miss off words in the query string. For example, when searching for the name of a song contating the lyrics ``Look at your children", \textit{all} low AQ scorers searched for ``Look at your children lyrics", whereas two out of seven respondents in the high AQ group did not put `lyrics' or `song' in the search query. When these search strings are entered into Google, the results are very different (see Figure~\ref{someresults}). A larger number of results are returned to the incomplete query (302,000,000 compared to 32,900,000). In this instance, the high AQ user group were presented with results that have a lower precision, i.e., more irrelevant information that they must sift through to find the answer to their search query.}
 \label{incomplete}
@@ -893,13 +893,35 @@ The LEAP does however miss small hand movements, and also very large ones (outsi
 
 \section{Software Testing}
 
-I used Behaviour Driven Development (BDD) to test the integration of my HTML, CSS and JavaScript code. The testing process consisted of development, test, make modifications, test (and so on) until the behaviour of the website was what I intended.\\
+\begin{comment}
+You could expand on e.g.: 
+a) the kind of BDD cases you have used to drive your development (maybe providing an example), 
+b) the tools you have used for BDD (Cucumber? FITNESSE? others?), 
+c) the kind of automated testing that you have put in place for your Javascript code (assuming you have some, it is unclear in the
+current writing),  JSLint (http://www.jslint.com/)
+d) the number of lines of code dedicated to testing (at the very least, you mention you are using JUnit), and the testing
+coverage of your code. Do not be scared of admitting that your coverage is under 95\% (if that is the case): it is better to admit a
+coverage of 50\% (or 30\%, or whatever) than saying nothing and letting the evaluators assume a low coverage of 10\%-15\%. 
+\end{comment}
+
+Behaviour Driven Development (BDD) was used in the current project. This is an agile technique, which includes elements of user acceptance testing and customer test driven development. This was achieved by obtaining a clear understanding of the desired behaviour of the application through discussion with the stakeholders (users with autism) during the \textit{Requirements Gathering} phase of the study (see Section~\ref{requirements}). During the requirements gathering phase, the purpose and benefit of each feature was reviewed and evaluated. In this way the user with Autism (or stakeholder) participated in the discussion and design of Jellibeans (or the user model used within Jellibeans) which added significant value to the application from the user's perspective. 
 
 \vspace{5mm}
-The JavaScript Console was used for testing JavaScript code. \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle} to ensure the code contained no bugs, and was particularly good for seeing how the JavaScript code integrated with the HTML code and CSS.
+One case example in which BDD was applied was in the development of the parametric search tool ( search tool presented after users indicate whether they are doing a `Do', `Know', `Go' or `Social' search). The first practice of BDD is to establish the goals of the different stakeholders. One goal for the application itself, was to increase the number of search terms being used by people with Autism, whilst the goal for the user was to accurately define their search query and retrieve relevant search results. The feature that was established to achieve both these goals was a parametric search tool, which was designed to be more complex and intricate for search queries that were identified as particularly difficult for people with Autism, for example, if the user had identified that they were specifically conducting a `Social' search.
 
 \vspace{5mm}
-JUnit was used to test the Combination Search Engine and the LEAP motion controller methods, which were written using Java. Test Driven Development unit testing was completed, at the level of each method implemented.
+The BDD process includes assuring that the software performs the way in which it is expected to, at all times. BDD was used to test the integration of the HTML, CSS and JavaScript code in Jellibeans. The testing process consisted of development, test, make modifications, test (and so on) until the behaviour of the website was what was intended. The entire set of requirements identified in Section ~\ref{requirements} were used to drive the development of the web application. 
+
+\vspace{5mm}
+The \textbf{FitNesse} framework for integrated testing was used to test the software collaboration functionality of the web application. It is open source software \cite{fitnesse}, and was chosen over Cucumber because the developer felt it was extremely interactive and transparent. Unlike unit testing (which tests efficiency of code), FitNesse was used in a browser GUI localhost to present human-readable tests to test the value of a feature on the application. Unit testing was also compulsory to ensure the code was efficient and complemented the value of the features identified during BDD.
+
+\vspace{5mm}
+JUnit testing framework was used to test both the Combination Search and LEAP controller methods. The code to implement the Combination Search Engine and LEAP motion controller methods was written using Java (the combination search was presented to the user in an applet). For the Combination Search, Unit testing was conducted for the number and accuracy of search results from each search engine (Google, Yahoo and Bing). The results gathered from the applet, were also confirmed in real time, against a live search using the developers machine. For the LEAP controller methods, Test Driven Development Unit testing was completed, at the level of each method implemented. Over 85\% of the Java code implemented in the current project was supported by Unit testing. The remaining 15\% was not tested due to the variable nature of some search engines, returning slightly different results on each iteration of a web search.
+
+\vspace{5mm}
+For JavaScript testing, the JavaScript Console was used \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle}. This was particularly useful to ensure the code was error-free. This tools also enabled me to see how well the JavaScript code integrated with the HTML code and CSS. JSLint  \cite{jslint} was another useful JavaScript testing tool used in the current project, to solely test JavaScript code. The program scans JavaScript code looking for errors, and when it finds one, it returns a message and location of the error in the code.
+
+
 
 
 \begin{comment}
@@ -1262,12 +1284,14 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem {gameshealth} Games for Health (2012) \textit{Screen-based technologies and Autism. 1}: 248-53
 \bibitem{leap} Leap Motion, \textit{Java SDK Documentation}, \\https://developer.leapmotion.com/documentation/java/index.html Retrieved 1 April 2015.
 \bibitem{GDC} Google Developers Console, https://console.developers.google.com, Retrieved 1 April 2015.
+\bibitem{fitnesse} FitNesse, http://www.fitnesse.org/, Retrieved 14 September 2015.
 \bibitem{leapstrap} LeapStrap, http://wilkesalex.github.io/leapstrap/getting-started/, Retrieved September 3 2015.
 \bibitem{motioncontrollerforautism} Garzotto, F., Valoriani, M. and Bartoli, L. (2014), Touchless Motion-Based Interaction for Therapy of Autistic Children, Virtual, Augmented Reality and Serious Games for Healthcare, \textit{Intelligent Systems Reference Library, 68}, 2014, pp 471-494
 \bibitem{googleTerms} Google Privacy and Terms, http://www.google.com/policies/technologies/, Retrieved 27 August 2015.
 \bibitem{javascripttesting} JavaScript Console, https://developer.chrome.com/devtools/docs/console, Retrieved September 3 2015.
 \bibitem{jsfiddle} JS Fiddle, https://jsfiddle.net/, Retrieved September 3 2015.
 \bibitem{jsoup} JSoup Java API, http://jsoup.org/, Retrieved 27 August 2015.
+\bibitem{jslint} JSLint, http://www.jslint.com/, Retrieved 13 September 2015.
 \bibitem{laravel}Laravel, laravel, http://laravelbook.com/laravel-architecture/ Retrieved Sep 6 2015
 \bibitem{mottron}Laurent Mottron, Jacob A. Burack, Johannes E. A. Stauder, Philippe Robaey (1999) Perceptual Processing among High-functioning Persons with Autism. \textit{Journal of Child Psychology and Psychiatry 40}, (2), 203211. doi:10.1111/1469-7610.00433.
 \bibitem {adam}Lella, A., (2014). \textit{comScore Releases March 2014 U.S. search Engine Rankings.} ComScore.com. Retrieved 21 Feb 2015
@@ -1291,11 +1315,11 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 
 
 \newpage
-\section {Appendices}
+\appendix{Appendices}
 
 \begin{comment}
 \newpage
-\subection{}\label{}
+\section{}\label{}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.55]{}
@@ -1305,6 +1329,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \end{comment}
 
 \newpage
+\section{UML Diagrams}
 \subsection{Class Diagram}\label{jBeanClassDiagram}
 \begin{figure}[H]
 \begin{center}
@@ -1327,7 +1352,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 
 \newpage
 
-\subsection{Languages and APIs Used in Jellibean Implementation}\label{implementation}
+\section{Languages and APIs Used in Jellibean Implementation}\label{implementation}
 
 \begin{tabular}{l p{11cm} }
 Google Search API & A RESTful API with a single method called list. The API method used was GET, and the response data is returned as a JSON type. The response consists of (1) the actual search result, (2) metadata for search like number of results, alternative search queries, and (3) custom search engine metadata. Google terms of service, state that `screen scraping', or copying the data directly from the website is prohibited.\\
@@ -1348,7 +1373,7 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \end{tabular}
 
 \newpage
-\subsection{Google Terms of Servive} \label{GoogleToS1}
+\section{Google Terms of Servive} \label{GoogleToS1}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.6]{GoogleToS}
@@ -1357,7 +1382,7 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \end{figure}
 
 \newpage
-\subsection{Search Query Survey} \label{AppendixA}
+\section{Search Query Survey} \label{AppendixA}
 
 \begin{figure}[H]
 \begin{center}
@@ -1389,7 +1414,7 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 \end{figure}
 
 \newpage
-\subsection{Data Coding for Result 1 and 2}\label{datacoding}
+\section{Data Coding for Result 1 and 2}\label{datacoding}
 
 \begin{figure}[H]
 \includegraphics[angle=90, scale=0.57]{resultsCoding}\\
@@ -1401,7 +1426,7 @@ LeapStrap & The LeapStrap SDK was used to integrate the LEAP into the web broswe
 
 
 \newpage
-\subsection{Questions on the Autism Spectrum Quotient \cite{Baron Cohen et al}} \label{AQ}
+\section{Questions on the Autism Spectrum Quotient \cite{Baron Cohen et al}} \label{AQ}
 
 Participants are asked to read each statement very carefully and rate how strongly they agree or disagree with the statement (Strongly Disagree, Slightly Disagree, Slightly Agree, or, Strongly Agree).  \\
 \hspace{1cm}
@@ -1458,6 +1483,7 @@ I am not very good at remembering people's date of birth.\\
 I find it very easy to play games with children that involve pretending.\\
 
 \newpage
-\subsection{Programming Code for the project.}
+\section{Programming Code for the project.}
+A CD including all the programming code for the project is included on the hard copies of this paper. Nothing will appear here on the electronic copy of this paper.
 
 \end{document} 
