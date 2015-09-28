@@ -25,20 +25,20 @@
 \contentsline {subsection}{\numberline {6.1}Testing and Evaluation of the Combined Search Engine.}{48}
 \contentsline {subsection}{\numberline {6.2}Evaluation of the LEAP Motion Controller in Jellibeans.}{48}
 \contentsline {section}{\numberline {7}Software Testing}{49}
-\contentsline {section}{\numberline {8}User Verification and User Testing}{50}
+\contentsline {section}{\numberline {8}User Verification and User Testing}{51}
 \contentsline {subsection}{\numberline {8.1}Interviews}{51}
 \contentsline {subsection}{\numberline {8.2}Quantifiable results}{51}
-\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{54}
+\contentsline {subsubsection}{\numberline {8.2.1}Result 1}{55}
 \contentsline {subsubsection}{\numberline {8.2.2}Result 2}{56}
 \contentsline {subsubsection}{\numberline {8.2.3}Result 3}{57}
-\contentsline {subsection}{\numberline {8.3}Focus Group}{57}
+\contentsline {subsection}{\numberline {8.3}Focus Group}{58}
 \contentsline {subsubsection}{\numberline {8.3.1}The Positives}{58}
-\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{59}
-\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{60}
-\contentsline {section}{\numberline {9}Evaluation and Discussion.}{60}
+\contentsline {subsubsection}{\numberline {8.3.2}The Negatives}{60}
+\contentsline {subsubsection}{\numberline {8.3.3}Other observations}{61}
+\contentsline {section}{\numberline {9}Evaluation and Discussion.}{61}
 \contentsline {subsection}{\numberline {9.1}Challenges}{61}
 \contentsline {subsection}{\numberline {9.2}Successes}{62}
-\contentsline {subsection}{\numberline {9.3}Future Directions}{62}
+\contentsline {subsection}{\numberline {9.3}Future Directions}{63}
 \contentsline {section}{\numberline {A}UML Diagrams}{68}
 \contentsline {subsection}{\numberline {A.1}Class Diagram}{68}
 \contentsline {subsection}{\numberline {A.2}Use Case Diagram}{69}

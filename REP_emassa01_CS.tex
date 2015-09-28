@@ -902,6 +902,14 @@ current writing),  JSLint (http://www.jslint.com/)
 d) the number of lines of code dedicated to testing (at the very least, you mention you are using JUnit), and the testing
 coverage of your code. Do not be scared of admitting that your coverage is under 95\% (if that is the case): it is better to admit a
 coverage of 50\% (or 30\%, or whatever) than saying nothing and letting the evaluators assume a low coverage of 10\%-15\%. 
+
+
+\vspace{5mm}
+Describe the verification process you used in your project\\
+Unit Testing, Static Analysis for methods in javascript etc.\\
+Manual testing, Selenium, Cucumber etc for html.\\
+Regression tests
+
 \end{comment}
 
 Behaviour Driven Development (BDD) was used in the current project. This is an agile technique, which includes elements of user acceptance testing and customer test driven development. This was achieved by obtaining a clear understanding of the desired behaviour of the application through discussion with the stakeholders (users with autism) during the \textit{Requirements Gathering} phase of the study (see Section~\ref{requirements}). During the requirements gathering phase, the purpose and benefit of each feature was reviewed and evaluated. In this way the user with Autism (or stakeholder) participated in the discussion and design of Jellibeans (or the user model used within Jellibeans) which added significant value to the application from the user's perspective. 
@@ -913,15 +921,19 @@ One case example in which BDD was applied was in the development of the parametr
 The BDD process includes assuring that the software performs the way in which it is expected to, at all times. BDD was used to test the integration of the HTML, CSS and JavaScript code in Jellibeans. The testing process consisted of development, test, make modifications, test (and so on) until the behaviour of the website was what was intended. The entire set of requirements identified in Section ~\ref{requirements} were used to drive the development of the web application. 
 
 \vspace{5mm}
-The \textbf{FitNesse} framework for integrated testing was used to test the software collaboration functionality of the web application. It is open source software \cite{fitnesse}, and was chosen over Cucumber because the developer felt it was extremely interactive and transparent. Unlike unit testing (which tests efficiency of code), FitNesse was used in a browser GUI localhost to present human-readable tests to test the value of a feature on the application. Unit testing was also compulsory to ensure the code was efficient and complemented the value of the features identified during BDD.
+The \textbf{FitNesse} framework for integrated testing was used to test the software collaboration functionality of the web application. It is open source software \cite{fitnesse}, and was chosen over Cucumber because the developer felt it was extremely interactive and transparent. Unlike unit testing (which tests efficiency of code), FitNesse was used in a browser GUI localhost to present human-readable tests to test the value of a feature on the application. 
 
 \vspace{5mm}
-JUnit testing framework was used to test both the Combination Search and LEAP controller methods. The code to implement the Combination Search Engine and LEAP motion controller methods was written using Java (the combination search was presented to the user in an applet). For the Combination Search, Unit testing was conducted for the number and accuracy of search results from each search engine (Google, Yahoo and Bing). The results gathered from the applet, were also confirmed in real time, against a live search using the developers machine. For the LEAP controller methods, Test Driven Development Unit testing was completed, at the level of each method implemented. Over 85\% of the Java code implemented in the current project was supported by Unit testing. The remaining 15\% was not tested due to the variable nature of some search engines, returning slightly different results on each iteration of a web search.
+Unit testing was also compulsory to ensure the code was efficient and complemented the value of the features identified during BDD. The JUnit testing framework was used to test both the Combination Search and LEAP controller methods. The code to implement the Combination Search Engine and LEAP motion controller methods was written using Java (the combination search was presented to the user in an applet). For the Combination Search, Unit testing was conducted for the number and accuracy of search results from each search engine (Google, Yahoo and Bing). The results gathered from the applet, were also confirmed in real time, against a live search using the developers machine. For the LEAP controller methods, Test Driven Development Unit testing was completed, at the level of each method implemented. Over 85\% of the Java code implemented in the current project was supported by Unit testing. The remaining 15\% was not tested due to the variable nature of some search engines, returning slightly different results on each iteration of a web search (and so, as explained above, in these cases the results of the web search were validated in real time).
 
 \vspace{5mm}
-For JavaScript testing, the JavaScript Console was used \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle}. This was particularly useful to ensure the code was error-free. This tools also enabled me to see how well the JavaScript code integrated with the HTML code and CSS. JSLint  \cite{jslint} was another useful JavaScript testing tool used in the current project, to solely test JavaScript code. The program scans JavaScript code looking for errors, and when it finds one, it returns a message and location of the error in the code.
+Manual testing for JavaScript included working with the JavaScript Console  \cite{javascripttesting}, I also used JSfiddle \cite{jsfiddle}. This was particularly useful to ensure the code was error-free. This tools also enabled me to see how well the JavaScript code integrated with the HTML code and CSS. JSLint  \cite{jslint} was another useful JavaScript testing tool used in the current project, to solely test JavaScript code. The program scans JavaScript code looking for errors, and when it finds one, it returns a message and location of the error in the code.
 
+\vspace{5mm}
+After manual verification was satisfied, automated verification of the JavaScript tests were run using QUnit \cite{qunit}. QUnit is a JavaScript Unit test framework used to test JavaScript, including, JQuery.
 
+\vspace{5mm}
+Finally, regression tests were run after unit testing, including testing with real users to evaluate the efficiency of the system as a whole. This next phase of testing is considered in Section ~\ref{usertesting} of this report.
 
 
 \begin{comment}
@@ -929,7 +941,7 @@ For JavaScript testing, the JavaScript Console was used \cite{javascripttesting}
 TODO consider using CUCUMBER IN ECLIPSE.https://hjrlive.wordpress.com/2014/02/15/test-post/
 \end{comment}
 
-\section{User Verification and User Testing}
+\section{User Verification and User Testing} \label{usertesting}
 Five high AQ scorers were called back from the previous research study for one-to-one interviews and a combined focus group. During the interview, individuals were given the same user search queries as previously, and for each search that was implemented, users were asked to comment on whether it enhanced, or took away from their search experience, and from their satisfaction with the search results. 
 
 \subsection{Interviews}
@@ -1204,13 +1216,7 @@ Nevertheless, one future direction for Jellibeans in order to achieve a balance 
 
 Users agreed during the focus group that with Jellibeans the time/reward payoff is really only apparent, over and beyond a traditional search engine, when the search query is complex. For example, if users are searching for something they have yet to identify, i.e., something ambiguous. To overcome this criticism, Jellibeans includes a `Search in Google' option, so that if users know what they are searching for, they have the option to run the search outside Jellibeans.
 
-\begin{comment}
-\vspace{5mm}
-Describe the verification process you used in your project\\
-Unit Testing, Static Analysis for methods in javascript etc.\\
-Manual testing, Selenium, Cucumber etc for html.\\
-Regression tests
-\end{comment}
+
 
 
 \section{Evaluation and Discussion.}\label{eval}
@@ -1301,6 +1307,7 @@ Elsabbagh, M., Volein, A., Holmboe, K., Tucker, L., Csibra, G., Baron-Cohen, S.,
 \bibitem{nutch} Apache Nutch, http://nutch.apache.org/, Retrieved September 10 2015.
 \bibitem {opensearch}OpenSearch, http://www.opensearch.org/Specifications/OpenSearch/1.1, Retrieved 30 July 2015.
 \bibitem{phptester} Online PHP tester, http://phptester.net/, Retrieved September 7 2015.
+\bibitem{qunit} QUnit, https://qunitjs.com/, Retrieved 14 September 2015.
 \bibitem {Shane and Albert}Shane, H. C. and Albert, P. D. (2008) Electronic screen media for persons with autism spectrum disorders: results of a survey. \textit{Journal of Autism Developmental Disorders, 38},8 :1499-508. doi: 10.1007/s10803-007-0527-5.
 \bibitem{AdultsWithAutism} Slavin, S (2013) Autism: Successful communication,10 things to make it easier, http://adultswithautism.org.uk/autism-successful-communication-10-things-to-make-it-easier/, Retrieved September 1 2015.
 \bibitem{solr} Apache Solr, http://lucene.apache.org/solr/, Retrieved September 10 2015.
